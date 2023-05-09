@@ -6,6 +6,6 @@ class Home extends BaseController
 {
     public function index()
     {
-        return "Bom dia! Flamengo time lixo";
+        return "Bom dia!";
     }
 }
