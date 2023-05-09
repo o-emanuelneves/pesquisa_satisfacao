@@ -40,3 +40,31 @@ Stack trace:
 #9 C:\xampp\htdocs\pesquisa_satisfacao\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('migrate', Array)
 #10 C:\xampp\htdocs\pesquisa_satisfacao\spark(97): CodeIgniter\CLI\Console->run()
 #11 {main}
+CRITICAL - 2023-05-09 16:57:03 --> There is no data to insert.
+in SYSTEMPATH\BaseModel.php on line 1680.
+ 1 SYSTEMPATH\BaseModel.php(1680): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('insert')
+ 2 SYSTEMPATH\BaseModel.php(742): CodeIgniter\BaseModel->transformDataToArray([], 'insert')
+ 3 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([], true)
+ 4 APPPATH\Controllers\Auth_Users.php(22): CodeIgniter\Model->insert([])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Auth_Users->store()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth_Users))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-09 17:02:00 --> Class "App\Models\Auth_UserModel" not found
+in APPPATH\Controllers\Auth_Users.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Auth_Users->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-09 17:02:01 --> Class "App\Models\Auth_UserModel" not found
+in APPPATH\Controllers\Auth_Users.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Auth_Users->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-09 17:02:02 --> Class "App\Models\Auth_UserModel" not found
+in APPPATH\Controllers\Auth_Users.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Auth_Users->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
