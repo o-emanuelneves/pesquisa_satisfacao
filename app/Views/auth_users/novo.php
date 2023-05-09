@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="/Auth_Users/store" method="post">
+    <form action="/AuthUsers/store" method="post">
         <label for="nome">
             <input type="text" placeholder="Nome" name="nome"> 
         </label>
