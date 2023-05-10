@@ -30,7 +30,7 @@ class PesquisaRespostas extends Migration
                 'constraint'     => 9,
                 'usigned'        => true
             ],
-            'respostas'         => [
+            'resposta'         => [
                 'type'           => 'INT',
                 'constraint'     => 1,
             ],

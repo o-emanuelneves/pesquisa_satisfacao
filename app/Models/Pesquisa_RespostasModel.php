@@ -3,7 +3,7 @@
 namespace App\Models;
 use CodeIgniter\Model;
  
-class Pesquisa_Respostas extends Model{
+class Pesquisa_RespostasModel extends Model{
     protected $table = 'pesquisa_respostas';
     protected $primaryKey = 'id_resposta';
     protected $allowedFields = [
@@ -11,7 +11,7 @@ class Pesquisa_Respostas extends Model{
         'fk_pesquisa',
         'fk_user',
         'fk_pergunta',
-        'respostas',
+        'resposta',
     ];
 
     protected $useSoftDeletes = true;
@@ -20,5 +20,6 @@ class Pesquisa_Respostas extends Model{
     protected $createdField = 'created_at';
     protected $updatedField = 'updated_at';
     protected $deletedField  = 'deleted_at';
-
 }
+
+?>
