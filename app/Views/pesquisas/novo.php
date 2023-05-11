@@ -5,15 +5,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dados Usuários</title>
+    <title>Add Pesquisa</title>
 </head>
 
 <body>
-    <form action="/AuthUsers/store" method="post">
-        <label for="nome">
-            <input type="text" placeholder="Nome" name="nome" value="<?= $auth_user['nome'] ?>">
+    <form action="/Pesquisas/store" method="post">
+        <label for="observacao">
+            <input type="text" placeholder="observacao" name="observacao">
+        </label> <br>
+        <label for="fk_user">FK_user:
+            <input type="number" name="fk_user">
         </label>
-        <input type="hidden" name="id_user" value="<?= $auth_user['id_user'] ?>">
+
         <input type="submit" value="Enviar">
     </form>
 </body>

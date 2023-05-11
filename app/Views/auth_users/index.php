@@ -25,8 +25,9 @@
                     <td><?= $auth_user['id_user'] ?></td>
                     <td><?= $auth_user['nome'] ?></td>
                     <td>
-                        <a href="/AuthUsers/editar/<?= $auth_user['id_user'] ?>">Editar</a>
                         <a href="/AuthUsers/excluir/<?= $auth_user['id_user'] ?>">Excluir</a>
+                        <a href="/AuthUsers/ver/<?= $auth_user['id_user'] ?>">Ver</a>
+
                     </td>
                 </tr>
 
