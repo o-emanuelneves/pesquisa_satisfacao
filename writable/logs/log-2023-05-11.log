@@ -1,0 +1,43 @@
+CRITICAL - 2023-05-11 12:29:24 --> Undefined variable $auth_user
+in APPPATH\Views\auth_users\editar.php on line 14.
+ 1 APPPATH\Views\auth_users\editar.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $auth_user', 'C:\\xampp\\htdocs\\pesquisa_satisfacao\\app\\Views\\auth_users\\editar.php', 14)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\pesquisa_satisfacao\\app\\Views\\auth_users\\editar.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('auth_users/editar', [], true)
+ 5 APPPATH\Controllers\AuthUsers.php(29): view('auth_users/editar')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\AuthUsers->editar('1')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthUsers))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-11 12:34:10 --> Too few arguments to function App\Controllers\AuthUsers::editar(), 0 passed in C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php on line 934 and exactly 1 expected
+in APPPATH\Controllers\AuthUsers.php on line 25.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\AuthUsers->editar()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthUsers))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-11 12:36:33 --> Too few arguments to function App\Controllers\AuthUsers::editar(), 0 passed in C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php on line 934 and exactly 1 expected
+in APPPATH\Controllers\AuthUsers.php on line 25.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\AuthUsers->editar()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthUsers))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-11 12:36:57 --> Too few arguments to function App\Controllers\AuthUsers::editar(), 0 passed in C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php on line 934 and exactly 1 expected
+in APPPATH\Controllers\AuthUsers.php on line 25.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\AuthUsers->editar()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthUsers))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-11 12:38:31 --> Too few arguments to function App\Controllers\AuthUsers::editar(), 0 passed in C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php on line 934 and exactly 1 expected
+in APPPATH\Controllers\AuthUsers.php on line 25.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\AuthUsers->editar()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthUsers))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-11 13:01:05 --> link(): No such file or directory
+in APPPATH\Controllers\Home.php on line 10.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'link(): No such file or directory', 'C:\\xampp\\htdocs\\pesquisa_satisfacao\\app\\Controllers\\Home.php', 10)
+ 2 APPPATH\Controllers\Home.php(10): link('/AuthUsers/index', 'Auth_users')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->index()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

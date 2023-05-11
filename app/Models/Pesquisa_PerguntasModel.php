@@ -1,22 +1,21 @@
 <?php
 
 namespace App\Models;
+
 use CodeIgniter\Model;
- 
-class Auth_UserModel extends Model{
-    protected $table = 'auth_users';
-    protected $primaryKey = 'id_user';
+
+class Pesquisa_PerguntasModel extends Model
+{
+    protected $table = 'pesquisa_perguntas';
+    protected $primaryKey = 'id_pergunta';
     protected $allowedFields = [
-        'id_user',
-        'nome'
+        'pergunta',
+        'fk_user',
+        'id_pergunta'
     ];
     protected $useTimestamps = true;
     protected $useSoftDeletes = true;
     protected $createdField = 'created_at';
     protected $updatedField = 'updated_at';
     protected $deletedField = 'deleted_at';
-
 }
-
-
-?>

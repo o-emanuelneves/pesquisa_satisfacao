@@ -3,12 +3,13 @@
 namespace App\Models;
 use CodeIgniter\Model;
  
-class Auth_UserModel extends Model{
-    protected $table = 'auth_users';
-    protected $primaryKey = 'id_user';
+class PesquisasModel extends Model{
+    protected $table = 'pesquisas';
+    protected $primaryKey = 'id_pesquisa';
     protected $allowedFields = [
-        'id_user',
-        'nome'
+        'fk_user',
+        'id_pesquisa',
+        'observacao'
     ];
     protected $useTimestamps = true;
     protected $useSoftDeletes = true;
@@ -17,6 +18,3 @@ class Auth_UserModel extends Model{
     protected $deletedField = 'deleted_at';
 
 }
-
-
-?>
