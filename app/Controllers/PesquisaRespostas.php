@@ -14,13 +14,50 @@ class PesquisaRespostas extends Controller
         $this->pesquisa_respostas_model = new Pesquisa_RespostasModel();
     }
 
-    public function form(){
-        echo View('pesquisa_respostas/form');
+    public function novo(){
+        echo View('pesquisarespostas/novo');
     }
 
-    public function store(){
+    public function index()
+    {
+        $pesquisa_respostas = $this->pesquisa_respostas_model->findAll();
+
+        $data['pesquisa_respostas'] = $pesquisa_respostas;
+        
+        echo View('/pesquisarespostas/index', $data);
+    }
+
+    public function editar($id_resposta)
+    {
+        $pesquisa_respostas = $this->pesquisa_respostas_model->where('id_resposta', $id_resposta)->first();
+
+        $data['pesquisa_respostas'] = $pesquisa_respostas;
+
+        echo View('/pesquisarespostas/editar', $data);
+    }
+
+    public function store()
+    {
         $dados = $this->request->getVar();
+
+        if(isset($dados['id_resposta'])):
+
+            $this->pesquisa_respostas_model->where('id_resposta', $dados['id_resposta'])->set($dados)->update();
+
+            return redirect()->to('http://pesquisa.satisfacao.com/pesquisarespostas');
+
+        endif;
+
         $this->pesquisa_respostas_model->insert($dados);
+
+        return redirect()->to('http://pesquisa.satisfacao.com/pesquisarespostas');
+    }
+
+    public function excluir($id_resposta)
+    {
+        $this->pesquisa_respostas_model->where('id_resposta', $id_resposta)->delete();
+
+        return redirect()->to('http://pesquisa.satisfacao.com/pesquisarespostas');
     }
 }
 
