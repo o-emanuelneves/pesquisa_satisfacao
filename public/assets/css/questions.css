@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 body{  
     color: #00386B;
     font-size: 8px; 
@@ -81,19 +82,109 @@ body{
 .fa-trash-can{
    font-size: 30px;
    cursor: pointer;
+=======
+
+body{  
+         color: #00386B;
+         font-size: 8px; 
+       
+     }
+
+::placeholder {
+        color: #00386B;
+}
+.questions{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        width: 100%;
+        gap: 8px;
+        align-items: center;
+        
+}
+.container-questions {
+        border: 1px solid #00386B;
+        outline: none;
+        margin-bottom: 10px;
+        margin-top: 12px;
+        border-radius: 10px;      
+        Height: 36px; 
+        width:100%
+        
+   
+        
+
+    }
+  
+   
+
+.container-modal {
+        border: 0px solid #00386B;
+        margin: auto;
+        border-radius: 10px; 
+        padding: 16px 32px;
+        gap: 16px;
+        width: 80%;
+        height: auto;
+        background: #ffffff;      
+        box-shadow: 0px 4px 4px #00386B;
+        margin-left: 150px;
+ }
+
+                      
+ .button{
+        width: 97.7%;
+        display: flex;
+        justify-content: end;
+        margin-top: 10px;
+ }
+ .button-save{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;       
+        padding: 8px 32px;
+        gap: 10px;
+        position: relative;
+        width: 120px;
+        height: 41px;
+        background: #FFFFFF;
+        border-radius: 8px;
+        border: 1px solid #00386B;
+     } 
+
+
+     .usersid {
+        width: 25px;
+        height: 25px;
+     }
+
+
+.fa-trash-can{
+        font-size: 20px;
+        cursor: pointer;
+>>>>>>> Stashed changes
 }
 
 
 .btn-plus {
+<<<<<<< Updated upstream
    width: 97.4%;
    display: flex;
    justify-content: end;
    padding-bottom: 25px;
+=======
+        width: 97.4%;
+        display: flex;
+        justify-content: end;
+        padding-bottom: 25px;
+>>>>>>> Stashed changes
 
 
 }
 
 .fa-plus {
+<<<<<<< Updated upstream
    color: #FFFFFF;
    font-weight: bold;
    font-size: 16px;
@@ -117,3 +208,38 @@ body{
    padding: 4px;
 
 }
+=======
+        color: #FFFFFF;
+        font-weight: bold;
+        font-size: 16px;
+        cursor: pointer;        
+        
+        
+          
+ }
+ 
+ .button-plus{
+
+        
+      
+        display: flex;    
+        justify-content: center;
+        align-items: center;
+        background-color: #00386B;
+        border-radius: 100%;         
+        width: 20px;
+        height: 20px;
+        padding: 4px;
+        
+
+ }
+
+ 
+        
+
+
+
+
+
+
+>>>>>>> Stashed changes
