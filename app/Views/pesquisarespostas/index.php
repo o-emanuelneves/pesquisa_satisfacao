@@ -31,8 +31,6 @@
                         <td><?= $pesquisa_resposta['fk_pergunta'] ?></td>
                         <td><?= $pesquisa_resposta['resposta'] ?></td>
                         <td>
-                            <a href="/pesquisarespostas/excluir/<?= $pesquisa_resposta['id_resposta'] ?>">Excluir</a>
-                            <a href="/pesquisarespostas/editar/<?= $pesquisa_resposta['id_resposta'] ?>">Editar</a>
                         </td>
                     </tr>
                 <?php endforeach; ?>
