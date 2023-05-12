@@ -13,11 +13,9 @@
         <table border="1px">
             <thead>
                 <tr>
-                    <th>Id Resposta</th>
-                    <th>Fk Pesquisa</th>
-                    <th>Fk User</th>
-                    <th>Fk pergunta</th>
-                    <th>Resposta</th>
+                    <th>Id Pesquisa</th>
+                    <th>Nome</th>
+                    
                     <th>Ações</th>
                 </tr>
             </thead>
@@ -25,12 +23,11 @@
 
                 <?php foreach ($pesquisa_respostas as $pesquisa_resposta) : ?>
                     <tr>
-                        <td><?= $pesquisa_resposta['id_resposta'] ?></td>
                         <td><?= $pesquisa_resposta['fk_pesquisa'] ?></td>
-                        <td><?= $pesquisa_resposta['fk_user'] ?></td>
-                        <td><?= $pesquisa_resposta['fk_pergunta'] ?></td>
-                        <td><?= $pesquisa_resposta['resposta'] ?></td>
+                        <td><?= $pesquisa_resposta['nome'] ?></td>
                         <td>
+                            <a href="/pesquisarespostas/excluir/<?= $pesquisa_resposta['id_resposta'] ?>">Excluir</a>
+                            <a href="/pesquisarespostas/editar/<?= $pesquisa_resposta['id_resposta'] ?>">Editar</a>
                         </td>
                     </tr>
                 <?php endforeach; ?>
