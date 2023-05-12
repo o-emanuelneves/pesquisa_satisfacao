@@ -17,7 +17,8 @@ body{
    
 }
 .container-questions {
-   border: 1px solid #00386B;
+   border: 2px solid #00386B;
+   padding: 20px;
    outline: none;
    margin-bottom: 10px;
    margin-top: 12px;
@@ -47,7 +48,7 @@ body{
 
                  
 .button{
-   width: 97.7%;
+   width: 96.7%;
    display: flex;
    justify-content: end;
    margin-top: 10px;
@@ -61,11 +62,12 @@ body{
    gap: 10px;
    position: relative;
    width: 120px;
-   height: 41px;
+   height: 56px;
    background: #FFFFFF;
    border-radius: 8px;
-   border: 1px solid #00386B;
-   cursor: pointer;        
+   border: 2px solid #00386B;
+   cursor: pointer;     
+   /* padding: 20px;    */
    
 } 
 
@@ -77,7 +79,7 @@ body{
 
 
 .fa-trash-can{
-   font-size: 20px;
+   font-size: 30px;
    cursor: pointer;
 }
 
