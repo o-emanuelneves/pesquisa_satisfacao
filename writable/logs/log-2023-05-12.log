@@ -247,3 +247,69 @@ in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
 11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
 12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
 >>>>>>> origin/gustavopesquisasperguntasvf
+CRITICAL - 2023-05-12 17:38:49 --> Undefined array key "id_resposta"
+in APPPATH\Views\pesquisarespostas\index.php on line 29.
+ 1 APPPATH\Views\pesquisarespostas\index.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_resposta"', 'C:\\xampp\\htdocs\\pesquisa_satisfacao\\app\\Views\\pesquisarespostas\\index.php', 29)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\pesquisa_satisfacao\\app\\Views\\pesquisarespostas\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/pesquisarespostas/index', [], true)
+ 5 APPPATH\Controllers\PesquisaRespostas.php(32): view('/pesquisarespostas/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-12 17:39:33 --> Undefined array key "id_resposta"
+in APPPATH\Views\pesquisarespostas\index.php on line 29.
+ 1 APPPATH\Views\pesquisarespostas\index.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_resposta"', 'C:\\xampp\\htdocs\\pesquisa_satisfacao\\app\\Views\\pesquisarespostas\\index.php', 29)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\pesquisa_satisfacao\\app\\Views\\pesquisarespostas\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/pesquisarespostas/index', [], true)
+ 5 APPPATH\Controllers\PesquisaRespostas.php(32): view('/pesquisarespostas/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-12 17:39:36 --> Undefined array key "id_resposta"
+in APPPATH\Views\pesquisarespostas\index.php on line 29.
+ 1 APPPATH\Views\pesquisarespostas\index.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_resposta"', 'C:\\xampp\\htdocs\\pesquisa_satisfacao\\app\\Views\\pesquisarespostas\\index.php', 29)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\pesquisa_satisfacao\\app\\Views\\pesquisarespostas\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/pesquisarespostas/index', [], true)
+ 5 APPPATH\Controllers\PesquisaRespostas.php(32): view('/pesquisarespostas/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-12 17:39:36 --> Undefined array key "id_resposta"
+in APPPATH\Views\pesquisarespostas\index.php on line 29.
+ 1 APPPATH\Views\pesquisarespostas\index.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_resposta"', 'C:\\xampp\\htdocs\\pesquisa_satisfacao\\app\\Views\\pesquisarespostas\\index.php', 29)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\pesquisa_satisfacao\\app\\Views\\pesquisarespostas\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/pesquisarespostas/index', [], true)
+ 5 APPPATH\Controllers\PesquisaRespostas.php(32): view('/pesquisarespostas/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-12 17:39:36 --> Undefined array key "id_resposta"
+in APPPATH\Views\pesquisarespostas\index.php on line 29.
+ 1 APPPATH\Views\pesquisarespostas\index.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_resposta"', 'C:\\xampp\\htdocs\\pesquisa_satisfacao\\app\\Views\\pesquisarespostas\\index.php', 29)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\pesquisa_satisfacao\\app\\Views\\pesquisarespostas\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/pesquisarespostas/index', [], true)
+ 5 APPPATH\Controllers\PesquisaRespostas.php(32): view('/pesquisarespostas/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-12 17:39:36 --> Undefined array key "id_resposta"
+in APPPATH\Views\pesquisarespostas\index.php on line 29.
+ 1 APPPATH\Views\pesquisarespostas\index.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_resposta"', 'C:\\xampp\\htdocs\\pesquisa_satisfacao\\app\\Views\\pesquisarespostas\\index.php', 29)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\pesquisa_satisfacao\\app\\Views\\pesquisarespostas\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/pesquisarespostas/index', [], true)
+ 5 APPPATH\Controllers\PesquisaRespostas.php(32): view('/pesquisarespostas/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
