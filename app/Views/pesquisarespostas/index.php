@@ -25,8 +25,14 @@
                     <tr>
                         <td><?= $pesquisa_resposta['fk_pesquisa'] ?></td>
                         <td><?= $pesquisa_resposta['nome'] ?></td>
+<<<<<<< HEAD
                         
                         <td><a href="http://pesquisa.satisfacao.com/pesquisarespostas">!!!</a></td>
+=======
+                        <td>
+                            <!--  -->
+                        </td>
+>>>>>>> origin/emanuel-v3
                     </tr>
                 <?php endforeach; ?>
 
