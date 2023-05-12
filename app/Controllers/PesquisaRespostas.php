@@ -21,9 +21,14 @@ class PesquisaRespostas extends Controller
     public function index()
     {
         $pesquisa_respostas = $this->pesquisa_respostas_model->findAll();
-
-        $data['pesquisa_respostas'] = $pesquisa_respostas;
-        
+        $model = new Pesquisa_RespostasModel();
+        // $data['pesquisa_respostas'] = $pesquisa_respostas;
+        $data['pesquisa_respostas'] = $model
+        ->select('pesquisa_respostas.fk_pesquisa, auth_users.nome, pesquisa_perguntas.pergunta, pesquisa_respostas.resposta')
+        ->join('pesquisas', 'pesquisas.id_pesquisa = pesquisa_respostas.fk_pesquisa')
+        ->join('auth_users', 'auth_users.id_user = pesquisa_respostas.fk_user')
+        ->join('pesquisa_perguntas', 'pesquisa_perguntas.id_pergunta = pesquisa_respostas.fk_pergunta')
+        ->findAll();
         echo View('/pesquisarespostas/index', $data);
     }
 
