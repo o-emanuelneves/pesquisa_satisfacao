@@ -1,0 +1,75 @@
+CRITICAL - 2023-05-13 15:45:25 --> There is no data to insert.
+in SYSTEMPATH\BaseModel.php on line 1680.
+ 1 SYSTEMPATH\BaseModel.php(1680): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('insert')
+ 2 SYSTEMPATH\BaseModel.php(742): CodeIgniter\BaseModel->transformDataToArray([], 'insert')
+ 3 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([], true)
+ 4 APPPATH\Controllers\PesquisaRespostas.php(56): CodeIgniter\Model->insert([])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->store()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-13 15:45:32 --> mysqli_sql_exception: Unknown column 'pesquisa_respostas.resposta' in 'field list' in C:\xampp\htdocs\pesquisa_satisfacao\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `pesquis...', 0)
+#1 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `pesquis...')
+#2 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `pesquis...')
+#3 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `pesquis...', Array, false)
+#4 C:\xampp\htdocs\pesquisa_satisfacao\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\pesquisa_satisfacao\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\pesquisa_satisfacao\app\Controllers\PesquisaRespostas.php(31): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->index()
+#8 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+#9 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\pesquisa_satisfacao\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-05-13 15:45:32 --> Unknown column 'pesquisa_respostas.resposta' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `pesquisa_respostas`.`fk_pesquisa`, `auth_users`.`nome`, `pesquisa_perguntas`.`pergunta`, `pesquisa_respostas`.`resposta`
+FROM `pesquisa_respostas`
+JOIN `pesquisas` ON `pesquisas`.`id_pesquisa` = `pesquisa_respostas`.`fk_pesquisa`
+JOIN `auth_users` ON `auth_users`.`id_user` = `pesquisa_respostas`.`fk_user`
+JOIN `pesquisa_perguntas` ON `pesquisa_perguntas`.`id_pergunta` = `pesquisa_respostas`.`fk_pergunta`
+WHERE `pesquisa_respostas`.`deleted_at` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `pesquisa_respostas`.`fk_pesquisa`, `auth_users`.`nome`, `pesquisa_perguntas`.`pergunta`, `pesquisa_respostas`.`resposta`
+FROM `pesquisa_respostas`
+JOIN `pesquisas` ON `pesquisas`.`id_pesquisa` = `pesquisa_respostas`.`fk_pesquisa`
+JOIN `auth_users` ON `auth_users`.`id_user` = `pesquisa_respostas`.`fk_user`
+JOIN `pesquisa_perguntas` ON `pesquisa_perguntas`.`id_pergunta` = `pesquisa_respostas`.`fk_pergunta`
+WHERE `pesquisa_respostas`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `pesquisa_respostas`.`fk_pesquisa`, `auth_users`.`nome`, `pesquisa_perguntas`.`pergunta`, `pesquisa_respostas`.`resposta`
+FROM `pesquisa_respostas`
+JOIN `pesquisas` ON `pesquisas`.`id_pesquisa` = `pesquisa_respostas`.`fk_pesquisa`
+JOIN `auth_users` ON `auth_users`.`id_user` = `pesquisa_respostas`.`fk_user`
+JOIN `pesquisa_perguntas` ON `pesquisa_perguntas`.`id_pergunta` = `pesquisa_respostas`.`fk_pergunta`
+WHERE `pesquisa_respostas`.`deleted_at` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `pesquisa_respostas`.`fk_pesquisa`, `auth_users`.`nome`, `pesquisa_perguntas`.`pergunta`, `pesquisa_respostas`.`resposta`
+FROM `pesquisa_respostas`
+JOIN `pesquisas` ON `pesquisas`.`id_pesquisa` = `pesquisa_respostas`.`fk_pesquisa`
+JOIN `auth_users` ON `auth_users`.`id_user` = `pesquisa_respostas`.`fk_user`
+JOIN `pesquisa_perguntas` ON `pesquisa_perguntas`.`id_pergunta` = `pesquisa_respostas`.`fk_pergunta`
+WHERE `pesquisa_respostas`.`deleted_at` IS NULL', [], false)
+ 5 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\PesquisaRespostas.php(31): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->index()
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-13 15:57:56 --> Invalid file: "auth_users/index.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('auth_users/index.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('auth_users/index', [], true)
+ 3 APPPATH\Controllers\AuthUsers.php(20): view('auth_users/index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\AuthUsers->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthUsers))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-13 15:57:58 --> Invalid file: "auth_users/index.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('auth_users/index.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('auth_users/index', [], true)
+ 3 APPPATH\Controllers\AuthUsers.php(20): view('auth_users/index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\AuthUsers->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthUsers))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

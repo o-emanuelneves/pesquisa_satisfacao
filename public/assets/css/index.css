@@ -1,0 +1,115 @@
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #00386B;
+    
+}
+
+h1{
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; 
+
+}
+
+a{
+    text-decoration: none;
+    color: #00386B;
+}
+
+.container-modal {
+   
+    border: 1px solid #00386B;
+    margin: auto;
+    border-radius: 10px; 
+    padding: 16px 32px;
+    gap: 16px;
+    width: 80%;
+    height: auto;
+    background: #e6e6e6;      
+    box-shadow: 0px 4px 4px #00386B;
+    margin-left: 150px;
+ }
+
+.containers-buttons-index {
+    
+    gap: 30px;
+    margin-top: 100px;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; 
+   
+
+}
+
+a:hover {
+    color: none;
+    text-decoration: none;
+    
+}
+
+ .button-users{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;       
+    padding: 8px 32px;
+    gap: 10px;
+    position: relative;
+    width: 120px;
+    height: 41px;
+    background: #FFFFFF;
+    border-radius: 8px;
+    color: #00386B;
+    border: 2px solid #00386B;
+    cursor: pointer;
+  }
+    
+
+    .button-new-users{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;       
+        padding: 8px 32px;
+        gap: 10px;
+        position: relative;
+        width: 120px;
+        height: 41px;
+        background: #FFFFFF;
+        border-radius: 8px;
+        color: #00386B;
+        border: 2px solid #00386B;
+        cursor: pointer;
+    }
+
+    .button-make-a-questions {display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;       
+        padding: 8px 32px;
+        gap: 10px;
+        position: relative;
+        width: 120px;
+        height: 41px;
+        background: #FFFFFF;
+        border-radius: 8px;
+        color: #00386B;
+        border: 2px solid #00386B;
+        cursor: pointer;}
+
+
+        .gif{
+            
+            margin-top: 100px;
+            align-items: center;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center; 
+            margin-bottom: 100px;
+
+        }

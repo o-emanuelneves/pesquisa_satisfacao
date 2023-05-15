@@ -1,0 +1,142 @@
+.container-modal {
+   
+    border: 1px solid #00386B;
+    margin: auto;
+    border-radius: 10px; 
+    padding: 16px 32px;
+    gap: 16px;
+    width: 80%;
+    height: auto;
+    background: #e6e6e6;      
+    box-shadow: 0px 4px 4px #00386B;
+    margin-left: 150px;
+ }
+
+ .bottons-table {
+    display: inline;
+    margin-right: 30px
+ }
+
+
+ thead {
+    color: rgb(209, 28, 28);
+ }
+
+ a:hover {
+    color: none;
+    text-decoration: none;}
+
+    a{
+        text-decoration: none;
+        color: #00386B;
+    }
+
+
+    
+.botton-excluir {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;       
+    padding: 8px 32px;
+    gap: 10px;
+    position: relative;
+    width: 30px;
+    height: 11px;
+    background: #FFFFFF;
+    border-radius: 8px;
+    color: #00386B;
+    border: 2px solid #00386B;
+    cursor: pointer;
+    margin-bottom: 10px ;
+}
+.botton-ver{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;       
+    padding: 8px 32px;
+    gap: 10px;
+    position: relative;
+    width: 30px;
+    height: 11px;
+    background: #FFFFFF;
+    border-radius: 8px;
+    color: #00386B;
+    border: 2px solid #00386B;
+    cursor: pointer;
+
+}
+
+ .new-users {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;       
+    padding: 8px 32px;
+    gap: 10px;
+    position: relative;
+    width: 120px;
+    height: 41px;
+    background: #FFFFFF;
+    border-radius: 8px;
+    color: #00386B;
+    border: 2px solid #00386B;
+    cursor: pointer;
+  }
+ 
+
+
+
+
+table, th, td{
+    border: 1px solid #00386B   
+}
+
+.style-table {
+    overflow-x: auto;
+
+}
+
+table  {
+   
+    
+    margin-top: 30px;
+    margin-bottom: 50px;
+    color: #00386B;
+    border-collapse: collapse;
+    width: 100%;
+    table-layout: auto;
+}
+
+th {
+    text-align: left;
+    height: 25px;
+    vertical-align: bottom;
+    height: 40px;
+}
+
+
+th, td {
+    padding: 15px;
+    border-spacing: 10px;
+}
+
+
+
+  
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
