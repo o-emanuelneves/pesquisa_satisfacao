@@ -7,30 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Pergunta</title>
 
-    
-   <link rel="stylesheet" href="/plugin/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="/plugin/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="/assets/css/questions.css">
-
-
-    
-
-  
 </head>
 
 <body>
-<input type="number" class="usersid"> name="fk_user"> </div>
+    <input type="number" class="usersid"> name="fk_user"> </div>
 
-
-
-
-
-<div class="container-modal">
-    
-     <form action="/PesquisaPerguntas/store" method="post">
- 
-        
+    <div class="container-modal">
+        <form action="/PesquisaPerguntas/store" method="post">
             <h1 class="left-align">Perguntas</h1>
-
 
             <div class="btn-plus">
                 <div class="button-plus">
@@ -38,82 +24,45 @@
                 </div>
             </div>
 
-            
             <div class="questions">
-                
-                <label for="pergunta"></label>           
-                <input type="text" placeholder="Pergunta 1" name="pergunta[]" class="container-questions" id='pergunta'> 
-                <i class="fa-solid fa-trash-can"></i>           
-            
-
-
+                <label for="pergunta"></label>
+                <input type="text" placeholder="Pergunta 1" name="pergunta" class="container-questions" id='pergunta'>
+                <i class="fa-solid fa-trash-can"></i>
             </div>
 
-
             <div class="questions">
-
-                <form action="/PesquisaPerguntas/store" method="post">
                 <label for="pergunta2"></label>
-                <input type="text" placeholder="Pergunta 2" name="pergunta[]" class="container-questions" id='pesquisa2'>
-                <i class="fa-solid fa-trash-can"></i>              
-                
-                
+                <input type="text" placeholder="Pergunta 2" name="pergunta" class="container-questions" id='pesquisa2'>
+                <i class="fa-solid fa-trash-can"></i>
             </div>
 
 
             <div class="questions">
-                <form action="/PesquisaPerguntas/store" method="post">
                 <label for="pergunta3"></label>
-                <input type="text" placeholder="Pergunta 3" name="pergunta[]" class="container-questions" id='pergunta3'>
+                <input type="text" placeholder="Pergunta 3" name="pergunta" class="container-questions" id='pergunta3'>
                 <i class="fa-solid fa-trash-can"></i>
-              
             </div>
 
-
             <div class="questions">
-                <form action="/PesquisaPerguntas/store" method="post"> 
-                <label for="pergunta4"></label>     
-                <input type="text" placeholder="Pergunta 4" name="pergunta[]"class="container-questions" id='pergunta4'>
+                <label for="pergunta4"></label>
+                <input type="text" placeholder="Pergunta 4" name="pergunta" class="container-questions" id='pergunta4'>
                 <i class="fa-solid fa-trash-can"></i>
-                          
             </div>
-        
 
             <div class="questions">
-                <form action="/PesquisaPerguntas/store" method="post">
                 <label for="pergunta5"></label>
-                <input type="text" placeholder="Pergunta 5" name="pergunta[]" class="container-questions" id='pergunta5'>
+                <input type="text" placeholder="Pergunta 5" name="pergunta" class="container-questions" id='pergunta5'>
                 <i class="fa-solid fa-trash-can"></i>
-              
             </div>
 
-            
-      
-    
-             
-             
-             
-
-
-
-
-
-        <div class="button">
-            <label for="fk_user">
-                
-            </label>
-            
-            
+            <div class="button">
                 <input type="submit" value="Salvar" class="button-save">
-           
-        </div>
+            </div>
 
+            <input type="text" placeholder="fk_user" name="fk_user" class="container-questions" id='fk_user'>
 
-    </form>
-
-
-</div>
-
+        </form>
+    </div>
 </body>
 
 </html>

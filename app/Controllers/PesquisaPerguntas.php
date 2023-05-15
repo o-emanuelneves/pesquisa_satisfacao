@@ -18,9 +18,11 @@ class PesquisaPerguntas extends Controller{
     public function novo(){
         echo View('pesquisa_perguntas/novo');
     }
+
     public function store(){
         $dados = $this->request->getVar();
         $this->pesquisa_perguntas_model->insert($dados);
+
     }
 
 

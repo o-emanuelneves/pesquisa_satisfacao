@@ -11,8 +11,8 @@ class PesquisaPerguntas extends Migration
         $this->forge->addField([
             'id_pergunta'         => [
                 'type'           => 'INT',
-                'constraint'     => 9, 
-                'usigned'        => true, 
+                'constraint'     => 9,
+                'usigned'        => true,
                 'auto_increment' => true,
             ],
             'fk_user'         => [
@@ -38,7 +38,6 @@ class PesquisaPerguntas extends Migration
         $this->forge->addKey('id_pergunta', true);
         $this->forge->addForeignKey('fk_user', 'auth_users', 'id_user');
         $this->forge->createTable('pesquisa_perguntas');
-       
     }
 
     public function down()
