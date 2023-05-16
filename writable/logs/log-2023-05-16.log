@@ -489,3 +489,12 @@ in SYSTEMPATH\Database\BaseBuilder.php on line 1772.
  7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaPerguntas))
  8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-16 17:35:28 --> Undefined array key "newpergunta"
+in APPPATH\Services\Pesquisa\PerguntasSrvc.php on line 15.
+ 1 APPPATH\Services\Pesquisa\PerguntasSrvc.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "newpergunta"', 'C:\\xampp\\htdocs\\pesquisa_satisfacao\\app\\Services\\Pesquisa\\PerguntasSrvc.php', 15)
+ 2 APPPATH\Models\Pesquisa_PerguntasModel.php(29): App\Services\Pesquisa\PerguntasSrvc->returnInsert()
+ 3 APPPATH\Controllers\PesquisaPerguntas.php(27): App\Models\Pesquisa_PerguntasModel->set_perguntas([...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaPerguntas->store()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaPerguntas))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

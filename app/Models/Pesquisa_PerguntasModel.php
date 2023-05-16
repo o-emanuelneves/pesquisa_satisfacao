@@ -25,9 +25,16 @@ class Pesquisa_PerguntasModel extends Model
 
         $dadosDb = $this->get_perguntas();
         $service = new PerguntasSrvc($dados, $dadosDb);
-        $array = $service->returnInsert();
-        
-        $this->insertBatch($array);
+
+        $idsDelete = $service->idsDelete();
+        $this->delete_perguntas($idsDelete);
+
+        $update = $service->returnUpdate();
+        $arrayInsert = $service->returnInsert();
+        $merge = array_merge($update, $arrayInsert);
+
+        $this->insertBatch($merge);
+
         return true;
     }
 
@@ -35,5 +42,7 @@ class Pesquisa_PerguntasModel extends Model
         return $this->find();
     }
 
-    
+    public function delete_perguntas($ids) {
+        $this->whereIn('id_pergunta', $ids)->delete();
+    } 
 }

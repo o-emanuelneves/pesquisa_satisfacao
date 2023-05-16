@@ -30,7 +30,7 @@
                     <div class="questions">
                         <label for=""></label>
 
-                        <input type="text" placeholder="" name="pergunta[]" class="container-questions" value="<?= $pergunta['pergunta'] ?>" id="<?= $pergunta['id_pergunta'] ?>">
+                        <input type="text" placeholder="" name="pergunta[<?= $pergunta['id_pergunta'] ?>]" class="container-questions" value="<?= $pergunta['pergunta'] ?>" id="<?= $pergunta['id_pergunta'] ?>">
 
                         <i class="fa-solid fa-trash-can delete-question" onclick="deleteButton(this)"></i>
                     </div>
@@ -47,7 +47,7 @@
 
     <div class="questionTemplate d-none">
         <label for=""></label>
-        <input type="text" placeholder="" name="pergunta[]" class="container-questions">
+        <input type="text" placeholder="" name="newpergunta[]" class="container-questions">
         <i class="fa-solid fa-trash-can delete-question"></i>
     </div>
 </body>
@@ -86,9 +86,7 @@
         const divDelete = elem.parentNode;
         const input = divDelete.getElementsByTagName('input')[0];
         const id = input.getAttribute('id');
-
         if (!window.confirm("Deseja deletar?")) return false;
-
         fetch(`/pesquisaperguntas/delete/${id}`).then(() => divDelete.remove());
     }
 </script>

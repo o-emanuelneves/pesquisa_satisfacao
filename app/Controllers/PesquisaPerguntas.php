@@ -23,7 +23,7 @@ class PesquisaPerguntas extends Controller{
 
     public function store(){
         $dados = $this->request->getVar();
-        
+
         $return = $this->pesquisa_perguntas_model->set_perguntas($dados);
 
         if ($return) return json_encode(['Ok']);
@@ -35,6 +35,9 @@ class PesquisaPerguntas extends Controller{
         $this->pesquisa_perguntas_model->where('id_pergunta', $id)->delete();
     }
 
+    public function mostraId($id){
+        return $id;
+    }
     
 
 
