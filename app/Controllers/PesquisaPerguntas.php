@@ -20,7 +20,12 @@ class PesquisaPerguntas extends Controller{
     }
     public function store(){
         $dados = $this->request->getVar();
-        $this->pesquisa_perguntas_model->insert($dados);
+        
+        $return = $this->pesquisa_perguntas_model->set_perguntas($dados);
+
+        if ($return) return json_encode(['Ok']);
+
+        return json_encode(['Erro!']);
     }
 
 

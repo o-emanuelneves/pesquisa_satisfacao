@@ -18,4 +18,20 @@ class Pesquisa_PerguntasModel extends Model
     protected $createdField = 'created_at';
     protected $updatedField = 'updated_at';
     protected $deletedField = 'deleted_at';
+
+    public function set_perguntas($dados) {
+        if (!$dados) return false;
+
+        $array = array_map(function($pergunta) {
+            return [
+                'fk_user' => 1,
+                'pergunta' => $pergunta
+            ];
+        }, $dados['pergunta']);
+        
+        $this->insertBatch($array);
+        return true;
+    }
+
+    
 }
