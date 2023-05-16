@@ -146,37 +146,4 @@ body{
    background-color: #00386B;
    outline:none;
    padding:8px;
-
-
-
-
-
-
-   /* PARTE ESDRAS */
-
-   
-}
-#btn1{
- display: none;
-}
-#btn2 {
-   display: none;
-}
-#btn3 {
-   display: none;
-}
-label{
-   font-size: 24px;
-}
-
-#btn1:checked{
-   background:green;
-}
-
-#btn2 {
-   background: yellow;
-}
-
-#btn3 {
-   background: red;
 }
