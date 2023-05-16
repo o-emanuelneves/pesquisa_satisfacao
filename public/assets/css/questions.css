@@ -1,13 +1,20 @@
 body{  
     color: #00386B;
     font-size: 8px; 
-  
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.d-none {
+   display:none !important;
 }
 
 ::placeholder {
-   color: #00386B;
+    color: #00386B;
+    padding: 24px;
+   
 }
 .questions{
+   
    display: flex;
    flex-direction: row;
    flex-wrap: nowrap;
@@ -17,12 +24,13 @@ body{
    
 }
 .container-questions {
-   border: 1px solid #00386B;
+   
+   border: 2px solid #00386B;
    outline: none;
    margin-bottom: 10px;
    margin-top: 12px;
    border-radius: 10px;      
-   Height: 46px; 
+   Height: 56px; 
    width:100%
   
 
@@ -32,7 +40,9 @@ body{
 
 
 .container-modal {
-   border: 0px solid #00386B;
+
+   
+   border: 2px solid #00386B;
    margin: auto;
    border-radius: 10px; 
    padding: 16px 32px;
@@ -41,17 +51,19 @@ body{
    height: auto;
    background: #ffffff;      
    box-shadow: 0px 4px 4px #00386B;
-   margin-left: 150px;
+   
 }
 
                  
 .button{
+   
    width: 97.7%;
    display: flex;
    justify-content: end;
    margin-top: 10px;
 }
 .button-save{
+   
    display: flex;
    flex-direction: row;
    justify-content: center;
@@ -63,8 +75,10 @@ body{
    height: 41px;
    background: #FFFFFF;
    border-radius: 8px;
-   border: 1px solid #00386B;
-   cursor: pointer;        
+   border: 2px solid #00386B;
+   cursor: pointer; 
+   color: #00386B;     
+
    
 } 
 
@@ -82,10 +96,11 @@ body{
 
 
 .btn-plus {
-   width: 97.4%;
-   display: flex;
-   justify-content: end;
+   align-items: center;
+   justify-content: space-around;
+   display: flex;  
    padding-bottom: 25px;
+   flex-direction: column;
 
 
 }
