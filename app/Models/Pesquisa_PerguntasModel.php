@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use CodeIgniter\Model;
+use App\Services\Pesquisa\PerguntasSrvc;
 
 class Pesquisa_PerguntasModel extends Model
 {
@@ -22,15 +23,16 @@ class Pesquisa_PerguntasModel extends Model
     public function set_perguntas($dados) {
         if (!$dados) return false;
 
-        $array = array_map(function($pergunta) {
-            return [
-                'fk_user' => 1,
-                'pergunta' => $pergunta
-            ];
-        }, $dados['pergunta']);
+        $dadosDb = $this->get_perguntas();
+        $service = new PerguntasSrvc($dados, $dadosDb);
+        $array = $service->returnInsert();
         
         $this->insertBatch($array);
         return true;
+    }
+
+    public function get_perguntas(){
+        return $this->find();
     }
 
     

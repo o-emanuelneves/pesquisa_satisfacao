@@ -16,8 +16,11 @@ class PesquisaPerguntas extends Controller{
 
 
     public function novo(){
-        echo View('pesquisa_perguntas/novo');
+        $perguntas = $this->pesquisa_perguntas_model->find();
+        $data['perguntas'] = $perguntas;
+        echo View('pesquisa_perguntas/novo', $data);
     }
+
     public function store(){
         $dados = $this->request->getVar();
         
@@ -27,6 +30,12 @@ class PesquisaPerguntas extends Controller{
 
         return json_encode(['Erro!']);
     }
+
+    public function delete($id) {
+        $this->pesquisa_perguntas_model->where('id_pergunta', $id)->delete();
+    }
+
+    
 
 
 }
