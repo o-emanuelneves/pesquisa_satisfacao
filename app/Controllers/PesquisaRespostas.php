@@ -15,7 +15,17 @@ class PesquisaRespostas extends Controller
     }
 
     public function novo(){
-        echo View('pesquisarespostas/novo');
+        $dia = $this->retornaDia();
+        $dia = 11;
+        if ($dia <= 10) {
+            echo View('pesquisarespostas/novo');
+        }
+        else{
+            header('Location: http://pesquisa.satisfacao.com/');
+            exit;
+        }
+                
+        
     }
 
     public function index()
@@ -29,6 +39,7 @@ class PesquisaRespostas extends Controller
         ->join('auth_users', 'auth_users.id_user = pesquisa_respostas.fk_user')
         ->join('pesquisa_perguntas', 'pesquisa_perguntas.id_pergunta = pesquisa_respostas.fk_pergunta')
         ->findAll();
+
         echo View('/pesquisarespostas/index', $data);
     }
 
@@ -63,6 +74,23 @@ class PesquisaRespostas extends Controller
         $this->pesquisa_respostas_model->where('id_resposta', $id_resposta)->delete();
 
         return redirect()->to('http://pesquisa.satisfacao.com/pesquisarespostas');
+    }
+
+    public function retornaDia()
+    {
+        date_default_timezone_set('America/Sao_Paulo');
+        $dia = date('d');
+        return $dia;
+    }
+
+    public function temAcesso(){
+        $dia = $this->retornaDia();
+        if ($dia <= 10){
+            return true;
+        }
+        header('Location: http://pesquisa.satisfacao.com/');
+        exit;
+
     }
 }
 

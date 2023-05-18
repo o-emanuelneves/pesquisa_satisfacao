@@ -1,6 +1,9 @@
 <?php 
 namespace App\Controllers;
 
+
+require_once '../Services/Pesquisa/PerguntasSrvc.php';
+
 use App\Models\Auth_UserModel;
 use App\Models\Pesquisa_PerguntasModel;
 use CodeIgniter\Controller;
@@ -24,7 +27,7 @@ class PesquisaPerguntas extends Controller{
     public function store(){
         $dados = $this->request->getVar();
 
-        $return = $this->pesquisa_perguntas_model->set_perguntas($dados);
+        $return = $this->pesquisa_perguntas_model->set_perguntas($dados ?? []);
 
         if ($return) return json_encode(['Ok']);
 
@@ -38,6 +41,8 @@ class PesquisaPerguntas extends Controller{
     public function mostraId($id){
         return $id;
     }
+
+    
     
 
 

@@ -18,7 +18,7 @@ class Pesquisas extends Controller
     public function index(){
         $pesquisas = $this->pesquisas_model->findAll();
         $data['pesquisas'] = $pesquisas;
-
+       
         echo View('pesquisas/index', $data);
     }
 

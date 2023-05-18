@@ -1,0 +1,54 @@
+CRITICAL - 2023-05-18 11:42:39 --> CodeIgniter\BaseModel::doProtectFields(): Argument #1 ($data) must be of type array, string given, called in C:\xampp\htdocs\pesquisa_satisfacao\system\BaseModel.php on line 850
+in SYSTEMPATH\BaseModel.php on line 1235.
+ 1 SYSTEMPATH\BaseModel.php(850): CodeIgniter\BaseModel->doProtectFields('Você está satisfeito com a empresa?')
+ 2 APPPATH\Models\Pesquisa_PerguntasModel.php(36): CodeIgniter\BaseModel->insertBatch([...])
+ 3 APPPATH\Controllers\PesquisaPerguntas.php(27): App\Models\Pesquisa_PerguntasModel->set_perguntas([...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaPerguntas->store()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaPerguntas))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-18 11:44:34 --> CodeIgniter\BaseModel::doProtectFields(): Argument #1 ($data) must be of type array, string given, called in C:\xampp\htdocs\pesquisa_satisfacao\system\BaseModel.php on line 850
+in SYSTEMPATH\BaseModel.php on line 1235.
+ 1 SYSTEMPATH\BaseModel.php(850): CodeIgniter\BaseModel->doProtectFields('Você está satisfeito com a empresa?')
+ 2 APPPATH\Models\Pesquisa_PerguntasModel.php(36): CodeIgniter\BaseModel->insertBatch([...])
+ 3 APPPATH\Controllers\PesquisaPerguntas.php(27): App\Models\Pesquisa_PerguntasModel->set_perguntas([...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaPerguntas->store()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaPerguntas))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-18 11:46:07 --> CodeIgniter\BaseModel::doProtectFields(): Argument #1 ($data) must be of type array, string given, called in C:\xampp\htdocs\pesquisa_satisfacao\system\BaseModel.php on line 850
+in SYSTEMPATH\BaseModel.php on line 1235.
+ 1 SYSTEMPATH\BaseModel.php(850): CodeIgniter\BaseModel->doProtectFields('Você está satisfeito com seu emprego?')
+ 2 APPPATH\Models\Pesquisa_PerguntasModel.php(36): CodeIgniter\BaseModel->insertBatch([...])
+ 3 APPPATH\Controllers\PesquisaPerguntas.php(27): App\Models\Pesquisa_PerguntasModel->set_perguntas([...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaPerguntas->store()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaPerguntas))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-18 11:47:35 --> CodeIgniter\BaseModel::doProtectFields(): Argument #1 ($data) must be of type array, string given, called in C:\xampp\htdocs\pesquisa_satisfacao\system\BaseModel.php on line 850
+in SYSTEMPATH\BaseModel.php on line 1235.
+ 1 SYSTEMPATH\BaseModel.php(850): CodeIgniter\BaseModel->doProtectFields('Você está satisfeito com seu emprego?')
+ 2 APPPATH\Models\Pesquisa_PerguntasModel.php(36): CodeIgniter\BaseModel->insertBatch([...])
+ 3 APPPATH\Controllers\PesquisaPerguntas.php(27): App\Models\Pesquisa_PerguntasModel->set_perguntas([...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaPerguntas->store()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaPerguntas))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-18 11:52:08 --> CodeIgniter\BaseModel::doProtectFields(): Argument #1 ($data) must be of type array, string given, called in C:\xampp\htdocs\pesquisa_satisfacao\system\BaseModel.php on line 850
+in SYSTEMPATH\BaseModel.php on line 1235.
+ 1 SYSTEMPATH\BaseModel.php(850): CodeIgniter\BaseModel->doProtectFields('Você está satisfeito com seu emprego?')
+ 2 APPPATH\Models\Pesquisa_PerguntasModel.php(36): CodeIgniter\BaseModel->insertBatch([...])
+ 3 APPPATH\Controllers\PesquisaPerguntas.php(27): App\Models\Pesquisa_PerguntasModel->set_perguntas([...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaPerguntas->store()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaPerguntas))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-18 11:53:29 --> CodeIgniter\BaseModel::doProtectFields(): Argument #1 ($data) must be of type array, string given, called in C:\xampp\htdocs\pesquisa_satisfacao\system\BaseModel.php on line 850
+in SYSTEMPATH\BaseModel.php on line 1235.
+ 1 SYSTEMPATH\BaseModel.php(850): CodeIgniter\BaseModel->doProtectFields('nivel satisfacao')
+ 2 APPPATH\Models\Pesquisa_PerguntasModel.php(36): CodeIgniter\BaseModel->insertBatch([...])
+ 3 APPPATH\Controllers\PesquisaPerguntas.php(27): App\Models\Pesquisa_PerguntasModel->set_perguntas([...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaPerguntas->store()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaPerguntas))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
