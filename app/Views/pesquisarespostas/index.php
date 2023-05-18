@@ -13,18 +13,19 @@
         <table border="1px">
             <thead>
                 <tr>
-                    <th>Id Pesquisa</th>
+                    <th>Id</th>
                     <th>Nome</th>
-                    
+                    <th>Satisfação</th>
                     <th>Ações</th>
                 </tr>
             </thead>
             <tbody>
 
-                <?php foreach ($pesquisa_respostas as $pesquisa_resposta) : ?>
+                <?php foreach ($pesquisas as $key => $pesquisa) : ?>
                     <tr>
-                        <td><?= $pesquisa_resposta['fk_pesquisa'] ?></td>
-                        <td><?= $pesquisa_resposta['nome'] ?></td>
+                        <td><?= $key ?></td>
+                        <td><?= $pesquisa['nome'] ?></td>
+                        <td><?= $pesquisa['satisfacao'] ?>%</td>
                         <td>
                             <!--  -->
                         </td>

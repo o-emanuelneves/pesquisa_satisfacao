@@ -498,3 +498,325 @@ in APPPATH\Services\Pesquisa\PerguntasSrvc.php on line 15.
  5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaPerguntas))
  6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-16 17:50:03 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')
+AND `deleted_at` IS NULL' at line 2 in C:\xampp\htdocs\pesquisa_satisfacao\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `pesquis...', 0)
+#1 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `pesquis...')
+#2 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `pesquis...')
+#3 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `pesquis...', Array, false)
+#4 C:\xampp\htdocs\pesquisa_satisfacao\system\Model.php(453): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 C:\xampp\htdocs\pesquisa_satisfacao\system\BaseModel.php(1065): CodeIgniter\Model->doDelete(NULL, false)
+#6 C:\xampp\htdocs\pesquisa_satisfacao\app\Models\Pesquisa_PerguntasModel.php(46): CodeIgniter\BaseModel->delete()
+#7 C:\xampp\htdocs\pesquisa_satisfacao\app\Models\Pesquisa_PerguntasModel.php(30): App\Models\Pesquisa_PerguntasModel->delete_perguntas(Array)
+#8 C:\xampp\htdocs\pesquisa_satisfacao\app\Controllers\PesquisaPerguntas.php(27): App\Models\Pesquisa_PerguntasModel->set_perguntas(Array)
+#9 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(934): App\Controllers\PesquisaPerguntas->store()
+#10 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaPerguntas))
+#11 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\pesquisa_satisfacao\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-05-16 17:50:03 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')
+AND `deleted_at` IS NULL' at line 2
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `pesquisa_perguntas` SET `deleted_at` = \'2023-05-16 17:50:03\', `updated_at` = \'2023-05-16 17:50:03\'
+WHERE `id_pergunta` IN ()
+AND `deleted_at` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `pesquisa_perguntas` SET `deleted_at` = \'2023-05-16 17:50:03\', `updated_at` = \'2023-05-16 17:50:03\'
+WHERE `id_pergunta` IN ()
+AND `deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `pesquisa_perguntas` SET `deleted_at` = \'2023-05-16 17:50:03\', `updated_at` = \'2023-05-16 17:50:03\'
+WHERE `id_pergunta` IN ()
+AND `deleted_at` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `pesquisa_perguntas` SET `deleted_at` = :deleted_at:, `updated_at` = :updated_at:
+WHERE `id_pergunta` IN :id_pergunta:
+AND `deleted_at` IS NULL', [...], false)
+ 5 SYSTEMPATH\Model.php(453): CodeIgniter\Database\BaseBuilder->update([...])
+ 6 SYSTEMPATH\BaseModel.php(1065): CodeIgniter\Model->doDelete(null, false)
+ 7 APPPATH\Models\Pesquisa_PerguntasModel.php(46): CodeIgniter\BaseModel->delete()
+ 8 APPPATH\Models\Pesquisa_PerguntasModel.php(30): App\Models\Pesquisa_PerguntasModel->delete_perguntas([])
+ 9 APPPATH\Controllers\PesquisaPerguntas.php(27): App\Models\Pesquisa_PerguntasModel->set_perguntas([...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaPerguntas->store()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaPerguntas))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-16 17:50:32 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')
+AND `deleted_at` IS NULL' at line 2 in C:\xampp\htdocs\pesquisa_satisfacao\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `pesquis...', 0)
+#1 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `pesquis...')
+#2 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `pesquis...')
+#3 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `pesquis...', Array, false)
+#4 C:\xampp\htdocs\pesquisa_satisfacao\system\Model.php(453): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 C:\xampp\htdocs\pesquisa_satisfacao\system\BaseModel.php(1065): CodeIgniter\Model->doDelete(NULL, false)
+#6 C:\xampp\htdocs\pesquisa_satisfacao\app\Models\Pesquisa_PerguntasModel.php(46): CodeIgniter\BaseModel->delete()
+#7 C:\xampp\htdocs\pesquisa_satisfacao\app\Models\Pesquisa_PerguntasModel.php(30): App\Models\Pesquisa_PerguntasModel->delete_perguntas(Array)
+#8 C:\xampp\htdocs\pesquisa_satisfacao\app\Controllers\PesquisaPerguntas.php(27): App\Models\Pesquisa_PerguntasModel->set_perguntas(Array)
+#9 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(934): App\Controllers\PesquisaPerguntas->store()
+#10 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaPerguntas))
+#11 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\pesquisa_satisfacao\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-05-16 17:50:32 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')
+AND `deleted_at` IS NULL' at line 2
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `pesquisa_perguntas` SET `deleted_at` = \'2023-05-16 17:50:32\', `updated_at` = \'2023-05-16 17:50:32\'
+WHERE `id_pergunta` IN ()
+AND `deleted_at` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `pesquisa_perguntas` SET `deleted_at` = \'2023-05-16 17:50:32\', `updated_at` = \'2023-05-16 17:50:32\'
+WHERE `id_pergunta` IN ()
+AND `deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `pesquisa_perguntas` SET `deleted_at` = \'2023-05-16 17:50:32\', `updated_at` = \'2023-05-16 17:50:32\'
+WHERE `id_pergunta` IN ()
+AND `deleted_at` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `pesquisa_perguntas` SET `deleted_at` = :deleted_at:, `updated_at` = :updated_at:
+WHERE `id_pergunta` IN :id_pergunta:
+AND `deleted_at` IS NULL', [...], false)
+ 5 SYSTEMPATH\Model.php(453): CodeIgniter\Database\BaseBuilder->update([...])
+ 6 SYSTEMPATH\BaseModel.php(1065): CodeIgniter\Model->doDelete(null, false)
+ 7 APPPATH\Models\Pesquisa_PerguntasModel.php(46): CodeIgniter\BaseModel->delete()
+ 8 APPPATH\Models\Pesquisa_PerguntasModel.php(30): App\Models\Pesquisa_PerguntasModel->delete_perguntas([])
+ 9 APPPATH\Controllers\PesquisaPerguntas.php(27): App\Models\Pesquisa_PerguntasModel->set_perguntas([...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaPerguntas->store()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaPerguntas))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-16 17:56:00 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')
+AND `deleted_at` IS NULL' at line 2 in C:\xampp\htdocs\pesquisa_satisfacao\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `pesquis...', 0)
+#1 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `pesquis...')
+#2 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `pesquis...')
+#3 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `pesquis...', Array, false)
+#4 C:\xampp\htdocs\pesquisa_satisfacao\system\Model.php(453): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 C:\xampp\htdocs\pesquisa_satisfacao\system\BaseModel.php(1065): CodeIgniter\Model->doDelete(NULL, false)
+#6 C:\xampp\htdocs\pesquisa_satisfacao\app\Models\Pesquisa_PerguntasModel.php(46): CodeIgniter\BaseModel->delete()
+#7 C:\xampp\htdocs\pesquisa_satisfacao\app\Models\Pesquisa_PerguntasModel.php(30): App\Models\Pesquisa_PerguntasModel->delete_perguntas(Array)
+#8 C:\xampp\htdocs\pesquisa_satisfacao\app\Controllers\PesquisaPerguntas.php(27): App\Models\Pesquisa_PerguntasModel->set_perguntas(Array)
+#9 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(934): App\Controllers\PesquisaPerguntas->store()
+#10 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaPerguntas))
+#11 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\pesquisa_satisfacao\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-05-16 17:56:00 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')
+AND `deleted_at` IS NULL' at line 2
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `pesquisa_perguntas` SET `deleted_at` = \'2023-05-16 17:56:00\', `updated_at` = \'2023-05-16 17:56:00\'
+WHERE `id_pergunta` IN ()
+AND `deleted_at` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `pesquisa_perguntas` SET `deleted_at` = \'2023-05-16 17:56:00\', `updated_at` = \'2023-05-16 17:56:00\'
+WHERE `id_pergunta` IN ()
+AND `deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `pesquisa_perguntas` SET `deleted_at` = \'2023-05-16 17:56:00\', `updated_at` = \'2023-05-16 17:56:00\'
+WHERE `id_pergunta` IN ()
+AND `deleted_at` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `pesquisa_perguntas` SET `deleted_at` = :deleted_at:, `updated_at` = :updated_at:
+WHERE `id_pergunta` IN :id_pergunta:
+AND `deleted_at` IS NULL', [...], false)
+ 5 SYSTEMPATH\Model.php(453): CodeIgniter\Database\BaseBuilder->update([...])
+ 6 SYSTEMPATH\BaseModel.php(1065): CodeIgniter\Model->doDelete(null, false)
+ 7 APPPATH\Models\Pesquisa_PerguntasModel.php(46): CodeIgniter\BaseModel->delete()
+ 8 APPPATH\Models\Pesquisa_PerguntasModel.php(30): App\Models\Pesquisa_PerguntasModel->delete_perguntas([])
+ 9 APPPATH\Controllers\PesquisaPerguntas.php(27): App\Models\Pesquisa_PerguntasModel->set_perguntas([...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaPerguntas->store()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaPerguntas))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-16 17:56:03 --> syntax error, unexpected token ")"
+in APPPATH\Views\pesquisarespostas\novo.php on line 16.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('pesquisarespostas/novo', [], true)
+ 3 APPPATH\Controllers\PesquisaRespostas.php(50): view('pesquisarespostas/novo')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->novo()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-16 17:58:33 --> syntax error, unexpected token ")"
+in APPPATH\Views\pesquisarespostas\novo.php on line 16.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/pesquisarespostas/novo', [], true)
+ 3 APPPATH\Controllers\PesquisaRespostas.php(59): view('/pesquisarespostas/novo', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->novo()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-16 18:01:16 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')
+AND `deleted_at` IS NULL' at line 2 in C:\xampp\htdocs\pesquisa_satisfacao\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `pesquis...', 0)
+#1 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `pesquis...')
+#2 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `pesquis...')
+#3 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `pesquis...', Array, false)
+#4 C:\xampp\htdocs\pesquisa_satisfacao\system\Model.php(453): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 C:\xampp\htdocs\pesquisa_satisfacao\system\BaseModel.php(1065): CodeIgniter\Model->doDelete(NULL, false)
+#6 C:\xampp\htdocs\pesquisa_satisfacao\app\Models\Pesquisa_PerguntasModel.php(46): CodeIgniter\BaseModel->delete()
+#7 C:\xampp\htdocs\pesquisa_satisfacao\app\Models\Pesquisa_PerguntasModel.php(30): App\Models\Pesquisa_PerguntasModel->delete_perguntas(Array)
+#8 C:\xampp\htdocs\pesquisa_satisfacao\app\Controllers\PesquisaPerguntas.php(27): App\Models\Pesquisa_PerguntasModel->set_perguntas(Array)
+#9 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(934): App\Controllers\PesquisaPerguntas->store()
+#10 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaPerguntas))
+#11 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\pesquisa_satisfacao\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-05-16 18:01:16 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')
+AND `deleted_at` IS NULL' at line 2
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `pesquisa_perguntas` SET `deleted_at` = \'2023-05-16 18:01:16\', `updated_at` = \'2023-05-16 18:01:16\'
+WHERE `id_pergunta` IN ()
+AND `deleted_at` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `pesquisa_perguntas` SET `deleted_at` = \'2023-05-16 18:01:16\', `updated_at` = \'2023-05-16 18:01:16\'
+WHERE `id_pergunta` IN ()
+AND `deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `pesquisa_perguntas` SET `deleted_at` = \'2023-05-16 18:01:16\', `updated_at` = \'2023-05-16 18:01:16\'
+WHERE `id_pergunta` IN ()
+AND `deleted_at` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `pesquisa_perguntas` SET `deleted_at` = :deleted_at:, `updated_at` = :updated_at:
+WHERE `id_pergunta` IN :id_pergunta:
+AND `deleted_at` IS NULL', [...], false)
+ 5 SYSTEMPATH\Model.php(453): CodeIgniter\Database\BaseBuilder->update([...])
+ 6 SYSTEMPATH\BaseModel.php(1065): CodeIgniter\Model->doDelete(null, false)
+ 7 APPPATH\Models\Pesquisa_PerguntasModel.php(46): CodeIgniter\BaseModel->delete()
+ 8 APPPATH\Models\Pesquisa_PerguntasModel.php(30): App\Models\Pesquisa_PerguntasModel->delete_perguntas([])
+ 9 APPPATH\Controllers\PesquisaPerguntas.php(27): App\Models\Pesquisa_PerguntasModel->set_perguntas([...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaPerguntas->store()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaPerguntas))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-16 18:01:27 --> syntax error, unexpected token ")"
+in APPPATH\Views\pesquisarespostas\novo.php on line 16.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('pesquisarespostas/novo', [], true)
+ 3 APPPATH\Controllers\PesquisaRespostas.php(50): view('pesquisarespostas/novo')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->novo()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-16 18:02:33 --> syntax error, unexpected token ")"
+in APPPATH\Views\pesquisarespostas\novo.php on line 16.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('pesquisarespostas/novo', [], true)
+ 3 APPPATH\Controllers\PesquisaRespostas.php(50): view('pesquisarespostas/novo')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->novo()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-16 18:04:48 --> syntax error, unexpected token ")"
+in APPPATH\Views\pesquisarespostas\novo.php on line 16.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('pesquisarespostas/novo', [], true)
+ 3 APPPATH\Controllers\PesquisaRespostas.php(50): view('pesquisarespostas/novo')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->novo()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-16 18:06:06 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')
+AND `deleted_at` IS NULL' at line 2 in C:\xampp\htdocs\pesquisa_satisfacao\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `pesquis...', 0)
+#1 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `pesquis...')
+#2 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `pesquis...')
+#3 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `pesquis...', Array, false)
+#4 C:\xampp\htdocs\pesquisa_satisfacao\system\Model.php(453): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 C:\xampp\htdocs\pesquisa_satisfacao\system\BaseModel.php(1065): CodeIgniter\Model->doDelete(NULL, false)
+#6 C:\xampp\htdocs\pesquisa_satisfacao\app\Models\Pesquisa_PerguntasModel.php(46): CodeIgniter\BaseModel->delete()
+#7 C:\xampp\htdocs\pesquisa_satisfacao\app\Models\Pesquisa_PerguntasModel.php(30): App\Models\Pesquisa_PerguntasModel->delete_perguntas(Array)
+#8 C:\xampp\htdocs\pesquisa_satisfacao\app\Controllers\PesquisaPerguntas.php(27): App\Models\Pesquisa_PerguntasModel->set_perguntas(Array)
+#9 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(934): App\Controllers\PesquisaPerguntas->store()
+#10 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaPerguntas))
+#11 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\pesquisa_satisfacao\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-05-16 18:06:06 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')
+AND `deleted_at` IS NULL' at line 2
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `pesquisa_perguntas` SET `deleted_at` = \'2023-05-16 18:06:06\', `updated_at` = \'2023-05-16 18:06:06\'
+WHERE `id_pergunta` IN ()
+AND `deleted_at` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `pesquisa_perguntas` SET `deleted_at` = \'2023-05-16 18:06:06\', `updated_at` = \'2023-05-16 18:06:06\'
+WHERE `id_pergunta` IN ()
+AND `deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `pesquisa_perguntas` SET `deleted_at` = \'2023-05-16 18:06:06\', `updated_at` = \'2023-05-16 18:06:06\'
+WHERE `id_pergunta` IN ()
+AND `deleted_at` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `pesquisa_perguntas` SET `deleted_at` = :deleted_at:, `updated_at` = :updated_at:
+WHERE `id_pergunta` IN :id_pergunta:
+AND `deleted_at` IS NULL', [...], false)
+ 5 SYSTEMPATH\Model.php(453): CodeIgniter\Database\BaseBuilder->update([...])
+ 6 SYSTEMPATH\BaseModel.php(1065): CodeIgniter\Model->doDelete(null, false)
+ 7 APPPATH\Models\Pesquisa_PerguntasModel.php(46): CodeIgniter\BaseModel->delete()
+ 8 APPPATH\Models\Pesquisa_PerguntasModel.php(30): App\Models\Pesquisa_PerguntasModel->delete_perguntas([])
+ 9 APPPATH\Controllers\PesquisaPerguntas.php(27): App\Models\Pesquisa_PerguntasModel->set_perguntas([...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaPerguntas->store()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaPerguntas))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-16 18:06:16 --> syntax error, unexpected token ")"
+in APPPATH\Views\pesquisarespostas\novo.php on line 16.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('pesquisarespostas/novo', [], true)
+ 3 APPPATH\Controllers\PesquisaRespostas.php(50): view('pesquisarespostas/novo')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->novo()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-16 18:12:24 --> syntax error, unexpected token ")"
+in APPPATH\Views\pesquisarespostas\novo.php on line 16.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('pesquisarespostas/novo', [], true)
+ 3 APPPATH\Controllers\PesquisaRespostas.php(51): view('pesquisarespostas/novo')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->novo()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-16 18:12:26 --> syntax error, unexpected token ")"
+in APPPATH\Views\pesquisarespostas\novo.php on line 16.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('pesquisarespostas/novo', [], true)
+ 3 APPPATH\Controllers\PesquisaRespostas.php(51): view('pesquisarespostas/novo')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->novo()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-16 18:12:28 --> syntax error, unexpected token ")"
+in APPPATH\Views\pesquisarespostas\novo.php on line 16.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('pesquisarespostas/novo', [], true)
+ 3 APPPATH\Controllers\PesquisaRespostas.php(51): view('pesquisarespostas/novo')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->novo()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-16 18:12:28 --> syntax error, unexpected token ")"
+in APPPATH\Views\pesquisarespostas\novo.php on line 16.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('pesquisarespostas/novo', [], true)
+ 3 APPPATH\Controllers\PesquisaRespostas.php(51): view('pesquisarespostas/novo')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->novo()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-16 18:12:29 --> syntax error, unexpected token ")"
+in APPPATH\Views\pesquisarespostas\novo.php on line 16.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('pesquisarespostas/novo', [], true)
+ 3 APPPATH\Controllers\PesquisaRespostas.php(51): view('pesquisarespostas/novo')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->novo()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-16 18:12:29 --> syntax error, unexpected token ")"
+in APPPATH\Views\pesquisarespostas\novo.php on line 16.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('pesquisarespostas/novo', [], true)
+ 3 APPPATH\Controllers\PesquisaRespostas.php(51): view('pesquisarespostas/novo')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->novo()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-16 18:12:29 --> syntax error, unexpected token ")"
+in APPPATH\Views\pesquisarespostas\novo.php on line 16.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('pesquisarespostas/novo', [], true)
+ 3 APPPATH\Controllers\PesquisaRespostas.php(51): view('pesquisarespostas/novo')
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->novo()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

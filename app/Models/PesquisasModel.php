@@ -17,4 +17,25 @@ class PesquisasModel extends Model{
     protected $updatedField = 'updated_at';
     protected $deletedField = 'deleted_at';
 
+    public function set_pesquisa($dados) {
+        $data = [
+            'fk_user' => $dados['fk_user'],
+            'observacao' => $dados['observacao']
+        ];
+
+        $this->insert($data);
+        return $this->insertID();
+    }
+
+    public function get_pesquisa($columns = ['*']){
+        $this->select($columns);
+        return $this->find();
+    }
+
+    public function get_pesquisa_and_respostas($columns = ['*']){
+        $this->select($columns)
+        ->join('pesquisa_respostas', 'pesquisa_respostas.fk_pesquisa = pesquisas.id_pesquisa')
+        ->join('auth_users', 'auth_users.id_user = pesquisa_respostas.fk_user');
+        return $this->find();
+    }
 }

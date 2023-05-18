@@ -20,6 +20,25 @@ class Pesquisa_RespostasModel extends Model{
     protected $createdField = 'created_at';
     protected $updatedField = 'updated_at';
     protected $deletedField  = 'deleted_at';
+
+
+    public function set_respostas($dados) {
+
+        $allRows = array_map(
+            function($resposta, $keys) use($dados) {
+                return [
+                    'resposta' => $resposta,
+                    'fk_pergunta' => $keys,
+                    'fk_pesquisa'=> $dados['pesquisa']['fk_pesquisa'],
+                    'fk_user' => $dados['pesquisa']['fk_user'],
+                ];
+            }, 
+            $dados['respostas'], 
+            array_keys($dados['respostas'])
+        );
+
+        $this->insertBatch($allRows);
+    }
 }
 
 ?>

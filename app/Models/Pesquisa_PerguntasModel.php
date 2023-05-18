@@ -38,7 +38,8 @@ class Pesquisa_PerguntasModel extends Model
         return true;
     }
 
-    public function get_perguntas(){
+    public function get_perguntas($columns = ['*']){
+        $this->select($columns);
         return $this->find();
     }
 

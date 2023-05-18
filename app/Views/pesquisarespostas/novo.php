@@ -12,30 +12,29 @@
 
 <body>
     <form action="/pesquisarespostas/store" method="post">
-        <h4>
+        <div>
             <label for="resposta">Resposta</label>
-        </h4>
-      
-            <label class="btns" for="btn1">Sim</label>
-            <input type="radio" value="2" name="resposta" id="btn1"></input>
-            <label class="btns" for="btn2">Talvez</label>
-            <input type="radio" value="1" name="resposta" id="btn2"></input>
-            <label class="btns" for="btn3">Não</label>
-            <input type="radio" value="0" name="resposta" id="btn3"></input>
-   
+        </div>
 
-        <h4>
-            <label for="fk_pesquisa">Fk Pesquisa</label>
-            <input type="number" name="fk_pesquisa">
-        </h4>
-        <h4>
-            <label for="fk_user">Fk User</label>
-            <input type="number" name="fk_user">
-        </h4>
-        <h4>
-            <label for="fk_pergunta">Fk Pergunta</label>
-            <input type="number" name="fk_pergunta">
-        </h4>
+        <?php foreach ($perguntas as $pergunta) : ?>
+            <div>
+
+                <label for="<?= $pergunta['id_pergunta'] ?>"><?= $pergunta['pergunta'] ?></label>
+
+                <input type="hidden" name="respostas[<?= $pergunta['id_pergunta'] ?>]" id="<?= $pergunta['id_pergunta'] ?>" name="pergunta">
+
+                <label>Sim</label>
+                <input type="radio" value="2" name="respostas[<?= $pergunta['id_pergunta'] ?>]"></input>
+                <label>Talvez</label>
+                <input type="radio" value="1" name="respostas[<?= $pergunta['id_pergunta'] ?>]"></input>
+                <label>Não</label>
+                <input type="radio" value="0" name="respostas[<?= $pergunta['id_pergunta'] ?>]"></input>
+
+            </div>
+        <?php endforeach; ?>
+
+        <textarea name="pesquisa[observacao]" cols="30" rows="10"></textarea>
+
         <input type="submit" value="Enviar">
     </form>
 </body>

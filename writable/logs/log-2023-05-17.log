@@ -1,0 +1,91 @@
+CRITICAL - 2023-05-17 11:11:20 --> Undefined variable $perguntas
+in APPPATH\Views\pesquisarespostas\novo.php on line 16.
+ 1 APPPATH\Views\pesquisarespostas\novo.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $perguntas', 'C:\\xampp\\htdocs\\pesquisa_satisfacao\\app\\Views\\pesquisarespostas\\novo.php', 16)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\pesquisa_satisfacao\\app\\Views\\pesquisarespostas\\novo.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('pesquisarespostas/novo', [], true)
+ 5 APPPATH\Controllers\PesquisaRespostas.php(51): view('pesquisarespostas/novo')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->novo()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-17 11:15:52 --> Undefined variable $perguntas
+in APPPATH\Views\pesquisarespostas\novo.php on line 16.
+ 1 APPPATH\Views\pesquisarespostas\novo.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $perguntas', 'C:\\xampp\\htdocs\\pesquisa_satisfacao\\app\\Views\\pesquisarespostas\\novo.php', 16)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\pesquisa_satisfacao\\app\\Views\\pesquisarespostas\\novo.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('pesquisarespostas/novo', [], true)
+ 5 APPPATH\Controllers\PesquisaRespostas.php(51): view('pesquisarespostas/novo')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->novo()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-17 11:15:55 --> Undefined variable $perguntas
+in APPPATH\Views\pesquisarespostas\novo.php on line 16.
+ 1 APPPATH\Views\pesquisarespostas\novo.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $perguntas', 'C:\\xampp\\htdocs\\pesquisa_satisfacao\\app\\Views\\pesquisarespostas\\novo.php', 16)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\pesquisa_satisfacao\\app\\Views\\pesquisarespostas\\novo.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('pesquisarespostas/novo', [], true)
+ 5 APPPATH\Controllers\PesquisaRespostas.php(51): view('pesquisarespostas/novo')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->novo()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-17 11:15:56 --> Undefined variable $perguntas
+in APPPATH\Views\pesquisarespostas\novo.php on line 16.
+ 1 APPPATH\Views\pesquisarespostas\novo.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $perguntas', 'C:\\xampp\\htdocs\\pesquisa_satisfacao\\app\\Views\\pesquisarespostas\\novo.php', 16)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\pesquisa_satisfacao\\app\\Views\\pesquisarespostas\\novo.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('pesquisarespostas/novo', [], true)
+ 5 APPPATH\Controllers\PesquisaRespostas.php(51): view('pesquisarespostas/novo')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->novo()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-17 11:16:09 --> Undefined variable $perguntas
+in APPPATH\Views\pesquisarespostas\novo.php on line 16.
+ 1 APPPATH\Views\pesquisarespostas\novo.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $perguntas', 'C:\\xampp\\htdocs\\pesquisa_satisfacao\\app\\Views\\pesquisarespostas\\novo.php', 16)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\pesquisa_satisfacao\\app\\Views\\pesquisarespostas\\novo.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('pesquisarespostas/novo', [], true)
+ 5 APPPATH\Controllers\PesquisaRespostas.php(51): view('pesquisarespostas/novo')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->novo()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-17 11:16:30 --> Undefined variable $perguntas
+in APPPATH\Views\pesquisarespostas\novo.php on line 16.
+ 1 APPPATH\Views\pesquisarespostas\novo.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $perguntas', 'C:\\xampp\\htdocs\\pesquisa_satisfacao\\app\\Views\\pesquisarespostas\\novo.php', 16)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\pesquisa_satisfacao\\app\\Views\\pesquisarespostas\\novo.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('pesquisarespostas/novo', [], true)
+ 5 APPPATH\Controllers\PesquisaRespostas.php(51): view('pesquisarespostas/novo')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->novo()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-17 11:18:47 --> syntax error, unexpected token ";", expecting "function" or "const"
+in APPPATH\Controllers\PesquisaRespostas.php on line 62.
+ 1 SYSTEMPATH\Router\Router.php(507): CodeIgniter\Router\AutoRouter->getRoute('pesquisarespostas/novo')
+ 2 SYSTEMPATH\Router\Router.php(206): CodeIgniter\Router\Router->autoRoute('pesquisarespostas/novo')
+ 3 SYSTEMPATH\CodeIgniter.php(815): CodeIgniter\Router\Router->handle('pesquisarespostas/novo')
+ 4 SYSTEMPATH\CodeIgniter.php(449): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-17 11:19:32 --> Cannot redeclare App\Controllers\PesquisaRespostas::novo()
+in APPPATH\Controllers\PesquisaRespostas.php on line 54.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-05-17 11:19:48 --> Undefined variable $id_resposta
+in APPPATH\Controllers\PesquisaRespostas.php on line 51.
+ 1 APPPATH\Controllers\PesquisaRespostas.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $id_resposta', 'C:\\xampp\\htdocs\\pesquisa_satisfacao\\app\\Controllers\\PesquisaRespostas.php', 51)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->novo()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-17 11:20:34 --> Undefined variable $id_resposta
+in APPPATH\Controllers\PesquisaRespostas.php on line 51.
+ 1 APPPATH\Controllers\PesquisaRespostas.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $id_resposta', 'C:\\xampp\\htdocs\\pesquisa_satisfacao\\app\\Controllers\\PesquisaRespostas.php', 51)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->novo()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

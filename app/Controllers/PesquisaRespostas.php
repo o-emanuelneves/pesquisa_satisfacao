@@ -1,69 +1,82 @@
 <?php 
 namespace App\Controllers;
 
+use App\Models\Pesquisa_PerguntasModel;
 use App\Models\Pesquisa_RespostasModel;
+use App\Models\PesquisasModel;
 use CodeIgniter\Controller;
-use CodeIgniter\Model;
+use App\Services\Pesquisa\PesquisasSrvc;
 
 class PesquisaRespostas extends Controller
 {
     private $pesquisa_respostas_model;
+    private $pesquisa_model;
 
     function __construct()
     {
         $this->pesquisa_respostas_model = new Pesquisa_RespostasModel();
-    }
-
-    public function novo(){
-        echo View('pesquisarespostas/novo');
+        $this->pesquisa_model = new PesquisasModel();
     }
 
     public function index()
     {
-        $pesquisa_respostas = $this->pesquisa_respostas_model->findAll();
-        $model = new Pesquisa_RespostasModel();
-        // $data['pesquisa_respostas'] = $pesquisa_respostas;
-        $data['pesquisa_respostas'] = $model
-        ->select('pesquisa_respostas.fk_pesquisa, auth_users.nome, pesquisa_perguntas.pergunta, pesquisa_respostas.resposta')
-        ->join('pesquisas', 'pesquisas.id_pesquisa = pesquisa_respostas.fk_pesquisa')
-        ->join('auth_users', 'auth_users.id_user = pesquisa_respostas.fk_user')
-        ->join('pesquisa_perguntas', 'pesquisa_perguntas.id_pergunta = pesquisa_respostas.fk_pergunta')
-        ->findAll();
+
+        $service = new PesquisasSrvc();
+        $pesquisas = $this->pesquisa_model->get_pesquisa_and_respostas([
+            'nome',
+            'resposta',
+            'fk_pesquisa'
+        ]);
+
+        $pesquisaAgrupada = [];
+        foreach ($pesquisas as $pesquisa) {
+            $pesquisaAgrupada[$pesquisa['fk_pesquisa']]['nome'] = $pesquisa['nome'];
+            $pesquisaAgrupada[$pesquisa['fk_pesquisa']]['respostas'][] = $pesquisa['resposta'];
+        }
+
+        foreach ($pesquisaAgrupada as $key => $pesquisa) {
+            $pesquisaAgrupada[$key]['satisfacao'] = $service->calculateSatisfaction($pesquisa['respostas']);
+        }
+
+        $data['pesquisas'] = $pesquisaAgrupada;
+
+        // $model = new Pesquisa_RespostasModel();
+        // $data['pesquisa_respostas'] = $model
+        // ->select('pesquisa_respostas.fk_pesquisa, auth_users.nome, pesquisa_perguntas.pergunta, pesquisa_respostas.resposta')
+        // ->join('pesquisas', 'pesquisas.id_pesquisa = pesquisa_respostas.fk_pesquisa')
+        // ->join('auth_users', 'auth_users.id_user = pesquisa_respostas.fk_user')
+        // ->join('pesquisa_perguntas', 'pesquisa_perguntas.id_pergunta = pesquisa_respostas.fk_pergunta')
+        // ->findAll();
         echo View('/pesquisarespostas/index', $data);
-    }
-
-    public function editar($id_resposta)
-    {
-        $pesquisa_respostas = $this->pesquisa_respostas_model->where('id_resposta', $id_resposta)->first();
-
-        $data['pesquisa_respostas'] = $pesquisa_respostas;
-
-        echo View('/pesquisarespostas/editar', $data);
     }
 
     public function store()
     {
         $dados = $this->request->getVar();
+        
+        if(isset($dados['respostas'])):
+            $dados['pesquisa']['fk_user'] = 2;
 
-        if(isset($dados['id_resposta'])):
+            $id_pesquisa = $this->pesquisa_model->set_pesquisa($dados['pesquisa']);
+            $dados['pesquisa']['fk_pesquisa'] = $id_pesquisa;
 
-            $this->pesquisa_respostas_model->where('id_resposta', $dados['id_resposta'])->set($dados)->update();
+            $this->pesquisa_respostas_model->set_respostas($dados);
+
 
             return redirect()->to('http://pesquisa.satisfacao.com/pesquisarespostas');
 
         endif;
-
-        $this->pesquisa_respostas_model->insert($dados);
-
-        return redirect()->to('http://pesquisa.satisfacao.com/pesquisarespostas');
     }
 
-    public function excluir($id_resposta)
+    public function novo()
     {
-        $this->pesquisa_respostas_model->where('id_resposta', $id_resposta)->delete();
+        $model = new Pesquisa_PerguntasModel();
+        $data['perguntas'] = $model->get_perguntas([
+            'id_pergunta',
+            'pergunta'
+        ]);
 
-        return redirect()->to('http://pesquisa.satisfacao.com/pesquisarespostas');
+        echo View('pesquisarespostas/novo', $data);
     }
 }
-
 ?>
