@@ -1,7 +1,9 @@
 <?php 
 namespace App\Controllers;
 
+
 use App\Models\Pesquisa_RespostasModel;
+use App\Services\Pesquisa\RespostasSrvc;
 use CodeIgniter\Controller;
 use CodeIgniter\Model;
 
@@ -15,8 +17,10 @@ class PesquisaRespostas extends Controller
     }
 
     public function novo(){
-        $dia = $this->retornaDia();
-        $dia = 11;
+        $respostasSrvc = new RespostasSrvc();
+
+        $dia = $respostasSrvc->retornaDia();
+ 
         if ($dia <= 10) {
             echo View('pesquisarespostas/novo');
         }
@@ -32,7 +36,7 @@ class PesquisaRespostas extends Controller
     {
         $pesquisa_respostas = $this->pesquisa_respostas_model->findAll();
         $model = new Pesquisa_RespostasModel();
-        // $data['pesquisa_respostas'] = $pesquisa_respostas;
+        //$data['pesquisa_respostas'] = $pesquisa_respostas;
         $data['pesquisa_respostas'] = $model
         ->select('pesquisa_respostas.fk_pesquisa, auth_users.nome, pesquisa_perguntas.pergunta, pesquisa_respostas.resposta')
         ->join('pesquisas', 'pesquisas.id_pesquisa = pesquisa_respostas.fk_pesquisa')
@@ -76,21 +80,11 @@ class PesquisaRespostas extends Controller
         return redirect()->to('http://pesquisa.satisfacao.com/pesquisarespostas');
     }
 
-    public function retornaDia()
-    {
-        date_default_timezone_set('America/Sao_Paulo');
-        $dia = date('d');
-        return $dia;
-    }
-
-    public function temAcesso(){
-        $dia = $this->retornaDia();
-        if ($dia <= 10){
-            return true;
-        }
-        header('Location: http://pesquisa.satisfacao.com/');
-        exit;
-
+    public function sePreencheu(){
+        //Fazer a listagem de quem ja respondeu no banco de dados
+        // Verificar se este usuário preencheu
+        // Se sim, não mostrar a pesquisa
+        // Se não, mostrar
     }
 }
 
