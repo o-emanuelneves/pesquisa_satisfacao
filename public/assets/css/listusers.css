@@ -1,4 +1,116 @@
-.container-modal {
+ h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+ }
+
+ thead {
+    background-color: #00386B;
+    color: rgb(255, 255, 255);
+    font-family: Arial, Helvetica, sans-serif;   
+    border-radius: 10px  10px 0 0;
+    
+   
+    
+ }
+ .header-list{
+    border-radius: 10px 10px 0 0;
+    border: 1px solid blue;
+ }
+ 
+  a:hover {
+    color: none;
+    text-decoration: none;}
+
+    a{
+        text-decoration: none;
+        color: #00386B;
+    }
+
+    table {
+    
+    margin-top: 30px;
+    margin-bottom: 50px;
+    color: #00386B;
+    border-collapse: collapse;
+    width: 100%;
+    table-layout: auto; 
+    
+    
+}
+
+th {
+    text-align: center;
+    height: 25px;
+    vertical-align: bottom;
+    height: 40px; 
+   
+
+}
+
+td {
+    text-align: center;
+    
+}
+
+th, td {
+     padding: 10px;
+    border-spacing: 10px; 
+  
+}
+
+
+
+
+
+table{
+    border-radius: 10px 10px 0 0;
+    overflow: hidden;
+    border-collapse: collapse;
+    
+}
+
+.d-none{
+    display: none !important;
+}
+.acoes{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btns {
+    background-color: #00386B;
+    border-radius: 100%;         
+    width: 25px;
+    height: 25px;
+    padding: 3px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2px;
+}
+.btns1  {
+    background-color: #00386B;
+    border-radius: 100%;      
+    font-size: 10px;   
+    width: 16px;
+    height: 16px;
+    padding: 3px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2px;
+}
+
+
+.fa-ellipsis {
+    display: flex;    
+    justify-content: center;
+    align-items: center;
+   
+}
+
+ 
+ .container-modal {
    
     border: 1px solid #00386B;
     margin: auto;
@@ -8,65 +120,27 @@
     width: 80%;
     height: auto;
     background: #f9f9f9;      
-    box-shadow: 0px 4px 4px #00386B;
-    margin-left: 150px;
+    box-shadow: 1px 3px 4px #00386B;
  }
 
  .bottons-table {
-    display: inline;
-    margin-right: 30px
- }
-
-
- thead {
-    color: rgb(209, 28, 28);
- }
-
- a:hover {
-    color: none;
-    text-decoration: none;}
-
-    a{
-        text-decoration: none;
-        color: #00386B;
-    }
-
-
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0 1px 5px;
+    position: relative;
+    padding: 8px;
+    width: 90px;
+    height: 8px;
+    align-items: center;
     
-.botton-excluir {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;       
-    padding: 8px 32px;
-    gap: 10px;
-    position: relative;
-    width: 30px;
-    height: 11px;
-    background: #FFFFFF;
-    border-radius: 8px;
-    color: #00386B;
-    border: 2px solid #00386B;
-    cursor: pointer;
-    margin-bottom: 10px ;
-}
-.botton-ver{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;       
-    padding: 8px 32px;
-    gap: 10px;
-    position: relative;
-    width: 30px;
-    height: 11px;
-    background: #FFFFFF;
-    border-radius: 8px;
-    color: #00386B;
-    border: 2px solid #00386B;
-    cursor: pointer;
-
-}
+    
+ }
+ .acoes{
+    position:absolute;
+ }
 
  .new-users {
     display: flex;
@@ -77,66 +151,24 @@
     gap: 10px;
     position: relative;
     width: 120px;
-    height: 41px;
+    height: 20px;
     background: #FFFFFF;
     border-radius: 8px;
     color: #00386B;
     border: 2px solid #00386B;
     cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
   }
  
 
 
 
 
-table, th, td{
-    border: 1px solid #00386B   
-}
+
 
 .style-table {
     overflow-x: auto;
 
 }
-
-table  {
-   
-    
-    margin-top: 30px;
-    margin-bottom: 50px;
-    color: #00386B;
-    border-collapse: collapse;
-    width: 100%;
-    table-layout: auto;
-}
-
-th {
-    text-align: left;
-    height: 25px;
-    vertical-align: bottom;
-    height: 40px;
-}
-
-
-th, td {
-    padding: 15px;
-    border-spacing: 10px;
-}
-
-
-
-  
- 
- 
- 
-
-
-
-
-
-
-
-
-
-
 
 

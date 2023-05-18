@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resposta</title>
 
-    <link rel="stylesheet" href="/assets/css/questions.css">
+    <link rel="stylesheet" href="/assets/css/...">
 </head>
 
 <body>
