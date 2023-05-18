@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 CRITICAL - 2023-05-18 11:11:54 --> Undefined variable $pergunta
 in APPPATH\Views\pesquisarespostas\novo.php on line 21.
  1 APPPATH\Views\pesquisarespostas\novo.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pergunta', 'C:\\xampp\\htdocs\\pesquisa_satisfacao\\app\\Views\\pesquisarespostas\\novo.php', 21)
@@ -81,10 +82,85 @@ in APPPATH\Views\pesquisarespostas\index.php on line 26.
  3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
  4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/pesquisarespostas/index', [], true)
  5 APPPATH\Controllers\PesquisaRespostas.php(40): view('/pesquisarespostas/index', [...])
+=======
+CRITICAL - 2023-05-18 11:42:39 --> CodeIgniter\BaseModel::doProtectFields(): Argument #1 ($data) must be of type array, string given, called in C:\xampp\htdocs\pesquisa_satisfacao\system\BaseModel.php on line 850
+in SYSTEMPATH\BaseModel.php on line 1235.
+ 1 SYSTEMPATH\BaseModel.php(850): CodeIgniter\BaseModel->doProtectFields('Você está satisfeito com a empresa?')
+ 2 APPPATH\Models\Pesquisa_PerguntasModel.php(36): CodeIgniter\BaseModel->insertBatch([...])
+ 3 APPPATH\Controllers\PesquisaPerguntas.php(27): App\Models\Pesquisa_PerguntasModel->set_perguntas([...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaPerguntas->store()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaPerguntas))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-18 11:44:34 --> CodeIgniter\BaseModel::doProtectFields(): Argument #1 ($data) must be of type array, string given, called in C:\xampp\htdocs\pesquisa_satisfacao\system\BaseModel.php on line 850
+in SYSTEMPATH\BaseModel.php on line 1235.
+ 1 SYSTEMPATH\BaseModel.php(850): CodeIgniter\BaseModel->doProtectFields('Você está satisfeito com a empresa?')
+ 2 APPPATH\Models\Pesquisa_PerguntasModel.php(36): CodeIgniter\BaseModel->insertBatch([...])
+ 3 APPPATH\Controllers\PesquisaPerguntas.php(27): App\Models\Pesquisa_PerguntasModel->set_perguntas([...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaPerguntas->store()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaPerguntas))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-18 11:46:07 --> CodeIgniter\BaseModel::doProtectFields(): Argument #1 ($data) must be of type array, string given, called in C:\xampp\htdocs\pesquisa_satisfacao\system\BaseModel.php on line 850
+in SYSTEMPATH\BaseModel.php on line 1235.
+ 1 SYSTEMPATH\BaseModel.php(850): CodeIgniter\BaseModel->doProtectFields('Você está satisfeito com seu emprego?')
+ 2 APPPATH\Models\Pesquisa_PerguntasModel.php(36): CodeIgniter\BaseModel->insertBatch([...])
+ 3 APPPATH\Controllers\PesquisaPerguntas.php(27): App\Models\Pesquisa_PerguntasModel->set_perguntas([...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaPerguntas->store()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaPerguntas))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-18 11:47:35 --> CodeIgniter\BaseModel::doProtectFields(): Argument #1 ($data) must be of type array, string given, called in C:\xampp\htdocs\pesquisa_satisfacao\system\BaseModel.php on line 850
+in SYSTEMPATH\BaseModel.php on line 1235.
+ 1 SYSTEMPATH\BaseModel.php(850): CodeIgniter\BaseModel->doProtectFields('Você está satisfeito com seu emprego?')
+ 2 APPPATH\Models\Pesquisa_PerguntasModel.php(36): CodeIgniter\BaseModel->insertBatch([...])
+ 3 APPPATH\Controllers\PesquisaPerguntas.php(27): App\Models\Pesquisa_PerguntasModel->set_perguntas([...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaPerguntas->store()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaPerguntas))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-18 11:52:08 --> CodeIgniter\BaseModel::doProtectFields(): Argument #1 ($data) must be of type array, string given, called in C:\xampp\htdocs\pesquisa_satisfacao\system\BaseModel.php on line 850
+in SYSTEMPATH\BaseModel.php on line 1235.
+ 1 SYSTEMPATH\BaseModel.php(850): CodeIgniter\BaseModel->doProtectFields('Você está satisfeito com seu emprego?')
+ 2 APPPATH\Models\Pesquisa_PerguntasModel.php(36): CodeIgniter\BaseModel->insertBatch([...])
+ 3 APPPATH\Controllers\PesquisaPerguntas.php(27): App\Models\Pesquisa_PerguntasModel->set_perguntas([...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaPerguntas->store()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaPerguntas))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-18 11:53:29 --> CodeIgniter\BaseModel::doProtectFields(): Argument #1 ($data) must be of type array, string given, called in C:\xampp\htdocs\pesquisa_satisfacao\system\BaseModel.php on line 850
+in SYSTEMPATH\BaseModel.php on line 1235.
+ 1 SYSTEMPATH\BaseModel.php(850): CodeIgniter\BaseModel->doProtectFields('nivel satisfacao')
+ 2 APPPATH\Models\Pesquisa_PerguntasModel.php(36): CodeIgniter\BaseModel->insertBatch([...])
+ 3 APPPATH\Controllers\PesquisaPerguntas.php(27): App\Models\Pesquisa_PerguntasModel->set_perguntas([...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaPerguntas->store()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaPerguntas))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-18 15:17:15 --> require_once(../Services/Pesquisa/RespostasServc.php): Failed to open stream: No such file or directory
+in APPPATH\Controllers\PesquisaRespostas.php on line 4.
+ 1 APPPATH\Controllers\PesquisaRespostas.php(4): CodeIgniter\Debug\Exceptions->errorHandler(2, 'require_once(../Services/Pesquisa/RespostasServc.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\pesquisa_satisfacao\\app\\Controllers\\PesquisaRespostas.php', 4)
+ 2 APPPATH\Controllers\PesquisaRespostas.php(4): require_once()
+ 3 SYSTEMPATH\Router\AutoRouter.php(147): include_once('C:\\xampp\\htdocs\\pesquisa_satisfacao\\app\\Controllers\\PesquisaRespostas.php')
+ 4 SYSTEMPATH\Router\Router.php(507): CodeIgniter\Router\AutoRouter->getRoute('pesquisarespostas')
+ 5 SYSTEMPATH\Router\Router.php(206): CodeIgniter\Router\Router->autoRoute('pesquisarespostas')
+ 6 SYSTEMPATH\CodeIgniter.php(815): CodeIgniter\Router\Router->handle('pesquisarespostas')
+ 7 SYSTEMPATH\CodeIgniter.php(449): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-18 15:18:03 --> Undefined array key "nome"
+in APPPATH\Views\pesquisarespostas\index.php on line 27.
+ 1 APPPATH\Views\pesquisarespostas\index.php(27): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nome"', 'C:\\xampp\\htdocs\\pesquisa_satisfacao\\app\\Views\\pesquisarespostas\\index.php', 27)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\pesquisa_satisfacao\\app\\Views\\pesquisarespostas\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/pesquisarespostas/index', [], true)
+ 5 APPPATH\Controllers\PesquisaRespostas.php(47): view('/pesquisarespostas/index', [...])
+>>>>>>> emanuel-v4
  6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->index()
  7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
  8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+<<<<<<< HEAD
 CRITICAL - 2023-05-18 14:53:41 --> count(): Argument #1 ($value) must be of type Countable|array, null given
 in APPPATH\Services\Pesquisa\PesquisasSrvc.php on line 9.
  1 APPPATH\Services\Pesquisa\PesquisasSrvc.php(9): count(null)
@@ -225,3 +301,28 @@ in APPPATH\Controllers\PesquisaRespostas.php on line 38.
  3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
  4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+=======
+CRITICAL - 2023-05-18 15:21:09 --> Undefined array key "nome"
+in APPPATH\Views\pesquisarespostas\index.php on line 27.
+ 1 APPPATH\Views\pesquisarespostas\index.php(27): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nome"', 'C:\\xampp\\htdocs\\pesquisa_satisfacao\\app\\Views\\pesquisarespostas\\index.php', 27)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\pesquisa_satisfacao\\app\\Views\\pesquisarespostas\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/pesquisarespostas/index', [], true)
+ 5 APPPATH\Controllers\PesquisaRespostas.php(47): view('/pesquisarespostas/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-18 15:22:38 --> Class "App\Services\Pesquisa\RespostasSrvc" not found
+in APPPATH\Controllers\PesquisaRespostas.php on line 20.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->novo()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-18 15:22:39 --> Class "App\Services\Pesquisa\RespostasSrvc" not found
+in APPPATH\Controllers\PesquisaRespostas.php on line 20.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->novo()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+>>>>>>> emanuel-v4

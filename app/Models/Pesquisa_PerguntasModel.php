@@ -44,6 +44,7 @@ class Pesquisa_PerguntasModel extends Model
     }
 
     public function delete_perguntas($ids) {
+        if (empty($ids)) return false;
         $this->whereIn('id_pergunta', $ids)->delete();
     } 
 }

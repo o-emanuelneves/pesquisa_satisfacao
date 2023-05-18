@@ -78,5 +78,12 @@ class PesquisaRespostas extends Controller
 
         echo View('pesquisarespostas/novo', $data);
     }
+
+    public function sePreencheu(){
+        //Fazer a listagem de quem ja respondeu no banco de dados
+        // Verificar se este usuário preencheu
+        // Se sim, não mostrar a pesquisa
+        // Se não, mostrar
+    }
 }
 ?>

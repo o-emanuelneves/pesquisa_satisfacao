@@ -498,7 +498,88 @@ in APPPATH\Services\Pesquisa\PerguntasSrvc.php on line 15.
  5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaPerguntas))
  6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+<<<<<<< HEAD
 ERROR - 2023-05-16 17:50:03 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')
+=======
+CRITICAL - 2023-05-16 18:01:16 --> Undefined array key "pergunta"
+in APPPATH\Services\Pesquisa\PerguntasSrvc.php on line 29.
+ 1 APPPATH\Services\Pesquisa\PerguntasSrvc.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "pergunta"', 'C:\\xampp\\htdocs\\pesquisa_satisfacao\\app\\Services\\Pesquisa\\PerguntasSrvc.php', 29)
+ 2 APPPATH\Models\Pesquisa_PerguntasModel.php(29): App\Services\Pesquisa\PerguntasSrvc->idsDelete()
+ 3 APPPATH\Controllers\PesquisaPerguntas.php(27): App\Models\Pesquisa_PerguntasModel->set_perguntas([...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaPerguntas->store()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaPerguntas))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-16 18:02:05 --> Undefined array key "pergunta"
+in APPPATH\Services\Pesquisa\PerguntasSrvc.php on line 29.
+ 1 APPPATH\Services\Pesquisa\PerguntasSrvc.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "pergunta"', 'C:\\xampp\\htdocs\\pesquisa_satisfacao\\app\\Services\\Pesquisa\\PerguntasSrvc.php', 29)
+ 2 APPPATH\Models\Pesquisa_PerguntasModel.php(29): App\Services\Pesquisa\PerguntasSrvc->idsDelete()
+ 3 APPPATH\Controllers\PesquisaPerguntas.php(27): App\Models\Pesquisa_PerguntasModel->set_perguntas([...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaPerguntas->store()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaPerguntas))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-16 18:03:06 --> Undefined array key "pergunta"
+in APPPATH\Services\Pesquisa\PerguntasSrvc.php on line 29.
+ 1 APPPATH\Services\Pesquisa\PerguntasSrvc.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "pergunta"', 'C:\\xampp\\htdocs\\pesquisa_satisfacao\\app\\Services\\Pesquisa\\PerguntasSrvc.php', 29)
+ 2 APPPATH\Models\Pesquisa_PerguntasModel.php(29): App\Services\Pesquisa\PerguntasSrvc->idsDelete()
+ 3 APPPATH\Controllers\PesquisaPerguntas.php(27): App\Models\Pesquisa_PerguntasModel->set_perguntas([...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaPerguntas->store()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaPerguntas))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-16 18:04:46 --> Undefined array key "pergunta"
+in APPPATH\Services\Pesquisa\PerguntasSrvc.php on line 29.
+ 1 APPPATH\Services\Pesquisa\PerguntasSrvc.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "pergunta"', 'C:\\xampp\\htdocs\\pesquisa_satisfacao\\app\\Services\\Pesquisa\\PerguntasSrvc.php', 29)
+ 2 APPPATH\Models\Pesquisa_PerguntasModel.php(29): App\Services\Pesquisa\PerguntasSrvc->idsDelete()
+ 3 APPPATH\Controllers\PesquisaPerguntas.php(27): App\Models\Pesquisa_PerguntasModel->set_perguntas([...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaPerguntas->store()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaPerguntas))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-16 18:05:58 --> Undefined array key "pergunta"
+in APPPATH\Services\Pesquisa\PerguntasSrvc.php on line 29.
+ 1 APPPATH\Services\Pesquisa\PerguntasSrvc.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "pergunta"', 'C:\\xampp\\htdocs\\pesquisa_satisfacao\\app\\Services\\Pesquisa\\PerguntasSrvc.php', 29)
+ 2 APPPATH\Models\Pesquisa_PerguntasModel.php(29): App\Services\Pesquisa\PerguntasSrvc->idsDelete()
+ 3 APPPATH\Controllers\PesquisaPerguntas.php(27): App\Models\Pesquisa_PerguntasModel->set_perguntas([...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaPerguntas->store()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaPerguntas))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-16 18:06:59 --> Undefined array key "pergunta"
+in APPPATH\Services\Pesquisa\PerguntasSrvc.php on line 29.
+ 1 APPPATH\Services\Pesquisa\PerguntasSrvc.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "pergunta"', 'C:\\xampp\\htdocs\\pesquisa_satisfacao\\app\\Services\\Pesquisa\\PerguntasSrvc.php', 29)
+ 2 APPPATH\Models\Pesquisa_PerguntasModel.php(29): App\Services\Pesquisa\PerguntasSrvc->idsDelete()
+ 3 APPPATH\Controllers\PesquisaPerguntas.php(27): App\Models\Pesquisa_PerguntasModel->set_perguntas([...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaPerguntas->store()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaPerguntas))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-16 18:08:39 --> Call to undefined method App\Services\Pesquisa\PerguntasSrvc::idsDelete()
+in APPPATH\Models\Pesquisa_PerguntasModel.php on line 29.
+ 1 APPPATH\Controllers\PesquisaPerguntas.php(27): App\Models\Pesquisa_PerguntasModel->set_perguntas([...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaPerguntas->store()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaPerguntas))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-16 18:08:46 --> Call to undefined method App\Services\Pesquisa\PerguntasSrvc::idsDelete()
+in APPPATH\Models\Pesquisa_PerguntasModel.php on line 29.
+ 1 APPPATH\Controllers\PesquisaPerguntas.php(27): App\Models\Pesquisa_PerguntasModel->set_perguntas([...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaPerguntas->store()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaPerguntas))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-16 18:09:58 --> Undefined array key "pergunta"
+in APPPATH\Services\Pesquisa\PerguntasSrvc.php on line 29.
+ 1 APPPATH\Services\Pesquisa\PerguntasSrvc.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "pergunta"', 'C:\\xampp\\htdocs\\pesquisa_satisfacao\\app\\Services\\Pesquisa\\PerguntasSrvc.php', 29)
+ 2 APPPATH\Models\Pesquisa_PerguntasModel.php(29): App\Services\Pesquisa\PerguntasSrvc->idsDelete()
+ 3 APPPATH\Controllers\PesquisaPerguntas.php(27): App\Models\Pesquisa_PerguntasModel->set_perguntas([...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaPerguntas->store()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaPerguntas))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-16 18:11:07 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')
+>>>>>>> emanuel-v4
 AND `deleted_at` IS NULL' at line 2 in C:\xampp\htdocs\pesquisa_satisfacao\system\Database\MySQLi\Connection.php:295
 Stack trace:
 #0 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `pesquis...', 0)
@@ -515,6 +596,7 @@ Stack trace:
 #11 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #12 C:\xampp\htdocs\pesquisa_satisfacao\public\index.php(67): CodeIgniter\CodeIgniter->run()
 #13 {main}
+<<<<<<< HEAD
 CRITICAL - 2023-05-16 17:50:03 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')
 AND `deleted_at` IS NULL' at line 2
 in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
@@ -525,6 +607,18 @@ AND `deleted_at` IS NULL', 0)
 WHERE `id_pergunta` IN ()
 AND `deleted_at` IS NULL')
  3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `pesquisa_perguntas` SET `deleted_at` = \'2023-05-16 17:50:03\', `updated_at` = \'2023-05-16 17:50:03\'
+=======
+CRITICAL - 2023-05-16 18:11:07 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')
+AND `deleted_at` IS NULL' at line 2
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `pesquisa_perguntas` SET `deleted_at` = \'2023-05-16 18:11:07\', `updated_at` = \'2023-05-16 18:11:07\'
+WHERE `id_pergunta` IN ()
+AND `deleted_at` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `pesquisa_perguntas` SET `deleted_at` = \'2023-05-16 18:11:07\', `updated_at` = \'2023-05-16 18:11:07\'
+WHERE `id_pergunta` IN ()
+AND `deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `pesquisa_perguntas` SET `deleted_at` = \'2023-05-16 18:11:07\', `updated_at` = \'2023-05-16 18:11:07\'
+>>>>>>> emanuel-v4
 WHERE `id_pergunta` IN ()
 AND `deleted_at` IS NULL')
  4 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `pesquisa_perguntas` SET `deleted_at` = :deleted_at:, `updated_at` = :updated_at:
@@ -539,7 +633,11 @@ AND `deleted_at` IS NULL', [...], false)
 11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaPerguntas))
 12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
 13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+<<<<<<< HEAD
 ERROR - 2023-05-16 17:50:32 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')
+=======
+ERROR - 2023-05-16 18:11:13 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')
+>>>>>>> emanuel-v4
 AND `deleted_at` IS NULL' at line 2 in C:\xampp\htdocs\pesquisa_satisfacao\system\Database\MySQLi\Connection.php:295
 Stack trace:
 #0 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `pesquis...', 0)
@@ -556,6 +654,7 @@ Stack trace:
 #11 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #12 C:\xampp\htdocs\pesquisa_satisfacao\public\index.php(67): CodeIgniter\CodeIgniter->run()
 #13 {main}
+<<<<<<< HEAD
 CRITICAL - 2023-05-16 17:50:32 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')
 AND `deleted_at` IS NULL' at line 2
 in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
@@ -566,6 +665,18 @@ AND `deleted_at` IS NULL', 0)
 WHERE `id_pergunta` IN ()
 AND `deleted_at` IS NULL')
  3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `pesquisa_perguntas` SET `deleted_at` = \'2023-05-16 17:50:32\', `updated_at` = \'2023-05-16 17:50:32\'
+=======
+CRITICAL - 2023-05-16 18:11:13 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')
+AND `deleted_at` IS NULL' at line 2
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `pesquisa_perguntas` SET `deleted_at` = \'2023-05-16 18:11:13\', `updated_at` = \'2023-05-16 18:11:13\'
+WHERE `id_pergunta` IN ()
+AND `deleted_at` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `pesquisa_perguntas` SET `deleted_at` = \'2023-05-16 18:11:13\', `updated_at` = \'2023-05-16 18:11:13\'
+WHERE `id_pergunta` IN ()
+AND `deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `pesquisa_perguntas` SET `deleted_at` = \'2023-05-16 18:11:13\', `updated_at` = \'2023-05-16 18:11:13\'
+>>>>>>> emanuel-v4
 WHERE `id_pergunta` IN ()
 AND `deleted_at` IS NULL')
  4 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `pesquisa_perguntas` SET `deleted_at` = :deleted_at:, `updated_at` = :updated_at:
@@ -580,6 +691,7 @@ AND `deleted_at` IS NULL', [...], false)
 11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaPerguntas))
 12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
 13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+<<<<<<< HEAD
 ERROR - 2023-05-16 17:56:00 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')
 AND `deleted_at` IS NULL' at line 2 in C:\xampp\htdocs\pesquisa_satisfacao\system\Database\MySQLi\Connection.php:295
 Stack trace:
@@ -818,5 +930,14 @@ in APPPATH\Views\pesquisarespostas\novo.php on line 16.
  3 APPPATH\Controllers\PesquisaRespostas.php(51): view('pesquisarespostas/novo')
  4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->novo()
  5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+=======
+CRITICAL - 2023-05-16 18:12:27 --> Undefined array key "pergunta"
+in APPPATH\Services\Pesquisa\PerguntasSrvc.php on line 20.
+ 1 APPPATH\Services\Pesquisa\PerguntasSrvc.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "pergunta"', 'C:\\xampp\\htdocs\\pesquisa_satisfacao\\app\\Services\\Pesquisa\\PerguntasSrvc.php', 20)
+ 2 APPPATH\Models\Pesquisa_PerguntasModel.php(32): App\Services\Pesquisa\PerguntasSrvc->returnUpdate()
+ 3 APPPATH\Controllers\PesquisaPerguntas.php(27): App\Models\Pesquisa_PerguntasModel->set_perguntas([...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaPerguntas->store()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaPerguntas))
+>>>>>>> emanuel-v4
  6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
