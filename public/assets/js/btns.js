@@ -5,9 +5,7 @@ $(document).ready(function(){
         let element = $(this).siblings('.bottons-table');
 
        element.toggleClass('d-none');
-
    
-       
     })
 })
 
