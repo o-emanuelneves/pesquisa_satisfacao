@@ -1,9 +1,6 @@
 <?php 
 namespace App\Controllers;
 
-
-require_once '../Services/Pesquisa/PerguntasSrvc.php';
-
 use App\Models\Auth_UserModel;
 use App\Models\Pesquisa_PerguntasModel;
 use CodeIgniter\Controller;
