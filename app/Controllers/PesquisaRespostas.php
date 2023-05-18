@@ -4,6 +4,8 @@ namespace App\Controllers;
 use App\Models\Pesquisa_PerguntasModel;
 use App\Models\Pesquisa_RespostasModel;
 use App\Models\PesquisasModel;
+
+use App\Services\Pesquisa\RespostasSrvc;
 use CodeIgniter\Controller;
 use App\Services\Pesquisa\PesquisasSrvc;
 
@@ -68,15 +70,31 @@ class PesquisaRespostas extends Controller
         endif;
     }
 
-    public function novo()
-    {
+
+    public function novo(){
         $model = new Pesquisa_PerguntasModel();
         $data['perguntas'] = $model->get_perguntas([
             'id_pergunta',
             'pergunta'
         ]);
 
-        echo View('pesquisarespostas/novo', $data);
+        $respostasSrvc = new RespostasSrvc();
+
+        $dia = $respostasSrvc->retornaDia();
+ 
+        if ($dia <= 10) {
+            echo View('pesquisarespostas/novo');
+        }
+        else{
+            header('Location: http://pesquisa.satisfacao.com/');
+            exit;
+        }}
+
+    public function sePreencheu(){
+        //Fazer a listagem de quem ja respondeu no banco de dados
+        // Verificar se este usuário preencheu
+        // Se sim, não mostrar a pesquisa
+        // Se não, mostrar
     }
 }
 ?>

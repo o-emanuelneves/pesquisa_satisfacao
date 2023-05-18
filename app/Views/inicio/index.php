@@ -17,10 +17,8 @@
 <body>
 
 <div class="container-modal">
-
-
-
-    <h1>Tela de início</h1>
+   
+      <h1>Tela de início</h1>
 
 
     <div class="containers-buttons-index">
