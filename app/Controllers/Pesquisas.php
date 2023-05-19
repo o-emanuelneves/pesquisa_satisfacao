@@ -22,10 +22,6 @@ class Pesquisas extends Controller
         echo View('pesquisas/index', $data);
     }
 
-    public function novo()
-    {
-        echo View('pesquisas/novo');
-    }
     public function store()
     {
         $dados = $this->request->getVar();

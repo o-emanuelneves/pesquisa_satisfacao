@@ -11,9 +11,6 @@ class RespostasSrvc{
         return $dia;
     }
 
-
-
-
 }
 
 ?>

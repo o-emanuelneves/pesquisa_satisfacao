@@ -5,12 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Users</title>
+    <title>Pesquisas</title>
 </head>
 
 <body>
     <h1>Tela de listar as pesquisas</h1>
-    <a href="/AuthUsers/novo">Cadastrar novo</a>
     <table border="1">
         <thead>
             <tr>
@@ -25,11 +24,6 @@
                     <td><?= $pesquisa['id_pesquisa'] ?></td>
                     <td><?= $pesquisa['fk_user'] ?></td>
                     <td><?= $pesquisa['observacao'] ?></td>
-                    <td>
-                        <a href="/Pesquisas/excluir/<?= $pesquisa['id_pesquisa'] ?>">Excluir</a>
-                        <a href="/Pesquisas/ver/<?= $pesquisa['id_pesquisa'] ?>">Ver</a>
-
-                    </td>
                 </tr>
 
             <?php endforeach; ?>

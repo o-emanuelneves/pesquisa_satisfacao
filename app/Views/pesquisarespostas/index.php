@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pesquisa Respostas</title>
 
-    
+
 
 
 </head>
@@ -20,6 +20,7 @@
                     <th>Id</th>
                     <th>Nome</th>
                     <th>Satisfação</th>
+                    <th>observação</th>
                     <th>Ações</th>
                 </tr>
             </thead>
@@ -30,8 +31,9 @@
                         <td><?= $key ?></td>
                         <td><?= $pesquisa['nome'] ?></td>
                         <td><?= $pesquisa['satisfacao'] ?>%</td>
+                        <td></td>
                         <td>
-                            <!--  -->
+                            <a href="/pesquisarespostas/respostas/<?= $key ?>"><button name="<?= $key ?>">Respostas</button></a>
                         </td>
                     </tr>
                 <?php endforeach; ?>
@@ -39,7 +41,7 @@
             </tbody>
         </table>
     </div>
-    
+
 </body>
 
 

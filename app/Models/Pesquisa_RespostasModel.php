@@ -25,9 +25,9 @@ class Pesquisa_RespostasModel extends Model{
     public function set_respostas($dados) {
 
         $allRows = array_map(
-            function($resposta, $keys) use($dados) {
+            function($respostas, $keys) use($dados) {
                 return [
-                    'resposta' => $resposta,
+                    'resposta' => $respostas,
                     'fk_pergunta' => $keys,
                     'fk_pesquisa'=> $dados['pesquisa']['fk_pesquisa'],
                     'fk_user' => $dados['pesquisa']['fk_user'],

@@ -43,7 +43,7 @@ class PerguntasSrvc {
     public function insertBatch($perguntas) {
         $array = array_map(function($pergunta) {
             return [
-                'fk_user' => 1,
+                'fk_user' => 5,
                 'pergunta' => $pergunta
             ];
         }, $perguntas);
