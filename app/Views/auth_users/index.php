@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Usuários</title>
     <link rel="stylesheet" href="/plugin/fontawesome/css/all.min.css">
-    <link rel="stylesheet" href="/assets/css/listusers.css">
+    <link rel="stylesheet" href="/assets/css/authUsers/listusers.css">
 </head>
 
 <body>
@@ -57,6 +57,6 @@
 
 
 <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
-<script src="/assets/js/btns.js"></script>
+<script src="/assets/js/authUsers/btns.js"></script>
 
 </html>

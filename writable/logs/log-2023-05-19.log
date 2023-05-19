@@ -1,0 +1,62 @@
+CRITICAL - 2023-05-19 11:42:19 --> insertBatch() has no data.
+in SYSTEMPATH\Database\BaseBuilder.php on line 1772.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2192): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+ 2 SYSTEMPATH\Model.php(364): CodeIgniter\Database\BaseBuilder->insertBatch([], null, 100)
+ 3 SYSTEMPATH\BaseModel.php(874): CodeIgniter\Model->doInsertBatch([], null, 100, false)
+ 4 APPPATH\Models\Pesquisa_PerguntasModel.php(36): CodeIgniter\BaseModel->insertBatch([])
+ 5 APPPATH\Controllers\PesquisaPerguntas.php(27): App\Models\Pesquisa_PerguntasModel->set_perguntas([...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaPerguntas->store()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaPerguntas))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-19 11:42:20 --> insertBatch() has no data.
+in SYSTEMPATH\Database\BaseBuilder.php on line 1772.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2192): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+ 2 SYSTEMPATH\Model.php(364): CodeIgniter\Database\BaseBuilder->insertBatch([], null, 100)
+ 3 SYSTEMPATH\BaseModel.php(874): CodeIgniter\Model->doInsertBatch([], null, 100, false)
+ 4 APPPATH\Models\Pesquisa_PerguntasModel.php(36): CodeIgniter\BaseModel->insertBatch([])
+ 5 APPPATH\Controllers\PesquisaPerguntas.php(27): App\Models\Pesquisa_PerguntasModel->set_perguntas([...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaPerguntas->store()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaPerguntas))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-19 11:42:44 --> insertBatch() has no data.
+in SYSTEMPATH\Database\BaseBuilder.php on line 1772.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2192): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+ 2 SYSTEMPATH\Model.php(364): CodeIgniter\Database\BaseBuilder->insertBatch([], null, 100)
+ 3 SYSTEMPATH\BaseModel.php(874): CodeIgniter\Model->doInsertBatch([], null, 100, false)
+ 4 APPPATH\Models\Pesquisa_PerguntasModel.php(36): CodeIgniter\BaseModel->insertBatch([])
+ 5 APPPATH\Controllers\PesquisaPerguntas.php(27): App\Models\Pesquisa_PerguntasModel->set_perguntas([...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaPerguntas->store()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaPerguntas))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-19 11:44:36 --> CodeIgniter\BaseModel::doProtectFields(): Argument #1 ($data) must be of type array, string given, called in C:\xampp\htdocs\pesquisa_satisfacao\system\BaseModel.php on line 850
+in SYSTEMPATH\BaseModel.php on line 1235.
+ 1 SYSTEMPATH\BaseModel.php(850): CodeIgniter\BaseModel->doProtectFields('oi')
+ 2 APPPATH\Models\Pesquisa_PerguntasModel.php(36): CodeIgniter\BaseModel->insertBatch([...])
+ 3 APPPATH\Controllers\PesquisaPerguntas.php(27): App\Models\Pesquisa_PerguntasModel->set_perguntas([...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaPerguntas->store()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaPerguntas))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-19 11:47:02 --> insertBatch() has no data.
+in SYSTEMPATH\Database\BaseBuilder.php on line 1772.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2192): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+ 2 SYSTEMPATH\Model.php(364): CodeIgniter\Database\BaseBuilder->insertBatch([], null, 100)
+ 3 SYSTEMPATH\BaseModel.php(874): CodeIgniter\Model->doInsertBatch([], null, 100, false)
+ 4 APPPATH\Models\Pesquisa_PerguntasModel.php(36): CodeIgniter\BaseModel->insertBatch([])
+ 5 APPPATH\Controllers\PesquisaPerguntas.php(27): App\Models\Pesquisa_PerguntasModel->set_perguntas([...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaPerguntas->store()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaPerguntas))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-19 11:57:38 --> CodeIgniter\BaseModel::doProtectFields(): Argument #1 ($data) must be of type array, string given, called in C:\xampp\htdocs\pesquisa_satisfacao\system\BaseModel.php on line 850
+in SYSTEMPATH\BaseModel.php on line 1235.
+ 1 SYSTEMPATH\BaseModel.php(850): CodeIgniter\BaseModel->doProtectFields('es')
+ 2 APPPATH\Models\Pesquisa_PerguntasModel.php(36): CodeIgniter\BaseModel->insertBatch([...])
+ 3 APPPATH\Controllers\PesquisaPerguntas.php(27): App\Models\Pesquisa_PerguntasModel->set_perguntas([...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaPerguntas->store()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaPerguntas))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

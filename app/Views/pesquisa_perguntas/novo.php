@@ -8,7 +8,7 @@
     <title>Add Pergunta</title>
 
     <link rel="stylesheet" href="/plugin/fontawesome/css/all.min.css">
-    <link rel="stylesheet" href="/assets/css/questions.css">
+    <link rel="stylesheet" href="/assets/css/pesquisaperguntas/questions.css">
 </head>
 
 <body>
@@ -51,4 +51,7 @@
         <i class="fa-solid fa-trash-can delete-question"></i>
     </div>
 </body>
+
+<script src="/assets/js/pesquisaperguntas/questions.js"></script>
+
 </html>
