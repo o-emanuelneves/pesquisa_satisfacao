@@ -7,6 +7,7 @@ use App\Models\PesquisasModel;
 use CodeIgniter\Controller;
 use App\Services\Pesquisa\PesquisasSrvc;
 
+
 class PesquisaRespostas extends Controller
 {
     private $pesquisa_respostas_model;
@@ -20,7 +21,6 @@ class PesquisaRespostas extends Controller
 
     public function index()
     {
-
         $service = new PesquisasSrvc();
         $pesquisas = $this->pesquisa_model->get_pesquisa_and_respostas([
             'nome',
@@ -40,6 +40,7 @@ class PesquisaRespostas extends Controller
 
         $data['pesquisas'] = $pesquisaAgrupada;
 
+        // apagar
         // $model = new Pesquisa_RespostasModel();
         // $data['pesquisa_respostas'] = $model
         // ->select('pesquisa_respostas.fk_pesquisa, auth_users.nome, pesquisa_perguntas.pergunta, pesquisa_respostas.resposta')
@@ -55,7 +56,7 @@ class PesquisaRespostas extends Controller
         $dados = $this->request->getVar();
         
         if(isset($dados['respostas'])):
-            $dados['pesquisa']['fk_user'] = 2;
+            $dados['pesquisa']['fk_user'] = 1;
 
             $id_pesquisa = $this->pesquisa_model->set_pesquisa($dados['pesquisa']);
             $dados['pesquisa']['fk_pesquisa'] = $id_pesquisa;
@@ -75,15 +76,20 @@ class PesquisaRespostas extends Controller
             'id_pergunta',
             'pergunta'
         ]);
+        
+        $respostasSrvc = new PesquisasSrvc();
+        $dia = $respostasSrvc->retornaDia();
+        $dia = 5;
+        if ($dia <= 10 and $respostasSrvc->mostrarPesquisa()) {
+            echo View('pesquisarespostas/novo', $data);
+        } else {
+            header('Location: http://pesquisa.satisfacao.com/pesquisarespostas/');
+            exit;
+    
+        }
 
-        echo View('pesquisarespostas/novo', $data);
+
     }
 
-    public function sePreencheu(){
-        //Fazer a listagem de quem ja respondeu no banco de dados
-        // Verificar se este usuário preencheu
-        // Se sim, não mostrar a pesquisa
-        // Se não, mostrar
-    }
 }
 ?>

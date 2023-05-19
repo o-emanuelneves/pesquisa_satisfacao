@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Services\Pesquisa;
+use App\Controllers\PesquisaRespostas;
+use App\Models\Pesquisa_RespostasModel;
 
 class PesquisasSrvc {
 
@@ -20,5 +22,23 @@ class PesquisasSrvc {
 
         return $media;
     }
+    public function retornaDia()
+    {
+         $dia = date('d');
+        return $dia;
+    }
+
+
+    public function mostrarPesquisa()
+    {
+        $pesquisa_respostas_model = new Pesquisa_RespostasModel();
+        $usuariosResposta = $pesquisa_respostas_model->select('fk_user')->where('fk_user', 3)->find();
+        if (empty($usuariosResposta)){
+            return true;
+        }
+        else{
+            return false;
+        }
+       }
 
 }
