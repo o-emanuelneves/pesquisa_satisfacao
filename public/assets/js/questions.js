@@ -1,4 +1,5 @@
 
+
         const buttonPlus = document.querySelectorAll('.button-plus')[0];
         buttonPlus.addEventListener('click', function () {
             const questionTemplate = document.querySelectorAll('.questionTemplate')[0];
@@ -15,11 +16,12 @@
             clone.querySelector('label').setAttribute('for', id);
             clone.querySelector('input').setAttribute('placeholder', place);
             allQuestions.append(clone);
+
+            
             const buttonDelete = clone.querySelector('.delete-question');
             buttonDelete.addEventListener('click', function () {
                 const divDelete = this.parentNode;
                 divDelete.remove();
             });
         })
-
 
