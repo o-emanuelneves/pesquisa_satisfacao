@@ -12,7 +12,6 @@ class Pesquisa_PerguntasModel extends Model
     protected $allowedFields = [
         'pergunta',
         'fk_user',
-        'id_pergunta'
     ];
     protected $useTimestamps = true;
     protected $useSoftDeletes = true;
@@ -33,7 +32,9 @@ class Pesquisa_PerguntasModel extends Model
         $arrayInsert = $service->returnInsert();
         $merge = array_merge($update, $arrayInsert);
 
-        $this->insertBatch($merge);
+        // print_r($merge);exit;
+
+         $this->insertBatch($merge);
 
         return true;
     }

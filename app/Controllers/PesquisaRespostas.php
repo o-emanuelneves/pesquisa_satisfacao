@@ -4,11 +4,11 @@ namespace App\Controllers;
 use App\Models\Pesquisa_PerguntasModel;
 use App\Models\Pesquisa_RespostasModel;
 use App\Models\PesquisasModel;
-use CodeIgniter\Controller;
+
 use App\Services\Pesquisa\PesquisasSrvc;
 
 
-class PesquisaRespostas extends Controller
+class PesquisaRespostas extends BaseController
 {
     private $pesquisa_respostas_model;
     private $pesquisa_model;
@@ -56,7 +56,7 @@ class PesquisaRespostas extends Controller
         $dados = $this->request->getVar();
         
         if(isset($dados['respostas'])):
-            $dados['pesquisa']['fk_user'] = 1;
+            $dados['pesquisa']['fk_user'] = 5;
 
             $id_pesquisa = $this->pesquisa_model->set_pesquisa($dados['pesquisa']);
             $dados['pesquisa']['fk_pesquisa'] = $id_pesquisa;
@@ -79,17 +79,20 @@ class PesquisaRespostas extends Controller
         
         $respostasSrvc = new PesquisasSrvc();
         $dia = $respostasSrvc->retornaDia();
-        $dia = 5;
-        if ($dia <= 10 and $respostasSrvc->mostrarPesquisa()) {
+        $dia = 3;
+
+        $pesquisa_respostas_model = new Pesquisa_RespostasModel();
+
+
+        if ($dia <= 10 and $pesquisa_respostas_model->mostrarPesquisa()) {
             echo View('pesquisarespostas/novo', $data);
         } else {
             header('Location: http://pesquisa.satisfacao.com/pesquisarespostas/');
             exit;
-    
         }
-
-
     }
+
+    
 
 }
 ?>

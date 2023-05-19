@@ -22,7 +22,7 @@ class PerguntasSrvc {
         
         $diff = $this->verifyDiff($perguntas, $dbPerguntas);
         $insert = $this->insertBatch($diff ?? []);
-        return $diff;
+        return $insert; 
     }
 
     public function idsDelete() {
