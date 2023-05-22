@@ -7,36 +7,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resposta</title>
 
-    <link rel="stylesheet" href="/assets/css/...">
+    <link rel="stylesheet" href="/assets/css/pesquisarespostas/pesquisarespostas.css">
+    <link rel="stylesheet" href="/plugin/fontawesome/css/all.min.css">
 </head>
 
 <body>
-    <form action="/pesquisarespostas/store" method="post">
-        <div>
-            <label for="resposta">Resposta</label>
-        </div>
 
-        <?php foreach ($perguntas as $pergunta) : ?>
+    <div class="container-modal">
+
+        <form action="/pesquisarespostas/store" method="post">
             <div>
-
-                <label for="<?= $pergunta['id_pergunta'] ?>"><?= $pergunta['pergunta'] ?></label>
-
-                <input type="hidden" name="respostas[<?= $pergunta['id_pergunta'] ?>]" id="<?= $pergunta['id_pergunta'] ?>" name="pergunta">
-
-                <label>Sim</label>
-                <input type="radio" value="2" name="respostas[<?= $pergunta['id_pergunta'] ?>]"></input>
-                <label>Talvez</label>
-                <input type="radio" value="1" name="respostas[<?= $pergunta['id_pergunta'] ?>]"></input>
-                <label>Não</label>
-                <input type="radio" value="0" name="respostas[<?= $pergunta['id_pergunta'] ?>]"></input>
-
+                <label for="resposta"><h1>Resposta</h1></label>
             </div>
-        <?php endforeach; ?>
+            
+            <?php foreach ($perguntas as $pergunta) : ?>
 
-        <textarea name="pesquisa[observacao]" cols="30" rows="10"></textarea>
+                <div class="container-respostas">
 
-        <input type="submit" value="Enviar">
-    </form>
+                    <div class="container-questions"><label class= "perguntas" for="<?= $pergunta['id_pergunta'] ?>"><?= $pergunta['pergunta'] ?></label> </div>
+
+                    <input type="hidden" name="respostas[<?= $pergunta['id_pergunta'] ?>]" id="<?= $pergunta['id_pergunta'] ?>" name="pergunta">
+
+                    <input class="button-answers"type="radio" value="2" name="respostas[<?= $pergunta['id_pergunta'] ?>]" id="sim-<?= $pergunta['id_pergunta'] ?>"></input>
+                    <label class="box" for= "sim-<?= $pergunta['id_pergunta'] ?>" class= "respostas">Sim</label>
+
+                    <input  class="button-answers" type="radio" value="1" name="respostas[<?= $pergunta['id_pergunta'] ?>]" id="talvez-<?= $pergunta['id_pergunta'] ?>" ></input>
+                    <label class="box"  for="talvez-<?= $pergunta['id_pergunta'] ?>" class= "respostas" >Talvez</label>
+                    
+                    <input class="button-answers" type="radio" value="0" name="respostas[<?= $pergunta['id_pergunta'] ?>]" id="nao-<?= $pergunta['id_pergunta'] ?>"  ></input>
+                    <label class="box"  for="nao-<?= $pergunta['id_pergunta'] ?>" class= "respostas">Não</label>
+                    
+
+                </div>
+
+            <?php endforeach; ?>
+
+            <div class="observacoes-respostas">
+                <textarea class="textarea-pesquisarespostas"  name="pesquisa[observacao]"    cols="30" rows="10"    ></textarea>                
+            </div>
+            
+            <div class="container-enviar"><input class="button-save" type="submit" value="Enviar"></div>
+
+        </form>
+    </div>
+
+
+    
 </body>
+
+<script src="/assets/js/pesquisarespostas/pesquisaresposta.js"></script>
 
 </html>
