@@ -74,25 +74,28 @@ class PesquisaRespostas extends BaseController
         $dia = $respostasSrvc->retornaDia();
 
 
+
         $pesquisa_respostas_model = new Pesquisa_RespostasModel();
 
-//aparecer que ja resondeu
-// exibir mensagem pra ele responder
-// se passou do prazo, sistema travado
         if ($dia <= 10 and $pesquisa_respostas_model->mostrarPesquisa()) {
+
+            echo '<script>alert("Responda a pesquisa mensal!");</script>';
             echo View('pesquisarespostas/novo', $data);
-        } else {
-            header('Location: http://pesquisa.satisfacao.com/pesquisarespostas/');
-            exit;
+            
+        } 
+        else if ($dia <= 10 and $pesquisa_respostas_model->mostrarPesquisa()== false){
+            echo ("<script> window.alert('Você já respondeu a pesquisa esse mês')
+            window.location.href='http://pesquisa.satisfacao.com/pesquisarespostas/'; </script>");
+        }
+        else {
+            echo ("<script> window.alert('A pesquisa expirou')
+            window.location.href='http://pesquisa.satisfacao.com/pesquisarespostas/'; </script>");
+            //travar sistema
+
+           
         }
     }
 
-    public function sePreencheu(){
-        //Fazer a listagem de quem ja respondeu no banco de dados
-        // Verificar se este usuário preencheu
-        // Se sim, não mostrar a pesquisa
-        // Se não, mostrar
-    }
 
     public function respostas()
     {
