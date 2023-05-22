@@ -56,7 +56,7 @@ class PesquisaRespostas extends BaseController
         $dados = $this->request->getVar();
         
         if(isset($dados['respostas'])):
-            $dados['pesquisa']['fk_user'] = 5;
+            $dados['pesquisa']['fk_user'] = 13;
 
             $id_pesquisa = $this->pesquisa_model->set_pesquisa($dados['pesquisa']);
             $dados['pesquisa']['fk_pesquisa'] = $id_pesquisa;
@@ -79,11 +79,13 @@ class PesquisaRespostas extends BaseController
         
         $respostasSrvc = new PesquisasSrvc();
         $dia = $respostasSrvc->retornaDia();
-        $dia = 3;
+
 
         $pesquisa_respostas_model = new Pesquisa_RespostasModel();
 
-
+//aparecer que ja resondeu
+// exibir mensagem pra ele responder
+// se passou do prazo, sistema travado
         if ($dia <= 10 and $pesquisa_respostas_model->mostrarPesquisa()) {
             echo View('pesquisarespostas/novo', $data);
         } else {
