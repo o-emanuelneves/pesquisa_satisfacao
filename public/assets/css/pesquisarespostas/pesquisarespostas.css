@@ -1,0 +1,146 @@
+body{  
+    color: #00386B;
+    font-size: 12px; 
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    font-size: 15px;
+    color: #00386B;
+    padding: 7px;
+ } 
+
+
+.container-modal {
+
+   
+    border: 2px solid #00386B;
+    margin: auto;
+    border-radius: 10px; 
+    padding: 16px 32px;
+    gap: 16px;
+    width: 80%;
+    background: #ffffff;      
+    box-shadow: 0px 4px 4px #00386B;
+    
+ }
+
+ .textarea-pesquisarespostas{
+    resize: none;
+    padding: 5px;
+    display: flex;
+    border: 2px solid #00386B;
+    margin: auto;
+    border-radius: 10px; 
+    padding: 16px 32px;
+    gap: 16px;
+    width: auto;
+    height: 50px;
+    background: #ffffff;      
+    box-shadow: 0px 4px 4px #00386B;
+
+}
+
+
+
+.button-save{
+
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;       
+    padding: 8px 32px;
+    gap: 10px;
+    position: relative;
+    width: 120px;
+    height: 41px;
+    background: #FFFFFF;
+    border-radius: 8px;
+    border: 2px solid #00386B;
+    cursor: pointer; 
+    color: #00386B;     
+ 
+    
+ }
+
+
+.box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    width:120px;
+    height: 30px;
+    background-color: #ffffff ;
+    border: 2px solid #00386B;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 20px;
+    color: #00386B;
+    font-weight: bold;
+    padding:8px;
+
+} 
+
+ .container-respostas {
+    display: flex;
+    justify-content: center;
+ }
+
+ .container-questions {
+    overflow: auto;
+    font-size: 13px;
+    padding: 8px;
+    margin: 10px;
+    border: 2px solid #00386B;
+    outline: none;
+    border-radius: 10px;      
+    width:70%;
+    height: 30px;
+ }
+
+.container-enviar {
+    margin-left: 87%;
+} 
+
+
+.observacoes-respostas{
+    margin-top: 30px;
+    overflow: auto;
+}
+
+
+
+ .button-answers{
+    display: none;
+      
+ } 
+
+ .button-answers:checked + .box {
+    background-color: #00386B;
+    color: #fafafa;
+
+ }
+
+ .box:hover  {
+    background-color: #00386B;
+    color: #fafafa;
+    transform: scale(1.1);
+    transition: all 0.5s;
+
+ }
+
+
+ .button-save:hover {
+    background-color: #00386B;
+    color: #fafafa;
+    transform: scale(1.1);
+    transition: all 0.5s;
+
+ }
+
+
+ 
+
+

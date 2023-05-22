@@ -7,7 +7,7 @@ use App\Models\PesquisasModel;
 use CodeIgniter\Controller;
 use App\Services\Pesquisa\PesquisasSrvc;
 
-class PesquisaRespostas extends Controller
+class PesquisaRespostas extends BaseController
 {
     private $pesquisa_respostas_model;
     private $pesquisa_model;

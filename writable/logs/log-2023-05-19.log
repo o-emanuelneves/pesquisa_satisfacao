@@ -60,3 +60,828 @@ in SYSTEMPATH\BaseModel.php on line 1235.
  5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaPerguntas))
  6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-19 12:41:37 --> mysqli_sql_exception: Unknown column 'resposta' in 'field list' in C:\xampp\htdocs\pesquisa_satisfacao\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `pe...', 0)
+#1 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseBuilder.php(1801): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', NULL, false)
+#4 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseBuilder.php(2192): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+#5 C:\xampp\htdocs\pesquisa_satisfacao\system\Model.php(364): CodeIgniter\Database\BaseBuilder->insertBatch(Array, NULL, 100)
+#6 C:\xampp\htdocs\pesquisa_satisfacao\system\BaseModel.php(874): CodeIgniter\Model->doInsertBatch(Array, NULL, 100, false)
+#7 C:\xampp\htdocs\pesquisa_satisfacao\app\Models\Pesquisa_RespostasModel.php(40): CodeIgniter\BaseModel->insertBatch(Array)
+#8 C:\xampp\htdocs\pesquisa_satisfacao\app\Controllers\PesquisaRespostas.php(63): App\Models\Pesquisa_RespostasModel->set_respostas(Array)
+#9 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->store()
+#10 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+#11 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\pesquisa_satisfacao\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-05-19 12:41:37 --> Unknown column 'resposta' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `pesquisa_respostas` (`created_at`, `fk_pergunta`, `fk_pesquisa`, `fk_user`, `resposta`, `updated_at`)
+VALUES (\'2023-05-19 12:41:37\',23,2,2,\'0\',\'2023-05-19 12:41:37\'), (\'2023-05-19 12:41:37\',24,2,2,\'0\',\'2023-05-19 12:41:37\'), (\'2023-05-19 12:41:37\',25,2,2,\'0\',\'2023-05-19 12:41:37\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pesquisa_respostas` (`created_at`, `fk_pergunta`, `fk_pesquisa`, `fk_user`, `resposta`, `updated_at`)
+VALUES (\'2023-05-19 12:41:37\',23,2,2,\'0\',\'2023-05-19 12:41:37\'), (\'2023-05-19 12:41:37\',24,2,2,\'0\',\'2023-05-19 12:41:37\'), (\'2023-05-19 12:41:37\',25,2,2,\'0\',\'2023-05-19 12:41:37\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pesquisa_respostas` (`created_at`, `fk_pergunta`, `fk_pesquisa`, `fk_user`, `resposta`, `updated_at`)
+VALUES (\'2023-05-19 12:41:37\',23,2,2,\'0\',\'2023-05-19 12:41:37\'), (\'2023-05-19 12:41:37\',24,2,2,\'0\',\'2023-05-19 12:41:37\'), (\'2023-05-19 12:41:37\',25,2,2,\'0\',\'2023-05-19 12:41:37\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1801): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pesquisa_respostas` (`created_at`, `fk_pergunta`, `fk_pesquisa`, `fk_user`, `resposta`, `updated_at`)
+VALUES (\'2023-05-19 12:41:37\',23,2,2,\'0\',\'2023-05-19 12:41:37\'), (\'2023-05-19 12:41:37\',24,2,2,\'0\',\'2023-05-19 12:41:37\'), (\'2023-05-19 12:41:37\',25,2,2,\'0\',\'2023-05-19 12:41:37\')', null, false)
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2192): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+ 6 SYSTEMPATH\Model.php(364): CodeIgniter\Database\BaseBuilder->insertBatch([...], null, 100)
+ 7 SYSTEMPATH\BaseModel.php(874): CodeIgniter\Model->doInsertBatch([...], null, 100, false)
+ 8 APPPATH\Models\Pesquisa_RespostasModel.php(40): CodeIgniter\BaseModel->insertBatch([...])
+ 9 APPPATH\Controllers\PesquisaRespostas.php(63): App\Models\Pesquisa_RespostasModel->set_respostas([...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->store()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-19 13:30:29 --> mysqli_sql_exception: Unknown column 'resposta' in 'field list' in C:\xampp\htdocs\pesquisa_satisfacao\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `pe...', 0)
+#1 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseBuilder.php(1801): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', NULL, false)
+#4 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseBuilder.php(2192): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+#5 C:\xampp\htdocs\pesquisa_satisfacao\system\Model.php(364): CodeIgniter\Database\BaseBuilder->insertBatch(Array, NULL, 100)
+#6 C:\xampp\htdocs\pesquisa_satisfacao\system\BaseModel.php(874): CodeIgniter\Model->doInsertBatch(Array, NULL, 100, false)
+#7 C:\xampp\htdocs\pesquisa_satisfacao\app\Models\Pesquisa_RespostasModel.php(40): CodeIgniter\BaseModel->insertBatch(Array)
+#8 C:\xampp\htdocs\pesquisa_satisfacao\app\Controllers\PesquisaRespostas.php(63): App\Models\Pesquisa_RespostasModel->set_respostas(Array)
+#9 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->store()
+#10 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+#11 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\pesquisa_satisfacao\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-05-19 13:30:29 --> Unknown column 'resposta' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `pesquisa_respostas` (`created_at`, `fk_pergunta`, `fk_pesquisa`, `fk_user`, `resposta`, `updated_at`)
+VALUES (\'2023-05-19 13:30:29\',23,3,2,\'\',\'2023-05-19 13:30:29\'), (\'2023-05-19 13:30:29\',24,3,2,\'\',\'2023-05-19 13:30:29\'), (\'2023-05-19 13:30:29\',25,3,2,\'\',\'2023-05-19 13:30:29\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pesquisa_respostas` (`created_at`, `fk_pergunta`, `fk_pesquisa`, `fk_user`, `resposta`, `updated_at`)
+VALUES (\'2023-05-19 13:30:29\',23,3,2,\'\',\'2023-05-19 13:30:29\'), (\'2023-05-19 13:30:29\',24,3,2,\'\',\'2023-05-19 13:30:29\'), (\'2023-05-19 13:30:29\',25,3,2,\'\',\'2023-05-19 13:30:29\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pesquisa_respostas` (`created_at`, `fk_pergunta`, `fk_pesquisa`, `fk_user`, `resposta`, `updated_at`)
+VALUES (\'2023-05-19 13:30:29\',23,3,2,\'\',\'2023-05-19 13:30:29\'), (\'2023-05-19 13:30:29\',24,3,2,\'\',\'2023-05-19 13:30:29\'), (\'2023-05-19 13:30:29\',25,3,2,\'\',\'2023-05-19 13:30:29\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1801): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pesquisa_respostas` (`created_at`, `fk_pergunta`, `fk_pesquisa`, `fk_user`, `resposta`, `updated_at`)
+VALUES (\'2023-05-19 13:30:29\',23,3,2,\'\',\'2023-05-19 13:30:29\'), (\'2023-05-19 13:30:29\',24,3,2,\'\',\'2023-05-19 13:30:29\'), (\'2023-05-19 13:30:29\',25,3,2,\'\',\'2023-05-19 13:30:29\')', null, false)
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2192): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+ 6 SYSTEMPATH\Model.php(364): CodeIgniter\Database\BaseBuilder->insertBatch([...], null, 100)
+ 7 SYSTEMPATH\BaseModel.php(874): CodeIgniter\Model->doInsertBatch([...], null, 100, false)
+ 8 APPPATH\Models\Pesquisa_RespostasModel.php(40): CodeIgniter\BaseModel->insertBatch([...])
+ 9 APPPATH\Controllers\PesquisaRespostas.php(63): App\Models\Pesquisa_RespostasModel->set_respostas([...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->store()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-19 16:26:58 --> mysqli_sql_exception: Unknown column 'resposta' in 'field list' in C:\xampp\htdocs\pesquisa_satisfacao\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `pe...', 0)
+#1 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseBuilder.php(1801): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', NULL, false)
+#4 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseBuilder.php(2192): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+#5 C:\xampp\htdocs\pesquisa_satisfacao\system\Model.php(364): CodeIgniter\Database\BaseBuilder->insertBatch(Array, NULL, 100)
+#6 C:\xampp\htdocs\pesquisa_satisfacao\system\BaseModel.php(874): CodeIgniter\Model->doInsertBatch(Array, NULL, 100, false)
+#7 C:\xampp\htdocs\pesquisa_satisfacao\app\Models\Pesquisa_RespostasModel.php(40): CodeIgniter\BaseModel->insertBatch(Array)
+#8 C:\xampp\htdocs\pesquisa_satisfacao\app\Controllers\PesquisaRespostas.php(63): App\Models\Pesquisa_RespostasModel->set_respostas(Array)
+#9 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->store()
+#10 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+#11 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\pesquisa_satisfacao\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-05-19 16:26:58 --> Unknown column 'resposta' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `pesquisa_respostas` (`created_at`, `fk_pergunta`, `fk_pesquisa`, `fk_user`, `resposta`, `updated_at`)
+VALUES (\'2023-05-19 16:26:58\',23,4,2,\'\',\'2023-05-19 16:26:58\'), (\'2023-05-19 16:26:58\',26,4,2,\'0\',\'2023-05-19 16:26:58\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pesquisa_respostas` (`created_at`, `fk_pergunta`, `fk_pesquisa`, `fk_user`, `resposta`, `updated_at`)
+VALUES (\'2023-05-19 16:26:58\',23,4,2,\'\',\'2023-05-19 16:26:58\'), (\'2023-05-19 16:26:58\',26,4,2,\'0\',\'2023-05-19 16:26:58\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pesquisa_respostas` (`created_at`, `fk_pergunta`, `fk_pesquisa`, `fk_user`, `resposta`, `updated_at`)
+VALUES (\'2023-05-19 16:26:58\',23,4,2,\'\',\'2023-05-19 16:26:58\'), (\'2023-05-19 16:26:58\',26,4,2,\'0\',\'2023-05-19 16:26:58\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1801): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pesquisa_respostas` (`created_at`, `fk_pergunta`, `fk_pesquisa`, `fk_user`, `resposta`, `updated_at`)
+VALUES (\'2023-05-19 16:26:58\',23,4,2,\'\',\'2023-05-19 16:26:58\'), (\'2023-05-19 16:26:58\',26,4,2,\'0\',\'2023-05-19 16:26:58\')', null, false)
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2192): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+ 6 SYSTEMPATH\Model.php(364): CodeIgniter\Database\BaseBuilder->insertBatch([...], null, 100)
+ 7 SYSTEMPATH\BaseModel.php(874): CodeIgniter\Model->doInsertBatch([...], null, 100, false)
+ 8 APPPATH\Models\Pesquisa_RespostasModel.php(40): CodeIgniter\BaseModel->insertBatch([...])
+ 9 APPPATH\Controllers\PesquisaRespostas.php(63): App\Models\Pesquisa_RespostasModel->set_respostas([...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->store()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-19 16:37:51 --> mysqli_sql_exception: Unknown column 'resposta' in 'field list' in C:\xampp\htdocs\pesquisa_satisfacao\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `pe...', 0)
+#1 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseBuilder.php(1801): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', NULL, false)
+#4 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseBuilder.php(2192): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+#5 C:\xampp\htdocs\pesquisa_satisfacao\system\Model.php(364): CodeIgniter\Database\BaseBuilder->insertBatch(Array, NULL, 100)
+#6 C:\xampp\htdocs\pesquisa_satisfacao\system\BaseModel.php(874): CodeIgniter\Model->doInsertBatch(Array, NULL, 100, false)
+#7 C:\xampp\htdocs\pesquisa_satisfacao\app\Models\Pesquisa_RespostasModel.php(40): CodeIgniter\BaseModel->insertBatch(Array)
+#8 C:\xampp\htdocs\pesquisa_satisfacao\app\Controllers\PesquisaRespostas.php(63): App\Models\Pesquisa_RespostasModel->set_respostas(Array)
+#9 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->store()
+#10 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+#11 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\pesquisa_satisfacao\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-05-19 16:37:51 --> Unknown column 'resposta' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `pesquisa_respostas` (`created_at`, `fk_pergunta`, `fk_pesquisa`, `fk_user`, `resposta`, `updated_at`)
+VALUES (\'2023-05-19 16:37:51\',23,5,2,\'2\',\'2023-05-19 16:37:51\'), (\'2023-05-19 16:37:51\',26,5,2,\'1\',\'2023-05-19 16:37:51\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pesquisa_respostas` (`created_at`, `fk_pergunta`, `fk_pesquisa`, `fk_user`, `resposta`, `updated_at`)
+VALUES (\'2023-05-19 16:37:51\',23,5,2,\'2\',\'2023-05-19 16:37:51\'), (\'2023-05-19 16:37:51\',26,5,2,\'1\',\'2023-05-19 16:37:51\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pesquisa_respostas` (`created_at`, `fk_pergunta`, `fk_pesquisa`, `fk_user`, `resposta`, `updated_at`)
+VALUES (\'2023-05-19 16:37:51\',23,5,2,\'2\',\'2023-05-19 16:37:51\'), (\'2023-05-19 16:37:51\',26,5,2,\'1\',\'2023-05-19 16:37:51\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1801): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pesquisa_respostas` (`created_at`, `fk_pergunta`, `fk_pesquisa`, `fk_user`, `resposta`, `updated_at`)
+VALUES (\'2023-05-19 16:37:51\',23,5,2,\'2\',\'2023-05-19 16:37:51\'), (\'2023-05-19 16:37:51\',26,5,2,\'1\',\'2023-05-19 16:37:51\')', null, false)
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2192): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+ 6 SYSTEMPATH\Model.php(364): CodeIgniter\Database\BaseBuilder->insertBatch([...], null, 100)
+ 7 SYSTEMPATH\BaseModel.php(874): CodeIgniter\Model->doInsertBatch([...], null, 100, false)
+ 8 APPPATH\Models\Pesquisa_RespostasModel.php(40): CodeIgniter\BaseModel->insertBatch([...])
+ 9 APPPATH\Controllers\PesquisaRespostas.php(63): App\Models\Pesquisa_RespostasModel->set_respostas([...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->store()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-19 17:43:52 --> mysqli_sql_exception: Unknown column 'resposta' in 'field list' in C:\xampp\htdocs\pesquisa_satisfacao\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `pe...', 0)
+#1 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseBuilder.php(1801): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', NULL, false)
+#4 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseBuilder.php(2192): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+#5 C:\xampp\htdocs\pesquisa_satisfacao\system\Model.php(364): CodeIgniter\Database\BaseBuilder->insertBatch(Array, NULL, 100)
+#6 C:\xampp\htdocs\pesquisa_satisfacao\system\BaseModel.php(874): CodeIgniter\Model->doInsertBatch(Array, NULL, 100, false)
+#7 C:\xampp\htdocs\pesquisa_satisfacao\app\Models\Pesquisa_RespostasModel.php(40): CodeIgniter\BaseModel->insertBatch(Array)
+#8 C:\xampp\htdocs\pesquisa_satisfacao\app\Controllers\PesquisaRespostas.php(63): App\Models\Pesquisa_RespostasModel->set_respostas(Array)
+#9 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->store()
+#10 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+#11 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\pesquisa_satisfacao\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-05-19 17:43:52 --> Unknown column 'resposta' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `pesquisa_respostas` (`created_at`, `fk_pergunta`, `fk_pesquisa`, `fk_user`, `resposta`, `updated_at`)
+VALUES (\'2023-05-19 17:43:52\',23,6,2,\'2\',\'2023-05-19 17:43:52\'), (\'2023-05-19 17:43:52\',26,6,2,\'0\',\'2023-05-19 17:43:52\'), (\'2023-05-19 17:43:52\',27,6,2,\'0\',\'2023-05-19 17:43:52\'), (\'2023-05-19 17:43:52\',28,6,2,\'1\',\'2023-05-19 17:43:52\'), (\'2023-05-19 17:43:52\',29,6,2,\'0\',\'2023-05-19 17:43:52\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pesquisa_respostas` (`created_at`, `fk_pergunta`, `fk_pesquisa`, `fk_user`, `resposta`, `updated_at`)
+VALUES (\'2023-05-19 17:43:52\',23,6,2,\'2\',\'2023-05-19 17:43:52\'), (\'2023-05-19 17:43:52\',26,6,2,\'0\',\'2023-05-19 17:43:52\'), (\'2023-05-19 17:43:52\',27,6,2,\'0\',\'2023-05-19 17:43:52\'), (\'2023-05-19 17:43:52\',28,6,2,\'1\',\'2023-05-19 17:43:52\'), (\'2023-05-19 17:43:52\',29,6,2,\'0\',\'2023-05-19 17:43:52\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pesquisa_respostas` (`created_at`, `fk_pergunta`, `fk_pesquisa`, `fk_user`, `resposta`, `updated_at`)
+VALUES (\'2023-05-19 17:43:52\',23,6,2,\'2\',\'2023-05-19 17:43:52\'), (\'2023-05-19 17:43:52\',26,6,2,\'0\',\'2023-05-19 17:43:52\'), (\'2023-05-19 17:43:52\',27,6,2,\'0\',\'2023-05-19 17:43:52\'), (\'2023-05-19 17:43:52\',28,6,2,\'1\',\'2023-05-19 17:43:52\'), (\'2023-05-19 17:43:52\',29,6,2,\'0\',\'2023-05-19 17:43:52\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1801): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pesquisa_respostas` (`created_at`, `fk_pergunta`, `fk_pesquisa`, `fk_user`, `resposta`, `updated_at`)
+VALUES (\'2023-05-19 17:43:52\',23,6,2,\'2\',\'2023-05-19 17:43:52\'), (\'2023-05-19 17:43:52\',26,6,2,\'0\',\'2023-05-19 17:43:52\'), (\'2023-05-19 17:43:52\',27,6,2,\'0\',\'2023-05-19 17:43:52\'), (\'2023-05-19 17:43:52\',28,6,2,\'1\',\'2023-05-19 17:43:52\'), (\'2023-05-19 17:43:52\',29,6,2,\'0\',\'2023-05-19 17:43:52\')', null, false)
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2192): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+ 6 SYSTEMPATH\Model.php(364): CodeIgniter\Database\BaseBuilder->insertBatch([...], null, 100)
+ 7 SYSTEMPATH\BaseModel.php(874): CodeIgniter\Model->doInsertBatch([...], null, 100, false)
+ 8 APPPATH\Models\Pesquisa_RespostasModel.php(40): CodeIgniter\BaseModel->insertBatch([...])
+ 9 APPPATH\Controllers\PesquisaRespostas.php(63): App\Models\Pesquisa_RespostasModel->set_respostas([...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->store()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-19 17:44:08 --> mysqli_sql_exception: Unknown column 'resposta' in 'field list' in C:\xampp\htdocs\pesquisa_satisfacao\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `pe...', 0)
+#1 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseBuilder.php(1801): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', NULL, false)
+#4 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseBuilder.php(2192): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+#5 C:\xampp\htdocs\pesquisa_satisfacao\system\Model.php(364): CodeIgniter\Database\BaseBuilder->insertBatch(Array, NULL, 100)
+#6 C:\xampp\htdocs\pesquisa_satisfacao\system\BaseModel.php(874): CodeIgniter\Model->doInsertBatch(Array, NULL, 100, false)
+#7 C:\xampp\htdocs\pesquisa_satisfacao\app\Models\Pesquisa_RespostasModel.php(40): CodeIgniter\BaseModel->insertBatch(Array)
+#8 C:\xampp\htdocs\pesquisa_satisfacao\app\Controllers\PesquisaRespostas.php(63): App\Models\Pesquisa_RespostasModel->set_respostas(Array)
+#9 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->store()
+#10 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+#11 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\pesquisa_satisfacao\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-05-19 17:44:08 --> Unknown column 'resposta' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `pesquisa_respostas` (`created_at`, `fk_pergunta`, `fk_pesquisa`, `fk_user`, `resposta`, `updated_at`)
+VALUES (\'2023-05-19 17:44:08\',23,7,2,\'2\',\'2023-05-19 17:44:08\'), (\'2023-05-19 17:44:08\',26,7,2,\'0\',\'2023-05-19 17:44:08\'), (\'2023-05-19 17:44:08\',27,7,2,\'0\',\'2023-05-19 17:44:08\'), (\'2023-05-19 17:44:08\',28,7,2,\'1\',\'2023-05-19 17:44:08\'), (\'2023-05-19 17:44:08\',29,7,2,\'0\',\'2023-05-19 17:44:08\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pesquisa_respostas` (`created_at`, `fk_pergunta`, `fk_pesquisa`, `fk_user`, `resposta`, `updated_at`)
+VALUES (\'2023-05-19 17:44:08\',23,7,2,\'2\',\'2023-05-19 17:44:08\'), (\'2023-05-19 17:44:08\',26,7,2,\'0\',\'2023-05-19 17:44:08\'), (\'2023-05-19 17:44:08\',27,7,2,\'0\',\'2023-05-19 17:44:08\'), (\'2023-05-19 17:44:08\',28,7,2,\'1\',\'2023-05-19 17:44:08\'), (\'2023-05-19 17:44:08\',29,7,2,\'0\',\'2023-05-19 17:44:08\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pesquisa_respostas` (`created_at`, `fk_pergunta`, `fk_pesquisa`, `fk_user`, `resposta`, `updated_at`)
+VALUES (\'2023-05-19 17:44:08\',23,7,2,\'2\',\'2023-05-19 17:44:08\'), (\'2023-05-19 17:44:08\',26,7,2,\'0\',\'2023-05-19 17:44:08\'), (\'2023-05-19 17:44:08\',27,7,2,\'0\',\'2023-05-19 17:44:08\'), (\'2023-05-19 17:44:08\',28,7,2,\'1\',\'2023-05-19 17:44:08\'), (\'2023-05-19 17:44:08\',29,7,2,\'0\',\'2023-05-19 17:44:08\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1801): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pesquisa_respostas` (`created_at`, `fk_pergunta`, `fk_pesquisa`, `fk_user`, `resposta`, `updated_at`)
+VALUES (\'2023-05-19 17:44:08\',23,7,2,\'2\',\'2023-05-19 17:44:08\'), (\'2023-05-19 17:44:08\',26,7,2,\'0\',\'2023-05-19 17:44:08\'), (\'2023-05-19 17:44:08\',27,7,2,\'0\',\'2023-05-19 17:44:08\'), (\'2023-05-19 17:44:08\',28,7,2,\'1\',\'2023-05-19 17:44:08\'), (\'2023-05-19 17:44:08\',29,7,2,\'0\',\'2023-05-19 17:44:08\')', null, false)
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2192): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+ 6 SYSTEMPATH\Model.php(364): CodeIgniter\Database\BaseBuilder->insertBatch([...], null, 100)
+ 7 SYSTEMPATH\BaseModel.php(874): CodeIgniter\Model->doInsertBatch([...], null, 100, false)
+ 8 APPPATH\Models\Pesquisa_RespostasModel.php(40): CodeIgniter\BaseModel->insertBatch([...])
+ 9 APPPATH\Controllers\PesquisaRespostas.php(63): App\Models\Pesquisa_RespostasModel->set_respostas([...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->store()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-19 17:44:26 --> mysqli_sql_exception: Unknown column 'resposta' in 'field list' in C:\xampp\htdocs\pesquisa_satisfacao\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `pe...', 0)
+#1 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseBuilder.php(1801): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', NULL, false)
+#4 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseBuilder.php(2192): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+#5 C:\xampp\htdocs\pesquisa_satisfacao\system\Model.php(364): CodeIgniter\Database\BaseBuilder->insertBatch(Array, NULL, 100)
+#6 C:\xampp\htdocs\pesquisa_satisfacao\system\BaseModel.php(874): CodeIgniter\Model->doInsertBatch(Array, NULL, 100, false)
+#7 C:\xampp\htdocs\pesquisa_satisfacao\app\Models\Pesquisa_RespostasModel.php(40): CodeIgniter\BaseModel->insertBatch(Array)
+#8 C:\xampp\htdocs\pesquisa_satisfacao\app\Controllers\PesquisaRespostas.php(63): App\Models\Pesquisa_RespostasModel->set_respostas(Array)
+#9 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->store()
+#10 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+#11 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\pesquisa_satisfacao\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-05-19 17:44:26 --> Unknown column 'resposta' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `pesquisa_respostas` (`created_at`, `fk_pergunta`, `fk_pesquisa`, `fk_user`, `resposta`, `updated_at`)
+VALUES (\'2023-05-19 17:44:26\',23,8,2,\'0\',\'2023-05-19 17:44:26\'), (\'2023-05-19 17:44:26\',26,8,2,\'0\',\'2023-05-19 17:44:26\'), (\'2023-05-19 17:44:26\',27,8,2,\'1\',\'2023-05-19 17:44:26\'), (\'2023-05-19 17:44:26\',28,8,2,\'1\',\'2023-05-19 17:44:26\'), (\'2023-05-19 17:44:26\',29,8,2,\'2\',\'2023-05-19 17:44:26\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pesquisa_respostas` (`created_at`, `fk_pergunta`, `fk_pesquisa`, `fk_user`, `resposta`, `updated_at`)
+VALUES (\'2023-05-19 17:44:26\',23,8,2,\'0\',\'2023-05-19 17:44:26\'), (\'2023-05-19 17:44:26\',26,8,2,\'0\',\'2023-05-19 17:44:26\'), (\'2023-05-19 17:44:26\',27,8,2,\'1\',\'2023-05-19 17:44:26\'), (\'2023-05-19 17:44:26\',28,8,2,\'1\',\'2023-05-19 17:44:26\'), (\'2023-05-19 17:44:26\',29,8,2,\'2\',\'2023-05-19 17:44:26\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pesquisa_respostas` (`created_at`, `fk_pergunta`, `fk_pesquisa`, `fk_user`, `resposta`, `updated_at`)
+VALUES (\'2023-05-19 17:44:26\',23,8,2,\'0\',\'2023-05-19 17:44:26\'), (\'2023-05-19 17:44:26\',26,8,2,\'0\',\'2023-05-19 17:44:26\'), (\'2023-05-19 17:44:26\',27,8,2,\'1\',\'2023-05-19 17:44:26\'), (\'2023-05-19 17:44:26\',28,8,2,\'1\',\'2023-05-19 17:44:26\'), (\'2023-05-19 17:44:26\',29,8,2,\'2\',\'2023-05-19 17:44:26\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1801): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pesquisa_respostas` (`created_at`, `fk_pergunta`, `fk_pesquisa`, `fk_user`, `resposta`, `updated_at`)
+VALUES (\'2023-05-19 17:44:26\',23,8,2,\'0\',\'2023-05-19 17:44:26\'), (\'2023-05-19 17:44:26\',26,8,2,\'0\',\'2023-05-19 17:44:26\'), (\'2023-05-19 17:44:26\',27,8,2,\'1\',\'2023-05-19 17:44:26\'), (\'2023-05-19 17:44:26\',28,8,2,\'1\',\'2023-05-19 17:44:26\'), (\'2023-05-19 17:44:26\',29,8,2,\'2\',\'2023-05-19 17:44:26\')', null, false)
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2192): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+ 6 SYSTEMPATH\Model.php(364): CodeIgniter\Database\BaseBuilder->insertBatch([...], null, 100)
+ 7 SYSTEMPATH\BaseModel.php(874): CodeIgniter\Model->doInsertBatch([...], null, 100, false)
+ 8 APPPATH\Models\Pesquisa_RespostasModel.php(40): CodeIgniter\BaseModel->insertBatch([...])
+ 9 APPPATH\Controllers\PesquisaRespostas.php(63): App\Models\Pesquisa_RespostasModel->set_respostas([...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->store()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-19 17:44:36 --> mysqli_sql_exception: Unknown column 'resposta' in 'field list' in C:\xampp\htdocs\pesquisa_satisfacao\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `pe...', 0)
+#1 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseBuilder.php(1801): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', NULL, false)
+#4 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseBuilder.php(2192): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+#5 C:\xampp\htdocs\pesquisa_satisfacao\system\Model.php(364): CodeIgniter\Database\BaseBuilder->insertBatch(Array, NULL, 100)
+#6 C:\xampp\htdocs\pesquisa_satisfacao\system\BaseModel.php(874): CodeIgniter\Model->doInsertBatch(Array, NULL, 100, false)
+#7 C:\xampp\htdocs\pesquisa_satisfacao\app\Models\Pesquisa_RespostasModel.php(40): CodeIgniter\BaseModel->insertBatch(Array)
+#8 C:\xampp\htdocs\pesquisa_satisfacao\app\Controllers\PesquisaRespostas.php(63): App\Models\Pesquisa_RespostasModel->set_respostas(Array)
+#9 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->store()
+#10 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+#11 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\pesquisa_satisfacao\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-05-19 17:44:36 --> Unknown column 'resposta' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `pesquisa_respostas` (`created_at`, `fk_pergunta`, `fk_pesquisa`, `fk_user`, `resposta`, `updated_at`)
+VALUES (\'2023-05-19 17:44:36\',23,9,2,\'0\',\'2023-05-19 17:44:36\'), (\'2023-05-19 17:44:36\',26,9,2,\'0\',\'2023-05-19 17:44:36\'), (\'2023-05-19 17:44:36\',27,9,2,\'1\',\'2023-05-19 17:44:36\'), (\'2023-05-19 17:44:36\',28,9,2,\'1\',\'2023-05-19 17:44:36\'), (\'2023-05-19 17:44:36\',29,9,2,\'2\',\'2023-05-19 17:44:36\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pesquisa_respostas` (`created_at`, `fk_pergunta`, `fk_pesquisa`, `fk_user`, `resposta`, `updated_at`)
+VALUES (\'2023-05-19 17:44:36\',23,9,2,\'0\',\'2023-05-19 17:44:36\'), (\'2023-05-19 17:44:36\',26,9,2,\'0\',\'2023-05-19 17:44:36\'), (\'2023-05-19 17:44:36\',27,9,2,\'1\',\'2023-05-19 17:44:36\'), (\'2023-05-19 17:44:36\',28,9,2,\'1\',\'2023-05-19 17:44:36\'), (\'2023-05-19 17:44:36\',29,9,2,\'2\',\'2023-05-19 17:44:36\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pesquisa_respostas` (`created_at`, `fk_pergunta`, `fk_pesquisa`, `fk_user`, `resposta`, `updated_at`)
+VALUES (\'2023-05-19 17:44:36\',23,9,2,\'0\',\'2023-05-19 17:44:36\'), (\'2023-05-19 17:44:36\',26,9,2,\'0\',\'2023-05-19 17:44:36\'), (\'2023-05-19 17:44:36\',27,9,2,\'1\',\'2023-05-19 17:44:36\'), (\'2023-05-19 17:44:36\',28,9,2,\'1\',\'2023-05-19 17:44:36\'), (\'2023-05-19 17:44:36\',29,9,2,\'2\',\'2023-05-19 17:44:36\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1801): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pesquisa_respostas` (`created_at`, `fk_pergunta`, `fk_pesquisa`, `fk_user`, `resposta`, `updated_at`)
+VALUES (\'2023-05-19 17:44:36\',23,9,2,\'0\',\'2023-05-19 17:44:36\'), (\'2023-05-19 17:44:36\',26,9,2,\'0\',\'2023-05-19 17:44:36\'), (\'2023-05-19 17:44:36\',27,9,2,\'1\',\'2023-05-19 17:44:36\'), (\'2023-05-19 17:44:36\',28,9,2,\'1\',\'2023-05-19 17:44:36\'), (\'2023-05-19 17:44:36\',29,9,2,\'2\',\'2023-05-19 17:44:36\')', null, false)
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2192): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+ 6 SYSTEMPATH\Model.php(364): CodeIgniter\Database\BaseBuilder->insertBatch([...], null, 100)
+ 7 SYSTEMPATH\BaseModel.php(874): CodeIgniter\Model->doInsertBatch([...], null, 100, false)
+ 8 APPPATH\Models\Pesquisa_RespostasModel.php(40): CodeIgniter\BaseModel->insertBatch([...])
+ 9 APPPATH\Controllers\PesquisaRespostas.php(63): App\Models\Pesquisa_RespostasModel->set_respostas([...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->store()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-19 17:44:49 --> mysqli_sql_exception: Unknown column 'resposta' in 'field list' in C:\xampp\htdocs\pesquisa_satisfacao\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `pe...', 0)
+#1 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseBuilder.php(1801): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', NULL, false)
+#4 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseBuilder.php(2192): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+#5 C:\xampp\htdocs\pesquisa_satisfacao\system\Model.php(364): CodeIgniter\Database\BaseBuilder->insertBatch(Array, NULL, 100)
+#6 C:\xampp\htdocs\pesquisa_satisfacao\system\BaseModel.php(874): CodeIgniter\Model->doInsertBatch(Array, NULL, 100, false)
+#7 C:\xampp\htdocs\pesquisa_satisfacao\app\Models\Pesquisa_RespostasModel.php(40): CodeIgniter\BaseModel->insertBatch(Array)
+#8 C:\xampp\htdocs\pesquisa_satisfacao\app\Controllers\PesquisaRespostas.php(63): App\Models\Pesquisa_RespostasModel->set_respostas(Array)
+#9 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->store()
+#10 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+#11 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\pesquisa_satisfacao\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-05-19 17:44:49 --> Unknown column 'resposta' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `pesquisa_respostas` (`created_at`, `fk_pergunta`, `fk_pesquisa`, `fk_user`, `resposta`, `updated_at`)
+VALUES (\'2023-05-19 17:44:49\',23,10,2,\'0\',\'2023-05-19 17:44:49\'), (\'2023-05-19 17:44:49\',26,10,2,\'0\',\'2023-05-19 17:44:49\'), (\'2023-05-19 17:44:49\',27,10,2,\'1\',\'2023-05-19 17:44:49\'), (\'2023-05-19 17:44:49\',28,10,2,\'1\',\'2023-05-19 17:44:49\'), (\'2023-05-19 17:44:49\',29,10,2,\'2\',\'2023-05-19 17:44:49\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pesquisa_respostas` (`created_at`, `fk_pergunta`, `fk_pesquisa`, `fk_user`, `resposta`, `updated_at`)
+VALUES (\'2023-05-19 17:44:49\',23,10,2,\'0\',\'2023-05-19 17:44:49\'), (\'2023-05-19 17:44:49\',26,10,2,\'0\',\'2023-05-19 17:44:49\'), (\'2023-05-19 17:44:49\',27,10,2,\'1\',\'2023-05-19 17:44:49\'), (\'2023-05-19 17:44:49\',28,10,2,\'1\',\'2023-05-19 17:44:49\'), (\'2023-05-19 17:44:49\',29,10,2,\'2\',\'2023-05-19 17:44:49\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pesquisa_respostas` (`created_at`, `fk_pergunta`, `fk_pesquisa`, `fk_user`, `resposta`, `updated_at`)
+VALUES (\'2023-05-19 17:44:49\',23,10,2,\'0\',\'2023-05-19 17:44:49\'), (\'2023-05-19 17:44:49\',26,10,2,\'0\',\'2023-05-19 17:44:49\'), (\'2023-05-19 17:44:49\',27,10,2,\'1\',\'2023-05-19 17:44:49\'), (\'2023-05-19 17:44:49\',28,10,2,\'1\',\'2023-05-19 17:44:49\'), (\'2023-05-19 17:44:49\',29,10,2,\'2\',\'2023-05-19 17:44:49\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1801): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pesquisa_respostas` (`created_at`, `fk_pergunta`, `fk_pesquisa`, `fk_user`, `resposta`, `updated_at`)
+VALUES (\'2023-05-19 17:44:49\',23,10,2,\'0\',\'2023-05-19 17:44:49\'), (\'2023-05-19 17:44:49\',26,10,2,\'0\',\'2023-05-19 17:44:49\'), (\'2023-05-19 17:44:49\',27,10,2,\'1\',\'2023-05-19 17:44:49\'), (\'2023-05-19 17:44:49\',28,10,2,\'1\',\'2023-05-19 17:44:49\'), (\'2023-05-19 17:44:49\',29,10,2,\'2\',\'2023-05-19 17:44:49\')', null, false)
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2192): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+ 6 SYSTEMPATH\Model.php(364): CodeIgniter\Database\BaseBuilder->insertBatch([...], null, 100)
+ 7 SYSTEMPATH\BaseModel.php(874): CodeIgniter\Model->doInsertBatch([...], null, 100, false)
+ 8 APPPATH\Models\Pesquisa_RespostasModel.php(40): CodeIgniter\BaseModel->insertBatch([...])
+ 9 APPPATH\Controllers\PesquisaRespostas.php(63): App\Models\Pesquisa_RespostasModel->set_respostas([...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->store()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-19 17:45:33 --> mysqli_sql_exception: Unknown column 'resposta' in 'field list' in C:\xampp\htdocs\pesquisa_satisfacao\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `pe...', 0)
+#1 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseBuilder.php(1801): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', NULL, false)
+#4 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseBuilder.php(2192): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+#5 C:\xampp\htdocs\pesquisa_satisfacao\system\Model.php(364): CodeIgniter\Database\BaseBuilder->insertBatch(Array, NULL, 100)
+#6 C:\xampp\htdocs\pesquisa_satisfacao\system\BaseModel.php(874): CodeIgniter\Model->doInsertBatch(Array, NULL, 100, false)
+#7 C:\xampp\htdocs\pesquisa_satisfacao\app\Models\Pesquisa_RespostasModel.php(40): CodeIgniter\BaseModel->insertBatch(Array)
+#8 C:\xampp\htdocs\pesquisa_satisfacao\app\Controllers\PesquisaRespostas.php(63): App\Models\Pesquisa_RespostasModel->set_respostas(Array)
+#9 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->store()
+#10 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+#11 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\pesquisa_satisfacao\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-05-19 17:45:33 --> Unknown column 'resposta' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `pesquisa_respostas` (`created_at`, `fk_pergunta`, `fk_pesquisa`, `fk_user`, `resposta`, `updated_at`)
+VALUES (\'2023-05-19 17:45:33\',23,11,2,\'2\',\'2023-05-19 17:45:33\'), (\'2023-05-19 17:45:33\',26,11,2,\'2\',\'2023-05-19 17:45:33\'), (\'2023-05-19 17:45:33\',27,11,2,\'2\',\'2023-05-19 17:45:33\'), (\'2023-05-19 17:45:33\',28,11,2,\'2\',\'2023-05-19 17:45:33\'), (\'2023-05-19 17:45:33\',29,11,2,\'2\',\'2023-05-19 17:45:33\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pesquisa_respostas` (`created_at`, `fk_pergunta`, `fk_pesquisa`, `fk_user`, `resposta`, `updated_at`)
+VALUES (\'2023-05-19 17:45:33\',23,11,2,\'2\',\'2023-05-19 17:45:33\'), (\'2023-05-19 17:45:33\',26,11,2,\'2\',\'2023-05-19 17:45:33\'), (\'2023-05-19 17:45:33\',27,11,2,\'2\',\'2023-05-19 17:45:33\'), (\'2023-05-19 17:45:33\',28,11,2,\'2\',\'2023-05-19 17:45:33\'), (\'2023-05-19 17:45:33\',29,11,2,\'2\',\'2023-05-19 17:45:33\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pesquisa_respostas` (`created_at`, `fk_pergunta`, `fk_pesquisa`, `fk_user`, `resposta`, `updated_at`)
+VALUES (\'2023-05-19 17:45:33\',23,11,2,\'2\',\'2023-05-19 17:45:33\'), (\'2023-05-19 17:45:33\',26,11,2,\'2\',\'2023-05-19 17:45:33\'), (\'2023-05-19 17:45:33\',27,11,2,\'2\',\'2023-05-19 17:45:33\'), (\'2023-05-19 17:45:33\',28,11,2,\'2\',\'2023-05-19 17:45:33\'), (\'2023-05-19 17:45:33\',29,11,2,\'2\',\'2023-05-19 17:45:33\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1801): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pesquisa_respostas` (`created_at`, `fk_pergunta`, `fk_pesquisa`, `fk_user`, `resposta`, `updated_at`)
+VALUES (\'2023-05-19 17:45:33\',23,11,2,\'2\',\'2023-05-19 17:45:33\'), (\'2023-05-19 17:45:33\',26,11,2,\'2\',\'2023-05-19 17:45:33\'), (\'2023-05-19 17:45:33\',27,11,2,\'2\',\'2023-05-19 17:45:33\'), (\'2023-05-19 17:45:33\',28,11,2,\'2\',\'2023-05-19 17:45:33\'), (\'2023-05-19 17:45:33\',29,11,2,\'2\',\'2023-05-19 17:45:33\')', null, false)
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2192): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+ 6 SYSTEMPATH\Model.php(364): CodeIgniter\Database\BaseBuilder->insertBatch([...], null, 100)
+ 7 SYSTEMPATH\BaseModel.php(874): CodeIgniter\Model->doInsertBatch([...], null, 100, false)
+ 8 APPPATH\Models\Pesquisa_RespostasModel.php(40): CodeIgniter\BaseModel->insertBatch([...])
+ 9 APPPATH\Controllers\PesquisaRespostas.php(63): App\Models\Pesquisa_RespostasModel->set_respostas([...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->store()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-19 17:47:05 --> mysqli_sql_exception: Unknown column 'resposta' in 'field list' in C:\xampp\htdocs\pesquisa_satisfacao\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `nome`, ...', 0)
+#1 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `nome`, ...')
+#2 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `nome`, ...')
+#3 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `nome`, ...', Array, false)
+#4 C:\xampp\htdocs\pesquisa_satisfacao\system\Model.php(203): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\pesquisa_satisfacao\system\BaseModel.php(557): CodeIgniter\Model->doFind(false, NULL)
+#6 C:\xampp\htdocs\pesquisa_satisfacao\app\Models\PesquisasModel.php(40): CodeIgniter\BaseModel->find()
+#7 C:\xampp\htdocs\pesquisa_satisfacao\app\Controllers\PesquisaRespostas.php(25): App\Models\PesquisasModel->get_pesquisa_and_respostas(Array)
+#8 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->index()
+#9 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+#10 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\pesquisa_satisfacao\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-05-19 17:47:05 --> Unknown column 'resposta' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `nome`, `resposta`, `fk_pesquisa`
+FROM `pesquisas`
+JOIN `pesquisa_respostas` ON `pesquisa_respostas`.`fk_pesquisa` = `pesquisas`.`id_pesquisa`
+JOIN `auth_users` ON `auth_users`.`id_user` = `pesquisa_respostas`.`fk_user`
+WHERE `pesquisas`.`deleted_at` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `nome`, `resposta`, `fk_pesquisa`
+FROM `pesquisas`
+JOIN `pesquisa_respostas` ON `pesquisa_respostas`.`fk_pesquisa` = `pesquisas`.`id_pesquisa`
+JOIN `auth_users` ON `auth_users`.`id_user` = `pesquisa_respostas`.`fk_user`
+WHERE `pesquisas`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `nome`, `resposta`, `fk_pesquisa`
+FROM `pesquisas`
+JOIN `pesquisa_respostas` ON `pesquisa_respostas`.`fk_pesquisa` = `pesquisas`.`id_pesquisa`
+JOIN `auth_users` ON `auth_users`.`id_user` = `pesquisa_respostas`.`fk_user`
+WHERE `pesquisas`.`deleted_at` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `nome`, `resposta`, `fk_pesquisa`
+FROM `pesquisas`
+JOIN `pesquisa_respostas` ON `pesquisa_respostas`.`fk_pesquisa` = `pesquisas`.`id_pesquisa`
+JOIN `auth_users` ON `auth_users`.`id_user` = `pesquisa_respostas`.`fk_user`
+WHERE `pesquisas`.`deleted_at` IS NULL', [], false)
+ 5 SYSTEMPATH\Model.php(203): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(557): CodeIgniter\Model->doFind(false, null)
+ 7 APPPATH\Models\PesquisasModel.php(40): CodeIgniter\BaseModel->find()
+ 8 APPPATH\Controllers\PesquisaRespostas.php(25): App\Models\PesquisasModel->get_pesquisa_and_respostas([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->index()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-19 17:48:30 --> mysqli_sql_exception: Unknown column 'resposta' in 'field list' in C:\xampp\htdocs\pesquisa_satisfacao\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `pe...', 0)
+#1 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseBuilder.php(1801): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', NULL, false)
+#4 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseBuilder.php(2192): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+#5 C:\xampp\htdocs\pesquisa_satisfacao\system\Model.php(364): CodeIgniter\Database\BaseBuilder->insertBatch(Array, NULL, 100)
+#6 C:\xampp\htdocs\pesquisa_satisfacao\system\BaseModel.php(874): CodeIgniter\Model->doInsertBatch(Array, NULL, 100, false)
+#7 C:\xampp\htdocs\pesquisa_satisfacao\app\Models\Pesquisa_RespostasModel.php(40): CodeIgniter\BaseModel->insertBatch(Array)
+#8 C:\xampp\htdocs\pesquisa_satisfacao\app\Controllers\PesquisaRespostas.php(63): App\Models\Pesquisa_RespostasModel->set_respostas(Array)
+#9 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->store()
+#10 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+#11 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\pesquisa_satisfacao\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-05-19 17:48:30 --> Unknown column 'resposta' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `pesquisa_respostas` (`created_at`, `fk_pergunta`, `fk_pesquisa`, `fk_user`, `resposta`, `updated_at`)
+VALUES (\'2023-05-19 17:48:30\',23,13,2,\'2\',\'2023-05-19 17:48:30\'), (\'2023-05-19 17:48:30\',26,13,2,\'2\',\'2023-05-19 17:48:30\'), (\'2023-05-19 17:48:30\',27,13,2,\'2\',\'2023-05-19 17:48:30\'), (\'2023-05-19 17:48:30\',28,13,2,\'1\',\'2023-05-19 17:48:30\'), (\'2023-05-19 17:48:30\',29,13,2,\'2\',\'2023-05-19 17:48:30\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pesquisa_respostas` (`created_at`, `fk_pergunta`, `fk_pesquisa`, `fk_user`, `resposta`, `updated_at`)
+VALUES (\'2023-05-19 17:48:30\',23,13,2,\'2\',\'2023-05-19 17:48:30\'), (\'2023-05-19 17:48:30\',26,13,2,\'2\',\'2023-05-19 17:48:30\'), (\'2023-05-19 17:48:30\',27,13,2,\'2\',\'2023-05-19 17:48:30\'), (\'2023-05-19 17:48:30\',28,13,2,\'1\',\'2023-05-19 17:48:30\'), (\'2023-05-19 17:48:30\',29,13,2,\'2\',\'2023-05-19 17:48:30\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pesquisa_respostas` (`created_at`, `fk_pergunta`, `fk_pesquisa`, `fk_user`, `resposta`, `updated_at`)
+VALUES (\'2023-05-19 17:48:30\',23,13,2,\'2\',\'2023-05-19 17:48:30\'), (\'2023-05-19 17:48:30\',26,13,2,\'2\',\'2023-05-19 17:48:30\'), (\'2023-05-19 17:48:30\',27,13,2,\'2\',\'2023-05-19 17:48:30\'), (\'2023-05-19 17:48:30\',28,13,2,\'1\',\'2023-05-19 17:48:30\'), (\'2023-05-19 17:48:30\',29,13,2,\'2\',\'2023-05-19 17:48:30\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1801): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pesquisa_respostas` (`created_at`, `fk_pergunta`, `fk_pesquisa`, `fk_user`, `resposta`, `updated_at`)
+VALUES (\'2023-05-19 17:48:30\',23,13,2,\'2\',\'2023-05-19 17:48:30\'), (\'2023-05-19 17:48:30\',26,13,2,\'2\',\'2023-05-19 17:48:30\'), (\'2023-05-19 17:48:30\',27,13,2,\'2\',\'2023-05-19 17:48:30\'), (\'2023-05-19 17:48:30\',28,13,2,\'1\',\'2023-05-19 17:48:30\'), (\'2023-05-19 17:48:30\',29,13,2,\'2\',\'2023-05-19 17:48:30\')', null, false)
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2192): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+ 6 SYSTEMPATH\Model.php(364): CodeIgniter\Database\BaseBuilder->insertBatch([...], null, 100)
+ 7 SYSTEMPATH\BaseModel.php(874): CodeIgniter\Model->doInsertBatch([...], null, 100, false)
+ 8 APPPATH\Models\Pesquisa_RespostasModel.php(40): CodeIgniter\BaseModel->insertBatch([...])
+ 9 APPPATH\Controllers\PesquisaRespostas.php(63): App\Models\Pesquisa_RespostasModel->set_respostas([...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->store()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-19 17:49:03 --> mysqli_sql_exception: Unknown column 'resposta' in 'field list' in C:\xampp\htdocs\pesquisa_satisfacao\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `nome`, ...', 0)
+#1 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `nome`, ...')
+#2 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `nome`, ...')
+#3 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `nome`, ...', Array, false)
+#4 C:\xampp\htdocs\pesquisa_satisfacao\system\Model.php(203): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\pesquisa_satisfacao\system\BaseModel.php(557): CodeIgniter\Model->doFind(false, NULL)
+#6 C:\xampp\htdocs\pesquisa_satisfacao\app\Models\PesquisasModel.php(40): CodeIgniter\BaseModel->find()
+#7 C:\xampp\htdocs\pesquisa_satisfacao\app\Controllers\PesquisaRespostas.php(25): App\Models\PesquisasModel->get_pesquisa_and_respostas(Array)
+#8 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->index()
+#9 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+#10 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\pesquisa_satisfacao\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-05-19 17:49:03 --> Unknown column 'resposta' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `nome`, `resposta`, `fk_pesquisa`
+FROM `pesquisas`
+JOIN `pesquisa_respostas` ON `pesquisa_respostas`.`fk_pesquisa` = `pesquisas`.`id_pesquisa`
+JOIN `auth_users` ON `auth_users`.`id_user` = `pesquisa_respostas`.`fk_user`
+WHERE `pesquisas`.`deleted_at` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `nome`, `resposta`, `fk_pesquisa`
+FROM `pesquisas`
+JOIN `pesquisa_respostas` ON `pesquisa_respostas`.`fk_pesquisa` = `pesquisas`.`id_pesquisa`
+JOIN `auth_users` ON `auth_users`.`id_user` = `pesquisa_respostas`.`fk_user`
+WHERE `pesquisas`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `nome`, `resposta`, `fk_pesquisa`
+FROM `pesquisas`
+JOIN `pesquisa_respostas` ON `pesquisa_respostas`.`fk_pesquisa` = `pesquisas`.`id_pesquisa`
+JOIN `auth_users` ON `auth_users`.`id_user` = `pesquisa_respostas`.`fk_user`
+WHERE `pesquisas`.`deleted_at` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `nome`, `resposta`, `fk_pesquisa`
+FROM `pesquisas`
+JOIN `pesquisa_respostas` ON `pesquisa_respostas`.`fk_pesquisa` = `pesquisas`.`id_pesquisa`
+JOIN `auth_users` ON `auth_users`.`id_user` = `pesquisa_respostas`.`fk_user`
+WHERE `pesquisas`.`deleted_at` IS NULL', [], false)
+ 5 SYSTEMPATH\Model.php(203): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(557): CodeIgniter\Model->doFind(false, null)
+ 7 APPPATH\Models\PesquisasModel.php(40): CodeIgniter\BaseModel->find()
+ 8 APPPATH\Controllers\PesquisaRespostas.php(25): App\Models\PesquisasModel->get_pesquisa_and_respostas([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->index()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-19 17:49:11 --> mysqli_sql_exception: Unknown column 'resposta' in 'field list' in C:\xampp\htdocs\pesquisa_satisfacao\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `nome`, ...', 0)
+#1 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `nome`, ...')
+#2 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `nome`, ...')
+#3 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `nome`, ...', Array, false)
+#4 C:\xampp\htdocs\pesquisa_satisfacao\system\Model.php(203): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\pesquisa_satisfacao\system\BaseModel.php(557): CodeIgniter\Model->doFind(false, NULL)
+#6 C:\xampp\htdocs\pesquisa_satisfacao\app\Models\PesquisasModel.php(40): CodeIgniter\BaseModel->find()
+#7 C:\xampp\htdocs\pesquisa_satisfacao\app\Controllers\PesquisaRespostas.php(25): App\Models\PesquisasModel->get_pesquisa_and_respostas(Array)
+#8 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->index()
+#9 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+#10 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\pesquisa_satisfacao\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-05-19 17:49:11 --> Unknown column 'resposta' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `nome`, `resposta`, `fk_pesquisa`
+FROM `pesquisas`
+JOIN `pesquisa_respostas` ON `pesquisa_respostas`.`fk_pesquisa` = `pesquisas`.`id_pesquisa`
+JOIN `auth_users` ON `auth_users`.`id_user` = `pesquisa_respostas`.`fk_user`
+WHERE `pesquisas`.`deleted_at` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `nome`, `resposta`, `fk_pesquisa`
+FROM `pesquisas`
+JOIN `pesquisa_respostas` ON `pesquisa_respostas`.`fk_pesquisa` = `pesquisas`.`id_pesquisa`
+JOIN `auth_users` ON `auth_users`.`id_user` = `pesquisa_respostas`.`fk_user`
+WHERE `pesquisas`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `nome`, `resposta`, `fk_pesquisa`
+FROM `pesquisas`
+JOIN `pesquisa_respostas` ON `pesquisa_respostas`.`fk_pesquisa` = `pesquisas`.`id_pesquisa`
+JOIN `auth_users` ON `auth_users`.`id_user` = `pesquisa_respostas`.`fk_user`
+WHERE `pesquisas`.`deleted_at` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `nome`, `resposta`, `fk_pesquisa`
+FROM `pesquisas`
+JOIN `pesquisa_respostas` ON `pesquisa_respostas`.`fk_pesquisa` = `pesquisas`.`id_pesquisa`
+JOIN `auth_users` ON `auth_users`.`id_user` = `pesquisa_respostas`.`fk_user`
+WHERE `pesquisas`.`deleted_at` IS NULL', [], false)
+ 5 SYSTEMPATH\Model.php(203): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(557): CodeIgniter\Model->doFind(false, null)
+ 7 APPPATH\Models\PesquisasModel.php(40): CodeIgniter\BaseModel->find()
+ 8 APPPATH\Controllers\PesquisaRespostas.php(25): App\Models\PesquisasModel->get_pesquisa_and_respostas([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->index()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-19 17:49:16 --> mysqli_sql_exception: Unknown column 'resposta' in 'field list' in C:\xampp\htdocs\pesquisa_satisfacao\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `nome`, ...', 0)
+#1 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `nome`, ...')
+#2 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `nome`, ...')
+#3 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `nome`, ...', Array, false)
+#4 C:\xampp\htdocs\pesquisa_satisfacao\system\Model.php(203): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\pesquisa_satisfacao\system\BaseModel.php(557): CodeIgniter\Model->doFind(false, NULL)
+#6 C:\xampp\htdocs\pesquisa_satisfacao\app\Models\PesquisasModel.php(40): CodeIgniter\BaseModel->find()
+#7 C:\xampp\htdocs\pesquisa_satisfacao\app\Controllers\PesquisaRespostas.php(25): App\Models\PesquisasModel->get_pesquisa_and_respostas(Array)
+#8 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->index()
+#9 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+#10 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\pesquisa_satisfacao\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-05-19 17:49:16 --> Unknown column 'resposta' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `nome`, `resposta`, `fk_pesquisa`
+FROM `pesquisas`
+JOIN `pesquisa_respostas` ON `pesquisa_respostas`.`fk_pesquisa` = `pesquisas`.`id_pesquisa`
+JOIN `auth_users` ON `auth_users`.`id_user` = `pesquisa_respostas`.`fk_user`
+WHERE `pesquisas`.`deleted_at` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `nome`, `resposta`, `fk_pesquisa`
+FROM `pesquisas`
+JOIN `pesquisa_respostas` ON `pesquisa_respostas`.`fk_pesquisa` = `pesquisas`.`id_pesquisa`
+JOIN `auth_users` ON `auth_users`.`id_user` = `pesquisa_respostas`.`fk_user`
+WHERE `pesquisas`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `nome`, `resposta`, `fk_pesquisa`
+FROM `pesquisas`
+JOIN `pesquisa_respostas` ON `pesquisa_respostas`.`fk_pesquisa` = `pesquisas`.`id_pesquisa`
+JOIN `auth_users` ON `auth_users`.`id_user` = `pesquisa_respostas`.`fk_user`
+WHERE `pesquisas`.`deleted_at` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `nome`, `resposta`, `fk_pesquisa`
+FROM `pesquisas`
+JOIN `pesquisa_respostas` ON `pesquisa_respostas`.`fk_pesquisa` = `pesquisas`.`id_pesquisa`
+JOIN `auth_users` ON `auth_users`.`id_user` = `pesquisa_respostas`.`fk_user`
+WHERE `pesquisas`.`deleted_at` IS NULL', [], false)
+ 5 SYSTEMPATH\Model.php(203): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(557): CodeIgniter\Model->doFind(false, null)
+ 7 APPPATH\Models\PesquisasModel.php(40): CodeIgniter\BaseModel->find()
+ 8 APPPATH\Controllers\PesquisaRespostas.php(25): App\Models\PesquisasModel->get_pesquisa_and_respostas([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->index()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-19 17:50:37 --> mysqli_sql_exception: Unknown column 'resposta' in 'field list' in C:\xampp\htdocs\pesquisa_satisfacao\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `nome`, ...', 0)
+#1 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `nome`, ...')
+#2 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `nome`, ...')
+#3 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `nome`, ...', Array, false)
+#4 C:\xampp\htdocs\pesquisa_satisfacao\system\Model.php(203): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\pesquisa_satisfacao\system\BaseModel.php(557): CodeIgniter\Model->doFind(false, NULL)
+#6 C:\xampp\htdocs\pesquisa_satisfacao\app\Models\PesquisasModel.php(40): CodeIgniter\BaseModel->find()
+#7 C:\xampp\htdocs\pesquisa_satisfacao\app\Controllers\PesquisaRespostas.php(25): App\Models\PesquisasModel->get_pesquisa_and_respostas(Array)
+#8 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->index()
+#9 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+#10 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\pesquisa_satisfacao\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-05-19 17:50:37 --> Unknown column 'resposta' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `nome`, `resposta`, `fk_pesquisa`
+FROM `pesquisas`
+JOIN `pesquisa_respostas` ON `pesquisa_respostas`.`fk_pesquisa` = `pesquisas`.`id_pesquisa`
+JOIN `auth_users` ON `auth_users`.`id_user` = `pesquisa_respostas`.`fk_user`
+WHERE `pesquisas`.`deleted_at` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `nome`, `resposta`, `fk_pesquisa`
+FROM `pesquisas`
+JOIN `pesquisa_respostas` ON `pesquisa_respostas`.`fk_pesquisa` = `pesquisas`.`id_pesquisa`
+JOIN `auth_users` ON `auth_users`.`id_user` = `pesquisa_respostas`.`fk_user`
+WHERE `pesquisas`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `nome`, `resposta`, `fk_pesquisa`
+FROM `pesquisas`
+JOIN `pesquisa_respostas` ON `pesquisa_respostas`.`fk_pesquisa` = `pesquisas`.`id_pesquisa`
+JOIN `auth_users` ON `auth_users`.`id_user` = `pesquisa_respostas`.`fk_user`
+WHERE `pesquisas`.`deleted_at` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `nome`, `resposta`, `fk_pesquisa`
+FROM `pesquisas`
+JOIN `pesquisa_respostas` ON `pesquisa_respostas`.`fk_pesquisa` = `pesquisas`.`id_pesquisa`
+JOIN `auth_users` ON `auth_users`.`id_user` = `pesquisa_respostas`.`fk_user`
+WHERE `pesquisas`.`deleted_at` IS NULL', [], false)
+ 5 SYSTEMPATH\Model.php(203): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(557): CodeIgniter\Model->doFind(false, null)
+ 7 APPPATH\Models\PesquisasModel.php(40): CodeIgniter\BaseModel->find()
+ 8 APPPATH\Controllers\PesquisaRespostas.php(25): App\Models\PesquisasModel->get_pesquisa_and_respostas([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->index()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-19 17:51:10 --> mysqli_sql_exception: Unknown column 'resposta' in 'field list' in C:\xampp\htdocs\pesquisa_satisfacao\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `nome`, ...', 0)
+#1 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `nome`, ...')
+#2 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `nome`, ...')
+#3 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `nome`, ...', Array, false)
+#4 C:\xampp\htdocs\pesquisa_satisfacao\system\Model.php(203): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\pesquisa_satisfacao\system\BaseModel.php(557): CodeIgniter\Model->doFind(false, NULL)
+#6 C:\xampp\htdocs\pesquisa_satisfacao\app\Models\PesquisasModel.php(40): CodeIgniter\BaseModel->find()
+#7 C:\xampp\htdocs\pesquisa_satisfacao\app\Controllers\PesquisaRespostas.php(25): App\Models\PesquisasModel->get_pesquisa_and_respostas(Array)
+#8 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->index()
+#9 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+#10 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\pesquisa_satisfacao\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-05-19 17:51:10 --> Unknown column 'resposta' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `nome`, `resposta`, `fk_pesquisa`
+FROM `pesquisas`
+JOIN `pesquisa_respostas` ON `pesquisa_respostas`.`fk_pesquisa` = `pesquisas`.`id_pesquisa`
+JOIN `auth_users` ON `auth_users`.`id_user` = `pesquisa_respostas`.`fk_user`
+WHERE `pesquisas`.`deleted_at` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `nome`, `resposta`, `fk_pesquisa`
+FROM `pesquisas`
+JOIN `pesquisa_respostas` ON `pesquisa_respostas`.`fk_pesquisa` = `pesquisas`.`id_pesquisa`
+JOIN `auth_users` ON `auth_users`.`id_user` = `pesquisa_respostas`.`fk_user`
+WHERE `pesquisas`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `nome`, `resposta`, `fk_pesquisa`
+FROM `pesquisas`
+JOIN `pesquisa_respostas` ON `pesquisa_respostas`.`fk_pesquisa` = `pesquisas`.`id_pesquisa`
+JOIN `auth_users` ON `auth_users`.`id_user` = `pesquisa_respostas`.`fk_user`
+WHERE `pesquisas`.`deleted_at` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `nome`, `resposta`, `fk_pesquisa`
+FROM `pesquisas`
+JOIN `pesquisa_respostas` ON `pesquisa_respostas`.`fk_pesquisa` = `pesquisas`.`id_pesquisa`
+JOIN `auth_users` ON `auth_users`.`id_user` = `pesquisa_respostas`.`fk_user`
+WHERE `pesquisas`.`deleted_at` IS NULL', [], false)
+ 5 SYSTEMPATH\Model.php(203): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(557): CodeIgniter\Model->doFind(false, null)
+ 7 APPPATH\Models\PesquisasModel.php(40): CodeIgniter\BaseModel->find()
+ 8 APPPATH\Controllers\PesquisaRespostas.php(25): App\Models\PesquisasModel->get_pesquisa_and_respostas([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->index()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-19 17:58:24 --> mysqli_sql_exception: Unknown column 'resposta' in 'field list' in C:\xampp\htdocs\pesquisa_satisfacao\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `nome`, ...', 0)
+#1 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `nome`, ...')
+#2 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `nome`, ...')
+#3 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `nome`, ...', Array, false)
+#4 C:\xampp\htdocs\pesquisa_satisfacao\system\Model.php(203): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\pesquisa_satisfacao\system\BaseModel.php(557): CodeIgniter\Model->doFind(false, NULL)
+#6 C:\xampp\htdocs\pesquisa_satisfacao\app\Models\PesquisasModel.php(40): CodeIgniter\BaseModel->find()
+#7 C:\xampp\htdocs\pesquisa_satisfacao\app\Controllers\PesquisaRespostas.php(25): App\Models\PesquisasModel->get_pesquisa_and_respostas(Array)
+#8 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->index()
+#9 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+#10 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\pesquisa_satisfacao\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-05-19 17:58:24 --> Unknown column 'resposta' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `nome`, `resposta`, `fk_pesquisa`
+FROM `pesquisas`
+JOIN `pesquisa_respostas` ON `pesquisa_respostas`.`fk_pesquisa` = `pesquisas`.`id_pesquisa`
+JOIN `auth_users` ON `auth_users`.`id_user` = `pesquisa_respostas`.`fk_user`
+WHERE `pesquisas`.`deleted_at` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `nome`, `resposta`, `fk_pesquisa`
+FROM `pesquisas`
+JOIN `pesquisa_respostas` ON `pesquisa_respostas`.`fk_pesquisa` = `pesquisas`.`id_pesquisa`
+JOIN `auth_users` ON `auth_users`.`id_user` = `pesquisa_respostas`.`fk_user`
+WHERE `pesquisas`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `nome`, `resposta`, `fk_pesquisa`
+FROM `pesquisas`
+JOIN `pesquisa_respostas` ON `pesquisa_respostas`.`fk_pesquisa` = `pesquisas`.`id_pesquisa`
+JOIN `auth_users` ON `auth_users`.`id_user` = `pesquisa_respostas`.`fk_user`
+WHERE `pesquisas`.`deleted_at` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `nome`, `resposta`, `fk_pesquisa`
+FROM `pesquisas`
+JOIN `pesquisa_respostas` ON `pesquisa_respostas`.`fk_pesquisa` = `pesquisas`.`id_pesquisa`
+JOIN `auth_users` ON `auth_users`.`id_user` = `pesquisa_respostas`.`fk_user`
+WHERE `pesquisas`.`deleted_at` IS NULL', [], false)
+ 5 SYSTEMPATH\Model.php(203): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(557): CodeIgniter\Model->doFind(false, null)
+ 7 APPPATH\Models\PesquisasModel.php(40): CodeIgniter\BaseModel->find()
+ 8 APPPATH\Controllers\PesquisaRespostas.php(25): App\Models\PesquisasModel->get_pesquisa_and_respostas([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->index()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-19 17:58:57 --> mysqli_sql_exception: Unknown column 'resposta' in 'field list' in C:\xampp\htdocs\pesquisa_satisfacao\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `nome`, ...', 0)
+#1 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `nome`, ...')
+#2 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `nome`, ...')
+#3 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `nome`, ...', Array, false)
+#4 C:\xampp\htdocs\pesquisa_satisfacao\system\Model.php(203): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\pesquisa_satisfacao\system\BaseModel.php(557): CodeIgniter\Model->doFind(false, NULL)
+#6 C:\xampp\htdocs\pesquisa_satisfacao\app\Models\PesquisasModel.php(40): CodeIgniter\BaseModel->find()
+#7 C:\xampp\htdocs\pesquisa_satisfacao\app\Controllers\PesquisaRespostas.php(25): App\Models\PesquisasModel->get_pesquisa_and_respostas(Array)
+#8 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->index()
+#9 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+#10 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\pesquisa_satisfacao\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-05-19 17:58:57 --> Unknown column 'resposta' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `nome`, `resposta`, `fk_pesquisa`
+FROM `pesquisas`
+JOIN `pesquisa_respostas` ON `pesquisa_respostas`.`fk_pesquisa` = `pesquisas`.`id_pesquisa`
+JOIN `auth_users` ON `auth_users`.`id_user` = `pesquisa_respostas`.`fk_user`
+WHERE `pesquisas`.`deleted_at` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `nome`, `resposta`, `fk_pesquisa`
+FROM `pesquisas`
+JOIN `pesquisa_respostas` ON `pesquisa_respostas`.`fk_pesquisa` = `pesquisas`.`id_pesquisa`
+JOIN `auth_users` ON `auth_users`.`id_user` = `pesquisa_respostas`.`fk_user`
+WHERE `pesquisas`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `nome`, `resposta`, `fk_pesquisa`
+FROM `pesquisas`
+JOIN `pesquisa_respostas` ON `pesquisa_respostas`.`fk_pesquisa` = `pesquisas`.`id_pesquisa`
+JOIN `auth_users` ON `auth_users`.`id_user` = `pesquisa_respostas`.`fk_user`
+WHERE `pesquisas`.`deleted_at` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `nome`, `resposta`, `fk_pesquisa`
+FROM `pesquisas`
+JOIN `pesquisa_respostas` ON `pesquisa_respostas`.`fk_pesquisa` = `pesquisas`.`id_pesquisa`
+JOIN `auth_users` ON `auth_users`.`id_user` = `pesquisa_respostas`.`fk_user`
+WHERE `pesquisas`.`deleted_at` IS NULL', [], false)
+ 5 SYSTEMPATH\Model.php(203): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(557): CodeIgniter\Model->doFind(false, null)
+ 7 APPPATH\Models\PesquisasModel.php(40): CodeIgniter\BaseModel->find()
+ 8 APPPATH\Controllers\PesquisaRespostas.php(25): App\Models\PesquisasModel->get_pesquisa_and_respostas([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->index()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-19 17:59:52 --> mysqli_sql_exception: Unknown column 'resposta' in 'field list' in C:\xampp\htdocs\pesquisa_satisfacao\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `nome`, ...', 0)
+#1 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `nome`, ...')
+#2 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `nome`, ...')
+#3 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `nome`, ...', Array, false)
+#4 C:\xampp\htdocs\pesquisa_satisfacao\system\Model.php(203): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\pesquisa_satisfacao\system\BaseModel.php(557): CodeIgniter\Model->doFind(false, NULL)
+#6 C:\xampp\htdocs\pesquisa_satisfacao\app\Models\PesquisasModel.php(40): CodeIgniter\BaseModel->find()
+#7 C:\xampp\htdocs\pesquisa_satisfacao\app\Controllers\PesquisaRespostas.php(25): App\Models\PesquisasModel->get_pesquisa_and_respostas(Array)
+#8 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->index()
+#9 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+#10 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\pesquisa_satisfacao\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-05-19 17:59:52 --> Unknown column 'resposta' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `nome`, `resposta`, `fk_pesquisa`
+FROM `pesquisas`
+JOIN `pesquisa_respostas` ON `pesquisa_respostas`.`fk_pesquisa` = `pesquisas`.`id_pesquisa`
+JOIN `auth_users` ON `auth_users`.`id_user` = `pesquisa_respostas`.`fk_user`
+WHERE `pesquisas`.`deleted_at` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `nome`, `resposta`, `fk_pesquisa`
+FROM `pesquisas`
+JOIN `pesquisa_respostas` ON `pesquisa_respostas`.`fk_pesquisa` = `pesquisas`.`id_pesquisa`
+JOIN `auth_users` ON `auth_users`.`id_user` = `pesquisa_respostas`.`fk_user`
+WHERE `pesquisas`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `nome`, `resposta`, `fk_pesquisa`
+FROM `pesquisas`
+JOIN `pesquisa_respostas` ON `pesquisa_respostas`.`fk_pesquisa` = `pesquisas`.`id_pesquisa`
+JOIN `auth_users` ON `auth_users`.`id_user` = `pesquisa_respostas`.`fk_user`
+WHERE `pesquisas`.`deleted_at` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `nome`, `resposta`, `fk_pesquisa`
+FROM `pesquisas`
+JOIN `pesquisa_respostas` ON `pesquisa_respostas`.`fk_pesquisa` = `pesquisas`.`id_pesquisa`
+JOIN `auth_users` ON `auth_users`.`id_user` = `pesquisa_respostas`.`fk_user`
+WHERE `pesquisas`.`deleted_at` IS NULL', [], false)
+ 5 SYSTEMPATH\Model.php(203): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(557): CodeIgniter\Model->doFind(false, null)
+ 7 APPPATH\Models\PesquisasModel.php(40): CodeIgniter\BaseModel->find()
+ 8 APPPATH\Controllers\PesquisaRespostas.php(25): App\Models\PesquisasModel->get_pesquisa_and_respostas([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->index()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-19 18:01:57 --> mysqli_sql_exception: Unknown column 'resposta' in 'field list' in C:\xampp\htdocs\pesquisa_satisfacao\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `pe...', 0)
+#1 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pe...')
+#2 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pe...')
+#3 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseBuilder.php(1801): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pe...', NULL, false)
+#4 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseBuilder.php(2192): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+#5 C:\xampp\htdocs\pesquisa_satisfacao\system\Model.php(364): CodeIgniter\Database\BaseBuilder->insertBatch(Array, NULL, 100)
+#6 C:\xampp\htdocs\pesquisa_satisfacao\system\BaseModel.php(874): CodeIgniter\Model->doInsertBatch(Array, NULL, 100, false)
+#7 C:\xampp\htdocs\pesquisa_satisfacao\app\Models\Pesquisa_RespostasModel.php(40): CodeIgniter\BaseModel->insertBatch(Array)
+#8 C:\xampp\htdocs\pesquisa_satisfacao\app\Controllers\PesquisaRespostas.php(63): App\Models\Pesquisa_RespostasModel->set_respostas(Array)
+#9 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->store()
+#10 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+#11 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\pesquisa_satisfacao\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-05-19 18:01:57 --> Unknown column 'resposta' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `pesquisa_respostas` (`created_at`, `fk_pergunta`, `fk_pesquisa`, `fk_user`, `resposta`, `updated_at`)
+VALUES (\'2023-05-19 18:01:57\',23,14,2,\'2\',\'2023-05-19 18:01:57\'), (\'2023-05-19 18:01:57\',26,14,2,\'2\',\'2023-05-19 18:01:57\'), (\'2023-05-19 18:01:57\',27,14,2,\'2\',\'2023-05-19 18:01:57\'), (\'2023-05-19 18:01:57\',28,14,2,\'2\',\'2023-05-19 18:01:57\'), (\'2023-05-19 18:01:57\',29,14,2,\'2\',\'2023-05-19 18:01:57\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pesquisa_respostas` (`created_at`, `fk_pergunta`, `fk_pesquisa`, `fk_user`, `resposta`, `updated_at`)
+VALUES (\'2023-05-19 18:01:57\',23,14,2,\'2\',\'2023-05-19 18:01:57\'), (\'2023-05-19 18:01:57\',26,14,2,\'2\',\'2023-05-19 18:01:57\'), (\'2023-05-19 18:01:57\',27,14,2,\'2\',\'2023-05-19 18:01:57\'), (\'2023-05-19 18:01:57\',28,14,2,\'2\',\'2023-05-19 18:01:57\'), (\'2023-05-19 18:01:57\',29,14,2,\'2\',\'2023-05-19 18:01:57\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pesquisa_respostas` (`created_at`, `fk_pergunta`, `fk_pesquisa`, `fk_user`, `resposta`, `updated_at`)
+VALUES (\'2023-05-19 18:01:57\',23,14,2,\'2\',\'2023-05-19 18:01:57\'), (\'2023-05-19 18:01:57\',26,14,2,\'2\',\'2023-05-19 18:01:57\'), (\'2023-05-19 18:01:57\',27,14,2,\'2\',\'2023-05-19 18:01:57\'), (\'2023-05-19 18:01:57\',28,14,2,\'2\',\'2023-05-19 18:01:57\'), (\'2023-05-19 18:01:57\',29,14,2,\'2\',\'2023-05-19 18:01:57\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1801): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pesquisa_respostas` (`created_at`, `fk_pergunta`, `fk_pesquisa`, `fk_user`, `resposta`, `updated_at`)
+VALUES (\'2023-05-19 18:01:57\',23,14,2,\'2\',\'2023-05-19 18:01:57\'), (\'2023-05-19 18:01:57\',26,14,2,\'2\',\'2023-05-19 18:01:57\'), (\'2023-05-19 18:01:57\',27,14,2,\'2\',\'2023-05-19 18:01:57\'), (\'2023-05-19 18:01:57\',28,14,2,\'2\',\'2023-05-19 18:01:57\'), (\'2023-05-19 18:01:57\',29,14,2,\'2\',\'2023-05-19 18:01:57\')', null, false)
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2192): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+ 6 SYSTEMPATH\Model.php(364): CodeIgniter\Database\BaseBuilder->insertBatch([...], null, 100)
+ 7 SYSTEMPATH\BaseModel.php(874): CodeIgniter\Model->doInsertBatch([...], null, 100, false)
+ 8 APPPATH\Models\Pesquisa_RespostasModel.php(40): CodeIgniter\BaseModel->insertBatch([...])
+ 9 APPPATH\Controllers\PesquisaRespostas.php(63): App\Models\Pesquisa_RespostasModel->set_respostas([...])
+10 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->store()
+11 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+12 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
