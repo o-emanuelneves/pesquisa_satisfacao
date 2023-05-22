@@ -42,6 +42,8 @@
 
             <?php endforeach; ?>
 
+            <h2>Observações</h2>
+
             <div class="observacoes-respostas">
                 <textarea class="textarea-pesquisarespostas"  name="pesquisa[observacao]"    cols="30" rows="10"    ></textarea>                
             </div>
