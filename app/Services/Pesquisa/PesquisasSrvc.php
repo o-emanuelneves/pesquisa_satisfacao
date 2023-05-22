@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Services\Pesquisa;
+// use App\Controllers\PesquisaRespostas;
+// use App\Models\Pesquisa_RespostasModel;
 
 class PesquisasSrvc {
 
@@ -20,5 +22,12 @@ class PesquisasSrvc {
 
         return $media;
     }
+    public function retornaDia()
+    {
+         $dia = date('d');
+        return $dia;
+    }
+
+
 
 }

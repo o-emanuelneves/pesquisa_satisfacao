@@ -5,7 +5,7 @@ use App\Database\Migrations\PesquisaRespostas as MigrationsPesquisaRespostas;
 use App\Models\Pesquisa_PerguntasModel;
 use App\Models\Pesquisa_RespostasModel;
 use App\Models\PesquisasModel;
-use CodeIgniter\Controller;
+
 use App\Services\Pesquisa\PesquisasSrvc;
 use App\Services\Pesquisa\RespostasSrvc;
 
@@ -69,8 +69,22 @@ class PesquisaRespostas extends BaseController
             'id_pergunta',
             'pergunta'
         ]);
+        
+        $respostasSrvc = new PesquisasSrvc();
+        $dia = $respostasSrvc->retornaDia();
 
-        echo View('pesquisarespostas/novo', $data);
+
+        $pesquisa_respostas_model = new Pesquisa_RespostasModel();
+
+//aparecer que ja resondeu
+// exibir mensagem pra ele responder
+// se passou do prazo, sistema travado
+        if ($dia <= 10 and $pesquisa_respostas_model->mostrarPesquisa()) {
+            echo View('pesquisarespostas/novo', $data);
+        } else {
+            header('Location: http://pesquisa.satisfacao.com/pesquisarespostas/');
+            exit;
+        }
     }
 
     public function sePreencheu(){

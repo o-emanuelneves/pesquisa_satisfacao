@@ -39,6 +39,18 @@ class Pesquisa_RespostasModel extends Model{
 
         $this->insertBatch($allRows);
     }
+    
+    public function mostrarPesquisa()
+    {
+        $pesquisa_respostas_model = new Pesquisa_RespostasModel();
+        $usuariosResposta = $pesquisa_respostas_model->select('fk_user')->where('fk_user', 3)->find();
+        if (empty($usuariosResposta)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    
 }
 
 ?>

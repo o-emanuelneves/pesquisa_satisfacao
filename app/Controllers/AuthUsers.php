@@ -5,7 +5,7 @@ use App\Models\Auth_UserModel;
 use CodeIgniter\Controller;
 use CodeIgniter\Model;
 
-class AuthUsers extends Controller{
+class AuthUsers extends BaseController{
     private $auth_users_model;
     function __construct()
     {
