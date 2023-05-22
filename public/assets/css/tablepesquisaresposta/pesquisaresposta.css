@@ -1,10 +1,11 @@
- h1 {
-    font-family: Arial, Helvetica, sans-serif;
+h1 {
     font-size: 20px;
     color: #00386B;
- }
+    font-family: Arial, Helvetica, sans-serif;
+}   
 
- thead {
+
+thead {
     background-color: #00386B;
     color: rgb(255, 255, 255);
     font-family: Arial, Helvetica, sans-serif;   
@@ -13,11 +14,11 @@
    
     
  }
-
  
   a:hover {
     color: none;
-    text-decoration: none;}
+    text-decoration: none;
+}
 
     a{
         text-decoration: none;
@@ -25,62 +26,54 @@
     }
 
     table {
-    
+    border:none;
+
     margin-top: 30px;
     margin-bottom: 50px;
     color: #00386B;
     border-collapse: collapse;
     width: 100%;
     table-layout: auto; 
+    border-radius: 10px 10px 0 0;
+    overflow: hidden;
     
     
 }
-
 
 th {
     text-align: center;
     height: 25px;
     vertical-align: bottom;
     height: 40px; 
+    border-collapse: collapse;
+    border:none;
    
 
 }
 
-td {
-    text-align: center;
-
-
-    
-}
-
 th, td {
-     padding: 10px;
+    border:none;
+    text-align: center;
+    padding: 10px;
     border-spacing: 10px; 
   
 }
 
 
+.container-modal {
+   
+    border: 1px solid #00386B;
+    margin: auto;
+    border-radius: 10px; 
+    padding: 16px 32px;
+    gap: 16px;
+    width: 80%;
+    height: auto;
+    background: #f9f9f9;      
+    box-shadow: 1px 3px 4px #00386B;
+ }
 
-
-
-table{
-    border-radius: 10px 10px 0 0;
-    overflow: hidden;
-    border-collapse: collapse;
-    
-}
-
-.d-none{
-    display: none !important;
-}
-
-.acoes{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.btns {
+ .btns {
     background-color: #00386B;
     border-radius: 100%;         
     width: 25px;
@@ -91,8 +84,6 @@ table{
     justify-content: center;
     margin: 2px;
 }
-
-
 
 .btns1  {
     background-color: #00386B;
@@ -107,33 +98,23 @@ table{
     margin: 2px;
 }
 
+.d-none{
+    display: none !important;
+}
 
-.fa-ellipsis {
+
+ .fa-ellipsis {
     display: flex;    
     justify-content: center;
     align-items: center;
    
 }
 
- 
- .container-modal {
-   
-    border: 1px solid #00386B;
-    margin: auto;
-    border-radius: 10px; 
-    padding: 16px 32px;
-    gap: 16px;
-    width: 80%;
-    height: auto;
-    background: #f9f9f9;      
-    box-shadow: 1px 3px 4px #00386B;
- }
-
- .bottons-table {
+.bottons-table {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    background-color: #ffffff;
+    background-color: #fffdfd;
     border-radius: 10px;
     box-shadow: 0 1px 5px;
     position: relative;
@@ -144,37 +125,10 @@ table{
     
     
  }
+
  .acoes{
-    position:absolute;
- }
-
- .new-users {
     display: flex;
-    flex-direction: row;
+    align-items: center;
     justify-content: center;
-    align-items: center;       
-    padding: 8px 32px;
-    gap: 10px;
-    position: relative;
-    width: 120px;
-    height: 20px;
-    background: #FFFFFF;
-    border-radius: 8px;
-    color: #00386B;
-    border: 2px solid #00386B;
-    cursor: pointer;
-    font-family: Arial, Helvetica, sans-serif;
-  }
- 
-
-
-
-
-
-
-.style-table {
-    overflow-x: auto;
-
 }
-
 

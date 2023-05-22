@@ -43,26 +43,6 @@ h1 {
 
 
 
-.button-save{
-
-    margin-top: 20px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;       
-    padding: 8px 32px;
-    gap: 10px;
-    position: relative;
-    width: 120px;
-    height: 41px;
-    background: #FFFFFF;
-    border-radius: 8px;
-    border: 2px solid #00386B;
-    cursor: pointer; 
-    color: #00386B;     
- 
-    
- }
 
 
 .box{
@@ -82,6 +62,10 @@ h1 {
     padding:8px;
 
 } 
+.button-answers{
+   display: none;
+     
+}
 
  .container-respostas {
     display: flex;
@@ -100,22 +84,43 @@ h1 {
     height: 30px;
  }
 
-.container-enviar {
-    margin-left: 87%;
-} 
-
 
 .observacoes-respostas{
     margin-top: 30px;
     overflow: auto;
 }
 
+.button-save{
+
+   margin-top: 20px;
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;       
+   padding: 8px 32px;
+   gap: 10px;
+   position: relative;
+   width: 120px;
+   height: 41px;
+   background: #FFFFFF;
+   border-radius: 8px;
+   border: 2px solid #00386B;
+   cursor: pointer; 
+   color: #00386B;     
+
+   
+}
 
 
- .button-answers{
-    display: none;
-      
- } 
+
+.container-enviar {
+   margin-left: 87%;
+} 
+
+
+
+
+ 
 
  .button-answers:checked + .box {
     background-color: #00386B;
