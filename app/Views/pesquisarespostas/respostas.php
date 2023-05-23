@@ -20,15 +20,71 @@
 
         <form>
             <div>
-                <h2>Respostas</h2>
-                <?php foreach ($respostas as $resposta) : ?>
-                    <div class="questions">
-                        <span><?= $resposta['pergunta'] ?></span>
-                        <span><?= $resposta['resposta'] ?></span>
-                    </div>
-                <?php endforeach; ?>
-                
-                <span><?= $respostas[0]['observacao'] ?></span>
+                <div class="questions">
+
+                    <table>
+
+
+
+
+
+
+                        <thead>
+                            <tr>
+
+                                <td>
+                                    Nº
+                                </td>
+
+                                <td>
+                                    Pergunntas
+                                </td>
+
+
+
+                                <td>
+                                    Respostas
+                                </td>
+                            </tr>
+                            </thead>
+
+
+
+
+
+
+
+
+
+
+                        
+                            <?php foreach ($respostas as $key => $resposta) : ?>
+                                <tr>
+                                            <td>
+                                                 <span class="perguntas-peguntasrespostas"><?= $key + 1 ?></span>
+                                            </td>
+
+                                             <td>
+                                                 <span class="perguntas-peguntasrespostas"><?= $resposta['pergunta'] ?></span>
+                                            </td>
+
+
+                                            <td>
+                                            <span class="respostas-peguntasrespostas"><?= $resposta['resposta'] ?></span>
+                                             </td>
+
+
+                                            </tr>
+                                             <?php endforeach; ?>
+
+
+
+                    </table>
+                </div>
+
+                <div class="observacoes-respostas">
+                    <span class="textarea-pesquisarespostas"><?= $respostas[0]['observacao'] ?></span>
+                </div>
 
             </div>
         </form>

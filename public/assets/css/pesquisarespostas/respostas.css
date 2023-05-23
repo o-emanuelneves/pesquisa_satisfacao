@@ -65,3 +65,83 @@ h1 {
     display: none;
       
  }
+
+
+ .observacoes-respostas{
+   margin-top: 30px;
+   overflow: auto;
+}
+
+
+ .textarea-pesquisarespostas{
+   resize: none;
+   padding: 5px;
+   display: flex;
+   border: 2px solid #00386B;
+   margin: auto;
+   border-radius: 10px; 
+   padding: 16px 32px;
+   gap: 16px;
+   width: auto;
+   height: 50px;
+   background: #ffffff;      
+   box-shadow: 0px 4px 4px #00386B;
+
+}
+
+.perguntas-peguntasrespostas {
+   border-bottom: 1px solid;
+   font-size: 20px;
+   margin: 20px;
+}
+
+.respostas-peguntasrespostas {
+   border-bottom: 1px solid;
+   font-size: 20px;
+   margin: 80px;
+}
+
+th {
+   text-align: center;
+   height: 25px;
+   vertical-align: bottom;
+   height: 40px; 
+   border-collapse: collapse;
+   border:none;
+  
+
+}
+
+th, td {
+   border:none;
+   text-align: center;
+   padding: 10px;
+   border-spacing: 10px; 
+ 
+}
+
+thead {
+   background-color: #00386B;
+   color: rgb(255, 255, 255);
+   font-family: Arial, Helvetica, sans-serif;   
+   border-radius: 10px  10px 0 0;
+   
+  
+   
+}
+
+table {
+   border:none;
+
+   margin-top: 30px;
+   margin-bottom: 50px;
+   color: #00386B;
+   border-collapse: collapse;
+   width: 100%;
+   table-layout: auto; 
+   border-radius: 10px 10px 0 0;
+   overflow: hidden;
+   
+   
+}
+
