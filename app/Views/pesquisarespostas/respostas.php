@@ -8,8 +8,6 @@
     <title>Respostas</title>
     <link rel="stylesheet" href="/assets/css/pesquisarespostas/respostas.css">
     <link rel="stylesheet" href="/plugin/fontawesome/css/all.min.css">
-
-
 </head>
 
 <body>
@@ -21,14 +19,7 @@
         <form>
             <div>
                 <div class="questions">
-
                     <table>
-
-
-
-
-
-
                         <thead>
                             <tr>
 
@@ -46,38 +37,25 @@
                                     Respostas
                                 </td>
                             </tr>
-                            </thead>
+                        </thead>
+                        <?php foreach ($respostas as $key => $resposta) : ?>
+
+                            <tr>
+                                <td>
+                                    <span class="perguntas-peguntasrespostas"><?= $key + 1 ?></span>
+                                </td>
+
+                                <td>
+                                    <span class="perguntas-peguntasrespostas"><?= $resposta['pergunta'] ?></span>
+                                </td>
 
 
+                                <td>
+                                    <span class="respostas-peguntasrespostas"><?= $resposta['resposta'] ?></span>
+                                </td>
 
-
-
-
-
-
-
-
-                        
-                            <?php foreach ($respostas as $key => $resposta) : ?>
-                                <tr>
-                                            <td>
-                                                 <span class="perguntas-peguntasrespostas"><?= $key + 1 ?></span>
-                                            </td>
-
-                                             <td>
-                                                 <span class="perguntas-peguntasrespostas"><?= $resposta['pergunta'] ?></span>
-                                            </td>
-
-
-                                            <td>
-                                            <span class="respostas-peguntasrespostas"><?= $resposta['resposta'] ?></span>
-                                             </td>
-
-
-                                            </tr>
-                                             <?php endforeach; ?>
-
-
+                            </tr>
+                        <?php endforeach; ?>
 
                     </table>
                 </div>
