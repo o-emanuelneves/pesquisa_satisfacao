@@ -12,13 +12,13 @@ class Pesquisas extends Migration
             'id_pesquisa'         => [
                 'type'           => 'INT',
                 'constraint'     => 9,
-                'usigned'        => true,
+                'unsigned'        => true,
                 'auto_increment' => true,
             ],
             'fk_user'         => [
                 'type'           => 'INT',
                 'constraint'     => 9,
-                'usigned'        => true
+                'unsigned'        => true
             ],
             'observacao'             => [
                 'type'      => "VARCHAR",

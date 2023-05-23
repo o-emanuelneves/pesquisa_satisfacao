@@ -293,3 +293,39 @@ in APPPATH\Controllers\PesquisaRespostas.php on line 40.
  3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
  4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-23 13:41:50 --> insertBatch() has no data.
+in SYSTEMPATH\Database\BaseBuilder.php on line 1772.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2192): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+ 2 SYSTEMPATH\Model.php(364): CodeIgniter\Database\BaseBuilder->insertBatch([], null, 100)
+ 3 SYSTEMPATH\BaseModel.php(874): CodeIgniter\Model->doInsertBatch([], null, 100, false)
+ 4 APPPATH\Models\Pesquisa_PerguntasModel.php(37): CodeIgniter\BaseModel->insertBatch([])
+ 5 APPPATH\Controllers\PesquisaPerguntas.php(27): App\Models\Pesquisa_PerguntasModel->set_perguntas([...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaPerguntas->store()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaPerguntas))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-23 13:42:51 --> insertBatch() has no data.
+in SYSTEMPATH\Database\BaseBuilder.php on line 1772.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2192): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+ 2 SYSTEMPATH\Model.php(364): CodeIgniter\Database\BaseBuilder->insertBatch([], null, 100)
+ 3 SYSTEMPATH\BaseModel.php(874): CodeIgniter\Model->doInsertBatch([], null, 100, false)
+ 4 APPPATH\Models\Pesquisa_PerguntasModel.php(37): CodeIgniter\BaseModel->insertBatch([])
+ 5 APPPATH\Controllers\PesquisaPerguntas.php(27): App\Models\Pesquisa_PerguntasModel->set_perguntas([...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaPerguntas->store()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaPerguntas))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-23 13:57:34 --> Call to a member function get_pesquisa_and_respostas() on null
+in APPPATH\Models\PesquisasModel.php on line 47.
+ 1 APPPATH\Controllers\PesquisaRespostas.php(23): App\Models\PesquisasModel->agrupar_pesquisas()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-23 14:34:55 --> Call to a member function get_pesquisa_and_respostas() on null
+in APPPATH\Models\PesquisasModel.php on line 47.
+ 1 APPPATH\Controllers\PesquisaRespostas.php(23): App\Models\PesquisasModel->agrupar_pesquisas()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

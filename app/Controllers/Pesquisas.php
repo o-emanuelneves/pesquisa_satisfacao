@@ -2,10 +2,8 @@
 
 namespace App\Controllers;
 
-
 use App\Models\PesquisasModel;
 use CodeIgniter\Controller;
-use CodeIgniter\Model;
 
 class Pesquisas extends BaseController
 {

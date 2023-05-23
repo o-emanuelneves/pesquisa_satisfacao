@@ -42,6 +42,29 @@ class PesquisasModel extends Model{
         return $this->find();
     }
 
+    public function agrupar_pesquisas(){
+    $service = new PesquisasSrvc();
+        $pesquisas = $this->get_pesquisa_and_respostas([
+            'nome',
+            'resposta',
+            'fk_pesquisa',
+            'observacao'
+        ]);
+
+        $pesquisa_agrupada = [];
+        foreach ($pesquisas as $pesquisa) {
+            $pesquisa_agrupada[$pesquisa['fk_pesquisa']]['nome'] = $pesquisa['nome'];
+            $pesquisa_agrupada[$pesquisa['fk_pesquisa']]['respostas'][] = $pesquisa['resposta'];
+            $pesquisa_agrupada[$pesquisa['fk_pesquisa']]['observacao'] = $pesquisa['observacao'];
+        }
+ 
+        foreach ($pesquisa_agrupada as $key => $pesquisa) {
+            $pesquisa_agrupada[$key]['satisfacao'] = $service->calculateSatisfaction($pesquisa['respostas']);
+        }
+
+        return $pesquisa_agrupada;
+    }
+
     public function get_pesquisa_and_respostas_by_id($id, $columns = ['*'])
     {
         $this->select($columns)

@@ -4,7 +4,6 @@ namespace App\Controllers;
 use App\Models\Auth_UserModel;
 use App\Models\Pesquisa_PerguntasModel;
 use CodeIgniter\Controller;
-use CodeIgniter\Model;
 
 class PesquisaPerguntas extends BaseController{
     private $pesquisa_perguntas_model;
@@ -34,13 +33,5 @@ class PesquisaPerguntas extends BaseController{
     public function delete($id) {
         $this->pesquisa_perguntas_model->where('id_pergunta', $id)->delete();
     }
-
-    public function mostraId($id){
-        return $id;
-    }
-
-    
-    
-
 
 }
