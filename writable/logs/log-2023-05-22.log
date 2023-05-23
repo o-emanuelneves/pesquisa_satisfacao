@@ -7,3 +7,14 @@ in SYSTEMPATH\HTTP\RedirectResponse.php on line 60.
  5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
  6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-22 17:10:40 --> Array to string conversion
+in APPPATH\Views\pesquisarespostas\index.php on line 35.
+ 1 APPPATH\Views\pesquisarespostas\index.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\pesquisa_satisfacao\\app\\Views\\pesquisarespostas\\index.php', 35)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\pesquisa_satisfacao\\app\\Views\\pesquisarespostas\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/pesquisarespostas/index', [], true)
+ 5 APPPATH\Controllers\PesquisaRespostas.php(48): view('/pesquisarespostas/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

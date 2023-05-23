@@ -26,21 +26,33 @@ class PesquisaRespostas extends BaseController
         $pesquisas = $this->pesquisa_model->get_pesquisa_and_respostas([
             'nome',
             'resposta',
-            'fk_pesquisa'
+            'fk_pesquisa',
+            'observacao'
+
         ]);
+
+        //dd($pesquisas);
 
         $pesquisaAgrupada = [];
         foreach ($pesquisas as $pesquisa) {
             $pesquisaAgrupada[$pesquisa['fk_pesquisa']]['nome'] = $pesquisa['nome'];
             $pesquisaAgrupada[$pesquisa['fk_pesquisa']]['respostas'][] = $pesquisa['resposta'];
+            $pesquisaAgrupada[$pesquisa['fk_pesquisa']]['observacao'] = $pesquisa['observacao'];
+
         }
+  
+      
+
 
         foreach ($pesquisaAgrupada as $key => $pesquisa) {
             $pesquisaAgrupada[$key]['satisfacao'] = $service->calculateSatisfaction($pesquisa['respostas']);
         }
 
-        $data['pesquisas'] = $pesquisaAgrupada;
 
+        
+
+        $data['pesquisas'] = $pesquisaAgrupada;
+       
         echo View('/pesquisarespostas/index', $data);
     }
 
@@ -76,24 +88,26 @@ class PesquisaRespostas extends BaseController
 
 
         $pesquisa_respostas_model = new Pesquisa_RespostasModel();
+        
+        
+        echo View('pesquisarespostas/novo', $data);
+        // if ($dia <= 10 and $pesquisa_respostas_model->mostrarPesquisa()) {
 
-        if ($dia <= 10 and $pesquisa_respostas_model->mostrarPesquisa()) {
-
-            echo '<script>alert("Responda a pesquisa mensal!");</script>';
-            echo View('pesquisarespostas/novo', $data);
+        //     echo '<script>alert("Responda a pesquisa mensal!");</script>';
+        //     echo View('pesquisarespostas/novo', $data);
             
-        } 
-        else if ($dia <= 10 and $pesquisa_respostas_model->mostrarPesquisa()== false){
-            echo ("<script> window.alert('Você já respondeu a pesquisa esse mês')
-            window.location.href='http://pesquisa.satisfacao.com/pesquisarespostas/'; </script>");
-        }
-        else {
-            echo ("<script> window.alert('A pesquisa expirou')
-            window.location.href='http://pesquisa.satisfacao.com/pesquisarespostas/'; </script>");
-            //travar sistema
+        // } 
+        // else if ($dia <= 10 and $pesquisa_respostas_model->mostrarPesquisa()== false){
+        //     echo ("<script> window.alert('Você já respondeu a pesquisa esse mês')
+        //     window.location.href='http://pesquisa.satisfacao.com/pesquisarespostas/'; </script>");
+        // }
+        // else {
+        //     echo ("<script> window.alert('A pesquisa expirou')
+        //     window.location.href='http://pesquisa.satisfacao.com/pesquisarespostas/'; </script>");
+        //     //travar sistema
 
            
-        }
+        // }
     }
 
 

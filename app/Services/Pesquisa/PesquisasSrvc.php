@@ -22,11 +22,13 @@ class PesquisasSrvc {
 
         return $media;
     }
+    
     public function retornaDia()
     {
          $dia = date('d');
         return $dia;
     }
+    
 
 
 

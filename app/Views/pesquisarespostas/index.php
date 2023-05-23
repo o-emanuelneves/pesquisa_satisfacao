@@ -13,6 +13,7 @@
 </head>
 
 <body>
+
     <div>
         <table border="1px">
             <thead>
@@ -31,7 +32,7 @@
                         <td><?= $key ?></td>
                         <td><?= $pesquisa['nome'] ?></td>
                         <td><?= $pesquisa['satisfacao'] ?>%</td>
-                        <td></td>
+                        <td><?= $pesquisa['observacao'] ?></td>
                         <td>
                             <a href="/pesquisarespostas/respostas/<?= $key ?>"><button name="<?= $key ?>">Respostas</button></a>
                         </td>

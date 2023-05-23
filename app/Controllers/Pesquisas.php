@@ -7,7 +7,7 @@ use App\Models\PesquisasModel;
 use CodeIgniter\Controller;
 use CodeIgniter\Model;
 
-class Pesquisas extends Controller
+class Pesquisas extends BaseController
 {
     private $pesquisas_model;
     function __construct()
@@ -18,7 +18,6 @@ class Pesquisas extends Controller
     public function index(){
         $pesquisas = $this->pesquisas_model->findAll();
         $data['pesquisas'] = $pesquisas;
-       
         echo View('pesquisas/index', $data);
     }
 
