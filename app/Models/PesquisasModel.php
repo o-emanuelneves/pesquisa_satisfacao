@@ -59,7 +59,7 @@ class PesquisasModel extends Model{
         }
  
         foreach ($pesquisa_agrupada as $key => $pesquisa) {
-            $pesquisa_agrupada[$key]['satisfacao'] = $service->calculateSatisfaction($pesquisa['respostas']);
+            $pesquisa_agrupada[$key]['satisfacao'] = $service->calculate_satisfaction($pesquisa['respostas']);
         }
 
         return $pesquisa_agrupada;
