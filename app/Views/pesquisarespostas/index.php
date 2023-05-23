@@ -38,17 +38,17 @@
                             <td><?= $key ?></td>
                             <td><?= $pesquisa['nome'] ?></td>
                             <td><?= $pesquisa['satisfacao'] ?>%</td>
-                            <td></td>
-                             <td class= "acoes">
+                            <td><?= $pesquisa['observacao'][0] ?></td>
+                            <td class="acoes">
 
-                                 <div class="bottons-table d-none">
+                                <div class="bottons-table d-none">
 
-                                      <div class="botton-ver btns1"><a href="/pesquisarespostas/respostas/<?= $key ?>"> <i class="fa-solid fa-eye" style="color: #ffffff;"></i></a>
-                                      </div>
-                                                                    
-                                 </div>
-                                 <div class="btns btns-acoes"><i class="fa-solid fa-ellipsis" style="color: #ffffff;"></i>
-                                 </div>
+                                    <div class="botton-ver btns1"><a href="/pesquisarespostas/respostas/<?= $key ?>"> <i class="fa-solid fa-eye" style="color: #ffffff;"></i></a>
+                                    </div>
+
+                                </div>
+                                <div class="btns btns-acoes"><i class="fa-solid fa-ellipsis" style="color: #ffffff;"></i>
+                                </div>
                             </td>
                         </tr>
                     <?php endforeach; ?>

@@ -26,13 +26,15 @@ class PesquisaRespostas extends BaseController
         $pesquisas = $this->pesquisa_model->get_pesquisa_and_respostas([
             'nome',
             'resposta',
-            'fk_pesquisa'
+            'observacao',
+            'fk_pesquisa'   
         ]);
 
         $pesquisaAgrupada = [];
         foreach ($pesquisas as $pesquisa) {
             $pesquisaAgrupada[$pesquisa['fk_pesquisa']]['nome'] = $pesquisa['nome'];
             $pesquisaAgrupada[$pesquisa['fk_pesquisa']]['respostas'][] = $pesquisa['resposta'];
+            $pesquisaAgrupada[$pesquisa['fk_pesquisa']]['observacao'][0] = $pesquisa['observacao'];
         }
 
         foreach ($pesquisaAgrupada as $key => $pesquisa) {
@@ -41,7 +43,6 @@ class PesquisaRespostas extends BaseController
 
         $data['pesquisas'] = $pesquisaAgrupada;
 
-        
         echo View('/pesquisarespostas/index', $data);
     }
 
