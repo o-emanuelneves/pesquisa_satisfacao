@@ -43,9 +43,5 @@ class AuthUsers extends BaseController{
         $data['auth_user'] = $auth_user;
         echo View('auth_users/ver', $data);
     }
-
-
 }
-
-
 ?>

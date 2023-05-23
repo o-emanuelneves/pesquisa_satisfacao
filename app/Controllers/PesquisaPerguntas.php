@@ -5,7 +5,6 @@ namespace App\Controllers;
 use App\Models\PesquisaPerguntasModel;
 use CodeIgniter\Controller;
 
-
 class PesquisaPerguntas extends BaseController{
     private $pesquisa_perguntas_model;
     function __construct()
@@ -35,9 +34,4 @@ class PesquisaPerguntas extends BaseController{
         $this->pesquisa_perguntas_model->deletar($id);
 
     }
-
-    
-    
-
-
 }

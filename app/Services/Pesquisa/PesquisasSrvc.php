@@ -1,8 +1,6 @@
 <?php
 
 namespace App\Services\Pesquisa;
-// use App\Controllers\PesquisaRespostas;
-// use App\Models\Pesquisa_RespostasModel;
 
 class PesquisasSrvc {
 

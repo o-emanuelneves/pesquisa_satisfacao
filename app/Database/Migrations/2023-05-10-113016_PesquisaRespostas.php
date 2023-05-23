@@ -28,7 +28,7 @@ class PesquisaRespostas extends Migration
             'fk_pergunta'         => [
                 'type'           => 'INT',
                 'constraint'     => 9,
-                'usigned'        => true
+                'unsigned'        => true
             ],
             'resposta'         => [
                 'type'           => 'INT',

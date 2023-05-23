@@ -1,13 +1,11 @@
 <?php 
 namespace App\Controllers;
 
-use App\Database\Migrations\PesquisaRespostas as MigrationsPesquisaRespostas;
 use App\Models\Pesquisa_PerguntasModel;
 use App\Models\Pesquisa_RespostasModel;
 use App\Models\PesquisasModel;
 
 use App\Services\Pesquisa\PesquisasSrvc;
-use App\Services\Pesquisa\RespostasSrvc;
 
 class PesquisaRespostas extends BaseController
 {
@@ -22,36 +20,10 @@ class PesquisaRespostas extends BaseController
 
     public function index()
     {
-        $service = new PesquisasSrvc();
-        $pesquisas = $this->pesquisa_model->get_pesquisa_and_respostas([
-            'nome',
-            'resposta',
-            'fk_pesquisa',
-            'observacao'
+        $pesquisa_agrupada = $this->pesquisa_model->agrupar_pesquisas();
 
-        ]);
-
-
-        $pesquisaAgrupada = [];
-        foreach ($pesquisas as $pesquisa) {
-            $pesquisaAgrupada[$pesquisa['fk_pesquisa']]['nome'] = $pesquisa['nome'];
-            $pesquisaAgrupada[$pesquisa['fk_pesquisa']]['respostas'][] = $pesquisa['resposta'];
-            $pesquisaAgrupada[$pesquisa['fk_pesquisa']]['observacao'] = $pesquisa['observacao'];
-
-        }
-  
-      
-
-
-        foreach ($pesquisaAgrupada as $key => $pesquisa) {
-            $pesquisaAgrupada[$key]['satisfacao'] = $service->calculate_satisfaction($pesquisa['respostas']);
-        }
-
-
+        $data['pesquisas'] = $pesquisa_agrupada;
         
-
-        $data['pesquisas'] = $pesquisaAgrupada;
-       
         echo View('/pesquisarespostas/index', $data);
     }
 
@@ -86,12 +58,10 @@ class PesquisaRespostas extends BaseController
 
         $dia = 1;
 
-
-
         $pesquisa_respostas_model = new Pesquisa_RespostasModel();
         
-        
         echo View('pesquisarespostas/novo', $data);
+        
         // if ($dia <= 10 and $pesquisa_respostas_model->mostrar_pesquisa()) {
 
         //     echo '<script>alert("Responda a pesquisa mensal!");</script>';
@@ -114,9 +84,7 @@ class PesquisaRespostas extends BaseController
 
     public function respostas($id)
     {
-        $pesquisaModel = new PesquisasModel();
-
-        $respostas = $pesquisaModel->retornar_respostas(
+        $respostas = $this->pesquisa_model->retornar_respostas(
             $id, [
             'pergunta',
             'resposta',
@@ -126,10 +94,7 @@ class PesquisaRespostas extends BaseController
 
         $data['respostas'] = $respostas;
 
-        // echo json_encode($respostas);
-
         echo View('pesquisarespostas/respostas', $data);
-        
     }
 }
 ?>
