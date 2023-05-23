@@ -41,6 +41,7 @@ class PesquisaRespostas extends BaseController
 
         $data['pesquisas'] = $pesquisaAgrupada;
 
+        
         echo View('/pesquisarespostas/index', $data);
     }
 
@@ -76,9 +77,7 @@ class PesquisaRespostas extends BaseController
 
         $pesquisa_respostas_model = new Pesquisa_RespostasModel();
 
-//aparecer que ja resondeu
-// exibir mensagem pra ele responder
-// se passou do prazo, sistema travado
+
         if ($dia <= 10 and $pesquisa_respostas_model->mostrarPesquisa()) {
             echo View('pesquisarespostas/novo', $data);
         } else {
@@ -87,19 +86,24 @@ class PesquisaRespostas extends BaseController
         }
     }
 
-    public function sePreencheu(){
-        //Fazer a listagem de quem ja respondeu no banco de dados
-        // Verificar se este usuário preencheu
-        // Se sim, não mostrar a pesquisa
-        // Se não, mostrar
-    }
-
-    public function respostas()
+    public function respostas($id)
     {
-        $model = new Pesquisa_PerguntasModel();
-        $data['perguntas'] = $model->get_perguntas();
+        $pesquisaModel = new PesquisasModel();
+
+        $respostas = $pesquisaModel->retornarRespostas(
+            $id, [
+            'pergunta',
+            'resposta',
+            'observacao',
+            'id_pesquisa',
+        ]);
+
+        $data['respostas'] = $respostas;
+
+        // echo json_encode($respostas);
 
         echo View('pesquisarespostas/respostas', $data);
+        
     }
 }
 ?>

@@ -2,6 +2,7 @@
 
 namespace App\Models;
 use CodeIgniter\Model;
+use App\Services\Pesquisa\PesquisasSrvc;
  
 class PesquisasModel extends Model{
     protected $table = 'pesquisas';
@@ -39,4 +40,25 @@ class PesquisasModel extends Model{
         ->join('auth_users', 'auth_users.id_user = pesquisa_respostas.fk_user');
         return $this->find();
     }
+
+    public function get_pesquisa_and_respostas_by_id($id, $columns = ['*'])
+    {
+        $this->select($columns)
+            ->join('pesquisa_respostas', 'pesquisa_respostas.fk_pesquisa = pesquisas.id_pesquisa')
+            ->join('auth_users', 'auth_users.id_user = pesquisa_respostas.fk_user')
+            ->join('pesquisa_perguntas', 'pesquisa_perguntas.id_pergunta = pesquisa_respostas.fk_pergunta');
+        return $this->where('id_pesquisa', $id)->find();
+    }
+
+    public function retornarRespostas($id, $columns = ['*'])
+    {
+        $services = new PesquisasSrvc;
+
+        $getResposta = $this->get_pesquisa_and_respostas_by_id($id, $columns);
+        
+        $getResposta = $services->transformarResposta($getResposta);
+
+        return $getResposta;
+    }
+
 }

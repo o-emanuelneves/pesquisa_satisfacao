@@ -15,18 +15,15 @@
     <div>
         <form>
             <div>
-                <?php foreach ($perguntas as $pergunta) : ?>
+                <h2>Respostas</h2>
+                <?php foreach ($respostas as $resposta) : ?>
                     <div class="questions">
-                        <input disabled type="text" placeholder="" name="pergunta[<?= $pergunta['id_pergunta'] ?>]" class="container-questions" value="<?= $pergunta['pergunta'] ?>" id="<?= $pergunta['id_pergunta'] ?>">
-
-                        <label>Sim</label>
-                        <input disabled type="radio"></input>
-                        <label>Talvez</label>
-                        <input disabled type="radio"></input>
-                        <label>Não</label>
-                        <input disabled type="radio"></input>
+                        <span><?= $resposta['pergunta'] ?></span>
+                        <span><?= $resposta['resposta'] ?></span>
                     </div>
                 <?php endforeach; ?>
+                
+                <span><?= $respostas[0]['observacao'] ?></span>
 
             </div>
         </form>

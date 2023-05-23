@@ -28,6 +28,15 @@ class PesquisasSrvc {
         return $dia;
     }
 
+    public function transformarResposta($array)
+    {
+        foreach($array as &$newArray){
+            if($newArray['resposta'] == 0 ) $newArray['resposta'] = 'Não' ;
+            if ($newArray['resposta'] == 1) $newArray['resposta'] = 'Talvez';
+            if ($newArray['resposta'] == 2) $newArray['resposta'] = 'Sim';
+        }
 
+        return $array;
+    }
 
 }

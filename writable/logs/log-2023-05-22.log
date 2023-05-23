@@ -1,0 +1,563 @@
+CRITICAL - 2023-05-22 17:03:39 --> Undefined array key "resposta"
+in APPPATH\Views\pesquisarespostas\respostas.php on line 27.
+ 1 APPPATH\Views\pesquisarespostas\respostas.php(27): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "resposta"', 'C:\\xampp\\htdocs\\pesquisa_satisfacao\\app\\Views\\pesquisarespostas\\respostas.php', 27)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\pesquisa_satisfacao\\app\\Views\\pesquisarespostas\\respostas.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('pesquisarespostas/respostas', [], true)
+ 5 APPPATH\Controllers\PesquisaRespostas.php(102): view('pesquisarespostas/respostas', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->respostas('38')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-22 17:03:55 --> Undefined variable $resposta
+in APPPATH\Views\pesquisarespostas\respostas.php on line 27.
+ 1 APPPATH\Views\pesquisarespostas\respostas.php(27): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $resposta', 'C:\\xampp\\htdocs\\pesquisa_satisfacao\\app\\Views\\pesquisarespostas\\respostas.php', 27)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\pesquisa_satisfacao\\app\\Views\\pesquisarespostas\\respostas.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('pesquisarespostas/respostas', [], true)
+ 5 APPPATH\Controllers\PesquisaRespostas.php(102): view('pesquisarespostas/respostas', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->respostas('38')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-22 17:04:42 --> Undefined variable $resposta
+in APPPATH\Views\pesquisarespostas\respostas.php on line 27.
+ 1 APPPATH\Views\pesquisarespostas\respostas.php(27): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $resposta', 'C:\\xampp\\htdocs\\pesquisa_satisfacao\\app\\Views\\pesquisarespostas\\respostas.php', 27)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\pesquisa_satisfacao\\app\\Views\\pesquisarespostas\\respostas.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('pesquisarespostas/respostas', [], true)
+ 5 APPPATH\Controllers\PesquisaRespostas.php(105): view('pesquisarespostas/respostas', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->respostas('38')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-22 17:08:54 --> Undefined variable $resposta
+in APPPATH\Views\pesquisarespostas\respostas.php on line 27.
+ 1 APPPATH\Views\pesquisarespostas\respostas.php(27): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $resposta', 'C:\\xampp\\htdocs\\pesquisa_satisfacao\\app\\Views\\pesquisarespostas\\respostas.php', 27)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\pesquisa_satisfacao\\app\\Views\\pesquisarespostas\\respostas.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('pesquisarespostas/respostas', [], true)
+ 5 APPPATH\Controllers\PesquisaRespostas.php(98): view('pesquisarespostas/respostas', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->respostas('38')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-22 17:09:55 --> Undefined variable $resposta
+in APPPATH\Views\pesquisarespostas\respostas.php on line 27.
+ 1 APPPATH\Views\pesquisarespostas\respostas.php(27): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $resposta', 'C:\\xampp\\htdocs\\pesquisa_satisfacao\\app\\Views\\pesquisarespostas\\respostas.php', 27)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\pesquisa_satisfacao\\app\\Views\\pesquisarespostas\\respostas.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('pesquisarespostas/respostas', [], true)
+ 5 APPPATH\Controllers\PesquisaRespostas.php(99): view('pesquisarespostas/respostas', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->respostas('38')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-22 17:10:31 --> Trying to access array offset on value of type int
+in APPPATH\Views\pesquisarespostas\respostas.php on line 20.
+ 1 APPPATH\Views\pesquisarespostas\respostas.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type int', 'C:\\xampp\\htdocs\\pesquisa_satisfacao\\app\\Views\\pesquisarespostas\\respostas.php', 20)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\pesquisa_satisfacao\\app\\Views\\pesquisarespostas\\respostas.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('pesquisarespostas/respostas', [], true)
+ 5 APPPATH\Controllers\PesquisaRespostas.php(99): view('pesquisarespostas/respostas', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->respostas('38')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-22 17:10:58 --> Trying to access array offset on value of type null
+in APPPATH\Views\pesquisarespostas\respostas.php on line 27.
+ 1 APPPATH\Views\pesquisarespostas\respostas.php(27): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\pesquisa_satisfacao\\app\\Views\\pesquisarespostas\\respostas.php', 27)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\pesquisa_satisfacao\\app\\Views\\pesquisarespostas\\respostas.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('pesquisarespostas/respostas', [], true)
+ 5 APPPATH\Controllers\PesquisaRespostas.php(99): view('pesquisarespostas/respostas', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->respostas('38')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-22 17:11:40 --> syntax error, unexpected end of file
+in APPPATH\Views\pesquisarespostas\respostas.php on line 40.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('pesquisarespostas/respostas', [], true)
+ 3 APPPATH\Controllers\PesquisaRespostas.php(99): view('pesquisarespostas/respostas', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->respostas('38')
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-22 17:11:57 --> foreach() argument must be of type array|object, null given
+in APPPATH\Views\pesquisarespostas\respostas.php on line 23.
+ 1 APPPATH\Views\pesquisarespostas\respostas.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, null given', 'C:\\xampp\\htdocs\\pesquisa_satisfacao\\app\\Views\\pesquisarespostas\\respostas.php', 23)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\pesquisa_satisfacao\\app\\Views\\pesquisarespostas\\respostas.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('pesquisarespostas/respostas', [], true)
+ 5 APPPATH\Controllers\PesquisaRespostas.php(99): view('pesquisarespostas/respostas', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->respostas('38')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-22 17:47:28 --> foreach() argument must be of type array|object, null given
+in APPPATH\Views\pesquisarespostas\respostas.php on line 23.
+ 1 APPPATH\Views\pesquisarespostas\respostas.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, null given', 'C:\\xampp\\htdocs\\pesquisa_satisfacao\\app\\Views\\pesquisarespostas\\respostas.php', 23)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\pesquisa_satisfacao\\app\\Views\\pesquisarespostas\\respostas.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('pesquisarespostas/respostas', [], true)
+ 5 APPPATH\Controllers\PesquisaRespostas.php(99): view('pesquisarespostas/respostas', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->respostas('38')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-22 17:51:22 --> foreach() argument must be of type array|object, null given
+in APPPATH\Views\pesquisarespostas\respostas.php on line 23.
+ 1 APPPATH\Views\pesquisarespostas\respostas.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, null given', 'C:\\xampp\\htdocs\\pesquisa_satisfacao\\app\\Views\\pesquisarespostas\\respostas.php', 23)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\pesquisa_satisfacao\\app\\Views\\pesquisarespostas\\respostas.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('pesquisarespostas/respostas', [], true)
+ 5 APPPATH\Controllers\PesquisaRespostas.php(99): view('pesquisarespostas/respostas', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->respostas('38')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-22 17:52:09 --> mysqli_sql_exception: Unknown column 'respostas' in 'where clause' in C:\xampp\htdocs\pesquisa_satisfacao\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\pesquisa_satisfacao\system\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\pesquisa_satisfacao\system\BaseModel.php(656): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\pesquisa_satisfacao\app\Controllers\PesquisaRespostas.php(93): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->respostas('38')
+#8 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+#9 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\pesquisa_satisfacao\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-05-22 17:52:09 --> Unknown column 'respostas' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `pesquisa_respostas`
+WHERE `respostas` IS NULL
+AND `pesquisa_respostas`.`deleted_at` IS NULL
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `pesquisa_respostas`
+WHERE `respostas` IS NULL
+AND `pesquisa_respostas`.`deleted_at` IS NULL
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `pesquisa_respostas`
+WHERE `respostas` IS NULL
+AND `pesquisa_respostas`.`deleted_at` IS NULL
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `pesquisa_respostas`
+WHERE `respostas` IS NULL
+AND `pesquisa_respostas`.`deleted_at` IS NULL
+ LIMIT 1', [], false)
+ 5 SYSTEMPATH\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(656): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Controllers\PesquisaRespostas.php(93): CodeIgniter\BaseModel->first()
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->respostas('38')
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-22 17:52:21 --> Undefined variable $respostas
+in APPPATH\Views\pesquisarespostas\respostas.php on line 23.
+ 1 APPPATH\Views\pesquisarespostas\respostas.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $respostas', 'C:\\xampp\\htdocs\\pesquisa_satisfacao\\app\\Views\\pesquisarespostas\\respostas.php', 23)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\pesquisa_satisfacao\\app\\Views\\pesquisarespostas\\respostas.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('pesquisarespostas/respostas', [], true)
+ 5 APPPATH\Controllers\PesquisaRespostas.php(99): view('pesquisarespostas/respostas', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->respostas('38')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-22 17:59:47 --> Undefined variable $perguntas
+in APPPATH\Controllers\PesquisaRespostas.php on line 98.
+ 1 APPPATH\Controllers\PesquisaRespostas.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $perguntas', 'C:\\xampp\\htdocs\\pesquisa_satisfacao\\app\\Controllers\\PesquisaRespostas.php', 98)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->respostas('39')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-22 18:04:14 --> mysqli_sql_exception: Not unique table/alias: 'pesquisa_respostas' in C:\xampp\htdocs\pesquisa_satisfacao\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\pesquisa_satisfacao\system\Model.php(203): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\pesquisa_satisfacao\system\BaseModel.php(557): CodeIgniter\Model->doFind(false, NULL)
+#6 C:\xampp\htdocs\pesquisa_satisfacao\app\Models\Pesquisa_RespostasModel.php(59): CodeIgniter\BaseModel->find()
+#7 C:\xampp\htdocs\pesquisa_satisfacao\app\Controllers\PesquisaRespostas.php(96): App\Models\Pesquisa_RespostasModel->get_respostas()
+#8 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->respostas('39')
+#9 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+#10 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\pesquisa_satisfacao\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-05-22 18:04:14 --> Not unique table/alias: 'pesquisa_respostas'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `pesquisa_respostas`
+JOIN `auth_users` ON `auth_users`.`id_user` = `pesquisa_respostas`.`fk_user`
+JOIN `pesquisa_respostas` ON `pesquisa_respostas`.`fk_pesquisa` = `pesquisas`.`id_pesquisa`
+WHERE `pesquisa_respostas`.`deleted_at` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `pesquisa_respostas`
+JOIN `auth_users` ON `auth_users`.`id_user` = `pesquisa_respostas`.`fk_user`
+JOIN `pesquisa_respostas` ON `pesquisa_respostas`.`fk_pesquisa` = `pesquisas`.`id_pesquisa`
+WHERE `pesquisa_respostas`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `pesquisa_respostas`
+JOIN `auth_users` ON `auth_users`.`id_user` = `pesquisa_respostas`.`fk_user`
+JOIN `pesquisa_respostas` ON `pesquisa_respostas`.`fk_pesquisa` = `pesquisas`.`id_pesquisa`
+WHERE `pesquisa_respostas`.`deleted_at` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `pesquisa_respostas`
+JOIN `auth_users` ON `auth_users`.`id_user` = `pesquisa_respostas`.`fk_user`
+JOIN `pesquisa_respostas` ON `pesquisa_respostas`.`fk_pesquisa` = `pesquisas`.`id_pesquisa`
+WHERE `pesquisa_respostas`.`deleted_at` IS NULL', [], false)
+ 5 SYSTEMPATH\Model.php(203): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(557): CodeIgniter\Model->doFind(false, null)
+ 7 APPPATH\Models\Pesquisa_RespostasModel.php(59): CodeIgniter\BaseModel->find()
+ 8 APPPATH\Controllers\PesquisaRespostas.php(96): App\Models\Pesquisa_RespostasModel->get_respostas()
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->respostas('39')
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-22 18:04:22 --> syntax error, unexpected token ","
+in APPPATH\Models\Pesquisa_RespostasModel.php on line 57.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\pesquisa_satisfacao\\app\\Models\\Pesquisa_RespostasModel.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\Pesquisa_RespostasModel')
+ 3 APPPATH\Controllers\PesquisaRespostas.php(19): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\Pesquisa_RespostasModel')
+ 4 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\PesquisaRespostas->__construct()
+ 5 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-22 18:07:08 --> mysqli_sql_exception: Unknown column 'pesquisa_pergunta.id_pergunta' in 'on clause' in C:\xampp\htdocs\pesquisa_satisfacao\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\pesquisa_satisfacao\system\Model.php(203): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\pesquisa_satisfacao\system\BaseModel.php(557): CodeIgniter\Model->doFind(false, NULL)
+#6 C:\xampp\htdocs\pesquisa_satisfacao\app\Models\Pesquisa_RespostasModel.php(59): CodeIgniter\BaseModel->find()
+#7 C:\xampp\htdocs\pesquisa_satisfacao\app\Controllers\PesquisaRespostas.php(96): App\Models\Pesquisa_RespostasModel->get_respostas()
+#8 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->respostas('39')
+#9 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+#10 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\pesquisa_satisfacao\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-05-22 18:07:08 --> Unknown column 'pesquisa_pergunta.id_pergunta' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `pesquisa_respostas`
+JOIN `auth_users` ON `auth_users`.`id_user` = `pesquisa_respostas`.`fk_user`
+JOIN `pesquisa_perguntas` ON `pesquisa_pergunta`.`id_pergunta` = `pesquisas_resposta`.`fk_pergunta`
+WHERE `pesquisa_respostas`.`deleted_at` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `pesquisa_respostas`
+JOIN `auth_users` ON `auth_users`.`id_user` = `pesquisa_respostas`.`fk_user`
+JOIN `pesquisa_perguntas` ON `pesquisa_pergunta`.`id_pergunta` = `pesquisas_resposta`.`fk_pergunta`
+WHERE `pesquisa_respostas`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `pesquisa_respostas`
+JOIN `auth_users` ON `auth_users`.`id_user` = `pesquisa_respostas`.`fk_user`
+JOIN `pesquisa_perguntas` ON `pesquisa_pergunta`.`id_pergunta` = `pesquisas_resposta`.`fk_pergunta`
+WHERE `pesquisa_respostas`.`deleted_at` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `pesquisa_respostas`
+JOIN `auth_users` ON `auth_users`.`id_user` = `pesquisa_respostas`.`fk_user`
+JOIN `pesquisa_perguntas` ON `pesquisa_pergunta`.`id_pergunta` = `pesquisas_resposta`.`fk_pergunta`
+WHERE `pesquisa_respostas`.`deleted_at` IS NULL', [], false)
+ 5 SYSTEMPATH\Model.php(203): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(557): CodeIgniter\Model->doFind(false, null)
+ 7 APPPATH\Models\Pesquisa_RespostasModel.php(59): CodeIgniter\BaseModel->find()
+ 8 APPPATH\Controllers\PesquisaRespostas.php(96): App\Models\Pesquisa_RespostasModel->get_respostas()
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->respostas('39')
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-22 18:08:29 --> mysqli_sql_exception: Unknown column 'pesquisa_pergunta.id_pergunta' in 'on clause' in C:\xampp\htdocs\pesquisa_satisfacao\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\pesquisa_satisfacao\system\Model.php(203): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\pesquisa_satisfacao\system\BaseModel.php(557): CodeIgniter\Model->doFind(false, NULL)
+#6 C:\xampp\htdocs\pesquisa_satisfacao\app\Models\Pesquisa_RespostasModel.php(59): CodeIgniter\BaseModel->find()
+#7 C:\xampp\htdocs\pesquisa_satisfacao\app\Controllers\PesquisaRespostas.php(96): App\Models\Pesquisa_RespostasModel->get_respostas()
+#8 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->respostas('39')
+#9 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+#10 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\pesquisa_satisfacao\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-05-22 18:08:29 --> Unknown column 'pesquisa_pergunta.id_pergunta' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `pesquisa_respostas`
+JOIN `auth_users` ON `auth_users`.`id_user` = `pesquisa_respostas`.`fk_user`
+JOIN `pesquisa_perguntas` ON `pesquisa_pergunta`.`id_pergunta` = `pesquisas_resposta`.`fk_pergunta`
+WHERE `pesquisa_respostas`.`deleted_at` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `pesquisa_respostas`
+JOIN `auth_users` ON `auth_users`.`id_user` = `pesquisa_respostas`.`fk_user`
+JOIN `pesquisa_perguntas` ON `pesquisa_pergunta`.`id_pergunta` = `pesquisas_resposta`.`fk_pergunta`
+WHERE `pesquisa_respostas`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `pesquisa_respostas`
+JOIN `auth_users` ON `auth_users`.`id_user` = `pesquisa_respostas`.`fk_user`
+JOIN `pesquisa_perguntas` ON `pesquisa_pergunta`.`id_pergunta` = `pesquisas_resposta`.`fk_pergunta`
+WHERE `pesquisa_respostas`.`deleted_at` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `pesquisa_respostas`
+JOIN `auth_users` ON `auth_users`.`id_user` = `pesquisa_respostas`.`fk_user`
+JOIN `pesquisa_perguntas` ON `pesquisa_pergunta`.`id_pergunta` = `pesquisas_resposta`.`fk_pergunta`
+WHERE `pesquisa_respostas`.`deleted_at` IS NULL', [], false)
+ 5 SYSTEMPATH\Model.php(203): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(557): CodeIgniter\Model->doFind(false, null)
+ 7 APPPATH\Models\Pesquisa_RespostasModel.php(59): CodeIgniter\BaseModel->find()
+ 8 APPPATH\Controllers\PesquisaRespostas.php(96): App\Models\Pesquisa_RespostasModel->get_respostas()
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->respostas('39')
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-22 18:09:11 --> mysqli_sql_exception: Unknown column 'pesquisas_resposta.fk_pergunta' in 'on clause' in C:\xampp\htdocs\pesquisa_satisfacao\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\pesquisa_satisfacao\system\Model.php(203): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\pesquisa_satisfacao\system\BaseModel.php(557): CodeIgniter\Model->doFind(false, NULL)
+#6 C:\xampp\htdocs\pesquisa_satisfacao\app\Models\Pesquisa_RespostasModel.php(59): CodeIgniter\BaseModel->find()
+#7 C:\xampp\htdocs\pesquisa_satisfacao\app\Controllers\PesquisaRespostas.php(96): App\Models\Pesquisa_RespostasModel->get_respostas()
+#8 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->respostas('39')
+#9 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+#10 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\pesquisa_satisfacao\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-05-22 18:09:11 --> Unknown column 'pesquisas_resposta.fk_pergunta' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `pesquisa_respostas`
+JOIN `auth_users` ON `auth_users`.`id_user` = `pesquisa_respostas`.`fk_user`
+JOIN `pesquisa_perguntas` ON `pesquisa_perguntas`.`id_pergunta` = `pesquisas_resposta`.`fk_pergunta`
+WHERE `pesquisa_respostas`.`deleted_at` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `pesquisa_respostas`
+JOIN `auth_users` ON `auth_users`.`id_user` = `pesquisa_respostas`.`fk_user`
+JOIN `pesquisa_perguntas` ON `pesquisa_perguntas`.`id_pergunta` = `pesquisas_resposta`.`fk_pergunta`
+WHERE `pesquisa_respostas`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `pesquisa_respostas`
+JOIN `auth_users` ON `auth_users`.`id_user` = `pesquisa_respostas`.`fk_user`
+JOIN `pesquisa_perguntas` ON `pesquisa_perguntas`.`id_pergunta` = `pesquisas_resposta`.`fk_pergunta`
+WHERE `pesquisa_respostas`.`deleted_at` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `pesquisa_respostas`
+JOIN `auth_users` ON `auth_users`.`id_user` = `pesquisa_respostas`.`fk_user`
+JOIN `pesquisa_perguntas` ON `pesquisa_perguntas`.`id_pergunta` = `pesquisas_resposta`.`fk_pergunta`
+WHERE `pesquisa_respostas`.`deleted_at` IS NULL', [], false)
+ 5 SYSTEMPATH\Model.php(203): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(557): CodeIgniter\Model->doFind(false, null)
+ 7 APPPATH\Models\Pesquisa_RespostasModel.php(59): CodeIgniter\BaseModel->find()
+ 8 APPPATH\Controllers\PesquisaRespostas.php(96): App\Models\Pesquisa_RespostasModel->get_respostas()
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->respostas('39')
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-22 18:12:49 --> mysqli_sql_exception: Not unique table/alias: 'pesquisa_respostas' in C:\xampp\htdocs\pesquisa_satisfacao\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\pesquisa_satisfacao\system\Model.php(203): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\pesquisa_satisfacao\system\BaseModel.php(557): CodeIgniter\Model->doFind(false, NULL)
+#6 C:\xampp\htdocs\pesquisa_satisfacao\app\Models\Pesquisa_RespostasModel.php(59): CodeIgniter\BaseModel->find()
+#7 C:\xampp\htdocs\pesquisa_satisfacao\app\Controllers\PesquisaRespostas.php(92): App\Models\Pesquisa_RespostasModel->get_respostas_perguntas()
+#8 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->respostas('39')
+#9 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+#10 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\pesquisa_satisfacao\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-05-22 18:12:49 --> Not unique table/alias: 'pesquisa_respostas'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
+FROM `pesquisa_respostas`
+JOIN `pesquisa_perguntas` ON `pesquisa_perguntas`.`id_pergunta` = `pesquisa_respostas`.`fk_pergunta`
+JOIN `pesquisa_respostas` ON `pesquisa_respostas`.`fk_pesquisa` = `pesquisas`.`id_pesquisa`
+WHERE `pesquisa_respostas`.`deleted_at` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `pesquisa_respostas`
+JOIN `pesquisa_perguntas` ON `pesquisa_perguntas`.`id_pergunta` = `pesquisa_respostas`.`fk_pergunta`
+JOIN `pesquisa_respostas` ON `pesquisa_respostas`.`fk_pesquisa` = `pesquisas`.`id_pesquisa`
+WHERE `pesquisa_respostas`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `pesquisa_respostas`
+JOIN `pesquisa_perguntas` ON `pesquisa_perguntas`.`id_pergunta` = `pesquisa_respostas`.`fk_pergunta`
+JOIN `pesquisa_respostas` ON `pesquisa_respostas`.`fk_pesquisa` = `pesquisas`.`id_pesquisa`
+WHERE `pesquisa_respostas`.`deleted_at` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `pesquisa_respostas`
+JOIN `pesquisa_perguntas` ON `pesquisa_perguntas`.`id_pergunta` = `pesquisa_respostas`.`fk_pergunta`
+JOIN `pesquisa_respostas` ON `pesquisa_respostas`.`fk_pesquisa` = `pesquisas`.`id_pesquisa`
+WHERE `pesquisa_respostas`.`deleted_at` IS NULL', [], false)
+ 5 SYSTEMPATH\Model.php(203): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(557): CodeIgniter\Model->doFind(false, null)
+ 7 APPPATH\Models\Pesquisa_RespostasModel.php(59): CodeIgniter\BaseModel->find()
+ 8 APPPATH\Controllers\PesquisaRespostas.php(92): App\Models\Pesquisa_RespostasModel->get_respostas_perguntas()
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->respostas('39')
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-22 18:18:53 --> Call to undefined method App\Models\Pesquisa_RespostasModel::get_pesquisa_and_respostas
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\PesquisaRespostas.php(90): CodeIgniter\Model->__call('get_pesquisa_and_respostas', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->respostas('39')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-22 18:19:24 --> Call to undefined method App\Models\Pesquisa_RespostasModel::get_pesquisa_and_respostas
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\PesquisaRespostas.php(90): CodeIgniter\Model->__call('get_pesquisa_and_respostas', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->respostas('39')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-22 18:19:35 --> Call to undefined method App\Models\Pesquisa_RespostasModel::get_pesquisa_and_respostas
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\PesquisaRespostas.php(90): CodeIgniter\Model->__call('get_pesquisa_and_respostas', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->respostas('39')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-22 18:20:35 --> Call to undefined method App\Models\PesquisasModel::get_respostas_perguntas
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\PesquisaRespostas.php(90): CodeIgniter\Model->__call('get_respostas_perguntas', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->respostas('39')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-22 18:20:53 --> Call to undefined method App\Models\PesquisasModel::get_respostas_perguntas
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\PesquisaRespostas.php(90): CodeIgniter\Model->__call('get_respostas_perguntas', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->respostas('39')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-22 18:22:44 --> Call to a member function get_respostas_perguntas() on array
+in APPPATH\Controllers\PesquisaRespostas.php on line 99.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->respostas('39')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-22 18:23:14 --> Call to a member function get_respostas_perguntas() on array
+in APPPATH\Controllers\PesquisaRespostas.php on line 99.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->respostas('39')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-22 18:27:25 --> Undefined variable $respostas
+in APPPATH\Views\pesquisarespostas\respostas.php on line 18.
+ 1 APPPATH\Views\pesquisarespostas\respostas.php(18): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $respostas', 'C:\\xampp\\htdocs\\pesquisa_satisfacao\\app\\Views\\pesquisarespostas\\respostas.php', 18)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\pesquisa_satisfacao\\app\\Views\\pesquisarespostas\\respostas.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('pesquisarespostas/respostas', [], true)
+ 5 APPPATH\Controllers\PesquisaRespostas.php(102): view('pesquisarespostas/respostas', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->respostas('39')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-22 18:28:02 --> Undefined variable $respostas
+in APPPATH\Views\pesquisarespostas\respostas.php on line 18.
+ 1 APPPATH\Views\pesquisarespostas\respostas.php(18): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $respostas', 'C:\\xampp\\htdocs\\pesquisa_satisfacao\\app\\Views\\pesquisarespostas\\respostas.php', 18)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\pesquisa_satisfacao\\app\\Views\\pesquisarespostas\\respostas.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('pesquisarespostas/respostas', [], true)
+ 5 APPPATH\Controllers\PesquisaRespostas.php(102): view('pesquisarespostas/respostas', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->respostas('39')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-22 18:51:09 --> Call to undefined method App\Models\Pesquisa_RespostasModel::get_respostas_perguntas
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\PesquisaRespostas.php(93): CodeIgniter\Model->__call('get_respostas_perguntas', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->respostas('39')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-22 18:51:36 --> Call to undefined method App\Models\Pesquisa_RespostasModel::get_pesquisa_and_respostas_by_id
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\PesquisaRespostas.php(93): CodeIgniter\Model->__call('get_pesquisa_and_respostas_by_id', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->respostas('39')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-22 18:51:38 --> Call to undefined method App\Models\Pesquisa_RespostasModel::get_pesquisa_and_respostas_by_id
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\PesquisaRespostas.php(93): CodeIgniter\Model->__call('get_pesquisa_and_respostas_by_id', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->respostas('39')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-22 18:52:32 --> mysqli_sql_exception: Unknown column 'pergunta' in 'field list' in C:\xampp\htdocs\pesquisa_satisfacao\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `pergunt...', 0)
+#1 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `pergunt...')
+#2 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `pergunt...')
+#3 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `pergunt...', Array, false)
+#4 C:\xampp\htdocs\pesquisa_satisfacao\system\Model.php(203): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\pesquisa_satisfacao\system\BaseModel.php(557): CodeIgniter\Model->doFind(false, NULL)
+#6 C:\xampp\htdocs\pesquisa_satisfacao\app\Models\PesquisasModel.php(48): CodeIgniter\BaseModel->find()
+#7 C:\xampp\htdocs\pesquisa_satisfacao\app\Controllers\PesquisaRespostas.php(93): App\Models\PesquisasModel->get_pesquisa_and_respostas_by_id('39', Array)
+#8 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->respostas('39')
+#9 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+#10 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\pesquisa_satisfacao\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-05-22 18:52:32 --> Unknown column 'pergunta' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `pergunta`, `resposta`, `observacao`, `id_pesquisa`
+FROM `pesquisas`
+JOIN `pesquisa_respostas` ON `pesquisa_respostas`.`fk_pesquisa` = `pesquisas`.`id_pesquisa`
+JOIN `auth_users` ON `auth_users`.`id_user` = `pesquisa_respostas`.`fk_user`
+WHERE `id_pesquisa` = \'39\'
+AND `pesquisas`.`deleted_at` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `pergunta`, `resposta`, `observacao`, `id_pesquisa`
+FROM `pesquisas`
+JOIN `pesquisa_respostas` ON `pesquisa_respostas`.`fk_pesquisa` = `pesquisas`.`id_pesquisa`
+JOIN `auth_users` ON `auth_users`.`id_user` = `pesquisa_respostas`.`fk_user`
+WHERE `id_pesquisa` = \'39\'
+AND `pesquisas`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `pergunta`, `resposta`, `observacao`, `id_pesquisa`
+FROM `pesquisas`
+JOIN `pesquisa_respostas` ON `pesquisa_respostas`.`fk_pesquisa` = `pesquisas`.`id_pesquisa`
+JOIN `auth_users` ON `auth_users`.`id_user` = `pesquisa_respostas`.`fk_user`
+WHERE `id_pesquisa` = \'39\'
+AND `pesquisas`.`deleted_at` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `pergunta`, `resposta`, `observacao`, `id_pesquisa`
+FROM `pesquisas`
+JOIN `pesquisa_respostas` ON `pesquisa_respostas`.`fk_pesquisa` = `pesquisas`.`id_pesquisa`
+JOIN `auth_users` ON `auth_users`.`id_user` = `pesquisa_respostas`.`fk_user`
+WHERE `id_pesquisa` = :id_pesquisa:
+AND `pesquisas`.`deleted_at` IS NULL', [...], false)
+ 5 SYSTEMPATH\Model.php(203): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(557): CodeIgniter\Model->doFind(false, null)
+ 7 APPPATH\Models\PesquisasModel.php(48): CodeIgniter\BaseModel->find()
+ 8 APPPATH\Controllers\PesquisaRespostas.php(93): App\Models\PesquisasModel->get_pesquisa_and_respostas_by_id('39', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->respostas('39')
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-22 19:14:06 --> array_map() expects at least 2 arguments, 1 given
+in APPPATH\Services\Pesquisa\PesquisasSrvc.php on line 41.
+ 1 APPPATH\Services\Pesquisa\PesquisasSrvc.php(41): array_map(Object(Closure))
+ 2 APPPATH\Services\Pesquisa\PesquisasSrvc.php(33): App\Services\Pesquisa\PesquisasSrvc->transformarResposta([...])
+ 3 APPPATH\Models\PesquisasModel.php(59): App\Services\Pesquisa\PesquisasSrvc->retornarRespostas([...])
+ 4 APPPATH\Controllers\PesquisaRespostas.php(93): App\Models\PesquisasModel->retornarRespostas('39', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->respostas('39')
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
