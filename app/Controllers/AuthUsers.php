@@ -23,8 +23,8 @@ class AuthUsers extends BaseController{
         echo View('auth_users/novo');
     }
 
-
-    public function store(){
+    public function store()
+    {
         $dados = $this->request->getVar();
         $this->auth_users_model->insert($dados);
         return redirect()->to('../AuthUsers/index');

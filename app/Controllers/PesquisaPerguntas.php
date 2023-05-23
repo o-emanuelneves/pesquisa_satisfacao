@@ -4,7 +4,7 @@ namespace App\Controllers;
 
 use App\Models\Pesquisa_PerguntasModel;
 use CodeIgniter\Controller;
-use CodeIgniter\Model;
+
 
 class PesquisaPerguntas extends BaseController{
     private $pesquisa_perguntas_model;
