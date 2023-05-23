@@ -84,9 +84,7 @@ class PesquisaRespostas extends BaseController
 
     public function respostas($id)
     {
-        $pesquisaModel = new PesquisasModel();
-
-        $respostas = $pesquisaModel->retornar_respostas(
+        $respostas = $this->pesquisa_model->retornar_respostas(
             $id, [
             'pergunta',
             'resposta',

@@ -22,44 +22,21 @@
                     <table>
                         <thead>
                             <tr>
-
-                                <td>
-                                    Nº
-                                </td>
-
-                                <td>
-                                    Pergunntas
-                                </td>
-
-
-
-                                <td>
-                                    Respostas
-                                </td>
+                                <td>Nº</td>
+                                <td>Perguntas</td>
+                                <td>Respostas</td>
                             </tr>
                         </thead>
                         <?php foreach ($respostas as $key => $resposta) : ?>
-
                             <tr>
-                                <td>
-                                    <span class="perguntas-peguntasrespostas"><?= $key + 1 ?></span>
-                                </td>
-
-                                <td>
-                                    <span class="perguntas-peguntasrespostas"><?= $resposta['pergunta'] ?></span>
-                                </td>
-
-
-                                <td>
-                                    <span class="respostas-peguntasrespostas"><?= $resposta['resposta'] ?></span>
-                                </td>
-
+                                <td><span class="perguntas-peguntasrespostas"><?= $key + 1 ?></span></td>
+                                <td><span class="perguntas-peguntasrespostas"><?= $resposta['pergunta'] ?></span></td>
+                                <td><span class="respostas-peguntasrespostas"><?= $resposta['resposta'] ?></span></td>
                             </tr>
                         <?php endforeach; ?>
-
                     </table>
                 </div>
-
+                
                 <div class="observacoes-respostas">
                     <span class="textarea-pesquisarespostas"><?= $respostas[0]['observacao'] ?></span>
                 </div>

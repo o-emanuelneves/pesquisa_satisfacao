@@ -574,3 +574,24 @@ in APPPATH\Models\PesquisasModel.php on line 62.
  3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
  4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-23 16:38:06 --> Cannot access offset of type string on string
+in APPPATH\Models\PesquisasModel.php on line 56.
+ 1 APPPATH\Controllers\PesquisaRespostas.php(23): App\Models\PesquisasModel->agrupar_pesquisas()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-23 16:38:18 --> Cannot access offset of type string on string
+in APPPATH\Models\PesquisasModel.php on line 56.
+ 1 APPPATH\Controllers\PesquisaRespostas.php(23): App\Models\PesquisasModel->agrupar_pesquisas()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-23 16:38:51 --> Cannot access offset of type string on string
+in APPPATH\Models\PesquisasModel.php on line 56.
+ 1 APPPATH\Controllers\PesquisaRespostas.php(23): App\Models\PesquisasModel->agrupar_pesquisas()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
