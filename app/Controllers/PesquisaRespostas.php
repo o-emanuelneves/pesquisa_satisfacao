@@ -74,6 +74,8 @@ class PesquisaRespostas extends BaseController
         $respostasSrvc = new PesquisasSrvc();
         $dia = $respostasSrvc->retornaDia();
 
+        $dia = 1;
+
 
         $pesquisa_respostas_model = new Pesquisa_RespostasModel();
 

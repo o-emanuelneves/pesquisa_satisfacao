@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 CRITICAL - 2023-05-22 17:03:39 --> Undefined array key "resposta"
 in APPPATH\Views\pesquisarespostas\respostas.php on line 27.
  1 APPPATH\Views\pesquisarespostas\respostas.php(27): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "resposta"', 'C:\\xampp\\htdocs\\pesquisa_satisfacao\\app\\Views\\pesquisarespostas\\respostas.php', 27)
@@ -189,10 +190,24 @@ Stack trace:
 #6 C:\xampp\htdocs\pesquisa_satisfacao\app\Models\Pesquisa_RespostasModel.php(59): CodeIgniter\BaseModel->find()
 #7 C:\xampp\htdocs\pesquisa_satisfacao\app\Controllers\PesquisaRespostas.php(96): App\Models\Pesquisa_RespostasModel->get_respostas()
 #8 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->respostas('39')
+=======
+ERROR - 2023-05-22 12:24:38 --> mysqli_sql_exception: Unknown column 'resposta' in 'field list' in C:\xampp\htdocs\pesquisa_satisfacao\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `nome`, ...', 0)
+#1 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `nome`, ...')
+#2 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `nome`, ...')
+#3 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `nome`, ...', Array, false)
+#4 C:\xampp\htdocs\pesquisa_satisfacao\system\Model.php(203): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\pesquisa_satisfacao\system\BaseModel.php(557): CodeIgniter\Model->doFind(false, NULL)
+#6 C:\xampp\htdocs\pesquisa_satisfacao\app\Models\PesquisasModel.php(40): CodeIgniter\BaseModel->find()
+#7 C:\xampp\htdocs\pesquisa_satisfacao\app\Controllers\PesquisaRespostas.php(26): App\Models\PesquisasModel->get_pesquisa_and_respostas(Array)
+#8 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->index()
+>>>>>>> origin/gustavos2205
 #9 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
 #10 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #11 C:\xampp\htdocs\pesquisa_satisfacao\public\index.php(67): CodeIgniter\CodeIgniter->run()
 #12 {main}
+<<<<<<< HEAD
 CRITICAL - 2023-05-22 18:04:14 --> Not unique table/alias: 'pesquisa_respostas'
 in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
  1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *
@@ -561,3 +576,485 @@ in APPPATH\Services\Pesquisa\PesquisasSrvc.php on line 41.
  6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
  7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+=======
+CRITICAL - 2023-05-22 12:24:38 --> Unknown column 'resposta' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `nome`, `resposta`, `fk_pesquisa`
+FROM `pesquisas`
+JOIN `pesquisa_respostas` ON `pesquisa_respostas`.`fk_pesquisa` = `pesquisas`.`id_pesquisa`
+JOIN `auth_users` ON `auth_users`.`id_user` = `pesquisa_respostas`.`fk_user`
+WHERE `pesquisas`.`deleted_at` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `nome`, `resposta`, `fk_pesquisa`
+FROM `pesquisas`
+JOIN `pesquisa_respostas` ON `pesquisa_respostas`.`fk_pesquisa` = `pesquisas`.`id_pesquisa`
+JOIN `auth_users` ON `auth_users`.`id_user` = `pesquisa_respostas`.`fk_user`
+WHERE `pesquisas`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `nome`, `resposta`, `fk_pesquisa`
+FROM `pesquisas`
+JOIN `pesquisa_respostas` ON `pesquisa_respostas`.`fk_pesquisa` = `pesquisas`.`id_pesquisa`
+JOIN `auth_users` ON `auth_users`.`id_user` = `pesquisa_respostas`.`fk_user`
+WHERE `pesquisas`.`deleted_at` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `nome`, `resposta`, `fk_pesquisa`
+FROM `pesquisas`
+JOIN `pesquisa_respostas` ON `pesquisa_respostas`.`fk_pesquisa` = `pesquisas`.`id_pesquisa`
+JOIN `auth_users` ON `auth_users`.`id_user` = `pesquisa_respostas`.`fk_user`
+WHERE `pesquisas`.`deleted_at` IS NULL', [], false)
+ 5 SYSTEMPATH\Model.php(203): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(557): CodeIgniter\Model->doFind(false, null)
+ 7 APPPATH\Models\PesquisasModel.php(40): CodeIgniter\BaseModel->find()
+ 8 APPPATH\Controllers\PesquisaRespostas.php(26): App\Models\PesquisasModel->get_pesquisa_and_respostas([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->index()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-22 12:25:06 --> mysqli_sql_exception: Unknown column 'resposta' in 'field list' in C:\xampp\htdocs\pesquisa_satisfacao\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `nome`, ...', 0)
+#1 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `nome`, ...')
+#2 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `nome`, ...')
+#3 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `nome`, ...', Array, false)
+#4 C:\xampp\htdocs\pesquisa_satisfacao\system\Model.php(203): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\pesquisa_satisfacao\system\BaseModel.php(557): CodeIgniter\Model->doFind(false, NULL)
+#6 C:\xampp\htdocs\pesquisa_satisfacao\app\Models\PesquisasModel.php(40): CodeIgniter\BaseModel->find()
+#7 C:\xampp\htdocs\pesquisa_satisfacao\app\Controllers\PesquisaRespostas.php(26): App\Models\PesquisasModel->get_pesquisa_and_respostas(Array)
+#8 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->index()
+#9 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+#10 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\pesquisa_satisfacao\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-05-22 12:25:06 --> Unknown column 'resposta' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `nome`, `resposta`, `fk_pesquisa`
+FROM `pesquisas`
+JOIN `pesquisa_respostas` ON `pesquisa_respostas`.`fk_pesquisa` = `pesquisas`.`id_pesquisa`
+JOIN `auth_users` ON `auth_users`.`id_user` = `pesquisa_respostas`.`fk_user`
+WHERE `pesquisas`.`deleted_at` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `nome`, `resposta`, `fk_pesquisa`
+FROM `pesquisas`
+JOIN `pesquisa_respostas` ON `pesquisa_respostas`.`fk_pesquisa` = `pesquisas`.`id_pesquisa`
+JOIN `auth_users` ON `auth_users`.`id_user` = `pesquisa_respostas`.`fk_user`
+WHERE `pesquisas`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `nome`, `resposta`, `fk_pesquisa`
+FROM `pesquisas`
+JOIN `pesquisa_respostas` ON `pesquisa_respostas`.`fk_pesquisa` = `pesquisas`.`id_pesquisa`
+JOIN `auth_users` ON `auth_users`.`id_user` = `pesquisa_respostas`.`fk_user`
+WHERE `pesquisas`.`deleted_at` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `nome`, `resposta`, `fk_pesquisa`
+FROM `pesquisas`
+JOIN `pesquisa_respostas` ON `pesquisa_respostas`.`fk_pesquisa` = `pesquisas`.`id_pesquisa`
+JOIN `auth_users` ON `auth_users`.`id_user` = `pesquisa_respostas`.`fk_user`
+WHERE `pesquisas`.`deleted_at` IS NULL', [], false)
+ 5 SYSTEMPATH\Model.php(203): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(557): CodeIgniter\Model->doFind(false, null)
+ 7 APPPATH\Models\PesquisasModel.php(40): CodeIgniter\BaseModel->find()
+ 8 APPPATH\Controllers\PesquisaRespostas.php(26): App\Models\PesquisasModel->get_pesquisa_and_respostas([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->index()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-22 12:25:30 --> mysqli_sql_exception: Unknown column 'resposta' in 'field list' in C:\xampp\htdocs\pesquisa_satisfacao\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `nome`, ...', 0)
+#1 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `nome`, ...')
+#2 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `nome`, ...')
+#3 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `nome`, ...', Array, false)
+#4 C:\xampp\htdocs\pesquisa_satisfacao\system\Model.php(203): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\pesquisa_satisfacao\system\BaseModel.php(557): CodeIgniter\Model->doFind(false, NULL)
+#6 C:\xampp\htdocs\pesquisa_satisfacao\app\Models\PesquisasModel.php(40): CodeIgniter\BaseModel->find()
+#7 C:\xampp\htdocs\pesquisa_satisfacao\app\Controllers\PesquisaRespostas.php(26): App\Models\PesquisasModel->get_pesquisa_and_respostas(Array)
+#8 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->index()
+#9 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+#10 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\pesquisa_satisfacao\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-05-22 12:25:30 --> Unknown column 'resposta' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `nome`, `resposta`, `fk_pesquisa`
+FROM `pesquisas`
+JOIN `pesquisa_respostas` ON `pesquisa_respostas`.`fk_pesquisa` = `pesquisas`.`id_pesquisa`
+JOIN `auth_users` ON `auth_users`.`id_user` = `pesquisa_respostas`.`fk_user`
+WHERE `pesquisas`.`deleted_at` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `nome`, `resposta`, `fk_pesquisa`
+FROM `pesquisas`
+JOIN `pesquisa_respostas` ON `pesquisa_respostas`.`fk_pesquisa` = `pesquisas`.`id_pesquisa`
+JOIN `auth_users` ON `auth_users`.`id_user` = `pesquisa_respostas`.`fk_user`
+WHERE `pesquisas`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `nome`, `resposta`, `fk_pesquisa`
+FROM `pesquisas`
+JOIN `pesquisa_respostas` ON `pesquisa_respostas`.`fk_pesquisa` = `pesquisas`.`id_pesquisa`
+JOIN `auth_users` ON `auth_users`.`id_user` = `pesquisa_respostas`.`fk_user`
+WHERE `pesquisas`.`deleted_at` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `nome`, `resposta`, `fk_pesquisa`
+FROM `pesquisas`
+JOIN `pesquisa_respostas` ON `pesquisa_respostas`.`fk_pesquisa` = `pesquisas`.`id_pesquisa`
+JOIN `auth_users` ON `auth_users`.`id_user` = `pesquisa_respostas`.`fk_user`
+WHERE `pesquisas`.`deleted_at` IS NULL', [], false)
+ 5 SYSTEMPATH\Model.php(203): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(557): CodeIgniter\Model->doFind(false, null)
+ 7 APPPATH\Models\PesquisasModel.php(40): CodeIgniter\BaseModel->find()
+ 8 APPPATH\Controllers\PesquisaRespostas.php(26): App\Models\PesquisasModel->get_pesquisa_and_respostas([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->index()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-22 12:25:31 --> mysqli_sql_exception: Unknown column 'resposta' in 'field list' in C:\xampp\htdocs\pesquisa_satisfacao\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `nome`, ...', 0)
+#1 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `nome`, ...')
+#2 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `nome`, ...')
+#3 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `nome`, ...', Array, false)
+#4 C:\xampp\htdocs\pesquisa_satisfacao\system\Model.php(203): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\pesquisa_satisfacao\system\BaseModel.php(557): CodeIgniter\Model->doFind(false, NULL)
+#6 C:\xampp\htdocs\pesquisa_satisfacao\app\Models\PesquisasModel.php(40): CodeIgniter\BaseModel->find()
+#7 C:\xampp\htdocs\pesquisa_satisfacao\app\Controllers\PesquisaRespostas.php(26): App\Models\PesquisasModel->get_pesquisa_and_respostas(Array)
+#8 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->index()
+#9 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+#10 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\pesquisa_satisfacao\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-05-22 12:25:31 --> Unknown column 'resposta' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `nome`, `resposta`, `fk_pesquisa`
+FROM `pesquisas`
+JOIN `pesquisa_respostas` ON `pesquisa_respostas`.`fk_pesquisa` = `pesquisas`.`id_pesquisa`
+JOIN `auth_users` ON `auth_users`.`id_user` = `pesquisa_respostas`.`fk_user`
+WHERE `pesquisas`.`deleted_at` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `nome`, `resposta`, `fk_pesquisa`
+FROM `pesquisas`
+JOIN `pesquisa_respostas` ON `pesquisa_respostas`.`fk_pesquisa` = `pesquisas`.`id_pesquisa`
+JOIN `auth_users` ON `auth_users`.`id_user` = `pesquisa_respostas`.`fk_user`
+WHERE `pesquisas`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `nome`, `resposta`, `fk_pesquisa`
+FROM `pesquisas`
+JOIN `pesquisa_respostas` ON `pesquisa_respostas`.`fk_pesquisa` = `pesquisas`.`id_pesquisa`
+JOIN `auth_users` ON `auth_users`.`id_user` = `pesquisa_respostas`.`fk_user`
+WHERE `pesquisas`.`deleted_at` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `nome`, `resposta`, `fk_pesquisa`
+FROM `pesquisas`
+JOIN `pesquisa_respostas` ON `pesquisa_respostas`.`fk_pesquisa` = `pesquisas`.`id_pesquisa`
+JOIN `auth_users` ON `auth_users`.`id_user` = `pesquisa_respostas`.`fk_user`
+WHERE `pesquisas`.`deleted_at` IS NULL', [], false)
+ 5 SYSTEMPATH\Model.php(203): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(557): CodeIgniter\Model->doFind(false, null)
+ 7 APPPATH\Models\PesquisasModel.php(40): CodeIgniter\BaseModel->find()
+ 8 APPPATH\Controllers\PesquisaRespostas.php(26): App\Models\PesquisasModel->get_pesquisa_and_respostas([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->index()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-22 12:25:44 --> mysqli_sql_exception: Unknown column 'resposta' in 'field list' in C:\xampp\htdocs\pesquisa_satisfacao\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `nome`, ...', 0)
+#1 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `nome`, ...')
+#2 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `nome`, ...')
+#3 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `nome`, ...', Array, false)
+#4 C:\xampp\htdocs\pesquisa_satisfacao\system\Model.php(203): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\pesquisa_satisfacao\system\BaseModel.php(557): CodeIgniter\Model->doFind(false, NULL)
+#6 C:\xampp\htdocs\pesquisa_satisfacao\app\Models\PesquisasModel.php(40): CodeIgniter\BaseModel->find()
+#7 C:\xampp\htdocs\pesquisa_satisfacao\app\Controllers\PesquisaRespostas.php(26): App\Models\PesquisasModel->get_pesquisa_and_respostas(Array)
+#8 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->index()
+#9 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+#10 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\pesquisa_satisfacao\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-05-22 12:25:44 --> Unknown column 'resposta' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `nome`, `resposta`, `fk_pesquisa`
+FROM `pesquisas`
+JOIN `pesquisa_respostas` ON `pesquisa_respostas`.`fk_pesquisa` = `pesquisas`.`id_pesquisa`
+JOIN `auth_users` ON `auth_users`.`id_user` = `pesquisa_respostas`.`fk_user`
+WHERE `pesquisas`.`deleted_at` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `nome`, `resposta`, `fk_pesquisa`
+FROM `pesquisas`
+JOIN `pesquisa_respostas` ON `pesquisa_respostas`.`fk_pesquisa` = `pesquisas`.`id_pesquisa`
+JOIN `auth_users` ON `auth_users`.`id_user` = `pesquisa_respostas`.`fk_user`
+WHERE `pesquisas`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `nome`, `resposta`, `fk_pesquisa`
+FROM `pesquisas`
+JOIN `pesquisa_respostas` ON `pesquisa_respostas`.`fk_pesquisa` = `pesquisas`.`id_pesquisa`
+JOIN `auth_users` ON `auth_users`.`id_user` = `pesquisa_respostas`.`fk_user`
+WHERE `pesquisas`.`deleted_at` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `nome`, `resposta`, `fk_pesquisa`
+FROM `pesquisas`
+JOIN `pesquisa_respostas` ON `pesquisa_respostas`.`fk_pesquisa` = `pesquisas`.`id_pesquisa`
+JOIN `auth_users` ON `auth_users`.`id_user` = `pesquisa_respostas`.`fk_user`
+WHERE `pesquisas`.`deleted_at` IS NULL', [], false)
+ 5 SYSTEMPATH\Model.php(203): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(557): CodeIgniter\Model->doFind(false, null)
+ 7 APPPATH\Models\PesquisasModel.php(40): CodeIgniter\BaseModel->find()
+ 8 APPPATH\Controllers\PesquisaRespostas.php(26): App\Models\PesquisasModel->get_pesquisa_and_respostas([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->index()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-22 12:25:44 --> mysqli_sql_exception: Unknown column 'resposta' in 'field list' in C:\xampp\htdocs\pesquisa_satisfacao\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `nome`, ...', 0)
+#1 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `nome`, ...')
+#2 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `nome`, ...')
+#3 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `nome`, ...', Array, false)
+#4 C:\xampp\htdocs\pesquisa_satisfacao\system\Model.php(203): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\pesquisa_satisfacao\system\BaseModel.php(557): CodeIgniter\Model->doFind(false, NULL)
+#6 C:\xampp\htdocs\pesquisa_satisfacao\app\Models\PesquisasModel.php(40): CodeIgniter\BaseModel->find()
+#7 C:\xampp\htdocs\pesquisa_satisfacao\app\Controllers\PesquisaRespostas.php(26): App\Models\PesquisasModel->get_pesquisa_and_respostas(Array)
+#8 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->index()
+#9 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+#10 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\pesquisa_satisfacao\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-05-22 12:25:44 --> Unknown column 'resposta' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `nome`, `resposta`, `fk_pesquisa`
+FROM `pesquisas`
+JOIN `pesquisa_respostas` ON `pesquisa_respostas`.`fk_pesquisa` = `pesquisas`.`id_pesquisa`
+JOIN `auth_users` ON `auth_users`.`id_user` = `pesquisa_respostas`.`fk_user`
+WHERE `pesquisas`.`deleted_at` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `nome`, `resposta`, `fk_pesquisa`
+FROM `pesquisas`
+JOIN `pesquisa_respostas` ON `pesquisa_respostas`.`fk_pesquisa` = `pesquisas`.`id_pesquisa`
+JOIN `auth_users` ON `auth_users`.`id_user` = `pesquisa_respostas`.`fk_user`
+WHERE `pesquisas`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `nome`, `resposta`, `fk_pesquisa`
+FROM `pesquisas`
+JOIN `pesquisa_respostas` ON `pesquisa_respostas`.`fk_pesquisa` = `pesquisas`.`id_pesquisa`
+JOIN `auth_users` ON `auth_users`.`id_user` = `pesquisa_respostas`.`fk_user`
+WHERE `pesquisas`.`deleted_at` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `nome`, `resposta`, `fk_pesquisa`
+FROM `pesquisas`
+JOIN `pesquisa_respostas` ON `pesquisa_respostas`.`fk_pesquisa` = `pesquisas`.`id_pesquisa`
+JOIN `auth_users` ON `auth_users`.`id_user` = `pesquisa_respostas`.`fk_user`
+WHERE `pesquisas`.`deleted_at` IS NULL', [], false)
+ 5 SYSTEMPATH\Model.php(203): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(557): CodeIgniter\Model->doFind(false, null)
+ 7 APPPATH\Models\PesquisasModel.php(40): CodeIgniter\BaseModel->find()
+ 8 APPPATH\Controllers\PesquisaRespostas.php(26): App\Models\PesquisasModel->get_pesquisa_and_respostas([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->index()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-22 12:29:59 --> mysqli_sql_exception: Unknown column 'resposta' in 'field list' in C:\xampp\htdocs\pesquisa_satisfacao\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `nome`, ...', 0)
+#1 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `nome`, ...')
+#2 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `nome`, ...')
+#3 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `nome`, ...', Array, false)
+#4 C:\xampp\htdocs\pesquisa_satisfacao\system\Model.php(203): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\pesquisa_satisfacao\system\BaseModel.php(557): CodeIgniter\Model->doFind(false, NULL)
+#6 C:\xampp\htdocs\pesquisa_satisfacao\app\Models\PesquisasModel.php(40): CodeIgniter\BaseModel->find()
+#7 C:\xampp\htdocs\pesquisa_satisfacao\app\Controllers\PesquisaRespostas.php(26): App\Models\PesquisasModel->get_pesquisa_and_respostas(Array)
+#8 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->index()
+#9 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+#10 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\pesquisa_satisfacao\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-05-22 12:29:59 --> Unknown column 'resposta' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `nome`, `resposta`, `fk_pesquisa`
+FROM `pesquisas`
+JOIN `pesquisa_respostas` ON `pesquisa_respostas`.`fk_pesquisa` = `pesquisas`.`id_pesquisa`
+JOIN `auth_users` ON `auth_users`.`id_user` = `pesquisa_respostas`.`fk_user`
+WHERE `pesquisas`.`deleted_at` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `nome`, `resposta`, `fk_pesquisa`
+FROM `pesquisas`
+JOIN `pesquisa_respostas` ON `pesquisa_respostas`.`fk_pesquisa` = `pesquisas`.`id_pesquisa`
+JOIN `auth_users` ON `auth_users`.`id_user` = `pesquisa_respostas`.`fk_user`
+WHERE `pesquisas`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `nome`, `resposta`, `fk_pesquisa`
+FROM `pesquisas`
+JOIN `pesquisa_respostas` ON `pesquisa_respostas`.`fk_pesquisa` = `pesquisas`.`id_pesquisa`
+JOIN `auth_users` ON `auth_users`.`id_user` = `pesquisa_respostas`.`fk_user`
+WHERE `pesquisas`.`deleted_at` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `nome`, `resposta`, `fk_pesquisa`
+FROM `pesquisas`
+JOIN `pesquisa_respostas` ON `pesquisa_respostas`.`fk_pesquisa` = `pesquisas`.`id_pesquisa`
+JOIN `auth_users` ON `auth_users`.`id_user` = `pesquisa_respostas`.`fk_user`
+WHERE `pesquisas`.`deleted_at` IS NULL', [], false)
+ 5 SYSTEMPATH\Model.php(203): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(557): CodeIgniter\Model->doFind(false, null)
+ 7 APPPATH\Models\PesquisasModel.php(40): CodeIgniter\BaseModel->find()
+ 8 APPPATH\Controllers\PesquisaRespostas.php(26): App\Models\PesquisasModel->get_pesquisa_and_respostas([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->index()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-22 12:35:59 --> mysqli_sql_exception: Unknown column 'resposta' in 'field list' in C:\xampp\htdocs\pesquisa_satisfacao\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `nome`, ...', 0)
+#1 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `nome`, ...')
+#2 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `nome`, ...')
+#3 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `nome`, ...', Array, false)
+#4 C:\xampp\htdocs\pesquisa_satisfacao\system\Model.php(203): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\pesquisa_satisfacao\system\BaseModel.php(557): CodeIgniter\Model->doFind(false, NULL)
+#6 C:\xampp\htdocs\pesquisa_satisfacao\app\Models\PesquisasModel.php(40): CodeIgniter\BaseModel->find()
+#7 C:\xampp\htdocs\pesquisa_satisfacao\app\Controllers\PesquisaRespostas.php(26): App\Models\PesquisasModel->get_pesquisa_and_respostas(Array)
+#8 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->index()
+#9 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+#10 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\pesquisa_satisfacao\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-05-22 12:35:59 --> Unknown column 'resposta' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `nome`, `resposta`, `fk_pesquisa`
+FROM `pesquisas`
+JOIN `pesquisa_respostas` ON `pesquisa_respostas`.`fk_pesquisa` = `pesquisas`.`id_pesquisa`
+JOIN `auth_users` ON `auth_users`.`id_user` = `pesquisa_respostas`.`fk_user`
+WHERE `pesquisas`.`deleted_at` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `nome`, `resposta`, `fk_pesquisa`
+FROM `pesquisas`
+JOIN `pesquisa_respostas` ON `pesquisa_respostas`.`fk_pesquisa` = `pesquisas`.`id_pesquisa`
+JOIN `auth_users` ON `auth_users`.`id_user` = `pesquisa_respostas`.`fk_user`
+WHERE `pesquisas`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `nome`, `resposta`, `fk_pesquisa`
+FROM `pesquisas`
+JOIN `pesquisa_respostas` ON `pesquisa_respostas`.`fk_pesquisa` = `pesquisas`.`id_pesquisa`
+JOIN `auth_users` ON `auth_users`.`id_user` = `pesquisa_respostas`.`fk_user`
+WHERE `pesquisas`.`deleted_at` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `nome`, `resposta`, `fk_pesquisa`
+FROM `pesquisas`
+JOIN `pesquisa_respostas` ON `pesquisa_respostas`.`fk_pesquisa` = `pesquisas`.`id_pesquisa`
+JOIN `auth_users` ON `auth_users`.`id_user` = `pesquisa_respostas`.`fk_user`
+WHERE `pesquisas`.`deleted_at` IS NULL', [], false)
+ 5 SYSTEMPATH\Model.php(203): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(557): CodeIgniter\Model->doFind(false, null)
+ 7 APPPATH\Models\PesquisasModel.php(40): CodeIgniter\BaseModel->find()
+ 8 APPPATH\Controllers\PesquisaRespostas.php(26): App\Models\PesquisasModel->get_pesquisa_and_respostas([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->index()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-22 12:36:00 --> mysqli_sql_exception: Unknown column 'resposta' in 'field list' in C:\xampp\htdocs\pesquisa_satisfacao\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `nome`, ...', 0)
+#1 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `nome`, ...')
+#2 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `nome`, ...')
+#3 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `nome`, ...', Array, false)
+#4 C:\xampp\htdocs\pesquisa_satisfacao\system\Model.php(203): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\pesquisa_satisfacao\system\BaseModel.php(557): CodeIgniter\Model->doFind(false, NULL)
+#6 C:\xampp\htdocs\pesquisa_satisfacao\app\Models\PesquisasModel.php(40): CodeIgniter\BaseModel->find()
+#7 C:\xampp\htdocs\pesquisa_satisfacao\app\Controllers\PesquisaRespostas.php(26): App\Models\PesquisasModel->get_pesquisa_and_respostas(Array)
+#8 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->index()
+#9 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+#10 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\pesquisa_satisfacao\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-05-22 12:36:00 --> Unknown column 'resposta' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `nome`, `resposta`, `fk_pesquisa`
+FROM `pesquisas`
+JOIN `pesquisa_respostas` ON `pesquisa_respostas`.`fk_pesquisa` = `pesquisas`.`id_pesquisa`
+JOIN `auth_users` ON `auth_users`.`id_user` = `pesquisa_respostas`.`fk_user`
+WHERE `pesquisas`.`deleted_at` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `nome`, `resposta`, `fk_pesquisa`
+FROM `pesquisas`
+JOIN `pesquisa_respostas` ON `pesquisa_respostas`.`fk_pesquisa` = `pesquisas`.`id_pesquisa`
+JOIN `auth_users` ON `auth_users`.`id_user` = `pesquisa_respostas`.`fk_user`
+WHERE `pesquisas`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `nome`, `resposta`, `fk_pesquisa`
+FROM `pesquisas`
+JOIN `pesquisa_respostas` ON `pesquisa_respostas`.`fk_pesquisa` = `pesquisas`.`id_pesquisa`
+JOIN `auth_users` ON `auth_users`.`id_user` = `pesquisa_respostas`.`fk_user`
+WHERE `pesquisas`.`deleted_at` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `nome`, `resposta`, `fk_pesquisa`
+FROM `pesquisas`
+JOIN `pesquisa_respostas` ON `pesquisa_respostas`.`fk_pesquisa` = `pesquisas`.`id_pesquisa`
+JOIN `auth_users` ON `auth_users`.`id_user` = `pesquisa_respostas`.`fk_user`
+WHERE `pesquisas`.`deleted_at` IS NULL', [], false)
+ 5 SYSTEMPATH\Model.php(203): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(557): CodeIgniter\Model->doFind(false, null)
+ 7 APPPATH\Models\PesquisasModel.php(40): CodeIgniter\BaseModel->find()
+ 8 APPPATH\Controllers\PesquisaRespostas.php(26): App\Models\PesquisasModel->get_pesquisa_and_respostas([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->index()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-22 12:43:35 --> mysqli_sql_exception: Unknown column 'resposta' in 'field list' in C:\xampp\htdocs\pesquisa_satisfacao\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `nome`, ...', 0)
+#1 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `nome`, ...')
+#2 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `nome`, ...')
+#3 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `nome`, ...', Array, false)
+#4 C:\xampp\htdocs\pesquisa_satisfacao\system\Model.php(203): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\pesquisa_satisfacao\system\BaseModel.php(557): CodeIgniter\Model->doFind(false, NULL)
+#6 C:\xampp\htdocs\pesquisa_satisfacao\app\Models\PesquisasModel.php(40): CodeIgniter\BaseModel->find()
+#7 C:\xampp\htdocs\pesquisa_satisfacao\app\Controllers\PesquisaRespostas.php(26): App\Models\PesquisasModel->get_pesquisa_and_respostas(Array)
+#8 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->index()
+#9 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+#10 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\pesquisa_satisfacao\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-05-22 12:43:35 --> Unknown column 'resposta' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `nome`, `resposta`, `fk_pesquisa`
+FROM `pesquisas`
+JOIN `pesquisa_respostas` ON `pesquisa_respostas`.`fk_pesquisa` = `pesquisas`.`id_pesquisa`
+JOIN `auth_users` ON `auth_users`.`id_user` = `pesquisa_respostas`.`fk_user`
+WHERE `pesquisas`.`deleted_at` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `nome`, `resposta`, `fk_pesquisa`
+FROM `pesquisas`
+JOIN `pesquisa_respostas` ON `pesquisa_respostas`.`fk_pesquisa` = `pesquisas`.`id_pesquisa`
+JOIN `auth_users` ON `auth_users`.`id_user` = `pesquisa_respostas`.`fk_user`
+WHERE `pesquisas`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `nome`, `resposta`, `fk_pesquisa`
+FROM `pesquisas`
+JOIN `pesquisa_respostas` ON `pesquisa_respostas`.`fk_pesquisa` = `pesquisas`.`id_pesquisa`
+JOIN `auth_users` ON `auth_users`.`id_user` = `pesquisa_respostas`.`fk_user`
+WHERE `pesquisas`.`deleted_at` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `nome`, `resposta`, `fk_pesquisa`
+FROM `pesquisas`
+JOIN `pesquisa_respostas` ON `pesquisa_respostas`.`fk_pesquisa` = `pesquisas`.`id_pesquisa`
+JOIN `auth_users` ON `auth_users`.`id_user` = `pesquisa_respostas`.`fk_user`
+WHERE `pesquisas`.`deleted_at` IS NULL', [], false)
+ 5 SYSTEMPATH\Model.php(203): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(557): CodeIgniter\Model->doFind(false, null)
+ 7 APPPATH\Models\PesquisasModel.php(40): CodeIgniter\BaseModel->find()
+ 8 APPPATH\Controllers\PesquisaRespostas.php(26): App\Models\PesquisasModel->get_pesquisa_and_respostas([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->index()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-22 12:47:30 --> mysqli_sql_exception: Unknown column 'resposta' in 'field list' in C:\xampp\htdocs\pesquisa_satisfacao\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `nome`, ...', 0)
+#1 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `nome`, ...')
+#2 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `nome`, ...')
+#3 C:\xampp\htdocs\pesquisa_satisfacao\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `nome`, ...', Array, false)
+#4 C:\xampp\htdocs\pesquisa_satisfacao\system\Model.php(203): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\pesquisa_satisfacao\system\BaseModel.php(557): CodeIgniter\Model->doFind(false, NULL)
+#6 C:\xampp\htdocs\pesquisa_satisfacao\app\Models\PesquisasModel.php(40): CodeIgniter\BaseModel->find()
+#7 C:\xampp\htdocs\pesquisa_satisfacao\app\Controllers\PesquisaRespostas.php(26): App\Models\PesquisasModel->get_pesquisa_and_respostas(Array)
+#8 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->index()
+#9 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+#10 C:\xampp\htdocs\pesquisa_satisfacao\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\pesquisa_satisfacao\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-05-22 12:47:30 --> Unknown column 'resposta' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('SELECT `nome`, `resposta`, `fk_pesquisa`
+FROM `pesquisas`
+JOIN `pesquisa_respostas` ON `pesquisa_respostas`.`fk_pesquisa` = `pesquisas`.`id_pesquisa`
+JOIN `auth_users` ON `auth_users`.`id_user` = `pesquisa_respostas`.`fk_user`
+WHERE `pesquisas`.`deleted_at` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `nome`, `resposta`, `fk_pesquisa`
+FROM `pesquisas`
+JOIN `pesquisa_respostas` ON `pesquisa_respostas`.`fk_pesquisa` = `pesquisas`.`id_pesquisa`
+JOIN `auth_users` ON `auth_users`.`id_user` = `pesquisa_respostas`.`fk_user`
+WHERE `pesquisas`.`deleted_at` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `nome`, `resposta`, `fk_pesquisa`
+FROM `pesquisas`
+JOIN `pesquisa_respostas` ON `pesquisa_respostas`.`fk_pesquisa` = `pesquisas`.`id_pesquisa`
+JOIN `auth_users` ON `auth_users`.`id_user` = `pesquisa_respostas`.`fk_user`
+WHERE `pesquisas`.`deleted_at` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `nome`, `resposta`, `fk_pesquisa`
+FROM `pesquisas`
+JOIN `pesquisa_respostas` ON `pesquisa_respostas`.`fk_pesquisa` = `pesquisas`.`id_pesquisa`
+JOIN `auth_users` ON `auth_users`.`id_user` = `pesquisa_respostas`.`fk_user`
+WHERE `pesquisas`.`deleted_at` IS NULL', [], false)
+ 5 SYSTEMPATH\Model.php(203): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(557): CodeIgniter\Model->doFind(false, null)
+ 7 APPPATH\Models\PesquisasModel.php(40): CodeIgniter\BaseModel->find()
+ 8 APPPATH\Controllers\PesquisaRespostas.php(26): App\Models\PesquisasModel->get_pesquisa_and_respostas([...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->index()
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+>>>>>>> origin/gustavos2205

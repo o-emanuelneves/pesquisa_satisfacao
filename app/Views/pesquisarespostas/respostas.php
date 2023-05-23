@@ -6,13 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Respostas</title>
+    <link rel="stylesheet" href="/assets/css/pesquisarespostas/respostas.css">
+    <link rel="stylesheet" href="/plugin/fontawesome/css/all.min.css">
 
 
 </head>
 
 <body>
 
-    <div>
+    <div class="container-modal">
+
+        <h1>Respostas</h1>
+
         <form>
             <div>
                 <h2>Respostas</h2>
