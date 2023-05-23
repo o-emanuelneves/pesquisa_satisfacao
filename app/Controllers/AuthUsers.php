@@ -3,7 +3,6 @@ namespace App\Controllers;
 
 use App\Models\Auth_UserModel;
 use CodeIgniter\Controller;
-use CodeIgniter\Model;
 
 class AuthUsers extends BaseController{
     private $auth_users_model;
@@ -28,13 +27,13 @@ class AuthUsers extends BaseController{
     public function store(){
         $dados = $this->request->getVar();
         $this->auth_users_model->insert($dados);
-        return redirect()->to('http://pesquisa.satisfacao.com/authusers');
+        return redirect()->to('../AuthUsers/index');
     }
 
     public function excluir($id_user)
     {
     $this->auth_users_model->where('id_user', $id_user)->delete();
-    return redirect()->to('http://pesquisa.satisfacao.com/authusers');
+    return redirect()->to('../AuthUsers/index');
 
     }
     

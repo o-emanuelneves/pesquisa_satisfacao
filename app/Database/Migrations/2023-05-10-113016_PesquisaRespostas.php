@@ -12,18 +12,18 @@ class PesquisaRespostas extends Migration
             'id_resposta'         => [
                 'type'           => 'INT',
                 'constraint'     => 9,
-                'usigned'        => true,
+                'unsigned'        => true,
                 'auto_increment' => true,
             ],
             'fk_pesquisa'         => [
                 'type'           => 'INT',
                 'constraint'     => 9,
-                'usigned'        => true
+                'unsigned'        => true
             ],
             'fk_user'         => [
                 'type'           => 'INT',
                 'constraint'     => 9,
-                'usigned'        => true
+                'unsigned'        => true
             ],
             'fk_pergunta'         => [
                 'type'           => 'INT',

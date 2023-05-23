@@ -51,13 +51,13 @@ class PesquisasModel extends Model{
         return $this->where('id_pesquisa', $id)->find();
     }
 
-    public function retornarRespostas($id, $columns = ['*'])
+    public function retornar_respostas($id, $columns = ['*'])
     {
         $services = new PesquisasSrvc;
 
         $getResposta = $this->get_pesquisa_and_respostas_by_id($id, $columns);
         
-        $getResposta = $services->transformarResposta($getResposta);
+        $getResposta = $services->transformar_resposta($getResposta);
 
         return $getResposta;
     }

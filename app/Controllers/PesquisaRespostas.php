@@ -31,7 +31,6 @@ class PesquisaRespostas extends BaseController
 
         ]);
 
-        //dd($pesquisas);
 
         $pesquisaAgrupada = [];
         foreach ($pesquisas as $pesquisa) {
@@ -45,7 +44,7 @@ class PesquisaRespostas extends BaseController
 
 
         foreach ($pesquisaAgrupada as $key => $pesquisa) {
-            $pesquisaAgrupada[$key]['satisfacao'] = $service->calculateSatisfaction($pesquisa['respostas']);
+            $pesquisaAgrupada[$key]['satisfacao'] = $service->calculate_satisfaction($pesquisa['respostas']);
         }
 
 
@@ -69,7 +68,7 @@ class PesquisaRespostas extends BaseController
             $this->pesquisa_respostas_model->set_respostas($dados);
 
 
-            return redirect()->to('http://pesquisa.satisfacao.com/pesquisarespostas');
+            return redirect()->to('../PesquisaRespostas/index');
 
         endif;
     }
@@ -83,7 +82,7 @@ class PesquisaRespostas extends BaseController
         ]);
         
         $respostasSrvc = new PesquisasSrvc();
-        $dia = $respostasSrvc->retornaDia();
+        $dia = $respostasSrvc->retorna_dia();
 
         $dia = 1;
 
@@ -93,13 +92,13 @@ class PesquisaRespostas extends BaseController
         
         
         echo View('pesquisarespostas/novo', $data);
-        // if ($dia <= 10 and $pesquisa_respostas_model->mostrarPesquisa()) {
+        // if ($dia <= 10 and $pesquisa_respostas_model->mostrar_pesquisa()) {
 
         //     echo '<script>alert("Responda a pesquisa mensal!");</script>';
         //     echo View('pesquisarespostas/novo', $data);
             
         // } 
-        // else if ($dia <= 10 and $pesquisa_respostas_model->mostrarPesquisa()== false){
+        // else if ($dia <= 10 and $pesquisa_respostas_model->mostrar_pesquisa()== false){
         //     echo ("<script> window.alert('Você já respondeu a pesquisa esse mês')
         //     window.location.href='http://pesquisa.satisfacao.com/pesquisarespostas/'; </script>");
         // }
@@ -117,7 +116,7 @@ class PesquisaRespostas extends BaseController
     {
         $pesquisaModel = new PesquisasModel();
 
-        $respostas = $pesquisaModel->retornarRespostas(
+        $respostas = $pesquisaModel->retornar_respostas(
             $id, [
             'pergunta',
             'resposta',

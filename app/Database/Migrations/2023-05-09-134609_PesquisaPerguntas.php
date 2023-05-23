@@ -11,14 +11,14 @@ class PesquisaPerguntas extends Migration
         $this->forge->addField([
             'id_pergunta'         => [
                 'type'           => 'INT',
-                'constraint'     => 9, 
-                'usigned'        => true, 
+                'constraint'     => 9,
+                'unsigned'        => true, 
                 'auto_increment' => true,
             ],
             'fk_user'         => [
                 'type'           => 'INT',
                 'constraint'     => 9,
-                'usigned'        => true
+                'unsigned'        => true
             ],
             'pergunta'             => [
                 'type'      => "VARCHAR",

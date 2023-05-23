@@ -293,3 +293,35 @@ in APPPATH\Controllers\PesquisaRespostas.php on line 40.
  3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
  4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-23 14:22:18 --> Call to undefined method App\Models\Pesquisa_RespostasModel::insert_batch
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Models\Pesquisa_RespostasModel.php(40): CodeIgniter\Model->__call('insert_batch', [...])
+ 2 APPPATH\Controllers\PesquisaRespostas.php(69): App\Models\Pesquisa_RespostasModel->set_respostas([...])
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->store()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-23 14:22:30 --> Call to undefined method App\Models\Pesquisa_RespostasModel::insert_batch
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Models\Pesquisa_RespostasModel.php(40): CodeIgniter\Model->__call('insert_batch', [...])
+ 2 APPPATH\Controllers\PesquisaRespostas.php(69): App\Models\Pesquisa_RespostasModel->set_respostas([...])
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->store()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-23 14:28:41 --> Call to undefined method App\Models\Pesquisa_RespostasModel::insert_batch
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Models\Pesquisa_RespostasModel.php(40): CodeIgniter\Model->__call('insert_batch', [...])
+ 2 APPPATH\Controllers\PesquisaRespostas.php(69): App\Models\Pesquisa_RespostasModel->set_respostas([...])
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->store()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-23 14:31:04 --> Call to undefined method App\Models\Pesquisa_RespostasModel::insert_batch_pergunta
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Models\Pesquisa_RespostasModel.php(40): CodeIgniter\Model->__call('insert_batch_pergunta', [...])
+ 2 APPPATH\Controllers\PesquisaRespostas.php(69): App\Models\Pesquisa_RespostasModel->set_respostas([...])
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->store()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
