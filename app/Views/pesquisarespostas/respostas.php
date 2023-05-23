@@ -6,27 +6,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Respostas</title>
+    <link rel="stylesheet" href="/assets/css/pesquisarespostas/respostas.css">
+    <link rel="stylesheet" href="/plugin/fontawesome/css/all.min.css">
 
 
 </head>
 
 <body>
 
-    <div>
+    <div class="container-modal">
+
+        <h1>Respostas</h1>
+
         <form>
             <div>
-                <?php foreach ($perguntas as $pergunta) : ?>
+                <h2>Respostas</h2>
+                <?php foreach ($respostas as $resposta) : ?>
                     <div class="questions">
-                        <input disabled type="text" placeholder="" name="pergunta[<?= $pergunta['id_pergunta'] ?>]" class="container-questions" value="<?= $pergunta['pergunta'] ?>" id="<?= $pergunta['id_pergunta'] ?>">
-
-                        <label>Sim</label>
-                        <input disabled type="radio"></input>
-                        <label>Talvez</label>
-                        <input disabled type="radio"></input>
-                        <label>Não</label>
-                        <input disabled type="radio"></input>
+                        <span><?= $resposta['pergunta'] ?></span>
+                        <span><?= $resposta['resposta'] ?></span>
                     </div>
                 <?php endforeach; ?>
+                
+                <span><?= $respostas[0]['observacao'] ?></span>
 
             </div>
         </form>

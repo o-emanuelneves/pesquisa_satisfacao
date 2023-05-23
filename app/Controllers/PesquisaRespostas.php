@@ -85,6 +85,8 @@ class PesquisaRespostas extends BaseController
         $respostasSrvc = new PesquisasSrvc();
         $dia = $respostasSrvc->retornaDia();
 
+        $dia = 1;
+
 
 
         $pesquisa_respostas_model = new Pesquisa_RespostasModel();
@@ -111,12 +113,24 @@ class PesquisaRespostas extends BaseController
     }
 
 
-    public function respostas()
+    public function respostas($id)
     {
-        $model = new Pesquisa_PerguntasModel();
-        $data['perguntas'] = $model->get_perguntas();
+        $pesquisaModel = new PesquisasModel();
+
+        $respostas = $pesquisaModel->retornarRespostas(
+            $id, [
+            'pergunta',
+            'resposta',
+            'observacao',
+            'id_pesquisa',
+        ]);
+
+        $data['respostas'] = $respostas;
+
+        // echo json_encode($respostas);
 
         echo View('pesquisarespostas/respostas', $data);
+        
     }
 }
 ?>

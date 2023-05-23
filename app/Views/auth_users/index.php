@@ -13,6 +13,9 @@
 
     <div class="container-modal">
         <h1>Tela de listar todos os usuários</h1>
+
+        <!-- Cadastrar Usuario sera removido no futuro -->
+
         <div class="new-users"><a href="/AuthUsers/novo">Cadastrar novo</a></div>
         <div id="wrapper"></div>
         <div class="style-table">
@@ -35,9 +38,11 @@
                                 <td><?= $auth_user['id_user'] ?></td>
                             </div>
                             <td><?= $auth_user['nome'] ?></td>
+
                             <td class="acoes">
 
                                 <div class="bottons-table d-none">
+
                                     <div class="botton-ver btns1"><a href="/AuthUsers/ver/<?= $auth_user['id_user'] ?>"> <i class="fa-solid fa-eye" style="color: #ffffff;"></i></a></div>
 
                                     <div class="botton-excluir btns1"> 
@@ -45,7 +50,10 @@
                                     </div>
                                 
                                 </div>
-                                <div class="btns btns-acoes"><i class="fa-solid fa-ellipsis" style="color: #ffffff;"></i></div>
+
+                                  <div class="btns btns-acoes">
+                                     <i class="fa-solid fa-ellipsis" style="color: #ffffff;"></i>
+                                  </div>
                             </td>
                         </tr>
                     <?php endforeach; ?>
@@ -57,6 +65,6 @@
 
 
 <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
-<script src="/assets/js/authUsers/btns.js"></script>
+<script src="/assets/js/Authusers/btns.js"></script>
 
 </html>
