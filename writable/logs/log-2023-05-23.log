@@ -294,6 +294,7 @@ in APPPATH\Controllers\PesquisaRespostas.php on line 40.
  3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
  4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+<<<<<<< HEAD
 CRITICAL - 2023-05-23 13:41:50 --> insertBatch() has no data.
 =======
 CRITICAL - 2023-05-23 13:04:39 --> insertBatch() has no data.
@@ -312,22 +313,66 @@ in SYSTEMPATH\Database\BaseBuilder.php on line 1772.
 CRITICAL - 2023-05-23 13:42:51 --> insertBatch() has no data.
 =======
 CRITICAL - 2023-05-23 13:28:27 --> Undefined array key 0
+=======
+CRITICAL - 2023-05-23 14:22:18 --> Call to undefined method App\Models\Pesquisa_RespostasModel::insert_batch
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Models\Pesquisa_RespostasModel.php(40): CodeIgniter\Model->__call('insert_batch', [...])
+ 2 APPPATH\Controllers\PesquisaRespostas.php(69): App\Models\Pesquisa_RespostasModel->set_respostas([...])
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->store()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-23 14:22:30 --> Call to undefined method App\Models\Pesquisa_RespostasModel::insert_batch
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Models\Pesquisa_RespostasModel.php(40): CodeIgniter\Model->__call('insert_batch', [...])
+ 2 APPPATH\Controllers\PesquisaRespostas.php(69): App\Models\Pesquisa_RespostasModel->set_respostas([...])
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->store()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-23 14:28:41 --> Call to undefined method App\Models\Pesquisa_RespostasModel::insert_batch
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Models\Pesquisa_RespostasModel.php(40): CodeIgniter\Model->__call('insert_batch', [...])
+ 2 APPPATH\Controllers\PesquisaRespostas.php(69): App\Models\Pesquisa_RespostasModel->set_respostas([...])
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->store()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-23 14:31:04 --> Call to undefined method App\Models\Pesquisa_RespostasModel::insert_batch_pergunta
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Models\Pesquisa_RespostasModel.php(40): CodeIgniter\Model->__call('insert_batch_pergunta', [...])
+ 2 APPPATH\Controllers\PesquisaRespostas.php(69): App\Models\Pesquisa_RespostasModel->set_respostas([...])
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->store()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-23 14:54:42 --> Undefined array key 0
+>>>>>>> origin/emanuel-v7
 in APPPATH\Views\pesquisarespostas\respostas.php on line 31.
  1 APPPATH\Views\pesquisarespostas\respostas.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'C:\\xampp\\htdocs\\pesquisa_satisfacao\\app\\Views\\pesquisarespostas\\respostas.php', 31)
  2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\pesquisa_satisfacao\\app\\Views\\pesquisarespostas\\respostas.php')
  3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
  4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('pesquisarespostas/respostas', [], true)
+<<<<<<< HEAD
  5 APPPATH\Controllers\PesquisaRespostas.php(108): view('pesquisarespostas/respostas', [...])
+=======
+ 5 APPPATH\Controllers\PesquisaRespostas.php(131): view('pesquisarespostas/respostas', [...])
+>>>>>>> origin/emanuel-v7
  6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->respostas('3')
  7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
  8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+<<<<<<< HEAD
 CRITICAL - 2023-05-23 13:28:31 --> Undefined array key 0
+=======
+CRITICAL - 2023-05-23 14:55:27 --> Undefined array key 0
+>>>>>>> origin/emanuel-v7
 in APPPATH\Views\pesquisarespostas\respostas.php on line 31.
  1 APPPATH\Views\pesquisarespostas\respostas.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'C:\\xampp\\htdocs\\pesquisa_satisfacao\\app\\Views\\pesquisarespostas\\respostas.php', 31)
  2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\pesquisa_satisfacao\\app\\Views\\pesquisarespostas\\respostas.php')
  3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
  4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('pesquisarespostas/respostas', [], true)
+<<<<<<< HEAD
  5 APPPATH\Controllers\PesquisaRespostas.php(108): view('pesquisarespostas/respostas', [...])
  6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->respostas('4')
  7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
@@ -386,10 +431,14 @@ in APPPATH\Views\pesquisarespostas\respostas.php on line 84.
  3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
  4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('pesquisarespostas/respostas', [], true)
  5 APPPATH\Controllers\PesquisaRespostas.php(108): view('pesquisarespostas/respostas', [...])
+=======
+ 5 APPPATH\Controllers\PesquisaRespostas.php(131): view('pesquisarespostas/respostas', [...])
+>>>>>>> origin/emanuel-v7
  6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->respostas('3')
  7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
  8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+<<<<<<< HEAD
 CRITICAL - 2023-05-23 14:26:14 --> Undefined array key 0
 in APPPATH\Views\pesquisarespostas\respostas.php on line 84.
  1 APPPATH\Views\pesquisarespostas\respostas.php(84): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'C:\\xampp\\htdocs\\pesquisa_satisfacao\\app\\Views\\pesquisarespostas\\respostas.php', 84)
@@ -505,3 +554,16 @@ in APPPATH\Models\PesquisasModel.php on line 47.
  5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
 =======
 >>>>>>> origin/gustavo-777
+=======
+CRITICAL - 2023-05-23 14:58:46 --> Undefined array key 0
+in APPPATH\Views\pesquisarespostas\respostas.php on line 31.
+ 1 APPPATH\Views\pesquisarespostas\respostas.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'C:\\xampp\\htdocs\\pesquisa_satisfacao\\app\\Views\\pesquisarespostas\\respostas.php', 31)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\pesquisa_satisfacao\\app\\Views\\pesquisarespostas\\respostas.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('pesquisarespostas/respostas', [], true)
+ 5 APPPATH\Controllers\PesquisaRespostas.php(131): view('pesquisarespostas/respostas', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->respostas('3')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+>>>>>>> origin/emanuel-v7

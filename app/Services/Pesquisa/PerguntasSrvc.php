@@ -6,41 +6,42 @@ class PerguntasSrvc {
     private $newPerguntas;
     private $dbPerguntas;
 
-    function __construct ($newPerguntas, $dbPerguntas) {
-        $this->newPerguntas = $newPerguntas;
-        $this->dbPerguntas = $dbPerguntas;
+    function __construct ($newPerguntas=null, $dbPerguntas=null) {
+        if($newPerguntas) $this->newPerguntas = $newPerguntas;
+        if($dbPerguntas) $this->dbPerguntas = $dbPerguntas;
+        
     }
 
-    public function returnInsert () {
-        $insert = $this->insertBatch($this->newPerguntas['newpergunta'] ?? []);
+    public function return_insert () {
+        $insert = $this->insert_batch_pergunta($this->newPerguntas['newpergunta'] ?? []);
         return $insert;
     }
 
-    public function returnUpdate(){
+    public function return_update(){
         $perguntas = $this->newPerguntas['pergunta'] ?? [];
         $dbPerguntas = array_column($this->dbPerguntas, 'pergunta');
         
-        $diff = $this->verifyDiff($perguntas, $dbPerguntas);
-        $insert = $this->insertBatch($diff ?? []);
+        $diff = $this->verify_diff($perguntas, $dbPerguntas);
+        $insert = $this->insert_batch_pergunta($diff ?? []);
         return $insert; 
     }
 
-    public function idsDelete() {
+    public function ids_delete() {
         $perguntas = $this->newPerguntas['pergunta'] ?? [];
         $dbPerguntas = array_column($this->dbPerguntas, 'pergunta');
  
-        $diff = $this->verifyDiff($perguntas, $dbPerguntas);
+        $diff = $this->verify_diff($perguntas, $dbPerguntas);
         $ids = array_keys($diff);
         return $ids;
     }
 
-    public function verifyDiff($newPerguntas, $dbPerguntas) {
+    public function verify_diff($newPerguntas, $dbPerguntas) {
         $difference = array_diff($newPerguntas, $dbPerguntas);
         return $difference;
     }
 
 
-    public function insertBatch($perguntas) {
+    public function insert_batch_pergunta($perguntas) {
         $array = array_map(function($pergunta) {
             return [
                 'fk_user' => 5,

@@ -1,7 +1,7 @@
 <?php 
 namespace App\Controllers;
 
-use App\Models\Auth_UserModel;
+
 use App\Models\Pesquisa_PerguntasModel;
 use CodeIgniter\Controller;
 
@@ -33,5 +33,4 @@ class PesquisaPerguntas extends BaseController{
     public function delete($id) {
         $this->pesquisa_perguntas_model->where('id_pergunta', $id)->delete();
     }
-
 }

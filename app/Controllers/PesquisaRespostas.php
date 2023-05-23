@@ -39,7 +39,8 @@ class PesquisaRespostas extends BaseController
 
             $this->pesquisa_respostas_model->set_respostas($dados);
 
-            return redirect()->to('/pesquisarespostas');
+
+            return redirect()->to('../PesquisaRespostas/index');
 
         endif;
     }
@@ -53,13 +54,31 @@ class PesquisaRespostas extends BaseController
         ]);
         
         $respostasSrvc = new PesquisasSrvc();
-        $dia = $respostasSrvc->retornaDia();
+        $dia = $respostasSrvc->retorna_dia();
 
         $dia = 1;
 
         $pesquisa_respostas_model = new Pesquisa_RespostasModel();
         
         echo View('pesquisarespostas/novo', $data);
+        
+        // if ($dia <= 10 and $pesquisa_respostas_model->mostrar_pesquisa()) {
+
+        //     echo '<script>alert("Responda a pesquisa mensal!");</script>';
+        //     echo View('pesquisarespostas/novo', $data);
+            
+        // } 
+        // else if ($dia <= 10 and $pesquisa_respostas_model->mostrar_pesquisa()== false){
+        //     echo ("<script> window.alert('Você já respondeu a pesquisa esse mês')
+        //     window.location.href='http://pesquisa.satisfacao.com/pesquisarespostas/'; </script>");
+        // }
+        // else {
+        //     echo ("<script> window.alert('A pesquisa expirou')
+        //     window.location.href='http://pesquisa.satisfacao.com/pesquisarespostas/'; </script>");
+        //     //travar sistema
+
+           
+        // }
     }
 
 
@@ -67,7 +86,7 @@ class PesquisaRespostas extends BaseController
     {
         $pesquisaModel = new PesquisasModel();
 
-        $respostas = $pesquisaModel->retornarRespostas(
+        $respostas = $pesquisaModel->retornar_respostas(
             $id, [
             'pergunta',
             'resposta',

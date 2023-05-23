@@ -4,7 +4,7 @@ namespace App\Services\Pesquisa;
 
 class PesquisasSrvc {
 
-    public function calculateSatisfaction($pesquisa = null)
+    public function calculate_satisfaction($pesquisa = null)
     {
         $somaEsperada = count($pesquisa) * 2;
 
@@ -21,14 +21,14 @@ class PesquisasSrvc {
         return $media;
     }
     
-    public function retornaDia()
+    public function retorna_dia()
     {
          $dia = date('d');
         return $dia;
     }
     
 
-    public function transformarResposta($array)
+    public function transformar_resposta($array)
     {
         foreach($array as &$newArray){
             if($newArray['resposta'] == 0 ) $newArray['resposta'] = 'Não' ;
