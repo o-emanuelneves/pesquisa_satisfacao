@@ -5,7 +5,7 @@ namespace App\Models;
 use CodeIgniter\Model;
 use App\Services\Pesquisa\PerguntasSrvc;
 
-class Pesquisa_PerguntasModel extends Model
+class PesquisaPerguntasModel extends Model
 {
     protected $table = 'pesquisa_perguntas';
     protected $primaryKey = 'id_pergunta';
@@ -48,4 +48,10 @@ class Pesquisa_PerguntasModel extends Model
         if (empty($ids)) return false;
         $this->whereIn('id_pergunta', $ids)->delete();
     } 
+
+    public function deletar($id){
+        $this->where('id_pergunta', $id)->delete();
+    }
+
+    
 }

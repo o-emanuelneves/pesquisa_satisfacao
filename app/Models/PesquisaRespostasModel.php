@@ -5,7 +5,7 @@ namespace App\Models;
 use App\Services\Pesquisa\PerguntasSrvc;
 use CodeIgniter\Model;
  
-class Pesquisa_RespostasModel extends Model{
+class PesquisaRespostasModel extends Model{
     protected $table = 'pesquisa_respostas';
     protected $primaryKey = 'id_resposta';
     protected $allowedFields = [
@@ -44,8 +44,8 @@ class Pesquisa_RespostasModel extends Model{
     
     public function mostrar_pesquisa()
     {
-        $pesquisa_respostas_model = new Pesquisa_RespostasModel();
-        $usuariosResposta = $pesquisa_respostas_model->select('fk_user')->where('fk_user', 2)->find();
+        // $pesquisa_respostas_model = new PesquisaRespostasModel();
+        $usuariosResposta = $this->select('fk_user')->where('fk_user', 2)->find();
         if (empty($usuariosResposta)) {
             return true;
         } else {

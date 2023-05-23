@@ -1,14 +1,14 @@
 <?php 
 namespace App\Controllers;
 
-use App\Models\Auth_UserModel;
+use App\Models\AuthUserModel;
 use CodeIgniter\Controller;
 
 class AuthUsers extends BaseController{
     private $auth_users_model;
     function __construct()
     {
-        $this->auth_users_model = new Auth_UserModel();
+        $this->auth_users_model = new AuthUserModel();
     }
 
 

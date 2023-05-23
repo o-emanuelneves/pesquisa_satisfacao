@@ -3,7 +3,7 @@
 namespace App\Models;
 use CodeIgniter\Model;
  
-class Auth_UserModel extends Model{
+class AuthUserModel extends Model{
     protected $table = 'auth_users';
     protected $primaryKey = 'id_user';
     protected $allowedFields = [
