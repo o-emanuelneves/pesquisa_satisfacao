@@ -44,3 +44,23 @@ in APPPATH\Controllers\AuthUsers.php on line 16.
  3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthUsers))
  4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-24 16:06:03 --> Call to undefined method App\Models\PesquisasModel::agrupar_pesquisas
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\PesquisaRespostas.php(23): CodeIgniter\Model->__call('agrupar_pesquisas', [])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-24 16:08:29 --> Object of class App\Services\Pesquisa\PesquisasService could not be converted to string
+in APPPATH\Controllers\PesquisaRespostas.php on line 25.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-24 16:08:49 --> Object of class App\Models\PesquisasModel could not be converted to string
+in APPPATH\Services\Pesquisa\PesquisasService.php on line 42.
+ 1 APPPATH\Controllers\PesquisaRespostas.php(25): App\Services\Pesquisa\PesquisasService->agrupar_pesquisas()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

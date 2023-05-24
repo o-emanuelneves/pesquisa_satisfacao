@@ -23,7 +23,7 @@ class PesquisaRespostas extends BaseController
         $pesquisa_agrupada = $this->pesquisa_model->agrupar_pesquisas();
 
         $data['pesquisas'] = $pesquisa_agrupada;
-        
+
         echo View('/pesquisarespostas/index', $data);
     }
 

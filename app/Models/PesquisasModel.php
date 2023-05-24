@@ -52,10 +52,19 @@ class PesquisasModel extends Model{
         ]);
 
         $pesquisa_agrupada = [];
+        
         foreach ($pesquisas as $pesquisa) {
-            $pesquisa_agrupada[$pesquisa['fk_pesquisa']]['nome'] = $pesquisa['nome'];
-            $pesquisa_agrupada[$pesquisa['fk_pesquisa']]['respostas'][] = $pesquisa['resposta'];
-            $pesquisa_agrupada[$pesquisa['fk_pesquisa']]['observacao'] = $pesquisa['observacao'];
+            $fk_pesquisa = $pesquisa['fk_pesquisa'];
+
+            if (!isset($pesquisa_agrupada[$fk_pesquisa])) {
+                $pesquisa_agrupada[$fk_pesquisa] = [
+                    'nome' => $pesquisa['nome'],
+                    'respostas' => [],
+                    'observacao' => $pesquisa['observacao']
+                ];
+            }
+
+            $pesquisa_agrupada[$fk_pesquisa]['respostas'][] = $pesquisa['resposta'];
         }
  
         foreach ($pesquisa_agrupada as $key => $pesquisa) {

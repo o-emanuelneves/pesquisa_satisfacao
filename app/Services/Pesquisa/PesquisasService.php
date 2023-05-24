@@ -2,6 +2,8 @@
 
 namespace App\Services\Pesquisa;
 
+use App\Models\PesquisasModel;
+
 class PesquisasService {
 
 
