@@ -38,8 +38,8 @@ class Pesquisa_RespostasModel extends Model{
             $dados['respostas'], 
             array_keys($dados['respostas'])
         );
-        $perguntasSRVC = new PerguntasSrvc();
-        $perguntasSRVC->insert_batch_pergunta($allRows);
+        
+        $this->insertBatch($allRows);
     }
     
     public function mostrar_pesquisa()
