@@ -2,10 +2,10 @@
 
 namespace App\Models;
 
-use App\Services\Pesquisa\PerguntasSrvc;
+use App\Services\Pesquisa\PerguntasService;
 use CodeIgniter\Model;
  
-class Pesquisa_RespostasModel extends Model{
+class PesquisaRespostasModel extends Model{
     protected $table = 'pesquisa_respostas';
     protected $primaryKey = 'id_resposta';
     protected $allowedFields = [
@@ -44,7 +44,8 @@ class Pesquisa_RespostasModel extends Model{
     
     public function mostrar_pesquisa()
     {
-        $usuariosResposta = $this->pesquisa_respostas_model->select('fk_user')->where('fk_user', 2)->find();
+
+        $usuariosResposta = $this->select('fk_user')->where('fk_user', 2)->find();
         if (empty($usuariosResposta)) {
             return true;
         } else {

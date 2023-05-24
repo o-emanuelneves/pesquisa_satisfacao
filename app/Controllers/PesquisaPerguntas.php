@@ -2,14 +2,14 @@
 namespace App\Controllers;
 
 
-use App\Models\Pesquisa_PerguntasModel;
+use App\Models\PesquisaPerguntasModel;
 use CodeIgniter\Controller;
 
 class PesquisaPerguntas extends BaseController{
     private $pesquisa_perguntas_model;
     function __construct()
     {
-        $this->pesquisa_perguntas_model = new Pesquisa_PerguntasModel();
+        $this->pesquisa_perguntas_model = new PesquisaPerguntasModel();
     }
 
 
@@ -24,13 +24,14 @@ class PesquisaPerguntas extends BaseController{
         $dados = $this->request->getVar();
 
         $return = $this->pesquisa_perguntas_model->set_perguntas($dados ?? []);
+        
+        if ($return) return json_encode (['mensagem' => "Pergunta cadastrada com sucesso! "]);
 
-        if ($return) return json_encode(['Ok']);
-
-        return json_encode(['Erro!']);
+        return json_encode(['mensagem' => "Erro "]);
     }
 
     public function delete($id) {
-        $this->pesquisa_perguntas_model->where('id_pergunta', $id)->delete();
+        $this->pesquisa_perguntas_model->deletar($id);
+
     }
 }

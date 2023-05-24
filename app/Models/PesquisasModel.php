@@ -2,7 +2,7 @@
 
 namespace App\Models;
 use CodeIgniter\Model;
-use App\Services\Pesquisa\PesquisasSrvc;
+use App\Services\Pesquisa\PesquisasService;
  
 class PesquisasModel extends Model{
     protected $table = 'pesquisas';
@@ -43,7 +43,7 @@ class PesquisasModel extends Model{
     }
 
     public function agrupar_pesquisas(){
-    $service = new PesquisasSrvc();
+    $service = new PesquisasService();
         $pesquisas = $this->get_pesquisa_and_respostas([
             'nome',
             'resposta',
@@ -76,7 +76,7 @@ class PesquisasModel extends Model{
 
     public function retornar_respostas($id, $columns = ['*'])
     {
-        $services = new PesquisasSrvc;
+        $services = new PesquisasService;
 
         $getResposta = $this->get_pesquisa_and_respostas_by_id($id, $columns);
         

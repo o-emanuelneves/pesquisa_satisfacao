@@ -1,11 +1,11 @@
 <?php 
 namespace App\Controllers;
 
-use App\Models\Pesquisa_PerguntasModel;
-use App\Models\Pesquisa_RespostasModel;
+use App\Models\PesquisaPerguntasModel;
+use App\Models\PesquisaRespostasModel;
 use App\Models\PesquisasModel;
 
-use App\Services\Pesquisa\PesquisasSrvc;
+use App\Services\Pesquisa\RespostasService;
 
 class PesquisaRespostas extends BaseController
 {
@@ -14,7 +14,7 @@ class PesquisaRespostas extends BaseController
 
     function __construct()
     {
-        $this->pesquisa_respostas_model = new Pesquisa_RespostasModel();
+        $this->pesquisa_respostas_model = new PesquisaRespostasModel();
         $this->pesquisa_model = new PesquisasModel();
     }
 
@@ -47,18 +47,19 @@ class PesquisaRespostas extends BaseController
 
     public function novo()
     {
-        $model = new Pesquisa_PerguntasModel();
+        $model = new PesquisaPerguntasModel();
         $data['perguntas'] = $model->get_perguntas([
             'id_pergunta',
             'pergunta'
         ]);
         
-        $respostasSrvc = new PesquisasSrvc();
-        $dia = $respostasSrvc->retorna_dia();
+        $respostasSrvc = new RespostasService();
+        $dia = $respostasSrvc->__construct();
+       
 
-        $dia = 1;
 
-        $pesquisa_respostas_model = new Pesquisa_RespostasModel();
+        $pesquisa_respostas_model = new PesquisaRespostasModel();
+
         
         echo View('pesquisarespostas/novo', $data);
         
