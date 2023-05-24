@@ -26,7 +26,7 @@ class AuthUsers extends BaseController{
     public function store()
     {
         $dados = $this->request->getVar();
-        $this->auth_users_model->insertUser($dados);
+        $this->auth_users_model->insert_User($dados);
         return redirect()->to('../AuthUsers/index');
     }
 

@@ -2,7 +2,8 @@
 
 namespace App\Models;
 
-use App\Services\Pesquisa\PerguntasService;
+
+use App\Services\Pesquisa\RespostasService;
 use CodeIgniter\Model;
  
 class PesquisaRespostasModel extends Model{
@@ -45,9 +46,39 @@ class PesquisaRespostasModel extends Model{
     public function mostrar_pesquisa()
     {
 
+<<<<<<< HEAD
         $usuariosResposta = $this->select('fk_user')->where('fk_user', 5)->find();
 
         return empty($usuariosResposta);
+=======
+        $usuariosResposta = $this->select('fk_user')->where('fk_user', 6)->find();
+        if (empty($usuariosResposta)) {
+            return true;
+        } else {
+            return false;
+        }
+>>>>>>> origin/emanuel-v8
+    }
+
+    public function acesso(){
+        $respostasSRVC = new RespostasService();
+        $dia = $respostasSRVC->__construct();
+        $mostrar_pesquisa = $this->mostrar_pesquisa();
+        
+        if ($dia <= 10 and $mostrar_pesquisa) {
+            echo json_encode(['mensagem' => "Responda a pesquisa mensal!"]);
+            
+        } 
+        else if ($dia <= 10 and $mostrar_pesquisa== false){
+            echo json_encode(['mensagem' => "Você já respondeu a pesquisa esse mês!"]);
+            header("Refresh: 2; URL=./index");
+
+        }
+        else {
+            echo json_encode(['mensagem' => "A pesquisa expirou!"]);
+            header("Refresh: 2; URL=./index");            
+        }
+
     }
     
 }
