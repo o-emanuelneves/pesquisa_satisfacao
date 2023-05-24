@@ -6,10 +6,10 @@ class PerguntasService {
     private $newPerguntas;
     private $dbPerguntas;
 
-    function __construct ($newPerguntas=null, $dbPerguntas=null) {
-        if($newPerguntas) $this->newPerguntas = $newPerguntas;
-        if($dbPerguntas) $this->dbPerguntas = $dbPerguntas;
-        
+    function __construct($newPerguntas = null, $dbPerguntas = null)
+    {
+        $this->newPerguntas = $newPerguntas ?? $this->newPerguntas;
+        $this->dbPerguntas = $dbPerguntas ?? $this->dbPerguntas;
     }
 
     public function return_insert () {

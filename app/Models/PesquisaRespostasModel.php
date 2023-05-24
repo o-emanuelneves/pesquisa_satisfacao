@@ -45,12 +45,9 @@ class PesquisaRespostasModel extends Model{
     public function mostrar_pesquisa()
     {
 
-        $usuariosResposta = $this->select('fk_user')->where('fk_user', 2)->find();
-        if (empty($usuariosResposta)) {
-            return true;
-        } else {
-            return false;
-        }
+        $usuariosResposta = $this->select('fk_user')->where('fk_user', 5)->find();
+
+        return empty($usuariosResposta);
     }
     
 }
