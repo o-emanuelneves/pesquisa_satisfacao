@@ -44,8 +44,7 @@ class Pesquisa_RespostasModel extends Model{
     
     public function mostrar_pesquisa()
     {
-        $pesquisa_respostas_model = new Pesquisa_RespostasModel();
-        $usuariosResposta = $pesquisa_respostas_model->select('fk_user')->where('fk_user', 2)->find();
+        $usuariosResposta = $this->pesquisa_respostas_model->select('fk_user')->where('fk_user', 2)->find();
         if (empty($usuariosResposta)) {
             return true;
         } else {
