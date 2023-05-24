@@ -1,0 +1,46 @@
+CRITICAL - 2023-05-24 11:58:36 --> array_column(): Argument #1 ($array) must be of type array, null given
+in APPPATH\Services\Pesquisa\PerguntasService.php on line 31.
+ 1 APPPATH\Services\Pesquisa\PerguntasService.php(31): array_column(null, 'pergunta')
+ 2 APPPATH\Models\PesquisaPerguntasModel.php(28): App\Services\Pesquisa\PerguntasService->ids_delete()
+ 3 APPPATH\Controllers\PesquisaPerguntas.php(26): App\Models\PesquisaPerguntasModel->set_perguntas([...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaPerguntas->store()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaPerguntas))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-24 11:59:18 --> array_column(): Argument #1 ($array) must be of type array, null given
+in APPPATH\Services\Pesquisa\PerguntasService.php on line 31.
+ 1 APPPATH\Services\Pesquisa\PerguntasService.php(31): array_column(null, 'pergunta')
+ 2 APPPATH\Models\PesquisaPerguntasModel.php(28): App\Services\Pesquisa\PerguntasService->ids_delete()
+ 3 APPPATH\Controllers\PesquisaPerguntas.php(26): App\Models\PesquisaPerguntasModel->set_perguntas([...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaPerguntas->store()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaPerguntas))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-24 11:59:55 --> array_column(): Argument #1 ($array) must be of type array, null given
+in APPPATH\Services\Pesquisa\PerguntasService.php on line 31.
+ 1 APPPATH\Services\Pesquisa\PerguntasService.php(31): array_column(null, 'pergunta')
+ 2 APPPATH\Models\PesquisaPerguntasModel.php(28): App\Services\Pesquisa\PerguntasService->ids_delete()
+ 3 APPPATH\Controllers\PesquisaPerguntas.php(26): App\Models\PesquisaPerguntasModel->set_perguntas([...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaPerguntas->store()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaPerguntas))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-24 12:18:10 --> Object of type App\Services\Pesquisa\PesquisasService is not callable
+in APPPATH\Controllers\PesquisaRespostas.php on line 57.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->novo()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-24 12:18:24 --> Object of type App\Services\Pesquisa\PesquisasService is not callable
+in APPPATH\Controllers\PesquisaRespostas.php on line 57.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->novo()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-24 12:48:21 --> Undefined property: App\Controllers\AuthUsers::$auth_users_model
+in APPPATH\Controllers\AuthUsers.php on line 16.
+ 1 APPPATH\Controllers\AuthUsers.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\AuthUsers::$auth_users_model', 'C:\\xampp\\htdocs\\pesquisa_satisfacao\\app\\Controllers\\AuthUsers.php', 16)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\AuthUsers->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthUsers))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

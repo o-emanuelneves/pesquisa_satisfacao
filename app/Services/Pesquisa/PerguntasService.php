@@ -2,7 +2,7 @@
 
 namespace App\Services\Pesquisa;
 
-class PerguntasSrvc {
+class PerguntasService {
     private $newPerguntas;
     private $dbPerguntas;
 

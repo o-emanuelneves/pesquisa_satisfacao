@@ -17,7 +17,26 @@ class AuthUserModel extends Model{
     protected $deletedField = 'deleted_at';
 
 
-    
+    public function store()
+    {
+        $dados = $this->request->getVar();
+        $this->insert($dados);
+        return redirect()->to('../AuthUsers/index');
+    }
+
+    public function insert_user($dados){
+        return $this->insert($dados);
+    }
+
+    public function excluir($id_user)
+    {
+        return $this->where('id_user', $id_user)->delete();
+    }
+
+    public function ver($id_user)
+    {
+        return $this->where('id_user', $id_user)->first();
+    }
 
 }
 

@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-use App\Services\Pesquisa\PerguntasSrvc;
+use App\Services\Pesquisa\PerguntasService;
 use CodeIgniter\Model;
  
 class PesquisaRespostasModel extends Model{
@@ -38,13 +38,13 @@ class PesquisaRespostasModel extends Model{
             $dados['respostas'], 
             array_keys($dados['respostas'])
         );
-        $perguntasSRVC = new PerguntasSrvc();
+        $perguntasSRVC = new PerguntasService();
         $perguntasSRVC->insert_batch_pergunta($allRows);
     }
     
     public function mostrar_pesquisa()
     {
-        // $pesquisa_respostas_model = new PesquisaRespostasModel();
+
         $usuariosResposta = $this->select('fk_user')->where('fk_user', 2)->find();
         if (empty($usuariosResposta)) {
             return true;

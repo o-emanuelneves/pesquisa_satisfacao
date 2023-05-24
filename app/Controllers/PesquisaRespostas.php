@@ -5,7 +5,7 @@ use App\Models\PesquisaPerguntasModel;
 use App\Models\PesquisaRespostasModel;
 use App\Models\PesquisasModel;
 
-use App\Services\Pesquisa\PesquisasSrvc;
+use App\Services\Pesquisa\RespostasService;
 
 class PesquisaRespostas extends BaseController
 {
@@ -53,12 +53,13 @@ class PesquisaRespostas extends BaseController
             'pergunta'
         ]);
         
-        $respostasSrvc = new PesquisasSrvc();
-        $dia = $respostasSrvc->retorna_dia();
+        $respostasSrvc = new RespostasService();
+        $dia = $respostasSrvc->__construct();
+       
 
-        $dia = 1;
 
         $pesquisa_respostas_model = new PesquisaRespostasModel();
+
         
         echo View('pesquisarespostas/novo', $data);
         

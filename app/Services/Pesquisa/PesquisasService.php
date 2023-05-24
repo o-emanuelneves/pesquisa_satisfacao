@@ -2,7 +2,8 @@
 
 namespace App\Services\Pesquisa;
 
-class PesquisasSrvc {
+class PesquisasService {
+
 
     public function calculate_satisfaction($pesquisa = null)
     {
@@ -19,12 +20,6 @@ class PesquisasSrvc {
         $media = $somaPequisa / $somaEsperada * 100;
 
         return $media;
-    }
-    
-    public function retorna_dia()
-    {
-         $dia = date('d');
-        return $dia;
     }
     
 

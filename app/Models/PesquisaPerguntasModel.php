@@ -3,7 +3,7 @@
 namespace App\Models;
 
 use CodeIgniter\Model;
-use App\Services\Pesquisa\PerguntasSrvc;
+use App\Services\Pesquisa\PerguntasService;
 
 class PesquisaPerguntasModel extends Model
 {
@@ -23,7 +23,7 @@ class PesquisaPerguntasModel extends Model
         if (!$dados) return false;
 
         $dadosDb = $this->get_perguntas();
-        $service = new PerguntasSrvc($dados, $dadosDb);
+        $service = new PerguntasService($dados, $dadosDb);
 
         $ids_delete = $service->ids_delete();
         $this->delete_perguntas($ids_delete);
