@@ -20,10 +20,11 @@ class PesquisaRespostas extends BaseController
 
     public function index()
     {
+        
         $pesquisa_agrupada = $this->pesquisa_model->agrupar_pesquisas();
 
         $data['pesquisas'] = $pesquisa_agrupada;
-        
+      
         echo View('/pesquisarespostas/index', $data);
     }
 
@@ -51,35 +52,15 @@ class PesquisaRespostas extends BaseController
         $data['perguntas'] = $model->get_perguntas([
             'id_pergunta',
             'pergunta'
-        ]);
-        
-        $respostasSrvc = new RespostasService();
-        $dia = $respostasSrvc->__construct();
-       
-
+        ]); 
 
         $pesquisa_respostas_model = new PesquisaRespostasModel();
+        $pesquisa_respostas_model->acesso();
+        
 
         
         echo View('pesquisarespostas/novo', $data);
-        
-        // if ($dia <= 10 and $pesquisa_respostas_model->mostrar_pesquisa()) {
-
-        //     echo '<script>alert("Responda a pesquisa mensal!");</script>';
-        //     echo View('pesquisarespostas/novo', $data);
-            
-        // } 
-        // else if ($dia <= 10 and $pesquisa_respostas_model->mostrar_pesquisa()== false){
-        //     echo ("<script> window.alert('Você já respondeu a pesquisa esse mês')
-        //     window.location.href='http://pesquisa.satisfacao.com/pesquisarespostas/'; </script>");
-        // }
-        // else {
-        //     echo ("<script> window.alert('A pesquisa expirou')
-        //     window.location.href='http://pesquisa.satisfacao.com/pesquisarespostas/'; </script>");
-        //     //travar sistema
-
-           
-        // }
+      
     }
 
 
