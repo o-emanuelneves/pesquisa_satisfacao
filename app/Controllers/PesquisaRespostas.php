@@ -5,6 +5,7 @@ use App\Models\PesquisaPerguntasModel;
 use App\Models\PesquisaRespostasModel;
 use App\Models\PesquisasModel;
 
+use App\Services\Pesquisa\PesquisasService;
 use App\Services\Pesquisa\RespostasService;
 
 class PesquisaRespostas extends BaseController
@@ -20,7 +21,8 @@ class PesquisaRespostas extends BaseController
 
     public function index()
     {
-        $pesquisa_agrupada = $this->pesquisa_model->agrupar_pesquisas();
+        $service = new PesquisasService;
+        $pesquisa_agrupada = $service->agrupar_pesquisas();
 
         $data['pesquisas'] = $pesquisa_agrupada;
 

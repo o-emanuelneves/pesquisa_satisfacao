@@ -64,3 +64,51 @@ in APPPATH\Services\Pesquisa\PesquisasService.php on line 42.
  3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
  4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-24 16:14:13 --> Call to undefined method App\Models\PesquisasModel::agrupar_pesquisas
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\PesquisaRespostas.php(23): CodeIgniter\Model->__call('agrupar_pesquisas', [])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-24 16:15:34 --> Call to undefined method App\Models\PesquisaRespostasModel::get_pesquisa_and_respostas
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Services\Pesquisa\PesquisasService.php(43): CodeIgniter\Model->__call('get_pesquisa_and_respostas', [...])
+ 2 APPPATH\Controllers\PesquisaRespostas.php(24): App\Services\Pesquisa\PesquisasService->agrupar_pesquisas()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->index()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-24 16:16:42 --> Object of class App\Services\Pesquisa\PesquisasService could not be converted to string
+in APPPATH\Controllers\PesquisaRespostas.php on line 24.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-24 16:17:42 --> Object of class App\Services\Pesquisa\PesquisasService could not be converted to string
+in APPPATH\Controllers\PesquisaRespostas.php on line 24.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-24 16:17:47 --> Object of class App\Services\Pesquisa\PesquisasService could not be converted to string
+in APPPATH\Controllers\PesquisaRespostas.php on line 24.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-24 16:18:33 --> Call to undefined method App\Models\PesquisaRespostasModel::get_pesquisa_and_respostas
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Services\Pesquisa\PesquisasService.php(43): CodeIgniter\Model->__call('get_pesquisa_and_respostas', [...])
+ 2 APPPATH\Controllers\PesquisaRespostas.php(24): App\Services\Pesquisa\PesquisasService->agrupar_pesquisas()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->index()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-24 16:19:00 --> Object of class App\Models\PesquisaRespostasModel could not be converted to string
+in APPPATH\Services\Pesquisa\PesquisasService.php on line 43.
+ 1 APPPATH\Controllers\PesquisaRespostas.php(24): App\Services\Pesquisa\PesquisasService->agrupar_pesquisas()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\PesquisaRespostas->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PesquisaRespostas))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

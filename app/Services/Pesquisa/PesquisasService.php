@@ -36,4 +36,37 @@ class PesquisasService {
         return $array;
     }
 
+    public function agrupar_pesquisas()
+    {
+        $model = new PesquisasModel();
+        $pesquisas = $model->get_pesquisa_and_respostas([
+            'nome',
+            'resposta',
+            'fk_pesquisa',
+            'observacao'
+        ]);
+
+        $pesquisa_agrupada = [];
+
+        foreach ($pesquisas as $pesquisa) {
+            $fk_pesquisa = $pesquisa['fk_pesquisa'];
+
+            if (!isset($pesquisa_agrupada[$fk_pesquisa])) {
+                $pesquisa_agrupada[$fk_pesquisa] = [
+                    'nome' => $pesquisa['nome'],
+                    'respostas' => [],
+                    'observacao' => $pesquisa['observacao']
+                ];
+            }
+
+            $pesquisa_agrupada[$fk_pesquisa]['respostas'][] = $pesquisa['resposta'];
+        }
+
+        foreach ($pesquisa_agrupada as $key => $pesquisa) {
+            $pesquisa_agrupada[$key]['satisfacao'] = $this->calculate_satisfaction($pesquisa['respostas']);
+        }
+
+        return $pesquisa_agrupada;
+    }
+
 }

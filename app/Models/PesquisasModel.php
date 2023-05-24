@@ -34,44 +34,11 @@ class PesquisasModel extends Model{
         return $this->find();
     }
 
-
     public function get_pesquisa_and_respostas($columns = ['*']){
         $this->select($columns)
         ->join('pesquisa_respostas', 'pesquisa_respostas.fk_pesquisa = pesquisas.id_pesquisa')
         ->join('auth_users', 'auth_users.id_user = pesquisa_respostas.fk_user');
         return $this->find();
-    }
-
-    public function agrupar_pesquisas(){
-    $service = new PesquisasService();
-        $pesquisas = $this->get_pesquisa_and_respostas([
-            'nome',
-            'resposta',
-            'fk_pesquisa',
-            'observacao'
-        ]);
-
-        $pesquisa_agrupada = [];
-        
-        foreach ($pesquisas as $pesquisa) {
-            $fk_pesquisa = $pesquisa['fk_pesquisa'];
-
-            if (!isset($pesquisa_agrupada[$fk_pesquisa])) {
-                $pesquisa_agrupada[$fk_pesquisa] = [
-                    'nome' => $pesquisa['nome'],
-                    'respostas' => [],
-                    'observacao' => $pesquisa['observacao']
-                ];
-            }
-
-            $pesquisa_agrupada[$fk_pesquisa]['respostas'][] = $pesquisa['resposta'];
-        }
- 
-        foreach ($pesquisa_agrupada as $key => $pesquisa) {
-            $pesquisa_agrupada[$key]['satisfacao'] = $service->calculate_satisfaction($pesquisa['respostas']);
-        }
-
-        return $pesquisa_agrupada;
     }
 
     public function get_pesquisa_and_respostas_by_id($id, $columns = ['*'])
