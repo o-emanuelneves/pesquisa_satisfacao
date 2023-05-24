@@ -46,18 +46,9 @@ class PesquisaRespostasModel extends Model{
     public function mostrar_pesquisa()
     {
 
-<<<<<<< HEAD
         $usuariosResposta = $this->select('fk_user')->where('fk_user', 5)->find();
 
         return empty($usuariosResposta);
-=======
-        $usuariosResposta = $this->select('fk_user')->where('fk_user', 6)->find();
-        if (empty($usuariosResposta)) {
-            return true;
-        } else {
-            return false;
-        }
->>>>>>> origin/emanuel-v8
     }
 
     public function acesso(){
