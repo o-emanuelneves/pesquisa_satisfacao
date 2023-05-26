@@ -1,3 +1,8 @@
+<?php
+$session = session();
+ 
+
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 

@@ -6,7 +6,7 @@ use CodeIgniter\Filters\FilterInterface;
 use CodeIgniter\HTTP\RequestInterface;
 use CodeIgniter\HTTP\ResponseInterface;
 
-class Auth implements FilterInterface
+class AdminFilter implements FilterInterface
 {
     /**
      * Do whatever processing this filter needs to do.
@@ -25,8 +25,14 @@ class Auth implements FilterInterface
      */
     public function before(RequestInterface $request, $arguments = null) // antes de executar a rota, executa esse método
     {
-        //
+        $id_admin = 14;
+        $id_usuario = 12;
+        
+        if($id_usuario  != $id_admin){
+            return redirect()->to('/acesso-negado');
+        
     }
+}
 
     /**
      * Allows After filters to inspect and modify the response

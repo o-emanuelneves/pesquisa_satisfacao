@@ -6,9 +6,12 @@ use CodeIgniter\Controller;
 
 class AuthUsers extends BaseController{
     private $auth_users_model;
+ 
+
     function __construct()
     {
         $this->auth_users_model = new AuthUserModel();
+       
     }
 
 
@@ -16,11 +19,14 @@ class AuthUsers extends BaseController{
         $auth_users = $this->auth_users_model->findAll();
         $data['auth_users'] = $auth_users;
 
+        echo View('/templates/header');
         echo View('auth_users/index', $data);
     }
 
     public function novo(){
+        echo View('/templates/header');
         echo View('auth_users/novo');
+
     }
 
     public function store()
@@ -30,17 +36,24 @@ class AuthUsers extends BaseController{
         return redirect()->to('../AuthUsers/index');
     }
 
+
     public function excluir($id_user)
     {
+
     $this->auth_users_model->excluir($id_user);
     return redirect()->to('../AuthUsers/index');
 
     }
-    
+
+    /**
+     * @filter('admin', ['5'], 'before')
+     */
     public function ver($id_user)
     {
         $auth_user = $this->auth_users_model->ver($id_user);
         $data['auth_user'] = $auth_user;
+        
+        echo View('/templates/header');
         echo View('auth_users/ver', $data);
     }
 }
