@@ -46,23 +46,14 @@ class PesquisaRespostasModel extends Model{
     public function mostrar_pesquisa()
     {
 
-<<<<<<< HEAD
         $usuariosResposta = $this->select('fk_user')->where('fk_user', 5)->find();
 
         return empty($usuariosResposta);
-=======
-        $usuariosResposta = $this->select('fk_user')->where('fk_user', 6)->find();
-        if (empty($usuariosResposta)) {
-            return true;
-        } else {
-            return false;
-        }
->>>>>>> origin/emanuel-v8
     }
 
     public function acesso(){
         $respostasSRVC = new RespostasService();
-        $dia = $respostasSRVC->__construct();
+        $dia = $respostasSRVC->__construct(10);
         $mostrar_pesquisa = $this->mostrar_pesquisa();
         
         if ($dia <= 10 and $mostrar_pesquisa) {

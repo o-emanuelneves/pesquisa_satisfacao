@@ -17,6 +17,7 @@ class PesquisaPerguntas extends BaseController{
     public function novo(){
         $perguntas = $this->pesquisa_perguntas_model->find();
         $data['perguntas'] = $perguntas;
+        echo View('/templates/header');
         echo View('pesquisa_perguntas/novo', $data);
     }
 

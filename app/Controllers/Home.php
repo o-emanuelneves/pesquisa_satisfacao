@@ -2,10 +2,15 @@
 
 namespace App\Controllers;
 
+use CodeIgniter\Config\View;
+
 class Home extends BaseController
 {
     public function index()
     {
-        return View('/Inicio/index');
+        echo View('/templates/header');
+        echo View('/Inicio/index');
+        
+
     }
 }
