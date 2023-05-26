@@ -36,7 +36,7 @@ class Filters extends BaseConfig
                 'except' => [
                     'Inicio',
                     'Inicio/*',
-                    'AuthUsers',
+                    'PesquisaRespostas/novo',
                 ]
             ]
         ],
@@ -51,8 +51,9 @@ class Filters extends BaseConfig
     public array $methods = [];
 
     public  $filters = [
-        'admin' => ['AuthUsers/index']
-        
+        'auth' => ['PesquisaPerguntas/*'],
+        'auth' => ['PesquisaRespostas/*'],
+        'auth' => ['AuthUsers/*'],
         
     ];
     

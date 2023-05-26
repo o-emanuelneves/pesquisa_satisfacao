@@ -25,7 +25,15 @@ class Auth implements FilterInterface
      */
     public function before(RequestInterface $request, $arguments = null) // antes de executar a rota, executa esse método
     {
-        //
+        $session = session();
+
+        $admin = '5';
+
+        $dados = $session->get();
+
+        if($dados['id_user'] != $admin):
+            return redirect()->to('Inicio/acesso');
+        endif;
     }
 
     /**

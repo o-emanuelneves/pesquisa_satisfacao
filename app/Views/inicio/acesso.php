@@ -26,10 +26,6 @@
 
         <div class="containers-buttons-index">
 
-            <div class="button-new-users"><a href="/AuthUsers">Ver usuarios</a> <br></div>
-
-            <div class="button-new-users"><a href="/PesquisaPerguntas/novo">Criar perguntas</a> <br></div>
-
             <div class="button-new-users"><a href="/PesquisaRespostas/novo">Responder Perguntas</a> <br></div>
 
         </div>

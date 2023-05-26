@@ -5,7 +5,7 @@ $nome = $session->get('nome');
 
 if ($nome==null):
     echo json_encode(['mensagem' => "Faça login pra continuar!"]);
-    header("Refresh: 2; URL=../inicio/index");
+    header("Refresh: 0; URL=../inicio/index");
     
 endif;
 
