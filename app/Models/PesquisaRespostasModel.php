@@ -53,7 +53,7 @@ class PesquisaRespostasModel extends Model{
 
     public function acesso(){
         $respostasSRVC = new RespostasService();
-        $dia = $respostasSRVC->__construct();
+        $dia = $respostasSRVC->__construct(10);
         $mostrar_pesquisa = $this->mostrar_pesquisa();
         
         if ($dia <= 10 and $mostrar_pesquisa) {

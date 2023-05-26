@@ -38,6 +38,33 @@ class AuthUserModel extends Model{
         return $this->where('id_user', $id_user)->first();
     }
 
+    public function id_session()
+    {
+        session();
+
+        $dadosSessao = $_SESSION;
+
+        return $dadosSessao;
+    }
+
+    // function verificarAdministrador()
+    // {
+    //     session_start();
+
+    //     $usuario_admin = '5';
+
+    //     $id_session = 
+
+        
+
+    //     $idSessao = $_SESSION['id_usuario'];
+
+
+    //     if ($id_session && !$usuarioAdmin) {
+            
+    //     }
+    // }
+
 }
 
 

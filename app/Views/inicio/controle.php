@@ -10,22 +10,24 @@
     <link rel="stylesheet" href="/plugin/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="/assets/css/telainicial/index.css">
 
-
-
 </head>
-
 <body>
+    <?php
+    $session = session();
 
+    $nome = $session->get('nome');
+    ?>
     <div class="container-modal">
+
         <h1>Tela de início</h1>
 
-        <form action="/Inicio/autenticar" method="post">
-            <label for="nome">Digite seu nome completo</label>
-            <input type="text" name="nome" id="nome">
+        <h2>Seja bem vindo <?= $nome ?></h2>
 
-            <button type="submit">Entrar</button>
-        </form>
+        <div class="containers-buttons-index">
 
+            <div class="button-new-users"><a href="/PesquisaRespostas/novo">Responder Perguntas</a> <br></div>
+
+        </div>
     </div>
 
 </body>

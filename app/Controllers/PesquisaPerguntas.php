@@ -12,11 +12,10 @@ class PesquisaPerguntas extends BaseController{
         $this->pesquisa_perguntas_model = new PesquisaPerguntasModel();
     }
 
-
-
     public function novo(){
         $perguntas = $this->pesquisa_perguntas_model->find();
         $data['perguntas'] = $perguntas;
+
         echo View('pesquisa_perguntas/novo', $data);
     }
 
