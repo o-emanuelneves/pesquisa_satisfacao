@@ -26,6 +26,8 @@ class Login extends BaseController
 
         if(!empty($usuario)):
             $session->set('nome', $usuario['nome']);
+            $session->set('id_user', $usuario['id_user']);
+            dd($usuario['id_user']);
             return redirect()->to('../');
         endif;
 

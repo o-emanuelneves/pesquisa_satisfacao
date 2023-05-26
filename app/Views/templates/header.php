@@ -1,6 +1,7 @@
 <?php
 $session = session();
 $nome = $session->get('nome');
+$id_user = $session->get('id_user');
 
 
 if ($nome==null):

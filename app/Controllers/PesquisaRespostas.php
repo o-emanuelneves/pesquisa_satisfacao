@@ -10,13 +10,16 @@ use App\Services\Pesquisa\RespostasService;
 
 class PesquisaRespostas extends BaseController
 {
+    
     private $pesquisa_respostas_model;
     private $pesquisa_model;
+
 
     function __construct()
     {
         $this->pesquisa_respostas_model = new PesquisaRespostasModel();
         $this->pesquisa_model = new PesquisasModel();
+        
     }
 
     public function index()
@@ -26,6 +29,9 @@ class PesquisaRespostas extends BaseController
 
         $data['pesquisas'] = $pesquisa_agrupada;
 
+
+       
+        
         echo View('/templates/header');
         echo View('/pesquisarespostas/index', $data);
     }
@@ -33,9 +39,12 @@ class PesquisaRespostas extends BaseController
     public function store()
     {
         $dados = $this->request->getVar();
-        
+
+        $session = session();
+        $id_user = $session->get('id_user');
+       
         if(isset($dados['respostas'])):
-            $dados['pesquisa']['fk_user'] = 14;
+            $dados['pesquisa']['fk_user'] = $id_user;
 
             $id_pesquisa = $this->pesquisa_model->set_pesquisa($dados['pesquisa']);
             $dados['pesquisa']['fk_pesquisa'] = $id_pesquisa;
@@ -58,9 +67,9 @@ class PesquisaRespostas extends BaseController
 
         $pesquisa_respostas_model = new PesquisaRespostasModel();
         $pesquisa_respostas_model->acesso();
-        
 
-        
+
+        echo View('/templates/header');
         echo View('pesquisarespostas/novo', $data);
       
     }
