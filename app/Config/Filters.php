@@ -22,7 +22,8 @@ class Filters extends BaseConfig
         'honeypot'      => Honeypot::class,
         'invalidchars'  => InvalidChars::class,
         'secureheaders' => SecureHeaders::class,
-        'admin'         =>     \App\Filters\AdminFilter::class
+        'admin'         =>     \App\Filters\AdminFilter::class,
+        'auth'          =>      \App\Filters\Auth::class,
     ];
 
     public array $globals = [

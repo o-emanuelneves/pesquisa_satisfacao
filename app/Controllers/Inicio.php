@@ -15,16 +15,15 @@ class Inicio extends BaseController
     
     public function index()
     {
-        return View('/Inicio/index');
+        echo View('/Inicio/index');
     }
 
     public function controle()
     {
         $id_user = $this->auth_users_model->id_session();
 
-        $usuario = $id_user['nome'];
-
-        return View('/Inicio/controle');
+        echo View('/templates/header');
+        echo View('/inicio/controle');
     }
 
     public function autenticar()
@@ -40,15 +39,19 @@ class Inicio extends BaseController
 
             $session->set('nome', $usuario['nome']);
 
-            $session->setFlashdata('alert', 'success_login');
-
             return redirect()->to('/Inicio/controle');
 
         endif;
 
-        $session->setFlashdata('alert', 'error_login');
+        $session->setFlashdata('erro');
 
         return redirect()->to('/Inicio');
+    }
 
+    public function logout()
+    {
+        $session = session();
+        $session->destroy();
+        return redirect()->to('../Inicio/index/');
     }
 }
