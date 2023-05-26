@@ -20,20 +20,23 @@ class Login extends BaseController
     public function autenticar(){
         $dados = $this->request->getVar();
         $usuario = $this->login_model->where('nome', $dados['nome'])->first();
+    
+
         $session = session();
+
         if(!empty($usuario)):
-            return redirect()->to('../../inicio');
+            $session->set('nome', $usuario['nome']);
+            return redirect()->to('../');
         endif;
 
-        $session->setFlashdata('erro');
-        return redirect()->to('/login');
+        return redirect()->to('./login');
 
     }
 
     public function logout(){
         $session = session();
         $session->destroy();
-        return redirect()->to('../../login/');
+        return redirect()->to('../login/');
     }
 
 }
