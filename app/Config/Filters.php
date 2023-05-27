@@ -54,7 +54,7 @@ class Filters extends BaseConfig
         'auth' => ['PesquisaPerguntas/*'],
         'auth' => ['PesquisaRespostas/*'],
         'auth' => ['AuthUsers/*'],
-        
+        'auth' => ['/inicio/controle'],
     ];
     
 }

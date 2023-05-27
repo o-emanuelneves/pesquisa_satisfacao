@@ -40,18 +40,23 @@ class Inicio extends BaseController
         
         $usuario = $this->auth_users_model->where('nome', $dados['nome'])->first();
 
+        $id_admin = '5';
+
         $session = session();
 
-        if(!empty($usuario)):
+        if (!empty($usuario)) {
+            if ($usuario['id_user'] === $id_admin) {
+                $session->set('nome', $usuario['nome']);
+                $session->set('id_user', $usuario['id_user']);
+                
+                return redirect()->to('/Inicio/controle');
+            } else {
+                $session->set('nome', $usuario['nome']);
+                $session->set('id_user', $usuario['id_user']);
 
-            $session->set('nome', $usuario['nome']);
-            $session->set('id_user', $usuario['id_user']);
-
-            $usuario['id_user'] = $usuario['id_user'] ;
-
-            return redirect()->to('/Inicio/controle');
-
-        endif;
+                return redirect()->to('/Inicio/acesso');
+            }
+        }
 
         $session->setFlashdata('erro');
 

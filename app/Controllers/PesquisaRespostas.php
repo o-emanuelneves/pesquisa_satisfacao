@@ -35,7 +35,7 @@ class PesquisaRespostas extends BaseController
         $dados = $this->request->getVar();
         
         if(isset($dados['respostas'])):
-            $dados['pesquisa']['fk_user'] = 14;
+            $dados['pesquisa']['fk_user'] = 6;
 
             $id_pesquisa = $this->pesquisa_model->set_pesquisa($dados['pesquisa']);
             $dados['pesquisa']['fk_pesquisa'] = $id_pesquisa;

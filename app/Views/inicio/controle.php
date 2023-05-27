@@ -30,7 +30,7 @@
 
             <div class="button-new-users"><a href="/PesquisaPerguntas/novo">Criar perguntas</a> <br></div>
 
-            <div class="button-new-users"><a href="/PesquisaRespostas/novo">Responder Perguntas</a> <br></div>
+            <div class="button-new-users"><a href="/PesquisaRespostas/index">Ver Respostas</a> <br></div>
 
         </div>
     </div>
