@@ -6,6 +6,8 @@ class PerguntasService {
     private $newPerguntas;
     private $dbPerguntas;
 
+    
+
     function __construct($newPerguntas = null, $dbPerguntas = null)
     {
         $this->newPerguntas = $newPerguntas ?? $this->newPerguntas;
@@ -42,9 +44,12 @@ class PerguntasService {
 
 
     public function insert_batch_pergunta($perguntas) {
+       
         $array = array_map(function($pergunta) {
+             $session = session(); // verificar se isso é permitido
+            $id_user = intval($session->get('id_user'));
             return [
-                'fk_user' => 5,
+                'fk_user' => $id_user,
                 'pergunta' => $pergunta
             ];
         }, $perguntas);
