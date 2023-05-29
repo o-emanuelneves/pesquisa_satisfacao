@@ -8,9 +8,12 @@ class Home extends BaseController
 {
     public function index()
     {
-        echo View('/templates/header');
-        echo View('/Inicio/index');
         
+               
+            echo View('/templates/header');
+            echo View('/Inicio/index');
+        
+
 
     }
 }

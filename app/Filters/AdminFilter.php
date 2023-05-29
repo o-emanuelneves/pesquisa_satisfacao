@@ -23,13 +23,19 @@ class AdminFilter implements FilterInterface
      *
      * @return mixed
      */
-    public function before(RequestInterface $request, $arguments = null) // antes de executar a rota, executa esse método
+    public function before(RequestInterface $request, $arguments = null)
     {
-        $id_admin = 14;
-        $id_usuario = 12;
+       
+        $session = session();
+        $id_user = intval($session->get('id_user'));
         
-        if($id_usuario  != $id_admin){
-            return redirect()->to('/acesso-negado');
+        $id_admin = 14;
+        
+        
+        if($id_user != $id_admin){
+            // return redirect()->to('/acesso-negado');
+            echo json_encode(['mensagem' => "Você não tem acesso a esse recurso!"]);
+            header("Refresh: 2; URL=http://pesquisa.satisfacao.com/");
         
     }
 }

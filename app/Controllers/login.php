@@ -20,14 +20,17 @@ class Login extends BaseController
     public function autenticar(){
         $dados = $this->request->getVar();
         $usuario = $this->login_model->where('nome', $dados['nome'])->first();
-    
-
+        
         $session = session();
-
+        
         if(!empty($usuario)):
             $session->set('nome', $usuario['nome']);
             $session->set('id_user', $usuario['id_user']);
-            dd($usuario['id_user']);
+
+            $nome = session()->get('nome');
+            $id_user = session()->get('id_user');
+           
+         
             return redirect()->to('../');
         endif;
 

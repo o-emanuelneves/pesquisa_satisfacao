@@ -27,7 +27,11 @@ class Filters extends BaseConfig
 
     public array $globals = [
         'before' => [
-            // 'admin'
+            'admin' => [
+                'except' => [
+                    '/', 'pesquisarespostas/novo', 'login', 'login/*' 
+                ]
+            ]
             // 'honeypot',
             // 'csrf',
             // 'invalidchars',
@@ -43,7 +47,7 @@ class Filters extends BaseConfig
     public array $methods = [];
 
     public  $filters = [
-        'admin' => ['AuthUsers/index']
+        'admin' => ['PesquisaRespostas/index']
         
         
     ];

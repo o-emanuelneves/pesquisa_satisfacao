@@ -52,7 +52,7 @@ class PesquisaRespostas extends BaseController
             $this->pesquisa_respostas_model->set_respostas($dados);
 
 
-            return redirect()->to('../PesquisaRespostas/index');
+            return redirect()->to('../../');
 
         endif;
     }

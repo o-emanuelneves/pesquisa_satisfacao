@@ -45,8 +45,10 @@ class PesquisaRespostasModel extends Model{
     
     public function mostrar_pesquisa()
     {
-
-        $usuariosResposta = $this->select('fk_user')->where('fk_user', 5)->find();
+        $session = session();
+        $id_user = intval($session->get('id_user'));
+    
+        $usuariosResposta = $this->select('fk_user')->where('fk_user', $id_user)->find();
 
         return empty($usuariosResposta);
     }
@@ -62,12 +64,12 @@ class PesquisaRespostasModel extends Model{
         } 
         else if ($dia <= 10 and $mostrar_pesquisa== false){
             echo json_encode(['mensagem' => "Você já respondeu a pesquisa esse mês!"]);
-            header("Refresh: 2; URL=./index");
+            header("Refresh: 2; URL=./../");
 
         }
         else {
             echo json_encode(['mensagem' => "A pesquisa expirou!"]);
-            header("Refresh: 2; URL=./index");            
+            header("Refresh: 2; URL=./../index");            
         }
 
     }
