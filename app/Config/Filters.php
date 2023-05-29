@@ -35,10 +35,15 @@ class Filters extends BaseConfig
             'auth' => [
                 'except' => [
                     'Inicio',
-                    'Inicio/*',
+                    'Inicio/index',
+                    'Inicio/__construct',
+                    'Inicio/acesso',
+                    'Inicio/autenticar',
+                    'Inicio/logout',
+                    'Inicio/redirecionar',
                     'PesquisaRespostas/novo',
                 ]
-            ]
+            ],
         ],
         'after' => [
             'toolbar',
@@ -55,6 +60,7 @@ class Filters extends BaseConfig
         'auth' => ['PesquisaRespostas/*'],
         'auth' => ['AuthUsers/*'],
         'auth' => ['/inicio/controle'],
+
     ];
     
 }

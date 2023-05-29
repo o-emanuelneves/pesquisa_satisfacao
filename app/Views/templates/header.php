@@ -4,7 +4,6 @@ $nome = $session->get('nome');
 
 
 if ($nome==null):
-    echo json_encode(['mensagem' => "Faça login pra continuar!"]);
     header("Refresh: 0; URL=../inicio/index");
     
 endif;
@@ -19,7 +18,7 @@ endif;
     <title>Document</title>
 </head>
 <body>
-    <h1>TESTE</h1>
+    <h1>Logout</h1>
     <a href="../inicio/logout">Sair</a>
 </body>
 </html>

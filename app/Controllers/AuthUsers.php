@@ -45,9 +45,6 @@ class AuthUsers extends BaseController{
 
     }
 
-    /**
-     * @filter('admin', ['5'], 'before')
-     */
     public function ver($id_user)
     {
         $auth_user = $this->auth_users_model->ver($id_user);

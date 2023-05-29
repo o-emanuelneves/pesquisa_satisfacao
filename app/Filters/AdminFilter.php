@@ -25,14 +25,16 @@ class AdminFilter implements FilterInterface
      */
     public function before(RequestInterface $request, $arguments = null) // antes de executar a rota, executa esse método
     {
-        $id_admin = 14;
-        $id_usuario = 12;
-        
-        if($id_usuario  != $id_admin){
-            return redirect()->to('/acesso-negado');
-        
+        // $session = session();
+
+        // $admin = '5';
+
+        // $dados = $session->get();
+
+        // if ($dados['id_user'] == null) :
+        //     return redirect()->to('Inicio/acesso');
+        // endif;
     }
-}
 
     /**
      * Allows After filters to inspect and modify the response
