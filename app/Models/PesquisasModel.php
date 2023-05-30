@@ -61,4 +61,11 @@ class PesquisasModel extends Model{
         return $getResposta;
     }
 
+    public function get_agrupar_pesquisas(){
+        $services = new PesquisasService;
+        $resultado_pesquisa_agrupada = $services->agrupar_pesquisas();
+        
+        return $resultado_pesquisa_agrupada;
+    }
+
 }

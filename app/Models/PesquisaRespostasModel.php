@@ -55,7 +55,7 @@ class PesquisaRespostasModel extends Model{
 
     public function acesso(){
         $respostasSRVC = new RespostasService();
-        $dia = $respostasSRVC->__construct(10);
+        $dia = $respostasSRVC->__construct();
         $mostrar_pesquisa = $this->mostrar_pesquisa();
         
         if ($dia <= 10 and $mostrar_pesquisa) {
@@ -72,6 +72,8 @@ class PesquisaRespostasModel extends Model{
             header("Refresh: 2; URL=./../index");            
         }
 
+        //  Se, antes do dia 10: Responda a pesquisa mensal.
+        //  Se, depois do dia 10: Responda a pesquisa mensal para ter acesso ao sistema.
     }
     
 }

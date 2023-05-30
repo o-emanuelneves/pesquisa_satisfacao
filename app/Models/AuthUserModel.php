@@ -2,7 +2,8 @@
 
 namespace App\Models;
 use CodeIgniter\Model;
- 
+use Throwable;
+
 class AuthUserModel extends Model{
     protected $table = 'auth_users';
     protected $primaryKey = 'id_user';
@@ -25,8 +26,17 @@ class AuthUserModel extends Model{
     }
 
     public function insert_user($dados){
-        return $this->insert($dados);
+        try {
+            return $this->insert($dados);
+            
+            
+        } catch (Throwable $e) {
+            log_message('error', 'Erro ao inserir dados: ' . $e->getMessage());
+            return false;
+        }
     }
+        
+    
 
     public function excluir($id_user)
     {
@@ -36,6 +46,12 @@ class AuthUserModel extends Model{
     public function ver($id_user)
     {
         return $this->where('id_user', $id_user)->first();
+    }
+
+    public function get_usuario($nome){
+   
+        return  $this->where('nome', $nome)->first();
+
     }
 
 }
