@@ -6,11 +6,10 @@ use App\Models\AuthUserModel;
 
 class Templates extends BaseController
 {
-    private $auth_users_model;
 
     function __construct()
     {
-        $this->auth_users_model = new AuthUserModel();
+        
     }
 
     public function header()

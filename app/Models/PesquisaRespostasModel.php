@@ -42,36 +42,50 @@ class PesquisaRespostasModel extends Model{
         
         $this->insertBatch($allRows);
     }
-    
+
     public function mostrar_pesquisa()
     {
+        $session = session();
+        $usuario = $session->get('id_user');
 
-        $usuariosResposta = $this->select('fk_user')->where('fk_user', 5)->find();
+        $pesquisa_model = new PesquisaPerguntasModel();
+        $id_perguntas = $pesquisa_model->get_perguntas();
+        $ids = array_column($id_perguntas, 'id_pergunta');
 
-        return empty($usuariosResposta);
+        $usuariosResposta = $this->select()
+            ->where('fk_user', $usuario)
+            ->whereIn('fk_pergunta', $ids)
+            ->find();
+
+        $respostasFaltantes = array_diff($ids, array_column($usuariosResposta, 'fk_pergunta'));
+
+        return empty($respostasFaltantes);
     }
 
-    public function acesso(){
+    public function verificacao_pesquisa()
+    {
         $respostasSRVC = new RespostasService();
-        $dia = $respostasSRVC->__construct(10);
+        $dia = $respostasSRVC->__construct();
         $mostrar_pesquisa = $this->mostrar_pesquisa();
-        
-        if ($dia <= 10 and $mostrar_pesquisa) {
-            echo json_encode(['mensagem' => "Responda a pesquisa mensal!"]);
-            
-        } 
-        else if ($dia <= 10 and $mostrar_pesquisa== false){
-            echo json_encode(['mensagem' => "Você já respondeu a pesquisa esse mês!"]);
-            header("Refresh: 2; URL=./index");
 
+        if ($dia <= 10) {
+            if (!$mostrar_pesquisa) {
+                echo json_encode(['mensagem' => "Responda a pesquisa mensal!"]);
+            } else {
+                echo json_encode(['mensagem' => "Você já respondeu a pesquisa este mês!"]);
+                header("Refresh: 2; URL=./index");
+                return;
+            }
+        } else {
+            if (!$mostrar_pesquisa) {
+                echo json_encode(['mensagem' => "Responda a pesquisa mensal para ter acesso!"]);
+            } else {
+                echo json_encode(['mensagem' => "Você já respondeu a pesquisa este mês!"]);
+                header("Refresh: 2; URL=./index");
+                return;
+            }
         }
-        else {
-            echo json_encode(['mensagem' => "A pesquisa expirou!"]);
-            header("Refresh: 2; URL=./index");            
-        }
-
     }
-    
 }
 
 ?>

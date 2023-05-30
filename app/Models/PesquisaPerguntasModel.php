@@ -53,5 +53,4 @@ class PesquisaPerguntasModel extends Model
         $this->where('id_pergunta', $id)->delete();
     }
 
-    
 }

@@ -32,10 +32,13 @@ class PesquisaRespostas extends BaseController
 
     public function store()
     {
+        $session = session();
+        $usuario['id_user'] = $session->get('id_user');
+
         $dados = $this->request->getVar();
         
         if(isset($dados['respostas'])):
-            $dados['pesquisa']['fk_user'] = 6;
+            $dados['pesquisa']['fk_user'] = $usuario['id_user'];
 
             $id_pesquisa = $this->pesquisa_model->set_pesquisa($dados['pesquisa']);
             $dados['pesquisa']['fk_pesquisa'] = $id_pesquisa;
@@ -57,7 +60,7 @@ class PesquisaRespostas extends BaseController
         ]); 
 
         $pesquisa_respostas_model = new PesquisaRespostasModel();
-        $pesquisa_respostas_model->acesso();
+        $pesquisa_respostas_model->verificacao_pesquisa();
         
 
         

@@ -17,13 +17,12 @@ class Filters extends BaseConfig
      * make reading things nicer and simpler.
      */
     public array $aliases = [
-        'csrf'          => CSRF::class,
-        'toolbar'       => DebugToolbar::class,
-        'honeypot'      => Honeypot::class,
-        'invalidchars'  => InvalidChars::class,
-        'secureheaders' => SecureHeaders::class,
-        'admin'         =>     \App\Filters\AdminFilter::class,
-        'auth'          =>      \App\Filters\Auth::class,
+        'csrf'              => CSRF::class,
+        'toolbar'           => DebugToolbar::class,
+        'honeypot'          => Honeypot::class,
+        'invalidchars'      => InvalidChars::class,
+        'secureheaders'     => SecureHeaders::class,
+        'auth'              =>      \App\Filters\Auth::class,
     ];
 
     public array $globals = [
@@ -40,8 +39,9 @@ class Filters extends BaseConfig
                     'Inicio/acesso',
                     'Inicio/autenticar',
                     'Inicio/logout',
-                    'Inicio/redirecionar',
                     'PesquisaRespostas/novo',
+                    'PesquisaRespostas/store',
+                    'PesquisaRespostas/__construct',
                 ]
             ],
         ],
@@ -60,7 +60,6 @@ class Filters extends BaseConfig
         'auth' => ['PesquisaRespostas/*'],
         'auth' => ['AuthUsers/*'],
         'auth' => ['/inicio/controle'],
-
     ];
     
 }

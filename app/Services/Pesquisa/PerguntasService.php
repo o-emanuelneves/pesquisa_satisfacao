@@ -44,13 +44,12 @@ class PerguntasService {
     public function insert_batch_pergunta($perguntas) {
         $array = array_map(function($pergunta) {
             return [
-                'fk_user' => 5,
+                'fk_user' => $_SESSION['id_user'],
                 'pergunta' => $pergunta
             ];
         }, $perguntas);
         return $array;
     }
 
- 
-    
+
 }

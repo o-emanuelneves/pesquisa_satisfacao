@@ -69,16 +69,4 @@ class Inicio extends BaseController
         $session->destroy();
         return redirect()->to('../Inicio/index/');
     }
-
-    public function redirecionar()
-    {
-        $session = session();
-        $nome = $session->get('nome');
-
-
-        if ($nome == null) :
-            header("Refresh: 0; URL=../inicio/index");
-
-        endif;
-    }
 }
