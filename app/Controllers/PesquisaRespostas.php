@@ -69,7 +69,7 @@ class PesquisaRespostas extends BaseController
         ]); 
 
         $pesquisa_respostas_model = new PesquisaRespostasModel();
-        $pesquisa_respostas_model->acesso();
+       
 
 
         echo View('/templates/header');

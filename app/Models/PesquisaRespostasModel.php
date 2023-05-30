@@ -53,28 +53,28 @@ class PesquisaRespostasModel extends Model{
         return empty($usuariosResposta);
     }
 
-    public function acesso(){
-        $respostasSRVC = new RespostasService();
-        $dia = $respostasSRVC->__construct();
-        $mostrar_pesquisa = $this->mostrar_pesquisa();
+    // public function acesso(){
+    //     $respostasSRVC = new RespostasService();
+    //     $dia = $respostasSRVC->__construct();
+    //     $mostrar_pesquisa = $this->mostrar_pesquisa();
         
-        if ($dia <= 10 and $mostrar_pesquisa) {
-            echo json_encode(['mensagem' => "Responda a pesquisa mensal!"]);
+    //     // if ($dia <= 10 and $mostrar_pesquisa) {
+    //     //     echo json_encode(['mensagem' => "Responda a pesquisa mensal!"]);
             
-        } 
-        else if ($dia <= 10 and $mostrar_pesquisa== false){
-            echo json_encode(['mensagem' => "Você já respondeu a pesquisa esse mês!"]);
-            header("Refresh: 2; URL=./../");
+    //     // } 
+    //     // else if ($dia <= 10 and $mostrar_pesquisa== false){
+    //     //     echo json_encode(['mensagem' => "Você já respondeu a pesquisa esse mês!"]);
+    //     //     header("Refresh: 2; URL=./../");
 
-        }
-        else {
-            echo json_encode(['mensagem' => "A pesquisa expirou!"]);
-            header("Refresh: 2; URL=./../index");            
-        }
+    //     // }
+    //     // else {
+    //     //     echo json_encode(['mensagem' => "A pesquisa expirou!"]);
+    //     //     header("Refresh: 2; URL=./../index");            
+    //     // }
 
-        //  Se, antes do dia 10: Responda a pesquisa mensal.
-        //  Se, depois do dia 10: Responda a pesquisa mensal para ter acesso ao sistema.
-    }
+    //     //  Se, antes do dia 10: Responda a pesquisa mensal.
+    //     //  Se, depois do dia 10: Responda a pesquisa mensal para ter acesso ao sistema.
+    // }
     
 }
 

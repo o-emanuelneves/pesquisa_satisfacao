@@ -22,7 +22,8 @@ class Filters extends BaseConfig
         'honeypot'      => Honeypot::class,
         'invalidchars'  => InvalidChars::class,
         'secureheaders' => SecureHeaders::class,
-        'admin'         =>     \App\Filters\AdminFilter::class
+        'admin'         =>     \App\Filters\AdminFilter::class,
+        'blocksystem'              =>      \App\Filters\BlockSystem::class
     ];
 
     public array $globals = [
@@ -30,7 +31,15 @@ class Filters extends BaseConfig
             'admin' => [
                 'except' => [
                     '/', 'pesquisarespostas/novo', 'login', 'login/*' 
+                ],
+    
+            ],
+            'blocksystem' => [
+                'except' => [
+                    'login', 'login/*', 'pesquisarespostas/novo'
                 ]
+                
+
             ]
             // 'honeypot',
             // 'csrf',
