@@ -86,6 +86,26 @@ class PesquisaRespostasModel extends Model{
             }
         }
     }
+
+    public function verificar_admin()
+    {
+        $session = session();
+        $usuario = $session->get('id_user');
+        $admin = 5;
+
+        if ($usuario != $admin) {
+            return true;
+        } else return false;
+    }
+    
+    public function deletar($id)
+    {
+        $pesquisa_model = new PesquisaPerguntasModel();
+
+        $this->get_pesquisa_and_respostas_by_id($id);
+        $this->retornar_respostas('fk_pesquisa', $id)->delete();
+    }
+    
 }
 
 ?>

@@ -61,4 +61,10 @@ class PesquisasModel extends Model{
         return $getResposta;
     }
 
+    // public function deletar($id)
+    // {
+    //     $this->get_pesquisa_and_respostas_by_id($id);
+    //     $this->retornar_respostas('fk_pesquisa', $id)->delete();
+    // }
+
 }

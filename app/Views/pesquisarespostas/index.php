@@ -43,11 +43,15 @@
 
                                 <div class="bottons-table d-none">
 
-                                    <div class="botton-ver btns1"><a href="/pesquisarespostas/respostas/<?= $key ?>"> <i class="fa-solid fa-eye" style="color: #ffffff;"></i></a>
+                                    <div class="botton-ver btns1">
+                                        <a href="/pesquisarespostas/respostas/<?= $key ?>"> <i class="fa-solid fa-eye" style="color: #ffffff;"></i></a>
                                     </div>
-
+                                    <div class="botton-ver btns1">
+                                        <a href="/pesquisarespostas/deletar/<?= $key ?>"> <i class="fa-solid fa-trash" style="color: #ffffff;"></i></a>
+                                    </div>
                                 </div>
-                                <div class="btns btns-acoes"><i class="fa-solid fa-ellipsis" style="color: #ffffff;"></i>
+                                <div class="btns btns-acoes">
+                                    <i class="fa-solid fa-ellipsis" style="color: #ffffff;"></i>
                                 </div>
                             </td>
                         </tr>
