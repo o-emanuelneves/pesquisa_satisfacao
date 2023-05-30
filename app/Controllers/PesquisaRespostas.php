@@ -86,7 +86,8 @@ class PesquisaRespostas extends BaseController
     public function deletar($id)
     {
         $this->pesquisa_respostas_model->deletar($id);
-        return redirect()->to('../PesquisaRespostas/index');
+        $this->pesquisa_model->deletar($id);
+        return redirect()->to('PesquisaRespostas/index');
     }
 }
 ?>

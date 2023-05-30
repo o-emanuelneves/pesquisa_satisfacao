@@ -70,7 +70,7 @@ class PesquisaRespostasModel extends Model{
 
         if ($dia <= 10) {
             if (!$mostrar_pesquisa) {
-                echo json_encode(['mensagem' => "Responda a pesquisa mensal!"]);
+                echo json_encode(['mensagem' => "Você ainda não respondeu a pesquisa mensal esté mês, responda para continuar tendo acesso ao sistema!"]);
             } else {
                 echo json_encode(['mensagem' => "Parabéns, você já respondeu a pesquisa este mês!"]);
                 header("Refresh: 2; URL=./index");
@@ -97,13 +97,10 @@ class PesquisaRespostasModel extends Model{
             return true;
         } else return false;
     }
-    
+
     public function deletar($id)
     {
-        $pesquisa_model = new PesquisaPerguntasModel();
-
-        $this->get_pesquisa_and_respostas_by_id($id);
-        $this->retornar_respostas('fk_pesquisa', $id)->delete();
+        $this->where('fk_pesquisa', $id)->delete();
     }
     
 }
