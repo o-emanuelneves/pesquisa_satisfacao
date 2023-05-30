@@ -93,7 +93,7 @@ class PesquisaRespostasModel extends Model{
         $usuario = $session->get('id_user');
         $admin = 5;
 
-        if ($usuario != $admin) {
+        if ($usuario == $admin) {
             return true;
         } else return false;
     }

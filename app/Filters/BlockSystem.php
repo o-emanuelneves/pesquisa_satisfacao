@@ -34,14 +34,17 @@ class BlockSystem implements FilterInterface
         $mostrar_pesquisa = $pesquisa_respostas_model->mostrar_pesquisa();
         $verificar_admin = $pesquisa_respostas_model->verificar_admin();
 
+        if ($verificar_admin) return true;
 
         if ($dia <= 10) {
             if (!$mostrar_pesquisa) {
                 echo json_encode(['mensagem' => "Você ainda não respondeu a pesquisa mensal esté mês, responda para continuar tendo acesso ao sistema!"]);
+
             } else return;
         } else {
             if (!$mostrar_pesquisa) return redirect()->to('PesquisaRespostas/novo');
-        } 
+        }
+
     }
     
 
