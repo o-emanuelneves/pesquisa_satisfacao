@@ -23,6 +23,7 @@ class Filters extends BaseConfig
         'invalidchars'      => InvalidChars::class,
         'secureheaders'     => SecureHeaders::class,
         'auth'              =>      \App\Filters\Auth::class,
+        'blocksystem'              =>      \App\Filters\BlockSystem::class,
     ];
 
     public array $globals = [
@@ -44,6 +45,16 @@ class Filters extends BaseConfig
                     'PesquisaRespostas/__construct',
                 ]
             ],
+            'blocksystem' => [
+                'except' => [
+                    'Inicio',
+                    'Inicio/index',
+                    'Inicio/__construct',
+                    'Inicio/autenticar',
+                    'Inicio/logout',
+                    'PesquisaRespostas/novo',
+                ]
+            ],
         ],
         'after' => [
             'toolbar',
@@ -60,6 +71,11 @@ class Filters extends BaseConfig
         'auth' => ['PesquisaRespostas/*'],
         'auth' => ['AuthUsers/*'],
         'auth' => ['/inicio/controle'],
+        'blocksystem' => ['PesquisaPerguntas/*'],
+        'blocksystem' => ['PesquisaRespostas/*'],
+        'blocksystem' => ['AuthUsers/*'],
+        'blocksystem' => ['/inicio/controle'],
+        'blocksystem' => ['/inicio/acesso'],
     ];
     
 }
