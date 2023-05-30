@@ -72,7 +72,7 @@ class PesquisaRespostasModel extends Model{
             if (!$mostrar_pesquisa) {
                 echo json_encode(['mensagem' => "Responda a pesquisa mensal!"]);
             } else {
-                echo json_encode(['mensagem' => "Você já respondeu a pesquisa este mês!"]);
+                echo json_encode(['mensagem' => "Parabéns, você já respondeu a pesquisa este mês!"]);
                 header("Refresh: 2; URL=./index");
                 return;
             }
@@ -80,7 +80,7 @@ class PesquisaRespostasModel extends Model{
             if (!$mostrar_pesquisa) {
                 echo json_encode(['mensagem' => "Responda a pesquisa mensal para ter acesso!"]);
             } else {
-                echo json_encode(['mensagem' => "Você já respondeu a pesquisa este mês!"]);
+                echo json_encode(['mensagem' => "Parabéns, você já respondeu a pesquisa este mês!"]);
                 header("Refresh: 2; URL=./index");
                 return;
             }

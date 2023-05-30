@@ -53,6 +53,7 @@ class Filters extends BaseConfig
                     'Inicio/autenticar',
                     'Inicio/logout',
                     'PesquisaRespostas/novo',
+                    'PesquisaRespostas/store',
                 ]
             ],
         ],

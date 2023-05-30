@@ -31,6 +31,5 @@ class PesquisaPerguntas extends BaseController{
 
     public function delete($id) {
         $this->pesquisa_perguntas_model->deletar($id);
-
     }
 }

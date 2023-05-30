@@ -37,18 +37,10 @@ class BlockSystem implements FilterInterface
         if ($dia <= 10) {
             if (!$mostrar_pesquisa) {
                 echo json_encode(['mensagem' => "Você ainda não respondeu a pesquisa mensal esté mês, responda para continuar tendo acesso ao sistema!"]);
-            } else {
-                return;
-            }
+            } else return;
         } else {
-            if (!$mostrar_pesquisa) {
-                return redirect()->to('PesquisaRespostas/novo');
-                return;
-            } else {
-                return;
-            }
+            if (!$mostrar_pesquisa) return redirect()->to('PesquisaRespostas/novo');
         }
-
     }
 
     /**
