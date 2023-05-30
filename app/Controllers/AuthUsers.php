@@ -6,14 +6,12 @@ use CodeIgniter\Controller;
 
 class AuthUsers extends BaseController{
     private $auth_users_model;
- 
 
     function __construct()
     {
         $this->auth_users_model = new AuthUserModel();
        
     }
-
 
     public function index(){
         $auth_users = $this->auth_users_model->findAll();
