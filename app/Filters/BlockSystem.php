@@ -6,6 +6,7 @@ use CodeIgniter\Filters\FilterInterface;
 use CodeIgniter\HTTP\RequestInterface;
 use CodeIgniter\HTTP\ResponseInterface;
 use App\Models\PesquisaRespostasModel;
+use CodeIgniter\Config\View;
 
 class BlockSystem implements FilterInterface
 {
@@ -34,21 +35,23 @@ class BlockSystem implements FilterInterface
             $usuario = true;
         }
 
-        $dia = date('d');
-        $dia = 5;
+         $dia = date('d');
+         
+        
 
         $pesquisa_respostas_model = new PesquisaRespostasModel();
         $mostrar_pesquisa = $pesquisa_respostas_model->mostrar_pesquisa();
 
         if ($usuario and $mostrar_pesquisa) {
             if ($dia <= 10) {
-                echo json_encode(['mensagem' => "Você ainda não respondeu a pesquisa mensal este mês!"]);
-                return redirect()->to('PesquisaRespostas/novo');
-                exit;
+                
+                echo json_encode(['mensagem' => "Você ainda não respondeu a pesquisa mensal este mês! Caso não responda até dia 10, terá o sistema bloqueado"]);
+                
             }
             if($dia>10){
-                echo json_encode(['mensagem' => "Responda a pesquisa para ter acesso ao sistema!"]);
+                echo json_encode(['mensagem' => "Responda a pesquisa para ter acesso ao sistema!"]); //será usado toast responde
                 return redirect()->to('PesquisaRespostas/novo');
+                
                 exit;
             }
             

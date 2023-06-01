@@ -2,8 +2,6 @@
 
 namespace App\Services\Pesquisa;
 
-use App\Models\PesquisasModel;
-
 class PesquisasService {
 
 
@@ -36,15 +34,8 @@ class PesquisasService {
         return $array;
     }
 
-    public function agrupar_pesquisas()
+    public function agrupar_pesquisas($pesquisas)
     {
-        $model = new PesquisasModel();
-        $pesquisas = $model->get_pesquisa_and_respostas([
-            'nome',
-            'resposta',
-            'fk_pesquisa',
-            'observacao'
-        ]);
 
         $pesquisa_agrupada = [];
 

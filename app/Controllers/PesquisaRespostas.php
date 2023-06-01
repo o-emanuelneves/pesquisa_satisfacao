@@ -67,9 +67,11 @@ class PesquisaRespostas extends BaseController
             'id_pergunta',
             'pergunta'
         ]); 
-
-        $pesquisa_respostas_model = new PesquisaRespostasModel();
-       
+        
+        if($this->pesquisa_respostas_model->mostrar_pesquisa()==false){
+            echo json_encode(['mensagem' => "Você já respondeu a pesquisa esse mês!"]);
+            header("Refresh: 2; URL=./../");
+        }
 
 
         echo View('/templates/header');

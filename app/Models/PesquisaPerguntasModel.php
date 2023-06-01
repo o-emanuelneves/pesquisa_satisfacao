@@ -33,10 +33,13 @@ class PesquisaPerguntasModel extends Model
         $merge = array_merge($update, $arrayInsert);
 
         // print_r($merge);exit;
-
-         $this->insertbatch($merge);
-
-        return true;
+        try {
+            $this->insertbatch($merge);
+            return true;
+        } catch (\Throwable $th) {
+            return true;
+        }
+        
     }
 
     public function get_perguntas($columns = ['*']){

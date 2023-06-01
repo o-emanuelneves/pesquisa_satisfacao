@@ -63,7 +63,13 @@ class PesquisasModel extends Model{
 
     public function get_agrupar_pesquisas(){
         $services = new PesquisasService;
-        $resultado_pesquisa_agrupada = $services->agrupar_pesquisas();
+        $pesquisas = $this->get_pesquisa_and_respostas([
+            'nome',
+            'resposta',
+            'fk_pesquisa',
+            'observacao'
+        ]);
+        $resultado_pesquisa_agrupada = $services->agrupar_pesquisas($pesquisas);
         
         return $resultado_pesquisa_agrupada;
     }
